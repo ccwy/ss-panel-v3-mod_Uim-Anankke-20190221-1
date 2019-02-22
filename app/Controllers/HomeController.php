@@ -66,21 +66,13 @@ class HomeController extends BaseController
     {
         return $this->view()->display('error_ip.tpl');
     }
-    
+	//商店
     public function shop($request, $response, $args)
     {
-        $pageNum = 1;
-        if (isset($request->getQueryParams()["page"])) {
-            $pageNum = $request->getQueryParams()["page"];
-        }
-		//商品显示模式优化
-       // $shops = Shop::where("status", 1)->orderBy("name")->paginate(20, ['*'], 'page', $pageNum);
-	   $shops = Shop::where("status", 1)->paginate(20, ['*'], 'page', $pageNum);
-        $shops->setPath('shop');
-
+        $shops = Shop::where("status", 1)->get();  //商品显示模式优化
         return $this->view()->assign('shops', $shops)->display('shop.tpl');
     }
-	
+
     public function telegram($request, $response, $args)
     {
         $token = "";

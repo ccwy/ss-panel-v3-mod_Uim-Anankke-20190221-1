@@ -10,10 +10,11 @@
 
 
 
+
 	<main class="content">
 		<div class="content-header ui-content-header">
 			<div class="container">
-				<h1 class="content-heading">套餐价格</h1>
+				<h1 class="content-heading">商品列表</h1>
 			</div>
 		</div>
 		<div class="container">
@@ -23,72 +24,134 @@
 					<div class="card">
 						<div class="card-main">
 							<div class="card-inner">
-							<p class="card-heading">
-					1，本站没有游戏节点，不保证可以观看TVB、NF等网站视频；<br>
-					2，套餐不可叠加，新购套餐会覆盖旧套餐的效果；<br>
-					
-					3，本站不提供试用，如有任何问题，请<a href="/cous">联系管理员</a></p>	
+								<p><i class="icon icon-lg">monetization_on</i>&nbsp;余额：&nbsp;<font color="red" size="5">{$user->money}</font>&nbsp;元</p>
+								    <p>1，余额不足？您可以 <a href="/user/code">点我充值</a> 余额到账户；<br>
+								    2，本站无游戏节点，不保证可以观看TVB\NF\huhu等视频网站；<br>
+								3，套餐不可叠加，新购套餐会覆盖旧套餐的效果，V2ray不提供任何技术支持，<br>
+								</p>
 							</div>
 						</div>
 					</div>
-                  
-                  {*
-					<div class="shop-switch">
+
+					<div class="ui-switch">
                          <div class="card">
 							 <div class="card-main">
-								 <div class="card-inner shop-switch">
+								 <div class="card-inner ui-switch">
 										<div class="switch-btn" id="switch-cards"><a href="#" onclick="return false"><i class="mdui-icon material-icons">apps</i></a></div>
 										<div class="switch-btn" id="switch-table"><a href="#" onclick="return false"><i class="mdui-icon material-icons">dehaze</i></a></div>
 								 </div>
 							 </div>
 						 </div>
 					</div>
-					*}
 						
             <div class="shop-flex">
-				{$shops->render()}
+				
 				{foreach $shops as $shop}
                   <div class="card">
 					  <div class="card-main">
-						  <div class="card-inner">
 								<div class="shop-name">{$shop->name}</div>
-								<div class="shop-price">价格：<code>{$shop->price}</code> 元</div>
-								<div class="shop-content">
-								{if $shop->id==68}
-								<div>账号流量重置为 <code>{$shop->bandwidth()}</code> G</div>
-								<div>仅适合流量已用完的用户使用</div>
-								<div>不增加等级和等级到期时间</div>
-								<div>仅重置账号流量为<code>{$shop->bandwidth()}</code> G</div>
-								<div>请谨慎购买</div>
-								
-								{else}
-								
-								{if $shop->auto_reset_day!=0}
-								<div>可使用VIP节点和SVIP节点</div>
-								
-								<div>为账号添加流量 <code>{$shop->bandwidth()}</code> G</div>
-								<div>为账号等级有效期添加 <code>{$shop->class_expire()}</code> 天</div>
-								<div>每月自动重置流量为 <code>{$shop->bandwidth()}</code> G</div>
-								
+								<div class="shop-price">{$shop->price}</div>
+								<div class="shop-tat">
+								{if $shop->auto_reset_day == 0 }
+									<span>{$shop->bandwidth()}</span> / <span>{$shop->class_expire()}</span>
 									{else}
-                                    <div>可使用VIP节点</div>
-									<div>为账号添加流量 <code>{$shop->bandwidth()}</code> G</div>
-									<div>为账号等级有效期添加 <code>{$shop->class_expire()}</code> 天</div>
-									
-                                   {/if}	
-								   {/if}
-							    </div>
-								<a class="btn btn-brand shop-btn" href="/user">购买</a>
-						  </div>
+									<span>{$shop->bandwidth()}</span> / <span>30</span>
+									{/if}
+								</div>
+								<div class="shop-cube">
+									<div>
+										<div class="cube-detail">
+											<span>Lv.</span>{$shop->user_class()}
+										</div>
+										<div class="cube-title">
+											VIP
+										</div>
+									</div>
+									<div>
+										<div class="cube-detail">
+											3<span> 个</span>
+										</div>
+										<div class="cube-title">
+											客户端数量
+										</div>
+									</div>
+									<div>
+										<div class="cube-detail">
+											{if {$shop->speedlimit()} == '0' }无限制{else}{$shop->speedlimit()}<span> Mbps</span>{/if}
+										</div>
+										<div class="cube-title">
+											端口速率
+										</div>
+									</div>
+
+								</div>
+								<div class="shop-content">
+									<div class="shop-content-left">账号有效期:</div><div class="shop-content-right">{$shop->class_expire()}<span>天</span></div>
+									<div class="shop-content-left">重置周期:</div><div class="shop-content-right">{if $shop->auto_reset_day == 0 }N / A{else}30<span>天</span>{/if}</div>
+									<div class="shop-content-left">重置流量:</div><div class="shop-content-right">{if $shop->auto_reset_day == 0 }N / A{else}{$shop->bandwidth()}<span>G</span> {/if}</div>
+								</div>
+								<div class="shop-content-extra">
+									{foreach $shop->content_extra() as $service}
+									<div><span class="icon">{$service[0]}</span> {$service[1]}</div>
+									{/foreach}
+								</div>
+								<a class="btn btn-brand-accent shop-btn" href="/user/shop">购买</a>
 					  </div>
 				  </div>
 				{/foreach}
-				{$shops->render()}
+				
 				<div class="flex-fix3"></div>
 				<div class="flex-fix4"></div>
 			</div>
 
+            <div class="shop-table">
+				
+					{foreach $shops as $shop}
+					<div class="shop-gridarea">
+                        <div class="card">
+								<div>
+									<div class="shop-name"> <span>{$shop->name}</span></div>
+									<div class="card-tag tag-gold">VIP {$shop->user_class()}</div>
+									<div class="card-tag tag-orange">¥ {$shop->price}</div>
+									{if $shop->auto_reset_day!=1 }
+									<div class="card-tag tag-cyan">{$shop->bandwidth()} G</div>
+									{else}
+									<div class="card-tag tag-cyan">每月 {$shop->bandwidth()} G</div>
+									{/if}
+									<div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
+								</div>
+								<div>
+								<i class="material-icons">expand_more</i>
+								</div>	
+						</div>
+						<a class="btn btn-brand-accent shop-btn" href="/user/shop">购买</a>
+						
+						<div class="shop-drop dropdown-area">
+							<div class="card-tag tag-black">账号有效期</div> <div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
+							{if $shop->auto_reset_day!=1 }
+							<div class="card-tag tag-black">重置周期</div> <div class="card-tag tag-blue">N/A</div>
+							{else}
+							<div class="card-tag tag-black">重置周期</div> <div class="card-tag tag-blue">30 天</div>
+							<div class="card-tag tag-black">重置流量</div><div class="card-tag tag-blue">{$shop->bandwidth()}G</div>
+							{/if}
+								{if {$shop->speedlimit()} == '0' }
+								<div class="card-tag tag-black">端口速率</div> <div class="card-tag tag-blue">无限制</div>
+								{else}
+								<div class="card-tag tag-black">端口限速</div> <div class="card-tag tag-blue">{$shop->speedlimit()} Mbps</div>
+								{/if}
+								
+								<div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">3 个</div>
+								
+						</div>
+					</div>
+					{/foreach}
+				
+            </div>
 					
+					
+					
+					{include file='dialog.tpl'}
+	
 			</div>
 			
 			
@@ -104,18 +167,48 @@
 
 
 
-{include file='footer.tpl'}
+{include file='user/footer.tpl'}
 
 
 <script>
-function ()
-$("#switch-cards").click(function (){
-	$(".shop-flex").css("display","flex");
-	$(".shop-display").css("display","none");
-});
-$("#switch-table").click(function (){
-     $(".shop-flex").css("display","none");
-	 $(".shop-display").css("display","block");
-});
+function buy(id,auto) {
+	if(auto==0)
+	{
+		document.getElementById('autor').style.display="none";
+	}
+	else
+	{
+		document.getElementById('autor').style.display="";
+	}
+	shop=id;
+	$("#coupon_modal").modal();
+}
 
+;(function(){
+	
+	//UI切换
+	let elShopCard = $$.querySelector(".shop-flex");
+	let elShopTable = $$.querySelector(".shop-table");
+	
+	let switchToCard = new UIswitch('switch-cards',elShopTable,elShopCard,'flex','tempshop');
+	switchToCard.listenSwitch();
+    
+	let switchToTable = new UIswitch('switch-table',elShopCard,elShopTable,'flex','tempshop');
+	switchToTable.listenSwitch();
+
+	switchToCard.setDefault();
+	switchToTable.setDefault();
+	
+	//手风琴
+	let dropDownButton = document.querySelectorAll('.shop-table .card');
+	let dropDownArea = document.querySelectorAll('.dropdown-area');
+	let arrows = document.querySelectorAll('.shop-table .card i');
+	
+	for (let i=0;i<dropDownButton.length;i++) {
+		rotatrArrow(dropDownButton[i],arrows[i]);
+		custDropdown(dropDownButton[i], dropDownArea[i]);
+	}
+
+})();
+    
 </script>
