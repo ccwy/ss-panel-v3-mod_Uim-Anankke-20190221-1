@@ -40,6 +40,7 @@
 	<div class="container">
 		<section class="content-inner margin-top-no">
 			<div class="ui-card-wrap">
+			{if $user->class >1}
 				<div class="row">
 					<div class="col-lg-12 col-sm-12 nodelist">
 							
@@ -304,6 +305,20 @@
 							</div>
 						</div>
 					</div>
+					{else}
+					
+                  	<div class="col-xx-12">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+                                 	
+									<h3>{$user->user_name}，您不是VIP暂时无法使用节点，<a href="/user/shop">成为VIP请点击这里</a></h3>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{/if}
 		</section>
 	</div>
 </main>
