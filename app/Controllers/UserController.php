@@ -1328,13 +1328,13 @@ class UserController extends BaseController
                 $subject = Config::get('appName') . "-工单被重新开启";
                 $to = $user->email;
                 $text = "管理员您好，用户id： ".$this->user->id."   ，邮箱： ".$this->user->email."   ，重新开启了<a href=\"".Config::get('baseUrl')."/admin/ticket/".$ticket_main->id."/view\">工单</a>，内容如下：<br>".$content ;
-                    Mail::send($to, $subject, 'news/warn.tpl', [
+                /*    Mail::send($to, $subject, 'news/warn.tpl', [
                         "user" => $user, "text" => $text
                     ], [
                     ]);
                 } catch (\Exception $e) {
                     echo $e->getMessage();
-                }
+                }*/
 				//工单优化	
 		$antiXss = new AntiXSS();
 		$emailjilu = new Emailjilu();
@@ -1352,14 +1352,14 @@ class UserController extends BaseController
                 $subject = Config::get('appName') . "-工单被回复";
                 $to = $user->email;
                 $text = "管理员您好，用户id： ".$this->user->id."   ，邮箱： ".$this->user->email."   ，回复了<a href=\"".Config::get('baseUrl')."/admin/ticket/".$ticket_main->id."/view\">工单</a>，内容如下：<br>".$content ;
-                try {
+               /* try {
                     Mail::send($to, $subject, 'news/warn.tpl', [
                         "user" => $user, "text" => $text
                     ], [
                     ]);
                 } catch (\Exception $e) {
                     echo $e->getMessage();
-                }
+                }*/
 				//工单优化	
 		$antiXss = new AntiXSS();
 		$emailjilu = new Emailjilu();
