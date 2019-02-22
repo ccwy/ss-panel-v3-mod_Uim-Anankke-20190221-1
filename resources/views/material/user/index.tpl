@@ -23,49 +23,11 @@
 											</div>
 											<div class="nodemiddle node-flex">
 												<div class="nodetype">
-													{if $user->class ==0}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;未激活</dd>											  
-											  {elseif $user->class ==16}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;永久会员</dd>
-											  {elseif $user->class==17}											  
-                                              <dd><i class="icon icon-md t4-text">stars</i>&nbsp;月付VIP1</dd>
-                                              {elseif $user->class==18}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;月付VIP2</dd>
-											  {elseif $user->class==19}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;月付VIP3</dd>
-											  {elseif $user->class==20}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;月付VIP4</dd>
-											  {elseif $user->class==21}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;月付VIP5</dd>
-											  {elseif $user->class==22}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;月付VIP6</dd>
-											  {elseif $user->class==23}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;年付SVIP1</dd>
-											  {elseif $user->class==24}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;年付SVIP2</dd>
-											  {elseif $user->class==25}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;年付SVIP3</dd>
-											  {elseif $user->class==26}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;年付SVIP4</dd>
-											  {elseif $user->class==30}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;预售年付V2ray</dd>
-											  {elseif $user->class==31}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;年付V2ray1</dd>
-											  {elseif $user->class==32}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;年付V2ray2</dd>
-											  {elseif $user->class==33}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;年付V2ray3</dd>
-											  {elseif $user->class==34}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;年付V2ray4</dd>
-											  
-											  
-											  {elseif $user->class==5}
-											  <dd><i class="icon icon-md t4-text">stars</i>&nbsp;年付VIP</dd>
-											
-                                          {else}
-                                              <dd><i class="icon icon-md t4-text">stars</i>&nbsp;未知等级</dd>
-											  
-                                              {/if}
+													{if $user->class!=0}
+													<dd>VIP {$user->class}</dd>
+													{else}
+													<dd>普通用户</dd>
+													{/if}
 												</div>
 											</div>
 										</div>
