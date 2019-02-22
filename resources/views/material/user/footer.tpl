@@ -13,7 +13,5 @@
 	<script src="/theme/material/js/project.min.js"></script>
 	<script src="/theme/material/js/clipboard.min.js"></script>
 	
-
-
 </body>
 </html>

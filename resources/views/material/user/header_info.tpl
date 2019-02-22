@@ -8,8 +8,6 @@
 	<meta http-equiv="X-Frame-Options" content="sameorigin">
 	<title>{$config["appName"]}</title>
 
-	
-	
 	<!-- css -->
 	<link href="/theme/material/css/base.min.css" rel="stylesheet">
 	<link href="/theme/material/css/project.min.css" rel="stylesheet">
