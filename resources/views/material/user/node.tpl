@@ -120,7 +120,7 @@
 									
 									{/if}
 
-									{if $node['sort'] == 0 || $node['sort'] == 10}
+									{if $node['sort'] == 0 || $node['sort'] == 10 || $node['sort'] == 11}
 										{$point_node=$node}
 									{/if}
 
@@ -247,7 +247,7 @@
 													
 												    {/if}
 
-                                                    {if $node['sort'] == 0 || $node['sort'] == 10}
+                                                    {if $node['sort'] == 0 || $node['sort'] == 10 || $node['sort'] == 10}
 														{$point_node=$node}
 													{/if}
 
@@ -279,9 +279,7 @@
 													
 													<div><i class="icon icon-lg node-icon">chat</i> {$node['info']}</div>
 
-													{if $node['sort'] == 11}
-														{displayV2rayNode node=$node}
-													{/if}
+													
 												</div>
 											  </div>
 
