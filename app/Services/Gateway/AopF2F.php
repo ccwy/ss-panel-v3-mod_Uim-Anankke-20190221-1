@@ -38,7 +38,11 @@ class AopF2F extends AbstractPayment
             $res['msg'] = "订单金额错误：" . $amount;
             return $response->getBody()->write(json_encode($res));
         }
-
+        if ($amount < $Config::get('codypaymenay')) {
+            $res['ret'] = 0;
+            $res['msg'] = "充值金额需大于15元。";
+            return $response->getBody()->write(json_encode($res));
+        }
         $pl = new Paylist();
         $pl->userid = $user->id;
         $pl->tradeno = self::generateGuid();
