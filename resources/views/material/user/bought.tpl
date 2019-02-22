@@ -34,25 +34,18 @@
 									<div class="table-responsive table-user">
 										{$shops->render()}
 										<table class="table">
-											<tr>
-												
-											 <!--   <th>ID</th> -->
-												<th>商品名称</th>
-												
-												<th>价格</th>
-												<th>续费时间</th>
+											<tr>												
+											 <th>购买时间</th>
+												<th>商品名称</th>												
+												<th>价格</th>												
 												<th>是否重置流量</th>
-												<th>操作</th>
-												
 											</tr>
 											{foreach $shops as $shop}
-											<tr>
-												
-										  <!--       <td>#{$shop->id}</td> -->
-												<td>{$shop->shop()->name}</td>
-												
-												<td>{$shop->price} 元</td>
-												{if $shop->shop()->auto_reset_day==0}
+											<tr>											
+								<td>{date('Y-m-d H:i:s',$shop->datetime)}</td>                        
+                                <td>{$shop->shop()->name}</td>							
+								<td>{$shop->price} 元</td> 								
+								{if $shop->shop()->auto_reset_day==0}
 								<td>不重置</td>
 								{else}
 								{if $user->auto_reset_day !=0}
@@ -61,12 +54,6 @@
 								<td>已过期</td>
 								{/if}
 								{/if}
-												
-												
-											  <td>
-													<a class="btn btn-brand" {if $shop->renew==0}disabled{else} href="javascript:void(0);" onClick="delete_modal_show('{$shop->id}')"{/if}>关闭自动续费</a>
-												</td>
-												
 											</tr>
 											{/foreach}
 										</table>
