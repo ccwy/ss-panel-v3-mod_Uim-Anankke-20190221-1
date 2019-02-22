@@ -1,4 +1,12 @@
+
+
+
 {include file='user/main.tpl'}
+
+
+
+
+
 
 
 	<main class="content">
@@ -11,7 +19,7 @@
 			<section class="content-inner margin-top-no">
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
-					  <div class="card margin-bottom-no">
+						
 						<div class="card">
 							<div class="card-main">
 								<div class="card-inner">
@@ -50,13 +58,23 @@
 											{$paybacks->render()}
 											</div>
 										</div>
-								</div>
+									</div>
 							</div>
 						</div>
 					</div>
-									</div>
+
+				</div>
 			</section>
 		</div>
 	</main>
+
+
+
+
+
+
+
+
+
 
 {include file='user/footer.tpl'}
