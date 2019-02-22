@@ -119,7 +119,7 @@
 										<div class="nodemain">
 											<div class="nodehead node-flex">
 												<div class="nodename">在线设备数</div>
-												<a href="/user/profile" class="card-tag tag-green">实时在线ip</a>
+												<a href="/user/profile" class="card-tag tag-green">在线ip</a>
 											</div>
 											<div class="nodemiddle node-flex">
 												<div class="nodetype">
