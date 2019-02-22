@@ -64,7 +64,7 @@
 									</div>
 									<div>
 										<div class="cube-detail">
-											{if {$shop->connector()} == '0' }无限制{else}{$shop->connector()}<span> 个</span>{/if}
+											3<span> 个</span>
 										</div>
 										<div class="cube-title">
 											客户端数量
@@ -81,9 +81,9 @@
 
 								</div>
 								<div class="shop-content">
-									<div class="shop-content-left">账号有效期:</div><div class="shop-content-right">{$shop->expire()}<span>天</span></div>
-									<div class="shop-content-left">重置周期:</div><div class="shop-content-right">{if {$shop->reset()} == '0' }N / A{else}{$shop->reset_exp()}<span>天</span>{/if}</div>
-									<div class="shop-content-left">重置频率:</div><div class="shop-content-right">{if {$shop->reset()} == '0' }N / A{else}{$shop->reset_value()}<span>G</span> / {$shop->reset()}<span>天</span>{/if}</div>
+									<div class="shop-content-left">账号有效期:</div><div class="shop-content-right">{$shop->class_expire()}<span>天</span></div>
+									<div class="shop-content-left">重置周期:</div><div class="shop-content-right">{if {$shop->auto_reset_day!=0 }N / A{else}30<span>天</span>{/if}</div>
+									<div class="shop-content-left">重置频率:</div><div class="shop-content-right">{if {$shop->auto_reset_day!=0 }N / A{else}{$shop->bandwidth()}<span>G</span> / {$shop->reset()}<span>天</span>{/if}</div>
 								</div>
 								<div class="shop-content-extra">
 									{foreach $shop->content_extra() as $service}
@@ -122,8 +122,8 @@
 							{if $shop->auto_reset_day!=0 }
 							<div class="card-tag tag-black">重置周期</div> <div class="card-tag tag-blue">N/A</div>
 							{else}
-							<div class="card-tag tag-black">重置周期</div> <div class="card-tag tag-blue">360 天</div>
-							<div class="card-tag tag-black">重置频率</div><div class="card-tag tag-blue">{$shop->bandwidth()}G/360天</div>
+							<div class="card-tag tag-black">重置周期</div> <div class="card-tag tag-blue">30 天</div>
+							<div class="card-tag tag-black">重置频率</div><div class="card-tag tag-blue">{$shop->bandwidth()}G</div>
 							{/if}
 								{if {$shop->speedlimit()} == '0' }
 								<div class="card-tag tag-black">端口速率</div> <div class="card-tag tag-blue">无限制</div>
