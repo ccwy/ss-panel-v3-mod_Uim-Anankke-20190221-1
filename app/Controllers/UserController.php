@@ -1832,7 +1832,20 @@ class UserController extends BaseController
         return $this->view()->assign('codes', $codes)->display('user/fanli.tpl');
     }
 
-	
+	 public function fanlifile($request, $response, $args)
+    {
+         $pageNum = 1;
+        if (isset($request->getQueryParams()["page"])) {
+            $pageNum = $request->getQueryParams()["page"];
+        }
+        $paybacks = Payback::where("ref_by", $this->user->id)->orderBy("datetime", "desc")->paginate(20, ['*'], 'page', $pageNum);
+        $paybacks->setPath('/user/fanlifile');
+
+
+        return $this->view()->assign("paybacks", $paybacks)->display('user/fanlifile.tpl');
+    }
+
+
 	//返利充值
 	 public function fanlipost($request, $response, $args)
     {

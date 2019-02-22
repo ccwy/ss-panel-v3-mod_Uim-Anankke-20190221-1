@@ -98,6 +98,7 @@ $app->group('/user', function () {
    //fanli	 
 	$this->get('/fanli', 'App\Controllers\UserController:fanli');
 	$this->post('/fanli', 'App\Controllers\UserController:fanlipost');
+	$this->get('/fanlifile', 'App\Controllers\UserController:fanlifile');
 	
     $this->get('/detect', 'App\Controllers\UserController:detect_index');
     $this->get('/detect/log', 'App\Controllers\UserController:detect_log');
