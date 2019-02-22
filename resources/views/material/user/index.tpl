@@ -24,7 +24,7 @@
 											<div class="nodemiddle node-flex">
 												<div class="nodetype">
 													{if $user->class ==0}
-											  <dd> 未激活</dd>											  
+											  <dd>未激活</dd>											  
 											  {elseif $user->class ==16}
 											  <dd> 永久会员</dd>
 											  {elseif $user->class==17}											  

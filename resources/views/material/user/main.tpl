@@ -79,7 +79,7 @@
 
 							<li>
 								<a href="/user/edit">
-									<i class="icon icon-lg">sync_problem</i>&nbsp;资料编辑
+									<i class="icon icon-lg">sync_problem</i>&nbsp;系统设置
 								</a>
 							</li>
 
@@ -91,14 +91,16 @@
 							</li>
 							{/if}
 
+                            {if $user->class >1}
                             <li>
 								<a href="/user/invite">
 									<i class="icon icon-lg">loyalty</i>&nbsp;邀请链接
 								</a>
 							</li>
+							{/if}
 						</ul>
 
-
+{if $user->class >1}
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_use">使用</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_use">
 							<li>
@@ -107,6 +109,7 @@
 								</a>
 							</li>
 
+                            
 							<li>
 								<a href="/user/relay">
 									<i class="icon icon-lg">compare_arrows</i>&nbsp;中转规则
@@ -125,8 +128,9 @@
 									<i class="icon icon-lg">start</i>&nbsp;使用教程
 								</a>
 							</li>
+							
 						</ul>
-
+{/if}
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审计</a>
 						<ul class="menu-collapse collapse out" id="ui_menu_detect">
 							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
