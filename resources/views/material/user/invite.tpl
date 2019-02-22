@@ -16,12 +16,11 @@
 								<div class="card-inner">
 									<div class="card-inner">
 										<p class="card-heading">说明</p>
-										<p>您每邀请1位用户注册：</p>
-										<p>您会获得<code>{$config["invite_gift"]} G</code>流量奖励。</p>
-										<p>对方将获得<code>{$config["invite_get_money"]}</code>元奖励作为初始资金。</p>
-										<p>对方充值时您还会获得对方充值金额的 <code>{$config["code_payback"]} %</code> 的返利。</p>
+										<p>您每邀请1位用户注册，对方充值时您会获得对方首次充值金额的 <code>{$config["code_payback"]} %</code> 的返利。</p>
+										
 										<p class="card-heading">已获得返利：<code>{$paybacks_sum}</code> 元</p>
-										<p><a href="/user/fanlifile">返利记录</a></p>
+										<p>返利记录：<a class="btn btn-brand waves-attach" href="/user/fanlifile">点击查询</a> </p>    
+										<p>返利提现：<a class="btn btn-brand waves-attach" href="/user/fanli">点击提现</a></p>
 									</div>
 
 								</div>
@@ -111,40 +110,7 @@
 					</div>
 
 					{/if}
-					<div class="col-xx-12">
-                        <div class="card">
-	                        <div class="card-main">
-		                        <div class="card-inner">
-			                        <div class="card-table">
-										<div class="table-responsive bgc-fix table-user">
-											{$paybacks->render()}
-											<table class="table">
-												<tr>
 					
-												 <!--   <th>ID</th> -->
-													<th>ID</th>
-													<th>被邀请用户ID</th>
-													<th>获得返利</th>
-												</tr>
-												{foreach $paybacks as $payback}
-												<tr>
-					
-											  <!--       <td>#{$payback->id}</td> -->
-													<td>{$payback->id}</td>
-													<td>{$payback->userid}</td>
-													<td>{$payback->ref_get} 元</td>
-					
-												</tr>
-												{/foreach}
-											</table>
-											{$paybacks->render()}
-										</div>
-			                        </div>
-		                        </div>
-	                        </div>
-                        </div>
-					
-					</div>
 
 					{include file='dialog.tpl'}
 

@@ -24,7 +24,8 @@
 							<div class="card-main">
 								<div class="card-inner">
                                         <div class="card-doubleinner">
-												<p class="card-heading">返利记录</p>
+												
+												<p><a class="btn btn-brand waves-attach" href="/user/fanli">提现</a> </p>  
 										</div>
 										
 										<div class="card-table">
