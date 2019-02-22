@@ -56,6 +56,7 @@ class Config
 			"murss22" => self::get("murss22"),  // 单端口开关
 			"payurlma" => self::get("payurlma"),  // 充值码购买地址
 			"metodaes" => self::get("metodaes"),  // v2ray加密算法
+		        "connemail" => self::get("connemail"),  // 联系邮件
 			"murss22" => self::get("murss22")  // 单端口开关
 			
          ];
