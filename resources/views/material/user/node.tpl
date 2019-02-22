@@ -290,21 +290,6 @@
 										    </div>
 											{/if}
 											   
-												{if isset($point_node)}
-												{if $point_node!=null}
-		
-												<div class="card">
-													<div class="card-main">
-														<div class="card-inner" id="info{$node@index}">
-		
-														</div>
-													</div>
-												</div>
-		
-												
-												{/if}
-												{/if}
-											
                                                 </div>
 											</div>
 
