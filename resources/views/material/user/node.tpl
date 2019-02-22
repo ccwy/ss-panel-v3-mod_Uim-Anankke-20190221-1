@@ -81,7 +81,7 @@
                                 <div class="nodeinfo node-flex">
                                     <div class="nodetraffic node-flex"><i class="material-icons node-icon">equalizer</i><span>{if $node['traffic_limit']>0}{$node['traffic_used']}/{$node['traffic_limit']}GB{else}{$node['traffic_used']}GB{/if}</span></div>
                                     <div class="nodecheck node-flex">
-                                        <i class="material-icons node-icon">network_check</i><span>x{$node['traffic_rate']}</span>
+                                        <i class="material-icons node-icon">network_check</i><span>  x  {$node['traffic_rate']} 倍率</span>
                                     </div>
                                    <!-- <div class="nodeband node-flex"><i class="material-icons node-icon">flash_on</i><span>{if {$node['bandwidth']}==0}N/A{else}{$node['bandwidth']}{/if}</span></div>-->
                                 </div>
