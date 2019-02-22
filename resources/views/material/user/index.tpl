@@ -214,9 +214,11 @@
 												<li {if $ssr_prefer}class="active"{/if}>
 													<a class="" data-toggle="tab" href="#all_ssr"><i class="icon icon-lg">airplanemode_active</i>&nbsp;SSR</a>
 												</li>
+												{*
 												<li {if !$ssr_prefer}class="active"{/if}>
 													<a class="" data-toggle="tab" href="#all_ss"><i class="icon icon-lg">flight_takeoff</i>&nbsp;SS/SSD</a>
 												</li>
+												*}
 
 												<li>
 													<a class="" data-toggle="tab" href="#all_v2ray"><i class="icon icon-lg">flight_land</i>&nbsp;V2RAY</a>
@@ -622,7 +624,8 @@
                                             <p><dt>邮箱帐号</dt>                                             
 											<dd><i class="icon icon-md">email</i>&nbsp;{$user->email}</dd>                                          
                                             </p>
-										  
+											
+										  {if $user->class == 0 && $user->lastSsTime() != 0}
 											<p><dt>等级过期时间</dt>
                                               {if $user->class_expire!="1989-06-04 00:05:00"}
 											<dd><i class="icon icon-md">event</i>&nbsp;{$user->class_expire}</dd>
@@ -630,6 +633,7 @@
                                               <dd><i class="icon icon-md">event</i>&nbsp;不过期</dd>
                                               {/if}
 											</p>
+											{/if}
 											
 											{if $user->class >1}
                                           	<p><dt>等级有效期</dt>
