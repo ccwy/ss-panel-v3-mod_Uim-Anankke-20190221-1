@@ -246,6 +246,7 @@ $System_Config['v2ray_port']='443';					//V2Ray端口
 $System_Config['v2ray_protocol']='HTTP/2 + TLS';	//V2Ray协议
 $System_Config['v2ray_alter_id']='32';
 $System_Config['v2ray_level']='0';
+$System_Config['metodaes']='aes-128-gcm';  //加密算法
 
 //以下所有均为高级设置（一般用不上，不用改---------------------------------------------------------------------
 #杂项
