@@ -123,10 +123,14 @@
 											</div>
 											<div class="nodemiddle node-flex">
 												<div class="nodetype">
+												{if $user->class >1}
 													{if $user->node_connector!=0}
 													<dd>{$user->online_ip_count()} / {$user->node_connector}</dd>
 													{else}
 													<dd>{$user->online_ip_count()} / 不限制 </dd>
+													{/if}
+													{else}
+													<dd>账号未激活</dd>
 													{/if}
 												</div>
 											</div>
@@ -153,10 +157,14 @@
 											</div>
 											<div class="nodemiddle node-flex">
 												<div class="nodetype">
+												{if $user->class >1}
 													{if $user->node_speedlimit!=0}
 													<dd><code>{$user->node_speedlimit}</code>Mbps</dd>
 													{else}
 													<dd>无限制</dd>
+													{/if}
+													{else}
+													<dd>账号未激活</dd>
 													{/if}
 												</div>
 											</div>
