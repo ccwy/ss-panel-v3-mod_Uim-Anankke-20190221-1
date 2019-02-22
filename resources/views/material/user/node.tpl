@@ -75,11 +75,11 @@
                                     <div class="nodename">{$node['name']}</div>
                                 </div>
                                 <div class="nodemiddle node-flex">
-                                    <div class="onlinemember node-flex"><i class="material-icons node-icon">flight_takeoff</i><span>实时 {if $node['online_user'] == -1} N/A{else} {$node['online_user']}{/if}</span> 人在线</div>
+                                    <div class="onlinemember node-flex"><i class="material-icons node-icon">flight_takeoff</i> 实时   <span>{if $node['online_user'] == -1} N/A{else} {$node['online_user']}{/if}</span> 人在线</div>
                                     <!-- <div class="nodetype">{$node['status']}</div> -->
                                 </div>
                                 <div class="nodeinfo node-flex">
-                                    <div class="nodetraffic node-flex"><i class="material-icons node-icon">equalizer</i><span>累计使用 {if $node['traffic_limit']>0}{$node['traffic_used']}/{$node['traffic_limit']}GB{else}{$node['traffic_used']}GB{/if}</span> 流量</div>
+                                    <div class="nodetraffic node-flex"><i class="material-icons node-icon">equalizer</i>累计使用  <span>{if $node['traffic_limit']>0}{$node['traffic_used']}/{$node['traffic_limit']}GB{else}{$node['traffic_used']}GB{/if}</span> 流量</div>
                                     <div class="nodecheck node-flex">
                                         <i class="material-icons node-icon">network_check</i><span>  x  {$node['traffic_rate']} 倍率</span>
                                     </div>
