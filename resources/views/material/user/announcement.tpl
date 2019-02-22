@@ -109,7 +109,7 @@
 											<p>6：选择一个节点</p>
 											<p><img src="/images/c_mac_6.png"/></p>
 											<p>7：打开谷歌测试一下吧</p>
-											<p><img src="/images/c_mac_7.png"/></p>
+											
 										</div>
 
 										<div class="tab-pane fade page-course" id="all_ssr_linux">
@@ -132,7 +132,7 @@
 											<h5>连接并开始上网</h5>
 											<p><img src="/images/c-linux-7.png"/></p>
 											<hr/>
-											<p>本教程由仟佰星云试验截图整理，转载请附本文链接</p>
+											
 										</div>
 
 										<div class="tab-pane fade page-course" id="all_ssr_ios">
