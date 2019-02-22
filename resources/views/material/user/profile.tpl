@@ -12,7 +12,7 @@
 	<main class="content">
 		<div class="content-header ui-content-header">
 			<div class="container">
-				<h1 class="content-heading">我的账户</h1>
+				<h1 class="content-heading">账号使用记录</h1>
 			</div>
 		</div>
 		<div class="container">
@@ -100,49 +100,6 @@
 							</div>
 						</div>
 
-
-
-						<div class="card">
-							<div class="card-main">
-								<div class="card-inner">
-                                        <div class="card-doubleinner">
-												<p class="card-heading">返利记录</p>
-										</div>
-										
-										<div class="card-table">
-											<div class="table-responsive table-user">
-											{$paybacks->render()}
-												<table class="table">
-													<thead>
-													<tr>
-														<th>###</th>
-														<th>返利用户</th>
-														<th>返利金额</th>
-													</tr>
-													</thead>
-													<tbody>
-													{foreach $paybacks as $payback}
-														<tr>
-															<td><b>{$payback->id}</b></td>
-															{if $payback->user()!=null}
-																<td>{$payback->user()->user_name}
-																</td>
-																{else}
-																<td>已注销
-																</td>
-															{/if}
-															</td>
-															<td>{$payback->ref_get} 元</td>
-														</tr>
-													{/foreach}
-													</tbody>
-												</table>
-											{$paybacks->render()}
-											</div>
-										</div>
-									</div>
-							</div>
-						</div>
 					</div>
 
 				</div>
