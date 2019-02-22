@@ -6,7 +6,7 @@ It will not impact the appearance and can give developers a lot of support :)
 -->    
 <footer class="ui-footer">
 	<div class="container">
-		<marquee>&copy;{date("Y")} {$config["appName"]} |  <a href="/fstaffs">SSPANEL</a>  |  <a class="Keep Right" href="/toos">用户协议(TOS)</a></marquee>{if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
+		<marquee>&copy;{date("Y")} {$config["appName"]} |  <a href="/fstaffs">STAFF</a>  |  <a class="Keep Right" href="/toos">用户协议(TOS)</a></marquee>{if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
 	</div>
 </footer>
 	<!-- js -->
