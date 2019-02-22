@@ -28,10 +28,9 @@
 					<div class="card">
 						<div class="card-main">
 							<div class="card-inner">
-								<p><i class="icon icon-lg">monetization_on</i>&nbsp;余额：&nbsp;<font color="red" size="5">{$user->money}</font>&nbsp;元</p>
-								    <p>1，余额不足？您可以 <a href="/user/code">点我充值</a> 余额到账户；<br>
-								    2，本站无游戏节点，不保证可以观看TVB\NF\huhu等视频网站；<br>
-								3，套餐不可叠加，新购套餐会覆盖旧套餐的效果，V2ray不提供任何技术支持，<br>
+								
+								   <p> 1，本站无游戏节点，不保证可以观看TVB\NF\huhu等视频网站；<br>
+								2，套餐不可叠加，新购套餐会覆盖旧套餐的效果，V2ray不提供任何技术支持，<br>
 								</p>
 							</div>
 						</div>
