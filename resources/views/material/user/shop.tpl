@@ -54,7 +54,7 @@
 								{if $shop->auto_reset_day == 0 }
 									<span>{$shop->bandwidth()}</span> / <span>{$shop->class_expire()}</span>
 									{else}
-									<span>每月自动重置流量</span>
+									<span>{$shop->bandwidth()}</span> / <span>30</span>
 									{/if}
 								</div>
 								<div class="shop-cube">
