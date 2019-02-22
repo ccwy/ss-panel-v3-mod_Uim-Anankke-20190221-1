@@ -17,14 +17,7 @@
 								</a>
 							</div>
 						{if $config['register_mode']!='close'}
-						<div class="rowtocol">
-							<div class="auth-row">
-								<div class="form-group-label auth-row">
-									<label class="floating-label" for="name">昵称</label>
-									<input class="form-control maxwidth-auth" id="name" type="text">
-								</div>
-							</div>
-						</div>
+						
 						<div class="rowtocol">
 							<div class="auth-row">
 								<div class="form-group-label auth-row">
@@ -41,14 +34,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="rowtocol">
-							<div class="auth-row">
-								<div class="form-group form-group-label">
-									<label class="floating-label" for="repasswd">重复密码</label>
-									<input class="form-control maxwidth-auth" id="repasswd" type="password">
-								</div>
-							</div>
-						</div>
+						
 						
 						{if $config['register_mode'] == 'invite'}
 						<div class="rowtocol">
@@ -185,7 +171,7 @@
                 dataType:"json",
                 data:{
                     email: $("#email").val(),
-                    name: $("#name").val(),
+                    
                     passwd: $("#passwd").val(),
                     repasswd: $("#repasswd").val(),
 					{if $recaptcha_sitekey != null}

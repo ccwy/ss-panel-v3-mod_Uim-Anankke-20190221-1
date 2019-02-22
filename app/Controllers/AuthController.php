@@ -321,7 +321,7 @@ class AuthController extends BaseController
             $res['msg'] = "未开放注册。";
             return $response->getBody()->write(json_encode($res));
 		}
-        $name = $request->getParam('name');
+        
         $email = $request->getParam('email');
 		$email = trim($email);
         $email = strtolower($email);
@@ -329,10 +329,10 @@ class AuthController extends BaseController
         $repasswd = $request->getParam('repasswd');
         $code = $request->getParam('code');
 		$code = trim($code);
-        $imtype = $request->getParam('imtype');
+        
         $emailcode = $request->getParam('emailcode');
 		$emailcode = trim($emailcode);
-        $wechat = $request->getParam('wechat');
+        
 		$wechat = trim($wechat);
         // check code
 
@@ -457,7 +457,7 @@ class AuthController extends BaseController
         $user->user_name = $antiXss->xss_clean($email);
         $user->email = $email;
         $user->pass = Hash::passwordHash($passwd);
-        $user->passwd = Tools::genRandomChar(6);
+        $user->passwd = Tools::genRandomChar(12);
         $user->port = Tools::getAvPort();
         $user->t = 0;
         $user->u = 0;
