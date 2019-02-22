@@ -185,10 +185,6 @@
 															{/if}
 															   {$node['name']}
 														</span>
-														|
-														<span class="node-icon"><i class="icon icon-lg">flight_takeoff</i></span>
-														  <strong><b><span class="node-alive">{if $node['online_user'] == -1}N/A{else}{$node['online_user']}{/if}</span></b></strong> 
-											            
 														
 														| <span class="node-icon"><i class="icon icon-lg">import_export</i></span>
 														<span class="node-mothed">{$node['bandwidth']}</span> 
