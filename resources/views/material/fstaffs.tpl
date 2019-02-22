@@ -89,7 +89,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
                            <nav>
 							<ul>  
-                          <a href="javascript:history.back();" class="button">返回上一页</a>
+                         <a href="javascript:history.back();" class="button">返回上一页</a>  <a href="/" class="button">返回到首页</a>
                            </ul>
 						</nav>
                  
@@ -101,7 +101,7 @@ It will not impact the appearance and can give developers a lot of support :)
                               </div>
                      <!-- 版权底部 -->
                       <footer id="footer">
-                   <p class="copyright">&copy;2015-2018 {$config["appName"]}</p>
+                   <p class="copyright">&copy;2015-{date("Y")} {$config["appName"]}    <a href="/fstaffs">STAFF</a>    <a class="Keep Right" href="/toos">用户协议(TOS)</a></p>
                       </footer>
               <!-- 版权结束 -->
 			 </div>
