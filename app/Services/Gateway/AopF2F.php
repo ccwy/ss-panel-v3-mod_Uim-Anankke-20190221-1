@@ -40,7 +40,7 @@ class AopF2F extends AbstractPayment
         }
         if ($amount < (Config::get('codypaymenay'))) {
             $res['ret'] = 0;
-            $res['msg'] = "充值金额需大于15元。";
+            $res['msg'] = "请输入大于15元的充值金额。";
             return $response->getBody()->write(json_encode($res));
         }
         $pl = new Paylist();
