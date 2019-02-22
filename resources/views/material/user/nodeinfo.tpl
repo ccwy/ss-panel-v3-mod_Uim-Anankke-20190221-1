@@ -154,7 +154,7 @@
 													加密方式：{$ssr_item['method']}<br>
 													密码：{$ssr_item['passwd']}<br>
 													协议：{$ssr_item['protocol']}<br>
-													协议参数：{$ssr_item['protocol_param']}<br>
+													
 													混淆：{$ssr_item['obfs']}<br>
 													混淆参数：{$ssr_item['obfs_param']}<br></p>
 												{else}

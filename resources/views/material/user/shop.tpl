@@ -112,7 +112,11 @@
 									<div class="shop-name"> <span>{$shop->name}</span></div>
 									<div class="card-tag tag-gold">VIP {$shop->user_class()}</div>
 									<div class="card-tag tag-orange">¥ {$shop->price}</div>
+									{if $shop->auto_reset_day!=1 }
 									<div class="card-tag tag-cyan">{$shop->bandwidth()} G</div>
+									{else}
+									<div class="card-tag tag-cyan">每月 {$shop->bandwidth()} G</div>
+									{/if}
 									<div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
 								</div>
 								<div>
