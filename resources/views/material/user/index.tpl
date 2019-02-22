@@ -595,7 +595,7 @@
 									<p class="card-heading">账号当前状态</p>
 										<p>1，您的账号等级已于 <code>{$user->class_expire}</code> 过期，<br>
 										2，为不影响您的正常使用，请及时通过  <a href="/user/shop">商店</a> 购买套餐重新激活账号；<br>
-										3，请注意，您的账号将在等级过期 <code>{$config['enable_account_expire_delete_days']}</code>  天后自动删除，</p>
+										3，请注意，您的账号将在等级过期 <code> 7 </code>  天后自动删除，</p>
 										<p>4，如您有任何疑问，请 <a href="/user/ticket/create">建立工单</a> 联系管理员</p>
 																												
 									</div>									
@@ -631,13 +631,14 @@
                                               {/if}
 											</p>
 											
+											{if $user->clsaa >1}
                                           	<p><dt>等级有效期</dt>
                                               <i class="icon icon-md">event</i>
                                               <span class="label-level-expire">剩余</span>
 											  <code><span id="days-level-expire"></span></code>
                                               <span class="label-level-expire">天</span>
                                             </p>
-
+											{/if}
 											
 											<p><dt>帐号注册时间</dt>
 											<dd><i class="icon icon-md">event</i>&nbsp;{$user->reg_date}</dd>	
