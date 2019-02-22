@@ -111,10 +111,7 @@
 											</a>
 												<div class="nodeload">
 													<div class="label label-brand-accent"> ↑点击节点查看配置信息</div>
-												<div>
-													<span class="node-icon"><i class="icon icon-lg">cloud</i></span>
-													<span class="node-load">负载：<code>{if $node['latest_load'] == -1}N/A{else}{$node['latest_load']}%{/if}</code></span>
-												</div>
+												
 											</div>
 										</div>
 									
@@ -151,11 +148,6 @@
 									<div class="tipmiddle">
 										<div><span class="node-icon"><i class="icon icon-lg">chat</i> </span>{$node['info']}</div>
 									</div>
-
-									{if $node['sort'] == 11}
-										{displayV2rayNode node=$node}
-									{/if}
-
 
 								{/if}
 							</div>
@@ -196,7 +188,7 @@
 														<span class="node-icon"><i class="icon icon-lg">flight_takeoff</i></span>
 														  <strong><b><span class="node-alive">{if $node['online_user'] == -1}N/A{else}{$node['online_user']}{/if}</span></b></strong> 
 											            | <span class="node-icon"><i class="icon icon-lg">cloud</i></span>
-														<span class="node-load">负载：{if $node['latest_load'] == -1}N/A{else}{$node['latest_load']}%{/if}</span> 
+														
 														| <span class="node-icon"><i class="icon icon-lg">import_export</i></span>
 														<span class="node-mothed">{$node['bandwidth']}</span> 
 														| <span class="node-icon"><i class="icon icon-lg">equalizer</i></span>
