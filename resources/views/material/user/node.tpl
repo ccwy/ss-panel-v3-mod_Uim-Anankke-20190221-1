@@ -104,7 +104,7 @@
 										{$relay_rule = $tools->pick_out_relay_rule($node['id'], $user->port, $relay_rules)}
 									{/if}
 
-									{if $node['mu_only'] != 1 && $node['sort'] != 11}
+									{if $node['mu_only'] != 1}
 									    <div class="tiptitle">
 											<a href="javascript:void(0);" onClick="urlChange('{$node['id']}',0,{if $relay_rule != null}{$relay_rule->id}{else}0{/if})">
 												{$node['name']}{if $relay_rule != null} - {$relay_rule->dist_node()->name}{/if}
@@ -117,8 +117,7 @@
 												</div>
 											</div>
 										</div>
-									{elseif $node['sort'] == 11}
-										{displayNodeLinkV2 node=$node}
+									
 									{/if}
 
 									{if $node['sort'] == 0 || $node['sort'] == 10}
@@ -237,7 +236,7 @@
                                                  <div class="card nodetip-table">
 														<div class="card-main">
 																<div class="card-inner">
-													{if $node['mu_only'] != 1 && $node['sort'] != 11}
+													{if $node['mu_only'] != 1}
 													
 																<p class="card-heading">
 																	<a href="javascript:void(0);" onClick="urlChange('{$node['id']}',0,{if $relay_rule != null}{$relay_rule->id}{else}0{/if})">{$node['name']}
@@ -245,8 +244,7 @@
 																	<span class="label label-brand-accent">←点击节点查看配置信息</span>
 																</p>
 
-													{elseif $node['sort'] == 11}
-														{displayNodeLinkV2 node=$node}
+													
 												    {/if}
 
                                                     {if $node['sort'] == 0 || $node['sort'] == 10}
