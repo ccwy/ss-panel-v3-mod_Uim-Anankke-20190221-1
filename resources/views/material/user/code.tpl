@@ -23,23 +23,11 @@
                                 <div class="card-inner">
                                     <p class="card-heading"><i class="icon icon-lg">view_compact</i>&nbsp;仪表盘</p>
 										<p><i class="icon icon-lg">monetization_on</i>&nbsp;余额：&nbsp;<font color="red" size="5">{$user->money}</font>&nbsp;元</p>
-									<p><i class="icon icon-lg">shop</i>&nbsp;商店：&nbsp;<a href="/user/shop">点击进入</a><br>
+									<p><i class="icon icon-lg">shop</i>&nbsp;商店：&nbsp;<a href="/user/shop">点击进入</a></p>
 									
-									充值完成后需刷新网页以查看余额，通常一分钟内到账，充值完成后请到商店购买套餐；<br>本站不提供退款，
-									充值过程中如遇到问题，请   <a href="/user/ticket/create">发工单</a>   联系管理员处理。
-                                    {if $config["enable_admin_contact"] == 'true'}
-                                        <p class="card-heading">如果没有到账请立刻联系管理员：</p>
-                                        {if $config["admin_contact1"]!=null}
-                                            <li>{$config["admin_contact1"]}</li>
-                                        {/if}
-                                        {if $config["admin_contact2"]!=null}
-                                            <li>{$config["admin_contact2"]}</li>
-                                        {/if}
-                                        {if $config["admin_contact3"]!=null}
-                                            <li>{$config["admin_contact3"]}</li>
-                                        {/if}
-                                    {/if}
-                                    <br/>
+									<p>充值完成后需刷新网页以查看余额，通常一分钟内到账，充值完成后请到商店购买套餐；<br>本站不提供退款，
+									充值过程中如遇到问题，请   <a href="/user/ticket/create">发工单</a>   联系管理员处理。</p>
+                                    
                                     
                                 </div>
                             </div>

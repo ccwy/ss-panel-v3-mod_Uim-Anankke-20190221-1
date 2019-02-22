@@ -21,7 +21,7 @@
 <div class="card-inner">
     <div class="form-group pull-left">
         <p class="modal-title">本站支持支付宝/微信在线充值</p>
-		<p><font color="red">付款时不能关闭网站二维码页面，否则无法自动到账</font>;</p>
+		<p><font color="red">付款时不能关闭网站二维码，否则无法自动到账</font>;</p>
         {if preg_match('/\|/', $config['Pay_Price'])}
         {$data = explode('|', $config['Pay_Price'])}
         <p>选择充值金额：</p>
