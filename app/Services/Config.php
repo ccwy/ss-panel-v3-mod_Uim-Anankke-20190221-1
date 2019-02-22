@@ -55,7 +55,6 @@ class Config
 			"enable_auto_clean_unused_days" => self::get("enable_auto_clean_unused_days"),  //账号过期时间
 			"murss22" => self::get("murss22"),  // 单端口开关
 			"payurlma" => self::get("payurlma"),  // 充值码购买地址
-			"payurl" => self::get("payurl"),  // 支付回调地址
 			"murss22" => self::get("murss22")  // 单端口开关
 			
          ];

@@ -21,6 +21,7 @@
 <div class="card-inner">
     <div class="form-group pull-left">
         <p class="modal-title">本站支持支付宝/微信在线充值</p>
+		<p><font color="red">付款时不能关闭网站二维码页面，否则无法自动到账</font>;</p>
         {if preg_match('/\|/', $config['Pay_Price'])}
         {$data = explode('|', $config['Pay_Price'])}
         <p>选择充值金额：</p>
@@ -36,7 +37,7 @@
                 <input type="number" id="AliPayType" class="form-control" name="amount"/>
             </div>
             {/if}
-        </div>
+        
 
         {if $config['AliPay_Status']==1}
             <a class="btn btn-flat waves-attach" id="urlChangeAliPay" type="1"><img src="/images/alipay.jpg"
@@ -46,6 +47,7 @@
             <a class="btn btn-flat waves-attach" id="urlChangeAliPay2" type="2"><img src="/images/weixin.jpg"
                                                                                      width="45"></a>
         {/if}
+		</div>
     </div>
 </div>
 <div aria-hidden="true" class="modal modal-va-middle fade" id="AliPayReadyToPay" role="dialog"
@@ -61,6 +63,7 @@
             <div class="modal-inner" style="text-align: center">
 
                 <div class="text-center">
+				<p><font color="red">充值时禁止关闭这里，否则无法自动到账</font></p>
                     <p id="title" class="textShow"></p>
                     <p id="qrcode">
                         <a class="pay"
@@ -202,7 +205,7 @@
             function getCountdown() {
                 countdown.innerHTML = "<span>" + (m >= 10 ? m : '0' + m) + "</span>:<span>" + (s >= 10 ? s : '0' + s) + "</span>";
                 if (m == 0 && s == 0) {
-                    close('倒计时结束了');
+                    close('充值码已过期，如付款成功请联系管理员处理');
                 } else if (m >= 0) {
                     if (s > 0) {
                         s--;
