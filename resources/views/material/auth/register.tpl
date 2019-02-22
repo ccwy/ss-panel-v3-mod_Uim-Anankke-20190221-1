@@ -49,30 +49,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="rowtocol">
-							<div class="auth-row">
-								<div class="form-group form-group-label dropdown">
-									<label class="floating-label" for="imtype">选择您的联络方式</label>
-									<button class="form-control maxwidth-auth" id="imtype" data-toggle="dropdown">
-										
-									</button>
-									<ul class="dropdown-menu" aria-labelledby="imtype">
-										<li><a href="#" class="dropdown-option" onclick="return false;" val="1" data="imtype">微信</a></li>
-										<li><a href="#" class="dropdown-option" onclick="return false;" val="2" data="imtype">QQ</a></li>
-										<li><a href="#" class="dropdown-option" onclick="return false;" val="3" data="imtype">Facebook</a></li>
-										<li><a href="#" class="dropdown-option" onclick="return false;" val="4" data="imtype">Telegram</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="rowtocol">
-							<div class="auth-row">
-								<div class="form-group form-group-label">
-									<label class="floating-label" for="wechat">在这输入联络方式账号</label>
-									<input class="form-control maxwidth-auth" id="wechat" type="text">
-								</div>
-							</div>
-						</div>
+						
 						{if $config['register_mode'] == 'invite'}
 						<div class="rowtocol">
 							<div class="auth-row">
@@ -130,7 +107,7 @@
 						<div class="auth-bottom auth-row auth-reg">
 							<div class="tgauth">
 		
-								<p>注册即代表同意<a href="/tos">服务条款</a>，以及保证所录入信息的真实性，如有不实信息会导致账号被删除。</p>
+								<p>注册即代表同意<a href="/toos">用户协议</a>，以及保证所录入信息的真实性，如有不实信息会导致账号被删除。</p>
 		
 								<!-- <span>Telegram</span><button class="btn" id="calltgauth"><i class="icon icon-lg">near_me</i></button><span>快捷登录</span> -->
 							</div>
@@ -211,9 +188,9 @@
                     name: $("#name").val(),
                     passwd: $("#passwd").val(),
                     repasswd: $("#repasswd").val(),
-					wechat: $("#wechat").val(),{if $recaptcha_sitekey != null}
+					{if $recaptcha_sitekey != null}
                     recaptcha: grecaptcha.getResponse(),{/if}
-					imtype: $("#imtype").val(),
+					
 					code:code{if $enable_email_verify == 'true'},
 					emailcode: $("#email_code").val(){/if}{if $geetest_html != null},
 					geetest_challenge: validate.geetest_challenge,

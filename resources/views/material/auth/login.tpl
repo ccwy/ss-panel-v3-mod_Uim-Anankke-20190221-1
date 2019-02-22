@@ -28,12 +28,7 @@
                         <input class="form-control maxwidth-auth" id="passwd" type="password" name="Password">
                     </div>
                 </div>
-                <div class="auth-row">
-                    <div class="form-group-label auth-row row-login">
-                        <label class="floating-label" for="code">两步验证码（未设置请忽略）</label>
-                        <input class="form-control maxwidth-auth" id="code" type="text" name="Code">
-                    </div>
-                </div>
+                
 
                 {if $geetest_html != null}
                 <div class="form-group-label labelgeetest auth-row">
