@@ -76,7 +76,7 @@
                                 </div>
                                 <div class="nodemiddle node-flex">
                                     <div class="onlinemember node-flex"><i class="material-icons node-icon">flight_takeoff</i><span>{if $node['online_user'] == -1} N/A{else} {$node['online_user']}{/if}</span></div>
-                                    <div class="nodetype">{$node['status']}</div>
+                                    <!-- <div class="nodetype">{$node['status']}</div> -->
                                 </div>
                                 <div class="nodeinfo node-flex">
                                     <div class="nodetraffic node-flex"><i class="material-icons node-icon">equalizer</i><span>{if $node['traffic_limit']>0}{$node['traffic_used']}/{$node['traffic_limit']}GB{else}{$node['traffic_used']}GB{/if}</span></div>
@@ -197,8 +197,8 @@
 														{/if}
 														| <span class="node-icon"><i class="icon icon-lg">network_check</i></span>
 														<span class="node-tr">{$node['traffic_rate']} 倍率</span> 
-														| <span class="node-icon"><i class="icon icon-lg">notifications_none</i></span>
-														<span class="node-status">{$node['status']}</span>
+														<!-- | <span class="node-icon"><i class="icon icon-lg">notifications_none</i></span>
+														<span class="node-status">{$node['status']}</span> -->
 													</div>
 												</div>
 											</div>
