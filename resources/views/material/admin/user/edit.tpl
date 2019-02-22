@@ -65,7 +65,7 @@
 
 								<div class="form-group form-group-label">
 									<label class="floating-label" for="fanli">返利</label>
-									<input class="form-control" id="fanli" type="text" value="{$edit_user->fanli}">
+									<input class="form-control maxwidth-edit" id="fanli" type="text" value="{$edit_user->fanli}">
 								</div>
 
 								<div class="form-group form-group-label">

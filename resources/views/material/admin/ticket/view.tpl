@@ -84,7 +84,7 @@
 
 {include file='admin/footer.tpl'}
 
-<link rel="stylesheet" href="/theme/material/css/editormd.min.css" />
+<script src="/theme/material/js/editormd.min.js"></script>
 <script>
     function changetouser_modal_show() {
         $("#changetouser_modal").modal();
