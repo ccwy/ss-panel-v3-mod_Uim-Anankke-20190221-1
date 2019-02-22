@@ -19,6 +19,7 @@
     <script src="/theme/material/js/jquery.min.js"></script>
     <script src="/theme/material/js/qrcode.min.js"></script>
 
+
 </head>
 <body class="page-orange">
 	<header class="header header-orange header-transparent header-waterfall ui-header">
