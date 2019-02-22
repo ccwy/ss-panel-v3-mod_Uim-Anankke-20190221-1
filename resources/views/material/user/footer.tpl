@@ -1,6 +1,6 @@
 	<footer class="ui-footer">
 		<div class="container">
-			<marquee>&copy;{date("Y")} {$config["appName"]} | Powered by <a href="/fstaffs">STAFFS</a> </marquee> {if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
+			<marquee>&copy;{date("Y")} {$config["appName"]} |  <a href="/fstaffs">SSPANEL</a>  |  <a href="/toos">用户协议(TOS)</a></marquee>{if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
 		</div>
 	</footer>
 

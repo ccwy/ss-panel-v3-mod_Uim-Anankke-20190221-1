@@ -125,7 +125,7 @@
                               </div>
                      <!-- 版权底部 -->
                       <footer id="footer">
-                   <p class="copyright">&copy;{date("Y")} {$config["appName"]}</p>
+                   <p class="copyright">&copy;{date("Y")} {$config["appName"]} |  <a href="/fstaffs">SSPANEL</a>  |  <a href="/toos">用户协议(TOS)</a></p>
                       </footer>
               <!-- 版权结束 -->
 			 </div>
