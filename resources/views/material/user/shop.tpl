@@ -53,7 +53,7 @@
 								<div class="shop-tat">
 								{if $shop->auto_reset_day == 0 }
 									<span>{$shop->bandwidth()}</span> / <span>{$shop->class_expire()}</span>
-									{slse}
+									{else}
 									<span>每月{$shop->bandwidth()}</span>
 									{/if}
 								</div>
