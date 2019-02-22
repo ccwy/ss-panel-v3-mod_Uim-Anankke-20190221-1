@@ -37,6 +37,7 @@ $System_Config['db_password'] = 'sspanel';						//用户名对应的密码
 $System_Config['rssresd'] = 'https://';            // ssr订阅地址
 $System_Config['roudeurl'] = 'https://';            // ssr路由器订阅地址
 $System_Config['payurlma'] = '';            // 充值码购买地址 
+$System_Config['connemail']='';      //联系邮件
 //单端口开关
 $System_Config['murss22']='true';     // 单端口开关
 
