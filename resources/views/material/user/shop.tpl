@@ -82,8 +82,8 @@
 								</div>
 								<div class="shop-content">
 									<div class="shop-content-left">账号有效期:</div><div class="shop-content-right">{$shop->class_expire()}<span>天</span></div>
-									<div class="shop-content-left">重置周期:</div><div class="shop-content-right">{if {$shop->auto_reset_day!=0 }N / A{else}<span>30天</span>{/if}</div>
-									<div class="shop-content-left">重置频率:</div><div class="shop-content-right">{if {$shop->auto_reset_day!=0 }N / A{else}{$shop->bandwidth()}<span>G</span> / {$shop->reset()}<span>天</span>{/if}</div>
+									<div class="shop-content-left">重置周期:</div><div class="shop-content-right">{if {$shop->auto_reset_day!='0' }N / A{else}每隔<span>30天</span>{/if}</div>
+									<div class="shop-content-left">重置流量:</div><div class="shop-content-right">{if {$shop->auto_reset_day!='0' }N / A{else}{$shop->bandwidth()}<span>G</span>
 								</div>
 								<div class="shop-content-extra">
 									{foreach $shop->content_extra() as $service}
@@ -119,11 +119,11 @@
 						
 						<div class="shop-drop dropdown-area">
 							<div class="card-tag tag-black">账号有效期</div> <div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
-							{if $shop->auto_reset_day!=0 }
+							{if $shop->auto_reset_day!='0' }
 							<div class="card-tag tag-black">重置周期</div> <div class="card-tag tag-blue">N/A</div>
 							{else}
 							<div class="card-tag tag-black">重置周期</div> <div class="card-tag tag-blue">30 天</div>
-							<div class="card-tag tag-black">重置频率</div><div class="card-tag tag-blue">{$shop->bandwidth()}G</div>
+							<div class="card-tag tag-black">重置流量</div><div class="card-tag tag-blue">{$shop->bandwidth()}G</div>
 							{/if}
 								{if {$shop->speedlimit()} == '0' }
 								<div class="card-tag tag-black">端口速率</div> <div class="card-tag tag-blue">无限制</div>
