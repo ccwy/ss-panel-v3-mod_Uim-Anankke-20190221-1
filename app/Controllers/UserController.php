@@ -1271,7 +1271,7 @@ class UserController extends BaseController
         foreach ($adminUser as $user) {
             $subject = Config::get('appName') . "-新工单被开启";
             $to = $user->email;
-            $text = "管理员您好，用户id： ".$this->user->id."   ，邮箱： ".$this->user->email."   ，开启了新工单，内容如下：<br>".$content ;  //工单优化
+            $text = "管理员您好，用户id： ".$this->user->id." ，邮箱： ".$this->user->email."   ，开启了新工单，内容如下：<br>".$content;  //工单优化
             try {
                 Mail::send($to, $subject, 'news/warn.tpl', [
                     "user" => $user, "text" => $text
@@ -1327,7 +1327,7 @@ class UserController extends BaseController
             foreach ($adminUser as $user) {
                 $subject = Config::get('appName') . "-工单被重新开启";
                 $to = $user->email;
-                $text = "管理员您好，用户id： ".$this->user->id."   ，邮箱： ".$this->user->email."   ，重新开启了工单，内容如下：<br>".$content ;
+                $text = "管理员您好，用户id： ".$this->user->id."   ，邮箱： ".$this->user->email."   ，重新开启了工单，内容如下：<br>".$content;
                    Mail::send($to, $subject, 'news/warn.tpl', [
                         "user" => $user, "text" => $text
                     ], [
