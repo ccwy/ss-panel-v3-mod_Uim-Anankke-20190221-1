@@ -124,7 +124,7 @@
 
 							<li>
 								
-								<a href="/user/announcement">
+								<a href="https://bk.yunxiao.us">
 									<i class="icon icon-lg">start</i>&nbsp;使用教程
 								</a>
 							</li>
