@@ -1,7 +1,7 @@
 ﻿{include file='user/main.tpl'}
 
-<script src="//cdn.jsdelivr.net/gh/YihanH/canvasjs.js@v2.2/canvasjs.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1"></script>
+<script src="/theme/material/js/canvasjs.min.js"></script>
+<script src="/theme/material/js/jquery3.3.1.min.js"></script>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 {function displayV2rayNode node=null}

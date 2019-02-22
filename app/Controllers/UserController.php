@@ -1591,7 +1591,7 @@ class UserController extends BaseController
 
         if ($pwd == "") {
             $res['ret'] = 0;
-            $res['msg'] = "悟空别闹";
+            $res['msg'] = "请输入。。。";
             return $response->getBody()->write(json_encode($res));
         }
 
@@ -1608,7 +1608,7 @@ class UserController extends BaseController
 
         if (!Tools::is_validate($pwd)) {
             $res['ret'] = 0;
-            $res['msg'] = "悟空别闹";
+            $res['msg'] = "连接密码只能是大小写字母和数字";
             return $response->getBody()->write(json_encode($res));
         }
 

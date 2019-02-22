@@ -11,11 +11,13 @@
 	<!-- css -->
 	<link href="/theme/material/css/base.min.css" rel="stylesheet">
 	<link href="/theme/material/css/project.min.css" rel="stylesheet">
-    <link href="https://fonts.loli.net/css?family=Roboto:300,300italic,400,400italic,500,500italic|Material+Icons" rel="stylesheet">
+    
+	<link href="/theme/material/css/roboto1.css" rel="stylesheet">
+	<link href="/theme/material/css/icon.css" rel="stylesheet">
     <link rel="stylesheet" href="/theme/material/css/user.css">
 	<!-- jquery -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1"></script>
-    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@gh-pages/qrcode.min.js"></script>
+    <script src="/theme/material/js/jquery.min.js"></script>
+    <script src="/theme/material/js/qrcode.min.js"></script>
 
 </head>
 <body class="page-orange">
@@ -75,12 +77,6 @@
 							</li>
 
 							<li>
-								<a href="/user/profile">
-									<i class="icon icon-lg">account_box</i>&nbsp;账户信息
-								</a>
-							</li>
-
-							<li>
 								<a href="/user/edit">
 									<i class="icon icon-lg">sync_problem</i>&nbsp;资料编辑
 								</a>
@@ -123,9 +119,7 @@
 							</li>
 
 							<li>
-								<a href="/user/lookingglass">
-									<i class="icon icon-lg">visibility</i>&nbsp;延迟检测
-								</a>
+								
 								<a href="/user/announcement">
 									<i class="icon icon-lg">start</i>&nbsp;使用教程
 								</a>
@@ -133,7 +127,7 @@
 						</ul>
 
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审计</a>
-						<ul class="menu-collapse collapse in" id="ui_menu_detect">
+						<ul class="menu-collapse collapse out" id="ui_menu_detect">
 							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
 							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;审计记录</a></li>
 						</ul>
