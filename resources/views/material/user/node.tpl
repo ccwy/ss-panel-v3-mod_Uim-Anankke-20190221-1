@@ -86,11 +86,7 @@
                                     <div class="nodeband node-flex"><i class="material-icons node-icon">flash_on</i><span>{if {$node['bandwidth']}==0}N/A{else}{$node['bandwidth']}{/if}</span></div>
                                 </div>
                             </div>
-                            <div class="nodestatus">
-                                <div class="{if $node['online']=="1"}nodeonline{elseif $node['online']=='0'}nodeunset{else}nodeoffline{/if}">
-                                    <i class="material-icons">{if $node['online']=="1"}cloud_queue{elseif $node['online']=='0'}wifi_off{else}flash_off{/if}</i>
-                                </div>
-							</div>
+                            
 
 						</div>
 						<div class="node-tip cust-model" tipindex="{$node@index}">
@@ -185,9 +181,10 @@
 															{/if}
 															   {$node['name']}
 														</span>
-														
-														| <span class="node-icon"><i class="icon icon-lg">import_export</i></span>
-														<span class="node-mothed">{$node['bandwidth']}</span> 
+														|
+														<span class="node-icon"><i class="icon icon-lg">flight_takeoff</i></span>
+														  <strong><b><span class="node-alive">{if $node['online_user'] == -1}N/A{else}{$node['online_user']}{/if}</span></b></strong> 
+											           
 														| <span class="node-icon"><i class="icon icon-lg">equalizer</i></span>
 														{if $node['traffic_limit']>0}
 															<span class="node-band">{$node['traffic_used']}/{$node['traffic_limit']}</span>
