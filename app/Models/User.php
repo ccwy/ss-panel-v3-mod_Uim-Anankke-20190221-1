@@ -118,12 +118,12 @@ class User extends Model
         $uid = $this->attributes['id'];
         $code = new InviteCode();
 		while(true){
-			$temp_code=Tools::genRandomChar(4);
+			$temp_code=Tools::genRandomChar(10);
 			if(InviteCode::where('user_id', $uid)->count()==0){
 				break;
 			}
 		}
-        $code->code = $this->user->id . $temp_code;
+        $code->code = $uid . $temp_code;
         $code->user_id = $uid;
         $code->save();
     }
