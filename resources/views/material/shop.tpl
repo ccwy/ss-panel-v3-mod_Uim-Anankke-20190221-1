@@ -7,6 +7,10 @@
 {include file='header.tpl'}
 
 
+<link rel="stylesheet" href="/theme/material/css/user.css">
+	<!-- jquery -->
+    <script src="/theme/material/js/jquery.min.js"></script>
+    <script src="/theme/material/js/qrcode.min.js"></script>
 
 
 
