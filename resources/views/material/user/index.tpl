@@ -631,7 +631,7 @@
                                               {/if}
 											</p>
 											
-											{if $user->clsaa >1}
+											{if $user->class >1}
                                           	<p><dt>等级有效期</dt>
                                               <i class="icon icon-md">event</i>
                                               <span class="label-level-expire">剩余</span>
