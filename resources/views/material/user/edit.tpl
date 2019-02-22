@@ -13,36 +13,9 @@
 			<section class="content-inner margin-top-no">
              
 
-
+{if $user->class > 1}
 					<div class="col-xx-12 col-sm-6">
-						<div class="card margin-bottom-no">
-							<div class="card-main">
-								<div class="card-inner">
-									<div class="card-inner">
-									<div class="cardbtn-edit">
-										<div class="card-heading">账号登录密码修改</div>
-										<button class="btn btn-flat" id="pwd-update"><span class="icon">check</span>&nbsp;</button>
-									</div>
-										<div class="form-group form-group-label">
-											<label class="floating-label" for="oldpwd">当前密码</label>
-											<input class="form-control maxwidth-edit" id="oldpwd" type="password">
-										</div>
-
-										<div class="form-group form-group-label">
-											<label class="floating-label" for="pwd">新密码</label>
-											<input class="form-control maxwidth-edit" id="pwd" type="password">
-										</div>
-
-										<div class="form-group form-group-label">
-											<label class="floating-label" for="repwd">确认新密码</label>
-											<input class="form-control maxwidth-edit" id="repwd" type="password">
-										</div>
-									</div>
-									
-								</div>
-							</div>
-						</div>
-
+					
 						<div class="card margin-bottom-no">
 							<div class="card-main">
 								<div class="card-inner">
@@ -91,55 +64,6 @@
 							</div>
 						</div>  
 
-						<div class="card margin-bottom-no">
-							<div class="card-main">
-								<div class="card-inner">
-									<div class="card-inner">
-										<div class="cardbtn-edit">
-												<div class="card-heading">联络方式修改</div>
-												<button class="btn btn-flat" id="wechat-update"><span class="icon">check</span>&nbsp;</button>
-										</div>
-										<p>当前联络方式：
-										<code id="ajax-im" data-default="imtype">
-										{if $user->im_type==1}
-										微信
-										{/if}
-
-										{if $user->im_type==2}
-										QQ
-										{/if}
-
-										{if $user->im_type==3}
-										Google+
-										{/if}
-
-										{if $user->im_type==4}
-										Telegram
-										{/if}
-										{$user->im_value}
-										</code>
-										</p>
-										<div class="form-group form-group-label control-highlight-custom dropdown">
-											<label class="floating-label" for="imtype">选择您的联络方式</label>
-											<button class="form-control maxwidth-edit" id="imtype" data-toggle="dropdown" value="{$user->im_type}">
-
-											</button>
-											<ul class="dropdown-menu" aria-labelledby="imtype">
-                                                <li><a href="#" class="dropdown-option" onclick="return false;" val="1" data="imtype">微信</a></li>
-                                                <li><a href="#" class="dropdown-option" onclick="return false;" val="2" data="imtype">QQ</a></li>
-                                                <li><a href="#" class="dropdown-option" onclick="return false;" val="3" data="imtype">Facebook</a></li>
-                                                <li><a href="#" class="dropdown-option" onclick="return false;" val="4" data="imtype">Telegram</a></li>
-											</ul>
-										</div>
-
-										<div class="form-group form-group-label">
-											<label class="floating-label" for="wechat">在这输入联络方式账号</label>
-											<input class="form-control maxwidth-edit" id="wechat" type="text">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
 
 
 
@@ -184,49 +108,18 @@
 										</div>
 									</div>
 
-									<div class="card-inner">
-										<p>当前混淆参数：<code id="ajax-user-obfs-param">{$user->obfs_param}</code></p>
-										<div class="form-group form-group-label">
-											<label class="floating-label" for="obs-param">在这输入混淆参数</label>
-											<input class="form-control maxwidth-edit" id="obfs-param" type="text">
-										</div>
-									</div>
+									
 
 								</div>
 							</div>
-						</div>  
+						</div> 
+                       {/if}						
 
 
 
 
 
 
-
-						<div class="card margin-bottom-no">
-							<div class="card-main">
-								<div class="card-inner">
-									<div class="card-inner">
-										<div class="cardbtn-edit">
-												<div class="card-heading">主题修改</div>
-												<button class="btn btn-flat" id="theme-update"><span class="icon">check</span>&nbsp;</button>
-										</div>
-										<p>当前主题：<code data-default="theme">{$user->theme}</code></p>
-										<div class="form-group form-group-label control-highlight-custom dropdown">
-											<label class="floating-label" for="theme">主题</label>
-											<button id="theme" type="button" class="form-control maxwidth-edit" data-toggle="dropdown" value="{$user->theme}">
-												
-											</button>
-											<ul class="dropdown-menu" aria-labelledby="mail">
-												{foreach $themes as $theme}
-												<li><a href="#" class="dropdown-option" onclick="return false;" val="{$theme}" data="theme">{$theme}</a></li>
-												{/foreach}
-											</ul>
-										</div>
-								        </div>
-							        </div>
-						        </div> 
-                            </div>
-				        </div>  
 
 
 					<div class="col-xx-12 col-sm-6">
@@ -235,110 +128,50 @@
 							<div class="card-main">
 								<div class="card-inner">
 									<div class="card-inner">
-										<div class="cardbtn-edit">
-												<div class="card-heading">IP解封</div>
-												<button class="btn btn-flat" id="unblock"><span class="icon">not_interested</span>&nbsp;</button>
-										</div>
-										<p>当前状态：<code id="ajax-block">{$Block}</code></p>
-
+									<div class="cardbtn-edit">
+										<div class="card-heading">账号登录密码修改</div>
+										<button class="btn btn-flat" id="pwd-update"><span class="icon">check</span>&nbsp;</button>
 									</div>
-								</div>
-							</div>
-						</div> 
-
-	
-
-						<div class="card margin-bottom-no">
-							<div class="card-main">
-								<div class="card-inner">
-									<div class="card-inner">
-										<div class="cardbtn-edit">
-												<div class="card-heading">每日邮件接收设置</div>
-												<button class="btn btn-flat" id="mail-update"><span class="icon">check</span>&nbsp;</button>
+										<div class="form-group form-group-label">
+											<label class="floating-label" for="oldpwd">当前密码</label>
+											<input class="form-control maxwidth-edit" id="oldpwd" type="password">
 										</div>
-										<p class="card-heading"></p>
-										<p>当前设置：<code id="ajax-mail" data-default="mail">{if $user->sendDailyMail==1}发送{else}不发送{/if}</code></p>
-										<div class="form-group form-group-label control-highlight-custom dropdown">
-											<label class="floating-label" for="mail">发送设置</label>
-											<button type="button" id="mail" class="form-control maxwidth-edit" data-toggle="dropdown" value="{$user->sendDailyMail}">
-												
-											</button>
-											<ul class="dropdown-menu" aria-labelledby="mail">
-												<li><a href="#" class="dropdown-option" onclick="return false;" val="1" data="mail">发送</a> </li>
-												<li><a href="#" class="dropdown-option" onclick="return false;" val="0" data="mail">不发送</a></li>
-											</ul>
+
+										<div class="form-group form-group-label">
+											<label class="floating-label" for="pwd">新密码</label>
+											<input class="form-control maxwidth-edit" id="pwd" type="password">
+										</div>
+
+										<div class="form-group form-group-label">
+											<label class="floating-label" for="repwd">确认新密码</label>
+											<input class="form-control maxwidth-edit" id="repwd" type="password">
 										</div>
 									</div>
+									
 								</div>
 							</div>
 						</div>
 
 
 
+						{if $user->class > 1 || $config['port_price']>=0 || $config['port_price_specify']>=0}
 						<div class="card margin-bottom-no">
 							<div class="card-main">
 								<div class="card-inner">
-									<div class="card-inner">
-										<p class="card-heading">两步验证</p>
-										<p>请下载 Google 的两步验证器，扫描下面的二维码。</p>
-										<p><i class="icon icon-lg" aria-hidden="true">android</i><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">&nbsp;Android</a></p>
-										<p><i class="icon icon-lg" aria-hidden="true">tablet_mac</i><a href="https://itunes.apple.com/cn/app/google-authenticator/id388497605?mt=8">&nbsp;iOS</a></p>
-										<p>在没有测试完成绑定成功之前请不要启用。</p>
-										<p>当前设置：<code data-default="ga-enable">{if $user->ga_enable==1} 要求验证 {else} 不要求 {/if}</code></p>
-										<p>当前服务器时间：{date("Y-m-d H:i:s")}</p>
-										<div class="form-group form-group-label control-highlight-custom dropdown">
-											<label class="floating-label" for="ga-enable">验证设置</label>
-											<button type="button" id="ga-enable" class="form-control maxwidth-edit" data-toggle="dropdown" value="{$user->ga_enable}">
-
-											</button>
-											<ul class="dropdown-menu" aria-labelledby="ga-enable">
-												<li><a href="#" class="dropdown-option" onclick="return false;" val="0" data="ga-enable">不要求</a> </li>
-												<li><a href="#" class="dropdown-option" onclick="return false;" val="1" data="ga-enable">要求验证</a></li>
-											</ul>
-										</div>
-
-
-										<div class="form-group form-group-label">
-											<div class="text-center">
-												<div id="ga-qr" class="qr-center"></div>
-												密钥：{$user->ga_token}
-											</div>
-										</div>
-
-
-										<div class="form-group form-group-label">
-											<label class="floating-label" for="code">测试一下</label>
-											<input type="text" id="code" placeholder="输入验证器生成的数字来测试" class="form-control maxwidth-edit">
-										</div>
-
-									</div>
-									<div class="card-action">
-										<div class="card-action-btn pull-left">
-											<a class="btn btn-brand-accent btn-flat waves-attach" href="/user/gareset"><span class="icon">format_color_reset</span>&nbsp;重置</a>
-											<button class="btn btn-flat waves-attach" id="ga-test" ><span class="icon">extension</span>&nbsp;测试</button>
-											<button class="btn btn-brand btn-flat waves-attach" id="ga-set" ><span class="icon">perm_data_setting</span>&nbsp;设置</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>    
-
-						{if $config['port_price']>=0 || $config['port_price_specify']>=0}
-						<div class="card margin-bottom-no">
-							<div class="card-main">
-								<div class="card-inner">
-									{if $config['port_price']>=0}
+									
 									<div class="card-inner">
 										<div class="cardbtn-edit">
 												<div class="card-heading">重置端口</div>
 												<button class="btn btn-flat" id="portreset"><span class="icon">autorenew</span>&nbsp;</button>
 										</div>
+										{if $config['port_price']>=0}
 										<p>对号码不满意？来摇号吧～！</p>
 										<p>随机更换一个端口使用，价格：<code>{$config['port_price']}</code>元/次</p>
+										{/if}
 										<p>重置后1分钟内生效</p>
 										<p>当前端口：<code id="ajax-user-port">{$user->port}</code></p>
 									</div>
-									{/if}
+									
 
 									{if $config['port_price_specify']>=0}
 									<div class="card-inner">
@@ -361,6 +194,7 @@
 						</div>
 						{/if}
 
+                        {if $user->class > 1}
 						<div class="card margin-bottom-no">
 							<div class="card-main">
 								<div class="card-inner">
@@ -382,6 +216,7 @@
 								</div>
 							</div>
 						</div>
+						{/if}
 
 						{if $config['enable_telegram'] == 'true'}
 						<div class="card margin-bottom-no">
@@ -770,10 +605,10 @@ $(".copy-text").click(function () {
                     if (data.ret) {
                         $("#result").modal();
 						$("#ajax-user-passwd").html($("#sspwd").val());
-						$("#msg").html("修改成功");
+						$("#msg").html(data.msg);
                     } else {
                         $("#result").modal();
-						$("#msg").html("修改失败");
+						$("#msg").html(data.msg);
                     }
                 },
                 error: function (jqXHR) {

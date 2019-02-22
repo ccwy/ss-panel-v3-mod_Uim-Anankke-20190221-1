@@ -34,6 +34,12 @@ $System_Config['db_database'] = 'sspanel';						//数据库名
 $System_Config['db_username'] = 'root';							//数据库用户名
 $System_Config['db_password'] = 'sspanel';						//用户名对应的密码
 
+//订阅地址----------------------------------------------------------------------
+$System_Config['rssresd'] = 'https://';            // ssr订阅地址
+$System_Config['roudeurl'] = 'https://';            // ssr路由器订阅地址
+$System_Config['payurlma'] = '';            // 充值码购买地址 
+//单端口开关
+$System_Config['murss22']='true';     // 单端口开关
 
 //邮件设置--------------------------------------------------------------------------------------------
 $System_Config['mailDriver'] = 'none';	//发送邮件方式：none / mailgun / smtp / sendgrid 
