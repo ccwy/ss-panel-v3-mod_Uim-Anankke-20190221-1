@@ -120,7 +120,7 @@
 									
 									{/if}
 
-									{if $node['sort'] == 0 || $node['sort'] == 10 || $node['sort'] == 11}
+									{if $node['sort'] == 0 || $node['sort'] == 10}
 										{$point_node=$node}
 									{/if}
 
@@ -247,7 +247,7 @@
 													
 												    {/if}
 
-                                                    {if $node['sort'] == 0 || $node['sort'] == 10 || $node['sort'] == 10}
+                                                    {if $node['sort'] == 0 || $node['sort'] == 10}
 														{$point_node=$node}
 													{/if}
 
