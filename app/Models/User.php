@@ -123,7 +123,7 @@ class User extends Model
 				break;
 			}
 		}
-        $code->code = $temp_code;
+        $code->code = $this->user->id . $temp_code;
         $code->user_id = $uid;
         $code->save();
     }
