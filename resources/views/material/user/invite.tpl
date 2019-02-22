@@ -9,7 +9,7 @@
 		<div class="container">
 			<section class="content-inner margin-top-no">
 				<div class="row">
-
+{if $user->class>1}
 					<div class="col-xx-12">
 						<div class="card margin-bottom-no">
 							<div class="card-main">
@@ -29,7 +29,7 @@
 						</div>
 					</div>
 
-					{if $user->class!=0}
+					
 
 					{if $user->invite_num!=-1}
 					<div class="col-xx-12">
