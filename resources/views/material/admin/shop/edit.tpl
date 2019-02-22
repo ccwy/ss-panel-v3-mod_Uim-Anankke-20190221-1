@@ -180,7 +180,12 @@
             } else {
 				var auto_reset_bandwidth=0;
 			}
-
+            if ($$.getElementById('auto_reset_day').checked) {
+				var auto_reset_day=1;
+            } else {
+				var auto_reset_day=0;
+			}
+			
             let contentExtra = $$getValue('content_extra');
 			if (contentExtra === '' || contentExtra === '-') {
                 contentExtra = 'check-全球节点分布;check-快速客服响应;check-全平台客户端';
@@ -193,6 +198,7 @@
                 data: {
                     name: $$getValue('name'),
                     auto_reset_bandwidth,
+					auto_reset_day,
                     price: $$getValue('price'),
                     auto_renew: $$getValue('auto_renew'),
                     bandwidth: $$getValue('bandwidth'),
