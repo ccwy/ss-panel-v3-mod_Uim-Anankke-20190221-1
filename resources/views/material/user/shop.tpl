@@ -182,20 +182,6 @@
 									<p id="credit">优惠额度：</p>
 									<p id="total">总金额：</p>
 
-									<div class="checkbox switch">
-										<label for="disableothers">
-											<input checked class="access-hide" id="disableothers" type="checkbox">
-											<span class="switch-toggle"></span>关闭旧套餐自动续费
-										</label>
-									</div>
-									<br/>
-									<div class="checkbox switch" id="autor">
-										<label for="autorenew">
-											<input checked class="access-hide" id="autorenew" type="checkbox">
-											<span class="switch-toggle"></span>到期时自动续费
-										</label>
-									</div>
-									
 								</div>
 								
 								<div class="modal-footer">
@@ -326,7 +312,7 @@ $("#order_input").click(function () {
 				if (data.ret) {
 					$("#result").modal();
 					$("#msg").html(data.msg);
-					window.setTimeout("location.href='/user/shop'", {$config['jump_delay']});
+					window.setTimeout("location.href='/user'", {$config['jump_delay']});
 				} else {
 					$("#result").modal();
 					$("#msg").html(data.msg);
