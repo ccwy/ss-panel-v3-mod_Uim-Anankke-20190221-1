@@ -18,7 +18,8 @@
 										<p class="card-heading">说明</p>
 										<p>您每邀请1位用户注册，对方充值时您会获得对方首次充值金额的 <code>{$config["code_payback"]} %</code> 的返利。</p>
 										
-										<p class="card-heading">已获得返利：<code>{$paybacks_sum}</code> 元</p>
+										<p class="card-heading">返利金额：<code>{$user->fanli} </code> 元</p>
+										
 										<p>返利记录：<a class="btn btn-brand waves-attach" href="/user/fanlifile">点击查询</a> </p>    
 										<p>返利提现：<a class="btn btn-brand waves-attach" href="/user/fanli">点击提现</a></p>
 									</div>
