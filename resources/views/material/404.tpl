@@ -30,7 +30,8 @@
 							</ul>
 						</nav>
               </header>
-					 p class="copyright">&copy;{date("Y")} {$config["appName"]} |  <a href="/fstaffs">STAFF</a>  |  <a href="/toos">用户协议(TOS)</a></p>
+					<footer id="footer">
+                   <p class="copyright">&copy;{date("Y")} {$config["appName"]} |  <a href="/fstaffs">STAFF</a>  |  <a href="/toos">用户协议(TOS)</a></p>
                       </footer>
 			</div>
 			<div id="bg"></div>
