@@ -35,7 +35,7 @@
 												       
 													<th>IP</th>
 													<th>归属地</th>
-													<th>时间</th>
+													
 												</tr>
 												{foreach $userip as $single=>$location}
 													<tr>
@@ -67,7 +67,7 @@
 
 													<th>IP</th>
 													<th>归属地</th>
-													<th>时间</th>
+													
 												</tr>
 												{foreach $userloginip as $single=>$location}
 													<tr>
@@ -75,7 +75,7 @@
 
 														<td>{$single}</td>
 														<td>{$location}</td>
-														<td>{$log->datetime()}</td>
+														
 													</tr>
 												{/foreach}
 											</table>
