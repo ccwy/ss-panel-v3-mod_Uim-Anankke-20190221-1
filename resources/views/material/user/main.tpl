@@ -124,7 +124,7 @@
 
 							<li>
 								
-								<a href="https://bk.yunxiao.us">
+								<a href="https://bk.yunxiao.us" target="_blank">
 									<i class="icon icon-lg">start</i>&nbsp;使用教程
 								</a>
 							</li>
