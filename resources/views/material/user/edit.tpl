@@ -390,7 +390,7 @@ $(".copy-text").click(function () {
         })
     })
 </script>
-
+<script src=" /assets/public/js/jquery.qrcode.min.js "></script>
 <script>
 	var ga_qrcode = '{$user->getGAurl()}',
 	qrcode1 = new QRCode(document.getElementById("ga-qr"));
