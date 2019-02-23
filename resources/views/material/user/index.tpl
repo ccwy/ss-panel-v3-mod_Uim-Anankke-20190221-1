@@ -71,7 +71,7 @@
 										</div>
 										<div class="nodestatus">
 											<div class="infocolor-red">
-												<i class="icon icon-md t4-text">stars</i>
+												<a href="/user/shop>"<i class="icon icon-md t4-text">stars</i></a>
 											</div>
 										</div>
 									</div>
@@ -96,13 +96,13 @@
 											</div>
 											<div class="nodemiddle node-flex">
 												<div class="nodetype">
-													{$user->money} CNY
+													{$user->money} 元
 												</div>
 											</div>
 										</div>
 										<div class="nodestatus">
 											<div class="infocolor-green">
-												<i class="icon icon-md">account_balance_wallet</i>
+												<a href="/user/code"><i class="icon icon-md">account_balance_wallet</i></a>
 											</div>
 										</div>
 									</div>
@@ -137,7 +137,7 @@
 										</div>
 										<div class="nodestatus">
 											<div class="infocolor-yellow">
-												<i class="icon icon-md">phonelink</i>
+												<a href="/user/profile"><i class="icon icon-md">phonelink</i></a>
 											</div>
 										</div>
 									</div>
