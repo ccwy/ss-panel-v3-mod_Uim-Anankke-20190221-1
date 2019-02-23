@@ -62,7 +62,7 @@ Rule:
 - DOMAIN-SUFFIX,vv.video.qq.com,Proxy
 
 ## Youku
-- IP-CIDR,106.11.0.0/16,Proxy,no-resolve
+- IP-CIDR,106.11.0.0/16,Proxy
 
 
 
