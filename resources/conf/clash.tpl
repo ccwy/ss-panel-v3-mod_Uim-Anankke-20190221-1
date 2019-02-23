@@ -41,9 +41,9 @@ Rule:
 ## IQIYI
 - DOMAIN-KEYWORD,qiyi,Proxy
 - DOMAIN-SUFFIX,qy.net,Proxy
-- IP-CIDR,101.227.0.0/16,Proxy,no-resolve
-- IP-CIDR,101.224.0.0/13,Proxy,no-resolve
-- IP-CIDR,119.176.0.0/12,Proxy,no-resolve
+- IP-CIDR,101.227.0.0/16,Proxy
+- IP-CIDR,101.224.0.0/13,Proxy
+- IP-CIDR,119.176.0.0/12,Proxy
 
 ## letv
 - DOMAIN-SUFFIX,api.mob.app.letv.com,Proxy
