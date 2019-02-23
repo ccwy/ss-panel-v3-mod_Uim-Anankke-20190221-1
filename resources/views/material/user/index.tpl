@@ -304,9 +304,10 @@
                                                       <p><a href="/user/announcement">点击这里查看Linux傻瓜式教程</a></p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_ios">
-													{if $display_ios_class>=0}
+													{if $display_ios_class>=0 && $user->class>=$display_ios_class}
+													
 														<div><span class="icon icon-lg text-white">account_box</span> 公共iOS账户：</div>
-														{if $user->class>=$display_ios_class}
+														
 															<div class="float-clear">
 																<input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$ios_account}" readonly="true">
 																<button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$ios_account}">点击复制</button><br>
@@ -316,11 +317,8 @@
 																<input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$ios_password}" readonly="true">
 																<button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$ios_password}">点击复制</button><br>
 															</div>
-														{else}
-															<p class="card-heading" align="center"><b> 
-																<i class="icon icon-lg">visibility_off</i>等级至少为{$display_ios_class}可见，如需升级请<a href="/user/shop">点击这里</a>升级套餐。
-															</b></p>
-														{/if}
+														
+														
 													{/if}
 													<p><span class="icon icon-lg text-white">filter_1</span> 在 Safari 中<a class="btn-dl" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/xcxnig/ssr-download/master/potatso-lite.plist"><i class="material-icons">save_alt</i> 点击安装 Potatso Lite</a> 或在非国区AppStore中搜索<code>Shadowrocket</code>下载安装 </p>
 														<p><span class="icon icon-lg text-white">filter_2</span> 打开 Potatso Lite，点击添加代理，点击右上角的 + 号，选择“订阅”，名字任意填写，开启自动更新，URL填写以下地址并保存即可</p>
