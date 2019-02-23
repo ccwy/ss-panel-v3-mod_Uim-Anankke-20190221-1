@@ -787,13 +787,7 @@ class UserController extends BaseController
 
     public function profile($request, $response, $args)
     {
-        $pageNum = 1;
-        if (isset($request->getQueryParams()["page"])) {
-            $pageNum = $request->getQueryParams()["page"];
-        }
-        $paybacks = Payback::where("ref_by", $this->user->id)->orderBy("datetime", "desc")->paginate(15, ['*'], 'page', $pageNum);
-        $paybacks->setPath('/user/profile');
-
+        
         $iplocation = new QQWry();
 
         $userip = array();
@@ -834,7 +828,7 @@ class UserController extends BaseController
         }
 
 
-        return $this->view()->assign("userip", $userip)->assign("userloginip", $userloginip)->assign("paybacks", $paybacks)->display('user/profile.tpl');
+        return $this->view()->assign("userip", $userip)->assign("userloginip", $userloginip)->display('user/profile.tpl');
     }
 
 
