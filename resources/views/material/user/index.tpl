@@ -532,13 +532,15 @@
 														</ul>
 													</nav>
 													<div class="tab-pane fade active in" id="all_v2ray_windows">
-														<p><span class="icon icon-lg text-white">filter_1</span><a href="/ssr-download/v2rayn.zip" class="btn-dl"><i class="material-icons">save_alt</i> 点击下载 V2RayN</a>，解压至任意磁盘并运行</p>
+														<p><span class="icon icon-lg text-white">filter_1</span><a href="https://github.com/2dust/v2rayN/releases/" class="btn-dl" target="_blank"><i class="material-icons">save_alt</i> 点击下载 V2RayN</a>，解压至任意磁盘并运行</p>
 														<p><span class="icon icon-lg text-white">filter_2</span> 双击任务栏右下角V2RayN图标->订阅->订阅设置->添加->填入下方的地址，点击确定</p>
 														<p><span class="icon icon-lg text-white">filter_3</span> 再次点击订阅->更新订阅，右击任务栏右下角V2RayN图标->启动Http代理</p>
 														<p><span class="icon icon-lg text-white">filter_4</span> 自行选择“Http代理模式”和“服务器”</p>
-														<p> 也可以使用ClashX进行连接，<a href="/ssr-download/Clash-Windows.7z" class="btn-dl"><i class="material-icons">save_alt</i> 点击下载 ClashX</a></p>
-														<div><span class="icon icon-lg text-white">flash_auto</span> 节点订阅地址：</div>
+														<p> 也可以使用ClashX进行连接，<a href="https://github.com/Fndroid/clash_for_windows_pkg/releases/" class="btn-dl" target="_blank"><i class="material-icons">save_alt</i> 点击下载 ClashX</a>，使用ClashX专用订阅地址更新订阅即可。</p>
+														<div><span class="icon icon-lg text-white">flash_auto</span> V2rayN订阅地址：</div>
 														<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$subUrl}{$ssr_sub_token}?mu=2" readonly="true"><button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=2">点击复制</button><br></div>
+														<div><span class="icon icon-lg text-white">flash_auto</span> ClashX专用订阅地址：</div>
+														<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$subUrl}{$ssr_sub_token}?mu=4" readonly="true"><button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=4">点击复制</button><br></div>
 													</div>
 													<div class="tab-pane fade" id="all_v2ray_ios">
 														<p><span class="icon icon-lg text-white">filter_1</span> 在非国区AppStore中搜索<code>Shadowrocket</code>下载安装 </p>
@@ -547,7 +549,7 @@
 														<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" id="v2sub" readonly value="{$subUrl}{$ssr_sub_token}?mu=2" readonly="true"><button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=2">点击复制</button><br></div>
 													</div>
 													<div class="tab-pane fade" id="all_v2ray_android">
-														<p><span class="icon icon-lg text-white">filter_1</span><a href="/ssr-download/v2rayng.apk" class="btn-dl"><i class="material-icons">save_alt</i> 点击下载 V2RayNG</a>并安装</p>
+														<p><span class="icon icon-lg text-white">filter_1</span><a href="https://github.com/2dust/v2rayNG/releases/" class="btn-dl" target="_blank"><i class="material-icons">save_alt</i> 点击下载 V2RayNG</a>并安装</p>
 														<p><span class="icon icon-lg text-white">filter_2</span> 点击左上角菜单按钮展开菜单->订阅设置->点击右上角“+”，URL填写以下地址并点击右上角“√”保存</p>
 														<p><span class="icon icon-lg text-white">filter_3</span> 回到软件主界面->点击右上角“更多”按钮->更新订阅</p>
 														<p><span class="icon icon-lg text-white">filter_4</span> 选择一个节点，点击右下角按钮订阅</p>
@@ -556,14 +558,17 @@
 													</div>
 													<div class="tab-pane fade" id="all_v2ray_info">
 														{$v2_url_all = URL::getAllVMessUrl($user)}
+														<p>ClashX专用订阅地址只能用于Clashx程序使用，其他软件请使用通用订阅地址。</p>
 														<p><a class="copy-text btn-dl" data-clipboard-text="{$v2_url_all}"><i class="material-icons icon-sm">how_to_vote</i>点击这里复制全部 VMess 链接</a></p>
-														<div><span class="icon icon-lg text-white">flash_auto</span> 订阅地址：</div>
+														<div><span class="icon icon-lg text-white">flash_auto</span> 通用订阅地址：</div>
 														<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$subUrl}{$ssr_sub_token}?mu=2" readonly="true" />
 														<button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=2">
 															点击复制
 														</button>
 														<br>
 														</div>
+														<div><span class="icon icon-lg text-white">flash_auto</span> ClashX专用订阅地址：</div>
+														<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$subUrl}{$ssr_sub_token}?mu=4" readonly="true"><button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=4">点击复制</button><br></div>
 													</div>
 												</div>
 											</div>
