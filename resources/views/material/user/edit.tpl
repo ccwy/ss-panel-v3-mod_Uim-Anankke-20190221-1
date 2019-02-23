@@ -390,7 +390,7 @@ $(".copy-text").click(function () {
         })
     })
 </script>
-<script src="/public/theme/material/js/qrcode.min.js"></script>
+<script src="/theme/material/js/qrcode.min.js"></script>
 <script>
 	var ga_qrcode = '{$user->getGAurl()}';
 	jQuery('#ga-qr').qrcode({
