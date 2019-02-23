@@ -623,17 +623,17 @@ class Job
 				$user->auto_reset_bandwidth = 0;
 			}
 			
-            if (strtotime($user->expire_in) < time()&&!file_exists(BASE_PATH."/storage/".$user->id.".expire_in")) {
+           /* if (strtotime($user->expire_in) < time()&&!file_exists(BASE_PATH."/storage/".$user->id.".expire_in")) {
                 $user->transfer_enable = 0;
                 $user->u = 0;
                 $user->d = 0;
                 $user->last_day_t = 0;
-				$user->auto_reset_day = 0;
-				$user->auto_reset_bandwidth = 0;
-				$user->tixing =2;	
-				$user->class=0;
+		$user->auto_reset_day = 0;
+		$user->auto_reset_bandwidth = 0;
+		$user->tixing =2;	
+		$user->class=0;
 				
-				$subject = Config::get('appName')."-您的账户已经过期了";
+		$subject = Config::get('appName')."-您的账户已经过期了";
                 $to = $user->email;
                 $text = "您好，系统发现您的账号已经过期了，账号已被暂停使用，为不影响您的正常使用，请及时登陆网站到商店购买套餐重新激活账号";
                 try {
@@ -662,7 +662,7 @@ class Job
             }
 			elseif (strtotime($user->expire_in) > time()&&file_exists(BASE_PATH."/storage/".$user->id.".expire_in")) {
 				unlink(BASE_PATH."/storage/".$user->id.".expire_in");
-			}
+			}*/
 
 
 			//余量不足检测
@@ -907,7 +907,7 @@ class Job
 				strtotime($user->class_expire)<time() && 
 				strtotime($user->class_expire) > 1420041600
 			){
-				$text = "您好，系统发现您的账号等级已经过期了，账号已被暂停使用，账号过期  7  天以上将自动删除，为不影响您的正常使用，请及时登陆网站到商店购买套餐重新激活账号，如有疑问，请登陆网站发工单联系管理员，谢谢！" ;
+				
 				$reset_traffic=Config::get('class_expire_reset_traffic');
 				if($reset_traffic>=0){
 					$user->transfer_enable =Tools::toGB($reset_traffic);
@@ -918,9 +918,10 @@ class Job
 				    $user->auto_reset_bandwidth = 0;
 				    $user->tixing =2;	
 				    $user->class=0;
-					$text.='流量已经被重置为'.$reset_traffic.'GB';
+				
 				}
                 $subject = Config::get('appName')."-您的账户等级已经过期了";
+		$text = "您好，系统发现您的账号等级已经过期了，账号已被暂停使用，账号过期  7  天以上将自动删除，为不影响您的正常使用，请及时登陆网站到商店购买套餐重新激活账号，如有疑问，请登陆网站发工单联系管理员，谢谢！" ;
                 $to = $user->email;              
                 try {
                     Mail::send($to, $subject, 'news/warn.tpl', [
