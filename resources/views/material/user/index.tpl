@@ -171,7 +171,7 @@
 										</div>
 										<div class="nodestatus">
 											<div class="infocolor-blue">
-												<i class="icon icon-md">settings_input_component</i>
+												<a href="/user/node"><i class="icon icon-md">settings_input_component</i></a>
 											</div>
 										</div>
 									</div>
