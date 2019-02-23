@@ -392,20 +392,19 @@ $(".copy-text").click(function () {
 </script>
 
 <script>
-	var ga_qrcode = '{$user->getGAurl()}',
-	
+	var ga_qrcode = '{$user->getGAurl()}';
+	jQuery('#ga-qr').qrcode({
+		"text": ga_qrcode
+	});
+
 	{if $config['enable_telegram'] == 'true'}
-
 	var telegram_qrcode = 'mod://bind/{$bind_token}';
-
-	if ($$.getElementById("telegram-qr")) {
-		let qrcode = new QRCode(document.getElementById("telegram-qr"));
-		qrcode.clear();
-		qrcode.makeCode(telegram_qrcode);
-	}
-
+	jQuery('#telegram-qr').qrcode({
+		"text": telegram_qrcode
+	});
 	{/if}
 </script>
+
 
 
 <script>
