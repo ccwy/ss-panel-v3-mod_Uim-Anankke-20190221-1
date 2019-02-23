@@ -71,7 +71,7 @@
 										</div>
 										<div class="nodestatus">
 											<div class="infocolor-red">
-												<a href="/user/shop>"<i class="icon icon-md t4-text">stars</i></a>
+												<a href="/user/shop"><i class="icon icon-md t4-text">stars</i></a>
 											</div>
 										</div>
 									</div>
