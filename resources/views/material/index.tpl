@@ -139,7 +139,7 @@
 	 
 	 {literal}
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135138510-1"></script>
+<script async src="/theme/material/js/ua.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -156,7 +156,7 @@
         ga('set', 'dimension1', hostDomain);
         ga('send', 'pageview');
     </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <script async src="/theme/material/js/analytics.js"></script>
     <!-- End Google Analytics -->
     
 
