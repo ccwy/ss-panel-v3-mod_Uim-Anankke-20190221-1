@@ -4,6 +4,17 @@
 		</div>
 	</footer>
 
+<!-- Google Analytics -->
+    <script>
+        window.ga=window.ga||function(){ (ga.q=ga.q||[]).push(arguments) };ga.l=+new Date;
+        ga('create', 'UA-135138510-1', 'auto');
+        var hostDomain = window.location.host || document.location.host || document.domain;
+        ga('set', 'dimension1', hostDomain);
+        ga('send', 'pageview');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <!-- End Google Analytics -->
+    
 	<!-- js -->
 	
 	
