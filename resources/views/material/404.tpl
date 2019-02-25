@@ -39,10 +39,10 @@
 			<script src="/assets/js/skel.min.js"></script>
 			<script src="/assets/js/util.js"></script>
 			<script src="/assets/js/main.js"></script>
-			 
+
 	 {literal}
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135138510-1"></script>
+<script async src="/theme/material/js/ua.js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -51,7 +51,6 @@
   gtag('config', 'UA-135138510-1');
 </script>
 {/literal}
-
 <!-- Google Analytics -->
     <script>
         window.ga=window.ga||function(){ (ga.q=ga.q||[]).push(arguments) };ga.l=+new Date;
@@ -62,5 +61,6 @@
     </script>
     <script async src="/theme/material/js/analytics.js"></script>
     <!-- End Google Analytics -->
-  
+    
+
 </body></html>
