@@ -51,6 +51,7 @@
   gtag('config', 'UA-135138510-1');
 </script>
 {/literal}
+
 <!-- Google Analytics -->
     <script>
         window.ga=window.ga||function(){ (ga.q=ga.q||[]).push(arguments) };ga.l=+new Date;
@@ -59,7 +60,7 @@
         ga('set', 'dimension1', hostDomain);
         ga('send', 'pageview');
     </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <script async src="/theme/material/js/analytics.js"></script>
     <!-- End Google Analytics -->
-    
+  
 </body></html>
