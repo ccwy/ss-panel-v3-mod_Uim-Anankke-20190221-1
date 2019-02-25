@@ -12,9 +12,9 @@
         ga('set', 'dimension1', hostDomain);
         ga('send', 'pageview');
     </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <script async src="/theme/material/js/analytics.js"></script>
     <!-- End Google Analytics -->
-    
+  
 	<!-- js -->
 	
 	
