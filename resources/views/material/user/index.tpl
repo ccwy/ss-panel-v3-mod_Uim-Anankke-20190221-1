@@ -636,7 +636,7 @@
 											<dd><i class="icon icon-md">email</i>&nbsp;{$user->email}</dd>                                          
                                             </p>
 											
-										  {if $user->class == 0 && $user->lastSsTime() != 0}
+										  {if $user->class >1}
 											<p><dt>等级过期时间</dt>
                                               {if $user->class_expire!="1989-06-04 00:05:00"}
 											<dd><i class="icon icon-md">event</i>&nbsp;{$user->class_expire}</dd>
