@@ -115,7 +115,6 @@ $System_Config['code_payback']='10';			//充值返利百分比
 $System_Config['invite_gift']='0';				//邀请新用户获得流量奖励，单位G
 $System_Config['enable_bought_reset']='false';      //购买时是否叠加等级过期时间和流量
 $System_Config['enable_bought_class']='false';      //购买时是否允许跨等级叠加
-$System_Config['port_price']='-1';				//用户随机重置端口所需要的价格，价格小于0时视为不开放购买
 $System_Config['port_price_specify']='-1';		//用户指明钦定端口所需要的价格，价格小于0时视为不开放购买
 
 #高级
