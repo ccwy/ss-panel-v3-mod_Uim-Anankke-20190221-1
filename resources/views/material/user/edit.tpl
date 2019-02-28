@@ -165,10 +165,7 @@
 												<div class="card-heading">重置端口</div>
 												<button class="btn btn-flat" id="portreset"><span class="icon">autorenew</span>&nbsp;</button>
 										</div>
-										{if $config['port_price']>=0}
-										<p>对号码不满意？来摇号吧～！</p>
-										<p>随机更换一个端口使用，价格：<code>{$config['port_price']}</code>元/次</p>
-										{/if}
+										
 										<p>重置后1分钟内生效</p>
 										<p>当前端口：<code id="ajax-user-port">{$user->port}</code></p>
 									</div>
