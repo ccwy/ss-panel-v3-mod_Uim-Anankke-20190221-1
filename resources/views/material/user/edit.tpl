@@ -155,7 +155,7 @@
 
 
 
-						{if $user->class > 1 || $config['port_price']>=0 || $config['port_price_specify']>=0}
+						{if $user->class > 1}
 						<div class="card margin-bottom-no">
 							<div class="card-main">
 								<div class="card-inner">
