@@ -372,28 +372,15 @@ class UserController extends BaseController
     }
 
     public function ResetPort($request, $response, $args)
-    {
-        $price = Config::get('port_price');
+    {      
         $user = $this->user;
-
-        if ($user->money < $price) {
-            $res['ret'] = 0;
-            $res['msg'] = "余额不足";
-            return $response->getBody()->write(json_encode($res));
-        }
-
         $origin_port = $user->port;
-
         $user->port = Tools::getAvPort();
-
-
         $relay_rules = Relay::where('user_id', $user->id)->where('port', $origin_port)->get();
         foreach ($relay_rules as $rule) {
             $rule->port = $user->port;
             $rule->save();
-        }
-
-        $user->money -= $price;
+        }    
         $user->save();
 
         $res['ret'] = 1;
