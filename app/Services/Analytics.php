@@ -141,4 +141,14 @@ class Analytics
         $total = Node::sum('node_bandwidth');
         return Tools::flowAutoShow($total);
     }
+	//年付用户
+	public function classuseryear()
+    {
+        return User::where('class', '>', 22)->where('id','!=',2291)->where('id','!=',2293)->count();
+    }
+	//月付用户
+	public function classusermoth()
+    {
+        return User::where('class', '<', 21)->where('id','!=',2291)->where('id','!=',2293)->count();
+    }
 }
