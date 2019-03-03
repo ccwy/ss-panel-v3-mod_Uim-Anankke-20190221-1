@@ -35,6 +35,8 @@
             'XiaoMi': u.indexOf('MiuiBrowser') > -1,
             'UC': u.indexOf('UC') > -1 || u.indexOf(' UBrowser') > -1,
             'QQBrowser': u.indexOf('QQBrowser') > -1,
+            'TBS': u.indexOf('tbs') > -1,
+            'MQQ': u.indexOf('MQQBrowser') > -1,
             'QQ': u.indexOf('QQ/') > -1,
             'Wechat': u.indexOf('MicroMessenger') > -1,
         };
@@ -78,7 +80,7 @@
         //基本信息
         var hash = {
             engine: ['WebKit', 'Trident', 'Gecko', 'Presto'],
-            browser: ['Safari', 'Chrome', 'Edge', 'IE', 'Firefox', 'Firefox Focus', 'Chromium', 'Opera', 'Vivaldi', 'Yandex', 'Arora', 'Lunascape', 'QupZilla', 'Coc Coc', 'Kindle', 'Iceweasel', 'Konqueror', 'Iceape', 'SeaMonkey', 'Epiphany', '360', '360SE', '360EE', 'UC', 'QQBrowser', 'QQ', 'Baidu', 'Maxthon', 'Sogou', 'LBBROWSER', '2345Explorer', 'TheWorld', 'XiaoMi', 'Quark', 'Qiyu', 'Wechat', 'Taobao', 'Alipay', 'Weibo', 'Douban','Suning', 'iQiYi'],
+            browser: ['Safari', 'Chrome', 'Edge', 'IE', 'Firefox', 'Firefox Focus', 'Chromium', 'Opera', 'Vivaldi', 'Yandex', 'Arora', 'Lunascape', 'QupZilla', 'Coc Coc', 'Kindle', 'Iceweasel', 'Konqueror', 'Iceape', 'SeaMonkey', 'Epiphany', '360', '360SE', '360EE', 'UC', 'QQBrowser', 'QQ', 'TBS', 'MQQ', 'Baidu', 'Maxthon', 'Sogou', 'LBBROWSER', '2345Explorer', 'TheWorld', 'XiaoMi', 'Quark', 'Qiyu', 'Wechat', 'Taobao', 'Alipay', 'Weibo', 'Douban','Suning', 'iQiYi'],
             os: ['Windows', 'Linux', 'Mac OS', 'Android', 'Ubuntu', 'FreeBSD', 'Debian', 'iOS', 'Windows Phone', 'BlackBerry', 'MeeGo', 'Symbian', 'Chrome OS', 'WebOS'],
             device: ['Mobile', 'Tablet']
         };
@@ -108,7 +110,11 @@ if (new Browser().browser == 'XiaoMi') {
 } else if (new Browser().browser == 'UC') {
     window.alert('UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
     bodyEl.innerHTML = browserHTML;
-} else if (new Browser().browser == 'QQ') {
+} else if (new Browser().browser == 'TBS') {
+    alert('腾讯浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
+    window.alert('腾讯浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
+    bodyEl.innerHTML = browserHTML;
+} else if (new Browser().browser == 'MQQ') {
     window.alert('手机 QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用浏览器访问本站。');
     bodyEl.innerHTML = mqqHTML;
 } else if (new Browser().browser == 'QQBrowser') {
