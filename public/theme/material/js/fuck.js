@@ -38,7 +38,7 @@
             'TBS': u.indexOf('tbs') > -1,
             'MQQ': u.indexOf('MQQBrowser') > -1,
             'QQ': u.indexOf('QQ/') > -1,
-            'Wechat': u.indexOf('MicroMessenger') > -1,
+            'Wechat': u.indexOf('MicroMessenger') > -1
         };
         var is360 = false;
         if(_window.chrome){
