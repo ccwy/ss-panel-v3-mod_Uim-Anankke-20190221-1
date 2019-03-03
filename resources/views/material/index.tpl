@@ -18,12 +18,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<link rel="stylesheet" href="/assets/css/main.css"/>
         <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript> 
-	<!-- js -->
-	<script src="https://i.ssrdo.com/assets/js/fuck.js">
-	<!-- js -->
+	
   </head>
   
        <body>
+       <!-- js -->
+	<script src="https://i.ssrdo.com/assets/js/fuck.js">
+	<!-- js -->
 			<div id="wrapper">
               <!--首页开始-->
 					<header id="header">
