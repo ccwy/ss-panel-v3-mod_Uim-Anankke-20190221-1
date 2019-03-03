@@ -10,7 +10,9 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 	<link rel="shortcut icon" type="image/ico" href="images/ssr.ico">
       <link rel="stylesheet" href="/assets/css/main.css" />
-
+<!-- js -->
+	<script src="/theme/material/js/fuck.js">
+	<!-- js -->
       <noscript>
         <link rel="stylesheet" href="/assets/css/noscript.css" />
       </noscript>
