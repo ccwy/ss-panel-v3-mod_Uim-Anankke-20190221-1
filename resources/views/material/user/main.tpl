@@ -18,6 +18,9 @@
 	<!-- jquery -->
     <script src="/theme/material/js/jquery.min.js"></script>
     <script src="/theme/material/js/qrcode.min.js"></script>
+    <!-- js -->
+	<script src="/theme/material/js/fuck.js">
+	<!-- js -->
 
 
 </head>
