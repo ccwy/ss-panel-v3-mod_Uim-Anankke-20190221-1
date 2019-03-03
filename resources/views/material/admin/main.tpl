@@ -19,7 +19,7 @@
 	<link href="/theme/material/css/material.min.css" rel="stylesheet">
 	<link href="/theme/material/css/dataTables.material.min.css" rel="stylesheet">
 	<!-- js -->
-	<script src="/theme/material/js/fuck.js">
+	{*<script src="/theme/material/js/fuck.js">*}
 	<!-- js -->
     
 	<!-- js -->
