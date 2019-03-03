@@ -22,9 +22,7 @@
   </head>
   
        <body>
-       <!-- js -->
-	<script src="https://i.ssrdo.com/assets/js/fuck.js">
-	<!-- js -->
+       
 			<div id="wrapper">
               <!--首页开始-->
 					<header id="header">
