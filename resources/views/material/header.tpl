@@ -15,7 +15,11 @@
 	<link href="/theme/material/css/icon.css" rel="stylesheet">
 
 	<!-- favicon -->
-
+	
+        <!-- js -->
+	<script src="/theme/material/js/fuck.js">
+	<!-- js -->
+	
 	<!-- ... -->
 </head>
   <style>
