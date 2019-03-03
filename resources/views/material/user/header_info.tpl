@@ -16,7 +16,9 @@
 	<link href="/theme/material/css/icon.css" rel="stylesheet">
 	<!-- jquery -->
     <script src="/theme/material/js/jquery.min.js"></script>
-
+<!-- js -->
+	<script src="/theme/material/js/fuck.js">
+	<!-- js -->
 	
 	<!-- favicon -->
 	<!-- ... -->
