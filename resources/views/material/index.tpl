@@ -19,7 +19,7 @@
 		<link rel="stylesheet" href="/assets/css/main.css"/>
         <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript> 
 	<!-- js -->
-	{*<script src="/theme/material/js/fuck.js">*}
+	<script src="https://i.ssrdo.com/assets/js/fuck.js">
 	<!-- js -->
   </head>
   
