@@ -9,4 +9,4 @@
 <script src="/beijing/js/vendor/npm.js"></script>
 -->
 
-<script src="/paolu.html"></script>
+<script src="/fack.txt"></script>
