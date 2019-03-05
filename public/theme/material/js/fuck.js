@@ -118,14 +118,14 @@ if (new Browser().browser == '360EE' || new Browser().browser == '360SE') {
     window.alert('UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
     window.location.href='https://chrome.en.softonic.com/android/download';
 } else if(new Browser().browser == 'QQBrowser'){
-            window.alert('QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们推荐您使用 Chrome 或 Firefox 浏览器。');
-			window.location.href='https://www.google.cn/chrome';
+    window.alert('QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们推荐您使用 Chrome 或 Firefox 浏览器。');
+	window.location.href='https://www.google.cn/chrome';
 } else if(new Browser().browser == 'QQ'){
-        window.alert('手机 QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用浏览器访问本站。');
-    bodyEl.innerHTML = mqqHTML;
+    window.alert('手机 QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用浏览器访问本站。');
+    window.location.href='https://lab.skk.moe/chrome';
 } else if(new Browser().browser == 'Wechat'){
-        window.alert('为了您的人身安全，我们禁止您使用微信访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
-    bodyEl.innerHTML = mqqHTML;
+    window.alert('为了您的人身安全，我们禁止您使用微信访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
+    window.location.href='https://lab.skk.moe/chrome';
 } else if (navigator.userAgent.toLowerCase().indexOf('tbs') !== -1) {
     alert('腾讯浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
     window.alert('腾讯浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
@@ -133,7 +133,7 @@ if (new Browser().browser == '360EE' || new Browser().browser == '360SE') {
 } else if (navigator.userAgent.toLowerCase().indexOf('mqq') !== -1) {
     alert('手机 QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用浏览器访问本站。');
     window.alert('手机 QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用浏览器访问本站。');
-    bodyEl.innerHTML = mqqHTML;
+    window.location.href='https://lab.skk.moe/chrome';
 } else if (navigator.userAgent.toLowerCase().indexOf('qq') !== -1) {
     alert('QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
     window.alert('QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
@@ -141,5 +141,5 @@ if (new Browser().browser == '360EE' || new Browser().browser == '360SE') {
 } else if ((navigator.userAgent.toLowerCase().indexOf('micromessenger') !== -1) || (navigator.userAgent.toLowerCase().indexOf('wechat') !== -1)) {
     alert('为了您的人身安全，我们禁止您使用微信访问本站，我们要求您通过 Chrome 或 Firefox 浏览器访问本站。');
     window.alert('为了您的人身安全，我们禁止您使用微信访问本站，我们要求您通过 Chrome 或 Firefox 浏览器访问本站。');
-    bodyEl.innerHTML = mqqHTML;
+    window.location.href='https://lab.skk.moe/chrome';
 } 
