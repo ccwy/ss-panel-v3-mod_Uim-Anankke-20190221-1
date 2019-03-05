@@ -222,3 +222,5 @@
     });
     // setTimeout("chenPayLoad()", 2000);
 </script>
+
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
