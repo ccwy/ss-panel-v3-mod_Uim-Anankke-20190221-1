@@ -152,7 +152,7 @@
 
 {include file='footer.tpl'}
 
-{if $config['fack'] == 'true'}{include file='fuck.tpl'}{/if}
+
 
 {if $config['register_mode']!='close'}
 <script>
@@ -257,7 +257,7 @@
     })
 </script>
 {/if}
-
+{if $config['fack'] == 'true'}{include file='fuck.tpl'}{/if}
 {if $enable_email_verify == 'true'}
 <script>
 var wait=60;
