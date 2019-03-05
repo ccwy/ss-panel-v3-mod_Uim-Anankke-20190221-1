@@ -105,35 +105,23 @@
 // 判断 360 浏览器跳转
 if (new Browser().browser == '360EE' || new Browser().browser == '360SE') {
     window.alert('为了您的人身安全，我们禁止您使用 360 浏览器访问本站，我们要求您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
-    window.location.href='https://lab.skk.moe/chrome';
+    window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == '360') {
     window.alert('为了您的人身安全，我们禁止您使用 360 浏览器访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
-    window.location.href='https://chrome.en.softonic.com/android/download';
+    window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'XiaoMi' ) {
     window.alert('MIUI 浏览器屏蔽了本站部分内容的访问\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
-    window.location.href='https://chrome.en.softonic.com/android/download';
+    window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'UC' ) {
     window.alert('UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
-    window.location.href='https://chrome.en.softonic.com/android/download';
+    window.location.href='https://www.google.cn/chrome';
 } else if(new Browser().browser == 'QQBrowser'){
     window.alert('QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们推荐您使用 Chrome 或 Firefox 浏览器。');
 	window.location.href='https://www.google.cn/chrome';
 } else if(new Browser().browser == 'QQ'){
     window.alert('手机 QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们推荐您使用 Chrome 或 Firefox 浏览器。');
-    window.location.href='https://lab.skk.moe/chrome';
+    bodyEl.innerHTML = mqqHTML;
 } else if(new Browser().browser == 'Wechat'){
     window.alert('为了您的人身安全，我们禁止您使用微信访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
-    bodyEl.innerHTML = mqqHTML;
-} else if (navigator.userAgent.toLowerCase().indexOf('tbs') !== -1) {
-    window.alert('QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
-    window.location.href='https://lab.skk.moe/chrome';
-} else if (navigator.userAgent.toLowerCase().indexOf('mqq') !== -1) {
-    window.alert('手机 QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们推荐您使用 Chrome 或 Firefox 浏览器。');
-    bodyEl.innerHTML = mqqHTML;
-} else if (navigator.userAgent.toLowerCase().indexOf('qq') !== -1) {
-    window.alert('QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
-    window.location.href='https://chrome.en.softonic.com/android/download';
-} else if ((navigator.userAgent.toLowerCase().indexOf('micromessenger') !== -1) || (navigator.userAgent.toLowerCase().indexOf('wechat') !== -1)) {
-    window.alert('为了您的人身安全，我们禁止您使用微信访问本站，我们要求您通过 Chrome 或 Firefox 浏览器访问本站。');
     bodyEl.innerHTML = mqqHTML;
 } 
