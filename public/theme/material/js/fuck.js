@@ -109,8 +109,6 @@
     };
 }));
 
-var browserHTML = '<div style="padding: 15px"><h2>Chrome</h2><p><a href="https://www.google.cn/chrome">前往 Google Chrome 官网下载 Chrome 浏览器（全平台）</a></p><p><a href="https://lab.skk.moe/chrome">Chrome 离线包下载（仅限 Windows）</a></p><p><a href="https://www.wandoujia.com/apps/com.android.chrome">前往豌豆荚下载 Chrome 安卓版</a></p><p><a href="https://play.google.com/store/apps/details?id=com.android.chrome">前往 Google Play 下载 Chrome 安卓版</a></p><p><a href="https://itunes.apple.com/us/app/chrome/id535886823">前往 App Store 下载 Chrome iOS 版</a></p><h2>Firefox</h2><p><a href="https://www.mozilla.org/zh-CN/firefox/">前往 Mozilla 官网下载 Firefox 浏览器（全平台）</a></p><p><a href="https://www.firefox.com.cn/">前往火狐中文网下载 Firefox 浏览器（全平台）</a></p><p><a href="https://www.wandoujia.com/apps/org.mozilla.firefox">前往豌豆荚下载 Firefox 安卓版</a></p><p><a href="https://www.coolapk.com/apk/org.mozilla.firefox">前往酷安下载 Firefox 安卓版</a></p><p><a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox">前往 Google Play 下载 Firefox 安卓版</a></p></div>';
-
 var mqqHTML = '<div style="padding: 15px"><h2>请从菜单中选择「从浏览器中打开」</h2></div>';
 
 var bodyEl = document.getElementsByTagName('body')[0];
