@@ -216,4 +216,4 @@ function buy(id,auto) {
     
 </script>
 
-{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
+{include file='fuck.tpl'}
