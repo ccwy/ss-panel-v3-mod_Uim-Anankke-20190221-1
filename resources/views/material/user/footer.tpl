@@ -16,9 +16,6 @@
 	<script src="/theme/material/js/project.min.js"></script>
 	<script src="/theme/material/js/clipboard.min.js"></script>
 	</body>	
-<!-- js -->
-<script src="/theme/material/js/fuck.js">
-<!-- js -->
 
 
 </html>
