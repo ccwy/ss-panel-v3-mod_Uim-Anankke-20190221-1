@@ -17,7 +17,7 @@
 	<!-- favicon -->
 	
         <!-- js -->
-	{*<script src="/theme/material/js/fuck.js">*}
+	<script src="/theme/material/js/fuck.js">
 	<!-- js -->
 	
 	<!-- ... -->
