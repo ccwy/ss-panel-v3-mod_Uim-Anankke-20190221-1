@@ -148,5 +148,6 @@ try{
 </script>
 
 {include file='injs.tpl'}
+
 	</body>
 </html>
