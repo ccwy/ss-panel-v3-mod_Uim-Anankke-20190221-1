@@ -123,10 +123,14 @@
                 <!-- BG -->
 			<div id="bg"></div>
 	        	<!-- Scripts -->
-			<script src="/assets/js/jquery.min.js"></script>
+			<!-- <script src="/assets/js/jquery.min.js"></script>
 			<script src="/assets/js/skel.min.js"></script>
 			<script src="/assets/js/util.js"></script>
-         <script src="/assets/js/main.js"></script>
+            <script src="/assets/js/main.js"></script>
+			
+	        <script src="/theme/material/js/fuck.js">
+	        -->
+			{include file='injs.tpl'}
 	
 	 {literal}
 <!-- Global site tag (gtag.js) - Google Analytics -->
