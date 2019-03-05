@@ -29,7 +29,7 @@
         var _this = this;
 
         var match = {
-			//内核
+	     //内核
             'Trident': u.indexOf('Trident') > -1 || u.indexOf('NET CLR') > -1,
             'Presto': u.indexOf('Presto') > -1,
             'WebKit': u.indexOf('AppleWebKit') > -1,
@@ -38,11 +38,11 @@
             '360': u.indexOf('QihooBrowser') > -1,
             '360EE': u.indexOf('360EE') > -1,
             '360SE': u.indexOf('360SE') > -1,
-			'UC': u.indexOf('UC') > -1 || u.indexOf(' UBrowser') > -1,
+	    'UC': u.indexOf('UC') > -1 || u.indexOf(' UBrowser') > -1,
             'QQBrowser': u.indexOf('QQBrowser') > -1,
             'QQ': u.indexOf('QQ/') > -1,            
-			'XiaoMi': u.indexOf('MiuiBrowser') > -1,
-			'Wechat': u.indexOf('MicroMessenger') > -1
+	    'XiaoMi': u.indexOf('MiuiBrowser') > -1,
+	    'Wechat': u.indexOf('MicroMessenger') > -1
            
         };
         var is360 = false;
