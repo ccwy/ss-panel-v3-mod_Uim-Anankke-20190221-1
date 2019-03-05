@@ -11,7 +11,7 @@
 	<!-- jquery -->
     <script src="/theme/material/js/jquery.min.js"></script>
     <script src="/theme/material/js/qrcode.min.js"></script>
-
+{include file='fuck.tpl'}
 
 
 
@@ -216,4 +216,4 @@ function buy(id,auto) {
     
 </script>
 
-{include file='fuck.tpl'}
+
