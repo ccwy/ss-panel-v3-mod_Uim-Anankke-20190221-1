@@ -215,3 +215,4 @@ function buy(id,auto) {
 })();
     
 </script>
+{include file='injs.tpl'}
