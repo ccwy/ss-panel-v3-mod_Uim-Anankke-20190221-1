@@ -173,13 +173,13 @@
 						</li>
 						{/if}
 
-						{* {if $user->isAdmin()}
+						{if $user->isAdmin()}
 							<li>
 								<a href="/admin">
 									<i class="icon icon-lg">person_pin</i>&nbsp;管理面板
 								</a>
 							</li>
-						{/if} *}
+						{/if} 
 
                         {if $can_backtoadmin}
                             <li>
