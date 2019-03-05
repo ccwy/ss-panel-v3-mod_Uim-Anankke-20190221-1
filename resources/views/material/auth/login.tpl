@@ -134,7 +134,7 @@
 
 {include file='footer.tpl'}
 </div>
-{if $config['fack'] == 'true'}{include file='fuck.tpl'}{/if}
+
 {literal}
 <script>
     let calltgbtn = document.querySelector('#calltgauth');
@@ -293,7 +293,7 @@
     </script>
 {/if}
 
-
+{if $config['fack'] == 'true'}{include file='fuck.tpl'}{/if}
 {if $geetest_html != null}
     <script>
         var handlerEmbed = function (captchaObj) {

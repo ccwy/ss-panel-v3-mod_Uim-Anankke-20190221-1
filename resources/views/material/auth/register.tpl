@@ -257,7 +257,7 @@
     })
 </script>
 {/if}
-{if $config['fack'] == 'true'}{include file='fuck.tpl'}{/if}
+
 {if $enable_email_verify == 'true'}
 <script>
 var wait=60;
@@ -309,7 +309,7 @@ function time(o) {
     })
 </script>
 {/if}
-
+{if $config['fack'] == 'true'}{include file='fuck.tpl'}{/if}
 {if $geetest_html != null}
 <script>
 	var handlerEmbed = function (captchaObj) {
