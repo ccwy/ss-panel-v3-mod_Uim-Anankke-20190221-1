@@ -387,7 +387,7 @@ $(".copy-text").click(function () {
         })
     })
 </script>
-
+{*
 <script>
 	var ga_qrcode = '{$user->getGAurl()}',
 	qrcode1 = new QRCode(document.getElementById("ga-qr"));
@@ -407,7 +407,7 @@ $(".copy-text").click(function () {
 
 	{/if}
 </script>
-
+*}
 <script>
     $(document).ready(function () {
         $("#wechat-update").click(function () {
@@ -707,3 +707,7 @@ $(".copy-text").click(function () {
     })
 </script>
 
+
+<!-- js -->
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
+<!-- js -->
