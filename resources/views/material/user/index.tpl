@@ -725,6 +725,7 @@
 {include file='user/footer.tpl'}
 
 <script src="/theme/material/js/shake.js/shake.js"></script>
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
 
 <script>
 ;(function(){
@@ -972,4 +973,3 @@ initGeetest({
 </script>
 {if $recaptcha_sitekey != null}<script src="https://recaptcha.net/recaptcha/api.js" async defer></script>{/if}
 
-{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
