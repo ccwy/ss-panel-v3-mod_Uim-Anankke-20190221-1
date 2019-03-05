@@ -40,6 +40,8 @@ $System_Config['payurlma'] = '';            // 充值码购买地址
 $System_Config['connemail']='';      //联系邮件
 //单端口开关
 $System_Config['murss22']='true';     // 单端口开关
+//屏蔽360微信浏览器
+$System_Config['fack']='true';     // 屏蔽360微信浏览器
 
 //邮件设置--------------------------------------------------------------------------------------------
 $System_Config['mailDriver'] = 'none';	//发送邮件方式：none / mailgun / smtp / sendgrid 
