@@ -815,6 +815,9 @@ window.onload = function() {
 };
  {/if}
 </script>
+
+
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
 <script>
 {if $geetest_html == null}
 
