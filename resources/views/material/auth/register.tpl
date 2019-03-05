@@ -152,6 +152,8 @@
 
 {include file='footer.tpl'}
 
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
+
 {if $config['register_mode']!='close'}
 <script>
     $(document).ready(function(){
