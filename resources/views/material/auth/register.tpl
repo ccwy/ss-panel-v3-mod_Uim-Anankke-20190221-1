@@ -152,8 +152,6 @@
 
 {include file='footer.tpl'}
 
-
-
 {if $config['register_mode']!='close'}
 <script>
     $(document).ready(function(){
@@ -310,6 +308,31 @@ function time(o) {
 </script>
 {/if}
 
+{if $geetest_html != null}
+<script>
+	var handlerEmbed = function (captchaObj) {
+        // 将验证码加到id为captcha的元素里
+
+		captchaObj.onSuccess(function () {
+		    validate = captchaObj.getValidate();
+		});
+
+		captchaObj.appendTo("#embed-captcha");
+
+		captcha = captchaObj;
+		// 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
+    };
+
+	initGeetest({
+		gt: "{$geetest_html->gt}",
+		challenge: "{$geetest_html->challenge}",
+		product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+		offline: {if $geetest_html->success}0{else}1{/if} // 表示用户后台检测极验服务器是否宕机，与SDK配合，用户一般不需要关注
+	}, handlerEmbed);
+</script>
+
+{/if}
+
 {*dumplin:aff链*}
 <script>
 	{*dumplin：轮子1.js读取url参数*}
@@ -361,34 +384,6 @@ function time(o) {
 	}
 	{/if}
 
+
 </script>
-
-
-{if $config['fack'] == 'true'}{include file='fuck.tpl'}{/if}
-
-{if $geetest_html != null}
-<script>
-	var handlerEmbed = function (captchaObj) {
-        // 将验证码加到id为captcha的元素里
-
-		captchaObj.onSuccess(function () {
-		    validate = captchaObj.getValidate();
-		});
-
-		captchaObj.appendTo("#embed-captcha");
-
-		captcha = captchaObj;
-		// 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
-    };
-
-	initGeetest({
-		gt: "{$geetest_html->gt}",
-		challenge: "{$geetest_html->challenge}",
-		product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
-		offline: {if $geetest_html->success}0{else}1{/if} // 表示用户后台检测极验服务器是否宕机，与SDK配合，用户一般不需要关注
-	}, handlerEmbed);
-</script>
-
-{/if}
-
 {if $recaptcha_sitekey != null}<script src="https://recaptcha.net/recaptcha/api.js" async defer></script>{/if}
