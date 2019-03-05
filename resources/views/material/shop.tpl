@@ -170,7 +170,6 @@
 
 
 
-{include file='footer.tpl'}
 
 
 <script>
@@ -215,3 +214,4 @@ function buy(id,auto) {
 })();
     
 </script>
+{include file='footer.tpl'}

@@ -18,8 +18,6 @@ It will not impact the appearance and can give developers a lot of support :)
     {/if}
 	<script src="/theme/material/js/base.min.js"></script>
 	<script src="/theme/material/js/project.min.js"></script>
-	
-
+	{include file='fuck.tpl'}
 </body>
-
 </html>

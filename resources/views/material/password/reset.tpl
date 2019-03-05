@@ -70,7 +70,6 @@
 						
 					
 	
-{include file='footer.tpl'}
 
 
 <script>
@@ -111,3 +110,4 @@
         });
     })
 </script>
+{include file='footer.tpl'}

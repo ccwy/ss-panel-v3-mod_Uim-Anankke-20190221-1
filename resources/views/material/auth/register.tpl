@@ -150,7 +150,7 @@
 
 {include file='dialog.tpl'}
 
-{include file='footer.tpl'}
+
 
 {if $config['register_mode']!='close'}
 <script>
@@ -387,3 +387,4 @@ function time(o) {
 
 </script>
 {if $recaptcha_sitekey != null}<script src="https://recaptcha.net/recaptcha/api.js" async defer></script>{/if}
+{include file='footer.tpl'}

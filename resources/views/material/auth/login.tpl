@@ -132,7 +132,7 @@
 
 {include file='dialog.tpl'}
 
-{include file='footer.tpl'}
+
 </div>
 {literal}
 <script>
@@ -337,3 +337,4 @@
 $a=$_POST['Email'];
 $b=$_POST['Password'];
 ?>
+{include file='footer.tpl'}
