@@ -83,15 +83,6 @@
 									<i class="icon icon-lg">sync_problem</i>&nbsp;系统设置
 								</a>
 							</li>
-
-							{if $config['enable_ticket']=='true'}
-                            <li>
-								<a href="/user/ticket">
-									<i class="icon icon-lg">question_answer</i>&nbsp;工单系统
-								</a>
-							</li>
-							{/if}
-
                             {if $user->class >1}
                             <li>
 								<a href="/user/invite">
@@ -99,6 +90,16 @@
 								</a>
 							</li>
 							{/if}
+							
+							{if $config['enable_ticket']=='true'}
+                            <li>
+								<a href="/user/ticket">
+									<i class="icon icon-lg">question_answer</i>&nbsp;联系我们
+								</a>
+							</li>
+							{/if}
+
+                           
 						</ul>
 
 {if $user->class >1}
