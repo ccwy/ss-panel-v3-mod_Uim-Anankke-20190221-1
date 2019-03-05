@@ -132,7 +132,7 @@
               <!-- 版权结束 -->
 			 </div>
                
-			{include file='injs.tpl'}
+			
 	        	
 
 	     <script language="javascript">
@@ -146,5 +146,7 @@ try{
 };
  
 </script>
+
+{include file='injs.tpl'}
 	</body>
 </html>
