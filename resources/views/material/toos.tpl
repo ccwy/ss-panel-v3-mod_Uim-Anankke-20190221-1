@@ -120,8 +120,8 @@
                       </footer>
               <!-- 版权结束 -->
 			 </div>
-                <!-- BG -->
-			<div id="bg"></div>
+               
+			
 	        	
 			{include file='injs.tpl'}
 	
