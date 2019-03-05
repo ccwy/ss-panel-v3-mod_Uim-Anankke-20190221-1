@@ -22,7 +22,7 @@
     <div class="form-group pull-left">
         <p class="modal-title">本站支持支付宝/微信在线充值</p>
 		<p><font color="red">充值时禁止关闭网站二维码，否则无法自动到账</font>
-		<br>如果不小心关掉二维码导致充值没到账，请   <a href="/user/ticket/create">点这里发工单</a>   联系管理员处理。</p>
+		<br>如充值失败，请   <a href="/user/ticket/create">点这里发工单</a>   联系管理员处理。</p>
         {if preg_match('/\|/', $config['Pay_Price'])}
         {$data = explode('|', $config['Pay_Price'])}
         <p>选择充值金额：</p>
