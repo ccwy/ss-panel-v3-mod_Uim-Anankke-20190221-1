@@ -215,4 +215,7 @@ function buy(id,auto) {
 })();
     
 </script>
-{include file='injs.tpl'}
+
+<!-- js -->
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
+<!-- js -->
