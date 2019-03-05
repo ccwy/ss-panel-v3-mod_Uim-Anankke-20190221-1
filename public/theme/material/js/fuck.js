@@ -29,6 +29,12 @@
         var _this = this;
 
         var match = {
+			//内核
+            'Trident': u.indexOf('Trident') > -1 || u.indexOf('NET CLR') > -1,
+            'Presto': u.indexOf('Presto') > -1,
+            'WebKit': u.indexOf('AppleWebKit') > -1,
+            'Gecko': u.indexOf('Gecko/') > -1,
+            //浏览器
             '360': u.indexOf('QihooBrowser') > -1,
             '360EE': u.indexOf('360EE') > -1,
             '360SE': u.indexOf('360SE') > -1,
