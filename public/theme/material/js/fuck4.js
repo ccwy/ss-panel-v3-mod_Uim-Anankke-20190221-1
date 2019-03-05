@@ -1,4 +1,4 @@
-/**
+/**原版改的
  * 浏览器解析，浏览器、Node.js皆可
  * https://github.com/mumuy/browser
  */
