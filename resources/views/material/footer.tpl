@@ -19,9 +19,6 @@ It will not impact the appearance and can give developers a lot of support :)
 	<script src="/theme/material/js/base.min.js"></script>
 	<script src="/theme/material/js/project.min.js"></script>
 	
-<!-- js -->
-<script src="/theme/material/js/fuck.js">
-<!-- js -->
-  
+
 </body>
 </html>
