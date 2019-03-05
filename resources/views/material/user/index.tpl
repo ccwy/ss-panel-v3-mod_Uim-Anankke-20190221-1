@@ -725,7 +725,7 @@
 {include file='user/footer.tpl'}
 
 <script src="/theme/material/js/shake.js/shake.js"></script>
-
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
 <script>
 ;(function(){
 	'use strict'
