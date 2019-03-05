@@ -1,7 +1,7 @@
 
 {include file='user/main.tpl'}
 {$ssr_prefer = URL::SSRCanConnect($user, 0)}
-{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
+
 	<main class="content">
 
 		<div class="content-header ui-content-header">
@@ -725,7 +725,7 @@
 {include file='user/footer.tpl'}
 
 <script src="/theme/material/js/shake.js/shake.js"></script>
-
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
 
 <script>
 ;(function(){
