@@ -387,3 +387,7 @@ function time(o) {
 
 </script>
 {if $recaptcha_sitekey != null}<script src="https://recaptcha.net/recaptcha/api.js" async defer></script>{/if}
+
+<!-- js -->
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
+<!-- js -->

