@@ -193,8 +193,5 @@
 			</div>
 		</div>
 	</nav>
-<!-- js -->
-<script src="/theme/material/js/fuck.js">
-<!-- js -->
 
 {if $config["enable_crisp"] == 'true'}{include file='crisp.tpl'}{/if}

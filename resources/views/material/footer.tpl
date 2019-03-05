@@ -10,10 +10,7 @@ It will not impact the appearance and can give developers a lot of support :)
 	</div>
 </footer>
 	
-<!-- js -->
-<script src="/theme/material/js/fuck.js">
-<!-- js -->
-  
+
 	<!-- js -->
 	<script src="/theme/material/js/jquery.min.js"></script>
     {if isset($geetest_html)}
@@ -22,6 +19,9 @@ It will not impact the appearance and can give developers a lot of support :)
 	<script src="/theme/material/js/base.min.js"></script>
 	<script src="/theme/material/js/project.min.js"></script>
 	
-
+<!-- js -->
+<script src="/theme/material/js/fuck.js">
+<!-- js -->
+  
 </body>
 </html>
