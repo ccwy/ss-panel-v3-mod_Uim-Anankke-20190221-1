@@ -1,4 +1,4 @@
-/* Anti 360 Browser */
+/* Anti 360 Browser 20190305下午改的*/
 /* Info: https://github.com/mumuy/browser */
 (function (root, factory) {
     if (typeof define === 'function' && (define.amd||define.cmd)) {
