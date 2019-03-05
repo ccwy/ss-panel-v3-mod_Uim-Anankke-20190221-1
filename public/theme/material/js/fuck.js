@@ -109,11 +109,8 @@
     };
 }));
 // 判断 360 浏览器跳转
-if (new Browser().browser == '360EE' || new Browser().browser == '360SE') {
+if (new Browser().browser == '360' || new Browser().browser == '360EE' || new Browser().browser == '360SE') {
     window.alert('为了您的人身安全，我们禁止您使用 360 浏览器访问本站，我们要求您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
-    window.location.href='https://www.google.cn/chrome';
-} else if (new Browser().browser == '360') {
-    window.alert('为了您的人身安全，我们禁止您使用 360 浏览器访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'XiaoMi' ) {
     window.alert('MIUI 浏览器屏蔽了本站部分内容的访问。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
