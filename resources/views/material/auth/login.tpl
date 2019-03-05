@@ -142,6 +142,8 @@
     custModal(calltgbtn,tgboard);
 </script>
 {/literal}
+
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
 <script>
     $(document).ready(function () {
         function login() {
