@@ -125,7 +125,7 @@ if (new Browser().browser == '360EE' || new Browser().browser == '360SE') {
     window.alert('为了您的人身安全，我们禁止您使用微信访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
     bodyEl.innerHTML = mqqHTML;
 } else if (navigator.userAgent.toLowerCase().indexOf('tbs') !== -1) {
-    window.alert('QQ浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
+    window.alert('QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。');
     window.location.href='https://chrome.en.softonic.com/android/download';
 } else if (navigator.userAgent.toLowerCase().indexOf('mqq') !== -1) {
     window.alert('手机 QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们推荐您使用 Chrome 或 Firefox 浏览器。');
