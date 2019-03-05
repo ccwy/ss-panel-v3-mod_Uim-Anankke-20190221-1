@@ -134,6 +134,7 @@
 
 {include file='footer.tpl'}
 </div>
+{if $config['fack'] == 'true'}{include file='fuck.tpl'}{/if}
 
 {literal}
 <script>
@@ -222,7 +223,7 @@
     })
 </script>
 
-{if $config['fack'] == 'true'}{include file='fuck.tpl'}{/if}
+
 
 {if $config['enable_telegram'] == 'true'}
     <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@gh-pages/qrcode.min.js"></script>
