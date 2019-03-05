@@ -814,11 +814,7 @@ window.onload = function() {
     $("#msg").html("您的流量已经用完或账户已经过期了，如需继续使用，请进入商店选购新的套餐~");
 };
  {/if}
-</script>
 
-
-{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
-<script>
 {if $geetest_html == null}
 
 var checkedmsgGE = '<p><a class="btn btn-brand disabled btn-flat waves-attach" href="#"><span class="icon">check</span>&nbsp;已签到</a></p>';
