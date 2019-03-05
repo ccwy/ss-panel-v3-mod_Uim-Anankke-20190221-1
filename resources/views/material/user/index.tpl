@@ -971,5 +971,3 @@ initGeetest({
 
 </script>
 {if $recaptcha_sitekey != null}<script src="https://recaptcha.net/recaptcha/api.js" async defer></script>{/if}
-
-{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}

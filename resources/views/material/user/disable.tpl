@@ -51,5 +51,3 @@
 {include file='user/footer.tpl'}
 
 
-
-{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}

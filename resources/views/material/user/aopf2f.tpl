@@ -79,5 +79,3 @@
     }
 
 </script>
-
-{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}

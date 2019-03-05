@@ -1,7 +1,5 @@
  <!-- BG -->
 <div id="bg"></div>
-
-
  <!-- BG -->
 <!-- js -->
 {if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}

@@ -215,5 +215,3 @@ function buy(id,auto) {
 })();
     
 </script>
-{include file='fuck.tpl'}
-
