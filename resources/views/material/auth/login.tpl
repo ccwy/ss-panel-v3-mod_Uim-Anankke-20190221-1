@@ -134,6 +134,7 @@
 
 {include file='footer.tpl'}
 </div>
+{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
 {literal}
 <script>
     let calltgbtn = document.querySelector('#calltgauth');
@@ -142,8 +143,6 @@
     custModal(calltgbtn,tgboard);
 </script>
 {/literal}
-
-{if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
 <script>
     $(document).ready(function () {
         function login() {
