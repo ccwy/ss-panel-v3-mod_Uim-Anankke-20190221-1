@@ -143,7 +143,11 @@
 									{else}
 									<div class="card-tag tag-cyan">每月 {$shop->bandwidth()} G</div>
 									{/if}
+									{if $shop->id == 68}
+									<div class="card-tag tag-blue">N / A 天</div>
+									{else}
 									<div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
+									{/if}
 								</div>
 								<div>
 								<i class="material-icons">expand_more</i>
