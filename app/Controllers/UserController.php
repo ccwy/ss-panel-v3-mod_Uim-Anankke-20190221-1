@@ -1005,7 +1005,7 @@ class UserController extends BaseController
 
     public function shop($request, $response, $args)
     {
-        $shops = Shop::where("status", 1)->orderBy("id")->get();  //商品显示模式优化
+        $shops = Shop::where("status", 1)->get();  //商品显示模式优化
         return $this->view()->assign('shops', $shops)->display('user/shop.tpl');
     }
 
@@ -1079,6 +1079,12 @@ class UserController extends BaseController
         if ($shop == null) {
             $res['ret'] = 0;
             $res['msg'] = "非法请求";
+            return $response->getBody()->write(json_encode($res));
+        }
+	//流量加油包仅限年付用户购买
+	if ($shop->id == 68 && $user->class <22 ) {
+            $res['ret'] = 0;
+            $res['msg'] = "流量加油包仅限年付用户购买";
             return $response->getBody()->write(json_encode($res));
         }
 
