@@ -23,13 +23,23 @@
 											</div>
 											<div class="nodemiddle node-flex">
 												<div class="nodetype">
-													{if $user->class ==0}
+											  {if $user->class ==0}
 											  <dd>账号未激活</dd>											  
+											  {if $user->class ==11}
+											  <dd>青铜会员</dd>
+											  {if $user->class ==12}
+											  <dd>白银会员</dd>
+											  {if $user->class ==13}
+											  <dd>黄金会员</dd>
+											  {if $user->class ==14}
+											  <dd>钻石会员</dd>
+											  
+											  
 											  {elseif $user->class ==16}
 											  <dd> 永久会员</dd>
 											  {elseif $user->class==17}											  
-                                              <dd> 月付VIP1</dd>
-                                              {elseif $user->class==18}
+                                                                                          <dd> 月付VIP1</dd>
+                                                                                          {elseif $user->class==18}
 											  <dd> 月付VIP2</dd>
 											  {elseif $user->class==19}
 											  <dd> 月付VIP3</dd>
@@ -45,27 +55,23 @@
 											  <dd> 年付SVIP2</dd>
 											  {elseif $user->class==25}
 											  <dd> 年付SVIP3</dd>
+											  
 											  {elseif $user->class==26}
-											  <dd> 年付SVIP4</dd>
-											  {elseif $user->class==30}
-											  <dd> 预售年付V2ray</dd>
-											  {elseif $user->class==31}
-											  <dd> 年付V2ray1</dd>
-											  {elseif $user->class==32}
-											  <dd> 年付V2ray2</dd>
-											  {elseif $user->class==33}
-											  <dd> 年付V2ray3</dd>
-											  {elseif $user->class==34}
-											  <dd> 年付V2ray4</dd>
+											  <dd> 青铜SVIP</dd>
+											  {elseif $user->class==27}
+											  <dd> 白银SVIP</dd>
+											  {elseif $user->class==28}
+											  <dd> 黄金SVIP</dd>
+											  {elseif $user->class==29}
+											  <dd> 钻石SVIP</dd>
 											  
 											  
 											  {elseif $user->class==5}
 											  <dd> 年付VIP</dd>
 											
-                                          {else}
-                                              <dd> 未知等级</dd>
-											  
-                                              {/if}
+                                                                                          {else}
+                                                                                          <dd> 未知等级</dd>
+                                                                                          {/if}
 												</div>
 											</div>
 										</div>
