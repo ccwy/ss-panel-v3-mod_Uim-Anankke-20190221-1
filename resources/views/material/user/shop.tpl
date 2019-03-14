@@ -94,7 +94,7 @@
 
 								</div>
 								<div class="shop-content">
-								{if $shop->id() == 68 }
+								{if $shop->id == 68 }
 								
 									<div class="shop-content-left">账号有效期:</div><div class="shop-content-right">无</span></div>
 									<div class="shop-content-left">重置周期:</div><div class="shop-content-right"><span>无</span>{/if}</div>
