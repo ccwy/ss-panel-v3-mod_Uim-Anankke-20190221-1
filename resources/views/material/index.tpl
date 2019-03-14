@@ -36,13 +36,13 @@
                                     等级：{if $user->class ==0}
 											  <dd>账号未激活</dd>											  
 											  {if $user->class ==11}
-											  <dd>青铜会员</dd>
+											  <dd>青铜VIP</dd>
 											  {if $user->class ==12}
-											  <dd>白银会员</dd>
+											  <dd>白银VIP</dd>
 											  {if $user->class ==13}
-											  <dd>黄金会员</dd>
+											  <dd>黄金VIP</dd>
 											  {if $user->class ==14}
-											  <dd>钻石会员</dd>
+											  <dd>钻石VIP</dd>
 											  
 											  
 											  {elseif $user->class ==16}
