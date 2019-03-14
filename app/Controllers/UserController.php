@@ -1005,7 +1005,7 @@ class UserController extends BaseController
 
     public function shop($request, $response, $args)
     {
-        $shops = Shop::where("status", 1)->orderBy("name")->get();  //商品显示模式优化
+        $shops = Shop::where("status", 1)->orderBy("id")->get();  //商品显示模式优化
         return $this->view()->assign('shops', $shops)->display('user/shop.tpl');
     }
 
