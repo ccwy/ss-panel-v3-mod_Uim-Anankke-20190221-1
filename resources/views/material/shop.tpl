@@ -132,6 +132,8 @@
 									<div class="shop-name"> <span>{$shop->name}</span></div>
 									{if $shop->auto_reset_day == 1 }
 									<div class="card-tag tag-gold">SVIP年付</div>
+									{elseif $shop->id == 68}
+									<div class="card-tag tag-gold">流量包</div>
 									{else}
 									<div class="card-tag tag-gold">VIP月付</div>
 									{/if}
