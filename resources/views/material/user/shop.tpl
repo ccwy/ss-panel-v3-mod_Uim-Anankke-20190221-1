@@ -139,9 +139,8 @@
 									{else}
 									<div class="card-tag tag-cyan">每月 {$shop->bandwidth()} G</div>
 									{/if}
-									{if $shop->id == 68}
-									<div class="card-tag tag-blue">N / A 天</div>
-									{else}
+									{if $shop->id != 68}
+									
 									<div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
 									{/if}
 								</div>
@@ -152,9 +151,8 @@
 						<a class="btn btn-brand-accent shop-btn" href="javascript:void(0);" onClick="buy('{$shop->id}',{$shop->auto_renew})">购买</a>
 						
 						<div class="shop-drop dropdown-area">
-						        {if $shop->id == 68}
-						        <div class="card-tag tag-black">账号有效期</div> <div class="card-tag tag-blue">N / A 天</div>
-						        {else}
+						        {if $shop->id != 68}
+						       
 							<div class="card-tag tag-black">账号有效期</div> <div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
 						        {/if}	
 							{if $shop->auto_reset_day!=1 }
