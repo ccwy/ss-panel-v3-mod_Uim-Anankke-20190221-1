@@ -36,13 +36,13 @@
                                     等级：{if $user->class ==0}
 											  <dd>账号未激活</dd>											  
 											  {elseif $user->class ==11}
-											  <dd>青铜VIP</dd>
+											  <dd>月付青铜VIP</dd>
 											  {elseif $user->class ==12}
-											  <dd>白银VIP</dd>
+											  <dd>月付白银VIP</dd>
 											  {elseif $user->class ==13}
-											  <dd>黄金VIP</dd>
+											  <dd>月付黄金VIP</dd>
 											  {elseif $user->class ==14}
-											  <dd>钻石VIP</dd>
+											  <dd>月付钻石VIP</dd>
 											  
 											  
 											  {elseif $user->class ==16}
@@ -67,13 +67,13 @@
 											  <dd> 年付SVIP3</dd>
 											  
 											  {elseif $user->class==26}
-											  <dd> 青铜SVIP</dd>
+											  <dd> 年付青铜SVIP</dd>
 											  {elseif $user->class==27}
-											  <dd> 白银SVIP</dd>
+											  <dd> 年付白银SVIP</dd>
 											  {elseif $user->class==28}
-											  <dd> 黄金SVIP</dd>
+											  <dd> 年付黄金SVIP</dd>
 											  {elseif $user->class==29}
-											  <dd> 钻石SVIP</dd>
+											  <dd> 年付钻石SVIP</dd>
 											  
 											  
 											  {elseif $user->class==5}
