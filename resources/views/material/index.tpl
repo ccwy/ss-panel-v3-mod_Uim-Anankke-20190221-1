@@ -33,38 +33,55 @@
 						<div class="content">
 							<div class="inner">
                                   <p>用户：<code>{$user->user_name}</code>
-                                    等级：{if $user->class==0}
-                                          <code>未激活</code>
-                                         {elseif $user->class==5}
-                                         <code>年付VIP</code>
-										 {elseif $user->class==16}
-										 <code>永久会员</code>
-										 {elseif $user->class==17}
-										 <code>月付VIP</code>										 
-										 {elseif $user->class==18}
-										 <code>月付VIP</code>
-										 {elseif $user->class==19}
-										 <code>月付VIP</code>
-										 {elseif $user->class==22}
-										 <code>半年付VIP</code>
-										 {elseif $user->class==23}
-										 <code>年付SVIP</code>	
-
-										 {elseif $user->class==30}
-										 <code>预售年付V2ray</code>	
-										 {elseif $user->class==31}
-										 <code>年付V2ray1</code>	
-										 {elseif $user->class==32}
-										 <code>年付V2ray2</code>	
-										 {elseif $user->class==33}
-										 <code>年付V2ray3</code>	
-										 {elseif $user->class==34}
-										 <code>年付V2ray4</code>	
-										 
-									
-										 {else}
-										 <code>未知等级</code>
-										 {/if}
+                                    等级：{if $user->class ==0}
+											  <dd>账号未激活</dd>											  
+											  {if $user->class ==11}
+											  <dd>青铜会员</dd>
+											  {if $user->class ==12}
+											  <dd>白银会员</dd>
+											  {if $user->class ==13}
+											  <dd>黄金会员</dd>
+											  {if $user->class ==14}
+											  <dd>钻石会员</dd>
+											  
+											  
+											  {elseif $user->class ==16}
+											  <dd> 永久会员</dd>
+											  {elseif $user->class==17}											  
+                                                                                          <dd> 月付VIP1</dd>
+                                                                                          {elseif $user->class==18}
+											  <dd> 月付VIP2</dd>
+											  {elseif $user->class==19}
+											  <dd> 月付VIP3</dd>
+											  {elseif $user->class==20}
+											  <dd> 月付VIP4</dd>
+											  {elseif $user->class==21}
+											  <dd> 月付VIP5</dd>
+											  {elseif $user->class==22}
+											  <dd> 月付VIP6</dd>
+											  {elseif $user->class==23}
+											  <dd> 年付SVIP1</dd>
+											  {elseif $user->class==24}
+											  <dd> 年付SVIP2</dd>
+											  {elseif $user->class==25}
+											  <dd> 年付SVIP3</dd>
+											  
+											  {elseif $user->class==26}
+											  <dd> 青铜SVIP</dd>
+											  {elseif $user->class==27}
+											  <dd> 白银SVIP</dd>
+											  {elseif $user->class==28}
+											  <dd> 黄金SVIP</dd>
+											  {elseif $user->class==29}
+											  <dd> 钻石SVIP</dd>
+											  
+											  
+											  {elseif $user->class==5}
+											  <dd> 年付VIP</dd>
+											
+                                                                                          {else}
+                                                                                          <dd> 未知等级</dd>
+                                                                                          {/if}
 										 
                                     过期时间：{if $user->class_expire!="1989-06-04 00:05:00"}
 											    <code>{$user->class_expire}</code>
