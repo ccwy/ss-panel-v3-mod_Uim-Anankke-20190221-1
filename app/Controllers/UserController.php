@@ -1082,11 +1082,12 @@ class UserController extends BaseController
             return $response->getBody()->write(json_encode($res));
         }
 	//流量加油包仅限年付用户购买
-	if ($shop->id == 68 && $user->class <22 ) {
+	if ($shop->id == 68) { 
+	if ($user->class < 22 ) {
             $res['ret'] = 0;
             $res['msg'] = "流量加油包仅限年付用户购买";
             return $response->getBody()->write(json_encode($res));
-        }
+        } }
 
         if ($coupon == "") {
             $credit = 0;
