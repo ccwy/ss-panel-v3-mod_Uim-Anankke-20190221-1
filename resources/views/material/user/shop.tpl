@@ -126,7 +126,11 @@
                         <div class="card">
 								<div>
 									<div class="shop-name"> <span>{$shop->name}</span></div>
-									<div class="card-tag tag-gold">VIP {$shop->user_class()}</div>
+									{if $shop->auto_reset_day == 1 }
+									<div class="card-tag tag-gold">SVIP年付</div>
+									{else}
+									<div class="card-tag tag-gold">VIP月付</div>
+									{/if}
 									<div class="card-tag tag-orange">¥ {$shop->price}</div>
 									{if $shop->auto_reset_day!=1 }
 									<div class="card-tag tag-cyan">{$shop->bandwidth()} G</div>
