@@ -25,13 +25,13 @@
 												<div class="nodetype">
 											  {if $user->class ==0}
 											  <dd>账号未激活</dd>											  
-											  {if $user->class ==11}
+											  {elseif $user->class ==11}
 											  <dd>青铜VIP</dd>
-											  {if $user->class ==12}
+											  {elseif $user->class ==12}
 											  <dd>白银VIP</dd>
-											  {if $user->class ==13}
+											  {elseif $user->class ==13}
 											  <dd>黄金VIP</dd>
-											  {if $user->class ==14}
+											  {elseif $user->class ==14}
 											  <dd>钻石VIP</dd>
 											  
 											  
