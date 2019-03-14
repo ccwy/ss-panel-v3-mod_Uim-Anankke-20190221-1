@@ -58,7 +58,7 @@
 								<div class="form-group form-group-label">
 									<div class="checkbox switch">
 										<label for="auto_reset_day">
-											<input class="access-hide" id="auto_reset_day" type="checkbox"><span class="switch-toggle"></span>每月购买当日自动重置用户流量
+											<input {if $shop->auto_reset_day==1}checked{/if} class="access-hide" id="auto_reset_day" type="checkbox"><span class="switch-toggle"></span>每月购买当日自动重置用户流量
 										</label>
 									</div>
 								</div>
