@@ -89,9 +89,16 @@
 
 								</div>
 								<div class="shop-content">
+								{if $shop->id == 68 }
+								
+									<div class="shop-content-left">仅重置流量为</div><div class="shop-content-right">50G</div>
+									<div class="shop-content-left">仅限流量用尽</div><div class="shop-content-right">购买</div>
+									<div class="shop-content-left">仅限年付用户</div><div class="shop-content-right">购买</div>
+								{else}
 									<div class="shop-content-left">账号有效期:</div><div class="shop-content-right">{$shop->class_expire()}<span>天</span></div>
 									<div class="shop-content-left">重置周期:</div><div class="shop-content-right">{if $shop->auto_reset_day == 0 }N / A{else}30<span>天</span>{/if}</div>
 									<div class="shop-content-left">重置流量:</div><div class="shop-content-right">{if $shop->auto_reset_day == 0 }N / A{else}{$shop->bandwidth()}<span>G</span> {/if}</div>
+								{/if}	
 								</div>
 								<div class="shop-content-extra">
 									{foreach $shop->content_extra() as $service}
