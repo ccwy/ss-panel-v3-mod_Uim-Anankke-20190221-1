@@ -1439,8 +1439,7 @@ class UserController extends BaseController
     {
         $protocol = $request->getParam('protocol');
         $obfs = $request->getParam('obfs');
-        $obfs_param = $request->getParam('obfs_param');
-        $obfs_param = trim($obfs_param);
+       
 
         $user = $this->user;
 
@@ -1466,8 +1465,7 @@ class UserController extends BaseController
 
         $user->protocol = $antiXss->xss_clean($protocol);
         $user->obfs = $antiXss->xss_clean($obfs);
-        $user->obfs_param = $antiXss->xss_clean($obfs_param);
-
+      
         if (!Tools::checkNoneProtocol($user)) {
             $res['ret'] = 0;
             $res['msg'] = "您好，系统检测到您目前的加密方式为 none ，但您将要设置为的协议并不在以下协议<br>" . implode(',', Config::getSupportParam('allow_none_protocol')) . '<br>之内，请您先修改您的加密方式，再来修改此处设置。';
