@@ -447,8 +447,8 @@ $(".copy-text").click(function () {
                 dataType: "json",
                 data: {
                     protocol: $("#protocol").val(),
-					obfs: $("#obfs").val(),
-					obfs_param: $("#obfs-param").val()
+					obfs: $("#obfs").val()
+					
                 },
                 success: function (data) {
                     if (data.ret) {
