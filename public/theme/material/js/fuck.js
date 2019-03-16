@@ -133,18 +133,18 @@ if (new Browser().browser == '360' || new Browser().browser == '360EE' || new Br
     window.alert('为了您的人身安全，我们禁止您使用 手机QQ 访问本站，我们推荐您使用 Chrome 或 Firefox 浏览器。');
     bodyEl.innerHTML = mqqHTML;
 } else if(new Browser().browser == 'Wechat') {
-    window.alert('为了您的人身安全，我们禁止您使用微信访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
+    window.alert('为了您的人身安全，我们禁止您使用 微信 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
     bodyEl.innerHTML = mqqHTML;
 } else if (new Browser().browser == '2345Explorer' ) {
-    window.alert('2345 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.alert('2345 浏览器 使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'TheWorld' ) {
-    window.alert('世界之窗 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.alert('世界之窗浏览器 使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'Sogou' ) {
-    window.alert('搜狗 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.alert('搜狗浏览器 使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'Baidu' ) {
-    window.alert('百度 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.alert('百度浏览器 使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 }
