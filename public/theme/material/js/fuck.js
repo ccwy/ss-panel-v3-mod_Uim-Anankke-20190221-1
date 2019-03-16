@@ -42,8 +42,11 @@
             'QQBrowser': u.indexOf('QQBrowser') > -1,
             'QQ': u.indexOf('QQ/') > -1,            
 	    'XiaoMi': u.indexOf('MiuiBrowser') > -1,
-	    'Wechat': u.indexOf('MicroMessenger') > -1
-           
+	    'Wechat': u.indexOf('MicroMessenger') > -1,
+	    'Baidu': u.indexOf('Baidu') > -1 || u.indexOf('BIDUBrowser') > -1,
+	    'Sogou': u.indexOf('MetaSr') > -1 || u.indexOf('Sogou') > -1,
+	    '2345Explorer': u.indexOf('2345Explorer') > -1,
+            'TheWorld': u.indexOf('TheWorld') > -1	  
         };
         var is360 = false;
         if(_window.chrome){
