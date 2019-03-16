@@ -130,7 +130,7 @@ if (new Browser().browser == '360' || new Browser().browser == '360EE' || new Br
     window.alert('QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们推荐您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
 	window.location.href='https://www.google.cn/chrome';
 } else if(new Browser().browser == 'QQ') {
-    window.alert('手机 QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们推荐您使用 Chrome 或 Firefox 浏览器。');
+    window.alert('为了您的人身安全，我们禁止您使用 手机QQ 访问本站，我们推荐您使用 Chrome 或 Firefox 浏览器。');
     bodyEl.innerHTML = mqqHTML;
 } else if(new Browser().browser == 'Wechat') {
     window.alert('为了您的人身安全，我们禁止您使用微信访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
