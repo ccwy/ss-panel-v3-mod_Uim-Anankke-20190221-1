@@ -404,7 +404,7 @@ class URL
 
         foreach ($nodes as $node) {
             $result .= (URL::getV2Url($user, $node) . "\n");
-	    $string = preg_replace('/\n$/','',$result);
+	    $string = preg_replace('/\n$/','',$result);  //修复v2rayng订阅换行符问题
         }
 
         return $string;
