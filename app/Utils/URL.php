@@ -403,7 +403,7 @@ class URL
         $result = "";
 
         foreach ($nodes as $node) {
-            $result .= preg_replace(URL::getV2Url($user, $node) . "\n" , "" , $result);
+            $result .= (URL::getV2Url($user, $node) . "\n");
         }
 
         return $result;
