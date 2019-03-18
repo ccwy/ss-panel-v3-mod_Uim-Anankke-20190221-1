@@ -44,7 +44,8 @@
 											  {elseif $user->class ==14}
 											  <dd>月付钻石VIP</dd>
 											  
-											  
+											  {elseif $user->class ==3}
+											  <dd> 永久会员</dd>
 											  {elseif $user->class ==16}
 											  <dd> 永久会员</dd>
 											  {elseif $user->class==17}											  
