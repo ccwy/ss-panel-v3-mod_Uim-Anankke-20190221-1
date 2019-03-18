@@ -404,9 +404,10 @@ class URL
 
         foreach ($nodes as $node) {
             $result .= (URL::getV2Url($user, $node) . "\n");
+	    $string = preg_replace('/\n$/','',$result);
         }
 
-        return $result;
+        return $string;
     }
 
 	public static function getAllSSDUrl($user){
