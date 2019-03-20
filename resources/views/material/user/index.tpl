@@ -275,7 +275,7 @@
                                                         {$user = URL::getSSRConnectInfo($pre_user)}
 														{$ssr_url_all = URL::getAllUrl($pre_user, 0, 0)}
 														{$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
-														<p><span class="icon icon-lg text-white">filter_1</span><a class="btn-dl" href="https://raw.githubusercontent.com/asmop/client/master/ShadowsocksR-4.7.0-win.7z"><i class="material-icons">save_alt</i> 点击下载客户端</a>解压至任意磁盘并运行</p>
+														<p><span class="icon icon-lg text-white">filter_1</span>点击<a class="btn-dl" href="https://raw.githubusercontent.com/asmop/client/master/ShadowsocksR-4.7.0-win.7z"><i class="material-icons">save_alt</i> 这里</a>或者<a class="btn-dl" href="https://client.yunxiao.us/ShadowsocksR/Windows/ShadowsocksR-4.7.0-win.7z"><i class="material-icons">save_alt</i> 这里</a>，下载客户端，解压至任意磁盘并运行</p>
 														<p><span class="icon icon-lg text-white">filter_2</span> 任务栏右下角右键纸飞机图标->服务器订阅->SSR服务器订阅设置，将订阅链接设置为下面的地址，确定之后再更新SSR服务器订阅（绕过代理）</p>
 														<p> <span class="icon icon-lg text-white">filter_3</span> 然后选择一个合适的服务器，代理规则选“绕过局域网和大陆”，然后即可上网</p>
 														<p><span class="icon icon-lg text-white">filter_4</span> 备用导入节点方法：点击复制<a class="copy-text btn-dl" data-clipboard-text="{$ssr_url_all}"><i class="material-icons icon-sm">how_to_vote</i>{if !$mergeSub}普通端口{/if}链接</a>{if !$mergeSub}或者<a class="copy-text btn-dl" data-clipboard-text="{$ssr_url_all_mu}"><i class="material-icons icon-sm">how_to_vote</i>单端口多用户链接</a>{/if}，然后右键小飞机->从剪贴板复制地址</p>
@@ -290,7 +290,7 @@
                                                        <p><a href="/user/announcement">点击这里查看Windows傻瓜式教程</a></p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_mac">
-															<p><span class="icon icon-lg text-white">filter_1</span><a href="https://raw.githubusercontent.com/asmop/client/master/ShadowsocksX-NG-R8-1.4.4.dmg" class="btn-dl"><i class="material-icons">save_alt</i> 点击下载客户端</a>，并打开</p>
+															<p><span class="icon icon-lg text-white">filter_1</span>点击<a href="https://raw.githubusercontent.com/asmop/client/master/ShadowsocksX-NG-R8-1.4.4.dmg" class="btn-dl"><i class="material-icons">save_alt</i> 这里</a>或者<a href="https://client.yunxiao.us/ShadowsocksR/MacOSX/ShadowsocksX-NG-R8-1.4.4.dmg" class="btn-dl"><i class="material-icons">save_alt</i> 这里</a>，下载客户端，并打开</p>
                                                      	    <p><span class="icon icon-lg text-white">filter_2</span> 把ShadowsocksX拖入到Finder的应用程序列表(Applications)</p>
                                                       		<p><span class="icon icon-lg text-white">filter_3</span> 打开Launchapad里的ShadowsocksX</p>
                                                       		<p><span class="icon icon-lg text-white">filter_4</span> 菜单栏的纸飞机图标-服务器-服务器订阅填入以下订阅地址，更新后出现您的节点</p>
@@ -336,7 +336,7 @@
                                                       <!-- <p><a href="/user/announcement">点击这里查看iOS傻瓜式教程</a></p> -->
 													</div>
 													<div class="tab-pane fade" id="all_ssr_android">
-														<p><span class="icon icon-lg text-white">filter_1</span>点击下载<a href="https://raw.githubusercontent.com/asmop/client/master/ssr-android.apk" class="btn-dl"><i class="material-icons">save_alt</i> SSR </a> 或 <a href="/ssr-download/ssrr-android.apk" class="btn-dl"><i class="material-icons">save_alt</i> SSRR </a> 并安装</p>
+														<p><span class="icon icon-lg text-white">filter_1</span>点击下载<a href="https://raw.githubusercontent.com/asmop/client/master/ssr-android.apk" class="btn-dl"><i class="material-icons">save_alt</i> SSR </a> 或 <a href="https://client.yunxiao.us/ShadowsocksR/Android/ssr-android.apk" class="btn-dl"><i class="material-icons">save_alt</i> SSRR </a> 并安装</p>
                                                       <p><span class="icon icon-lg text-white">filter_2</span> 打开App，点击右下角的<span class="icon icon-lg text-white">add</span>号图标</p>
                                                         <p><span class="icon icon-lg text-white">filter_3</span> 添加/升级 SSR订阅</p>
                                                           <p><span class="icon icon-lg text-white">filter_4</span> 添加订阅地址，输入下方订阅地址后确定</p>
