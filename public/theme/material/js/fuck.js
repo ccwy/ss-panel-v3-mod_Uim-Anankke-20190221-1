@@ -169,14 +169,14 @@ if (new Browser().browser == '360' || new Browser().browser == '360EE' || new Br
     window.alert('为了您的人身安全，我们禁止您使用 360 浏览器访问本站，我们要求您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'XiaoMi' ) {
-    window.alert('MIUI 浏览器屏蔽了本站部分内容的访问。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.alert('为了您的人身安全，我们禁止您使用 MIUI浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'UC' ) {
-    window.alert('UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.alert('为了您的人身安全，我们禁止您使用 UC浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if(new Browser().browser == 'QQBrowser') {
-    window.alert('QQ 浏览器内核存在严重缺陷。\n为了您能更好地浏览本站，我们推荐您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
-	window.location.href='https://www.google.cn/chrome';
+    window.alert('为了您的人身安全，我们禁止您使用 QQ浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.location.href='https://www.google.cn/chrome';
 } else if(new Browser().browser == 'QQ') {
     window.alert('为了您的人身安全，我们禁止您使用 手机QQ 访问本站，我们推荐您使用 Chrome 或 Firefox 浏览器。');
     bodyEl.innerHTML = mqqHTML;
@@ -184,25 +184,25 @@ if (new Browser().browser == '360' || new Browser().browser == '360EE' || new Br
     window.alert('为了您的人身安全，我们禁止您使用 微信 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
     bodyEl.innerHTML = mqqHTML;
 }  else if(new Browser().browser == 'Taobao') {
-    window.alert('为了您的人身安全，我们禁止您使用 淘宝客户端 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
+    window.alert('为了您的人身安全，我们禁止您使用 淘宝 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
     bodyEl.innerHTML = mqqHTML;
 }  else if(new Browser().browser == 'Alipay') {
-    window.alert('为了您的人身安全，我们禁止您使用 支付宝客户端 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
+    window.alert('为了您的人身安全，我们禁止您使用 支付宝 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
     bodyEl.innerHTML = mqqHTML;
 }  else if(new Browser().browser == 'Weibo') {
-    window.alert('为了您的人身安全，我们禁止您使用 微博客户端 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
+    window.alert('为了您的人身安全，我们禁止您使用 微博 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
     bodyEl.innerHTML = mqqHTML;
 } else if (new Browser().browser == '2345Explorer' || new Browser().browser == 'Mb2345Browser') {
-    window.alert('2345 浏览器 使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.alert('为了您的人身安全，我们禁止您使用 2345浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'TheWorld' ) {
     window.alert('为了您的人身安全，我们禁止您使用 世界之窗浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'Sogou' ) {
-    window.alert('搜狗浏览器 使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.alert('为了您的人身安全，我们禁止您使用 搜狗浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'Baidu' ) {
-    window.alert('百度浏览器 使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好地浏览本站，我们要求您使用 Chrome 或 Firefox 浏览器。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.alert('为了您的人身安全，我们禁止您使用 百度浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'LBBROWSER' ) {
     window.alert('为了您的人身安全，我们禁止您使用 猎豹浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
