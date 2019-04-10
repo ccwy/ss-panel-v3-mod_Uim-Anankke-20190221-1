@@ -84,7 +84,7 @@
 
                                                 </tr>
                                                 {foreach $codes as $code}
-                                                    {if $code->type!=-2}
+                                                    {if $code->type!=-2 }
                                                         <tr>
                                                             <!--	<td>#{$code->id}</td>  -->
                                                             <td>{$code->code}</td>

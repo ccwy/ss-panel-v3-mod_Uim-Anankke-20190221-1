@@ -1861,9 +1861,8 @@ class UserController extends BaseController
 		
                 $id=$user->id;
 				$char="返利提现";
-				$time=date("Y-m-d H:i:s");
 				$codeq=new Code();				
-                $codeq->code=$id . $char . $time;
+                $codeq->code=$id . $char . time();
                 $codeq->isused=1;
                 $codeq->type=-3;
                 $codeq->number=$fanli;

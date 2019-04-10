@@ -24,7 +24,7 @@
 							<div class="card-main">
 								<div class="card-inner">
                                         <div class="card-doubleinner">
-												
+												<p class="card-heading">累计返利总额：<code>{$paybacks_sum}</code> 元 （仅做统计）</p>
 												<p><a class="btn btn-brand waves-attach" href="/user/fanli">提现</a> </p>  
 										</div>
 										
@@ -37,6 +37,7 @@
 														<th>###</th>
 														<th>返利用户</th>
 														<th>返利金额</th>
+														<th>返利时间</th>
 													</tr>
 													</thead>
 													<tbody>
@@ -52,6 +53,7 @@
 															{/if}
 															</td>
 															<td>{$payback->ref_get} 元</td>
+															<td>{date('Y-m-d H:i:s',$payback->datetime)} </td>
 														</tr>
 													{/foreach}
 													</tbody>
