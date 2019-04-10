@@ -1810,12 +1810,7 @@ class UserController extends BaseController
         $pageNum = 1;
         if (isset($request->getQueryParams()["page"])) {
             $pageNum = $request->getQueryParams()["page"];
-        }
-		$paybacks = Payback::where("ref_by", $this->user->id)->orderBy("id", "desc")->first();
-        if (!$paybacks_sum = Payback::where("ref_by", $this->user->id)->sum('ref_get')) {
-            $paybacks_sum = 0;
-        }
-		
+        }		
         $codes = Code::where('type', '<>', '-2')->where('userid', '=', $this->user->id)->orderBy('id', 'desc')->paginate(20, ['*'], 'page', $pageNum);
         $codes->setPath('/user/fanli');
 		
@@ -1827,14 +1822,8 @@ class UserController extends BaseController
         $pageNum = 1;
         if (isset($request->getQueryParams()["page"])) {
             $pageNum = $request->getQueryParams()["page"];
-        }
-		
-        $paybacks = Payback::where("ref_by", $this->user->id)->orderBy("datetime", "desc")->paginate(20, ['*'], 'page', $pageNum);
-		 
-        if (!$paybacks_sum = Payback::where("ref_by", $this->user->id)->sum('ref_get')) {
-            $paybacks_sum = 0;
-        }
-
+        }		
+        $paybacks = Payback::where("ref_by", $this->user->id)->orderBy("datetime", "desc")->paginate(20, ['*'], 'page', $pageNum);		
         $paybacks->setPath('/user/fanlifile');
        
         return $this->view()->assign("paybacks", $paybacks)->display('user/fanlifile.tpl');

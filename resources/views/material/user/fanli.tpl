@@ -26,7 +26,7 @@
 										<p>1，每次提现最低1元，提现金额不能大于返利金额；
 										
 										<br>2，提现到账户余额秒到帐，刷新页面就可以看到充值记录和账户余额变化，提现到账户余额完成后可<a href="/user/shop">到商店</a> 购买套餐；</p>
-										<p class="card-heading">累计返利总额：<code>{$paybacks_sum}</code> 元 （仅做统计）</p>
+										
 										<p class="card-heading">当前账户余额：<code>{$user->money}  </code>元</p>
 										<p class="card-heading">当前返利金额：<code>{$user->fanli}  </code>元</p>
 										<div class="form-group form-group-label">
