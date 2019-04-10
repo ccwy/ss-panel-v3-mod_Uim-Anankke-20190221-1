@@ -65,7 +65,7 @@
             <div class="modal-inner" style="text-align: center">
 
                 <div class="text-center">
-				<p><font color="red">充值时禁止关闭这里，否则无法自动到账</font></p>
+				<p><font color="red">禁止关闭网页二维码，否则无法自动到账</font></p>
                     <p id="title" class="textShow"></p>
                     <p id="qrcode">
                         <a class="pay"
