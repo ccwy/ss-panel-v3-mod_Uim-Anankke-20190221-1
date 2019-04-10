@@ -25,7 +25,7 @@
 								<div class="card-inner">
                                         <div class="card-doubleinner">
 												<p class="card-heading">累计返利总额：<code>{$paybacks_sum}</code> 元 （仅做统计）</p>
-												<p><a class="btn btn-brand waves-attach" href="/user/fanli">提现</a> </p>  
+												<p class="card-heading"><a class="btn btn-brand waves-attach" href="/user/fanli">提现</a> </p>  
 										</div>
 										
 										<div class="card-table">
