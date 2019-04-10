@@ -123,7 +123,7 @@ class TicketController extends AdminController
         $datatables->query('Select ticket.id as op,ticket.id,ticket.datetime,ticket.title,ticket.userid,user.user_name,ticket.status from ticket,user where ticket.userid = user.id and ticket.rootid = 0');
 
         $datatables->edit('op', function ($data) {
-            return '<a class="btn btn-brand" href="/admin/ticket/'.$data['id'].'/view">查看</a><a class="btn btn-brand" href="/admin/user/'.$data['userid'].'/edit">编辑</a>';
+            return '<a class="btn btn-brand" href="/admin/ticket/'.$data['id'].'/view">查看</a><a class="btn btn-brand" href="/admin/user/'.$data['userid'].'/edit">编辑用户</a>';
         });
 
         $datatables->edit('datetime', function ($data) {
