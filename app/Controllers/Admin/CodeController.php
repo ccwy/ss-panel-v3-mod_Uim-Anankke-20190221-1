@@ -18,7 +18,7 @@ class CodeController extends AdminController
         $table_config['total_column'] = array("id" => "ID", "usedatetime" => "使用时间", "number" => "操作", "userid" => "用户ID", "user_name" => "用户名","code" => "内容",
                         "type" => "类型", "isused" => "是否已经使用"                      
                          );
-        $table_config['default_show_column'] = array();
+        $table_config['default_show_column'] = array("id", "usedatetime", "number", "userid", "user_name", "code", "type", "isused");
         foreach ($table_config['total_column'] as $column => $value) {
             array_push($table_config['default_show_column'], $column);
         }
@@ -91,7 +91,7 @@ class CodeController extends AdminController
     public function ajax_code($request, $response, $args)
     {
         $datatables = new Datatables(new DatatablesHelper());
-        $datatables->query('Select code.id,code.code,code.type,code.number,code.isused,code.userid,user.user_name,code.userid as user_name,code.usedatetime from code,user WHERE code.userid = user.id');
+        $datatables->query('Select code.id,code.code,code.type,code.number,code.isused,code.userid,code.userid as user_name,code.usedatetime from code');
 
         $datatables->edit('number', function ($data) {
             switch ($data['type']) {
