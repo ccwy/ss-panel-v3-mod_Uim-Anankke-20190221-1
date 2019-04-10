@@ -26,7 +26,7 @@
 									<p><i class="icon icon-lg">shop</i>&nbsp;商店：&nbsp;<a href="/user/shop">点击进入</a></p>
 									
 									<p>充值完成后需刷新网页以查看余额，通常一分钟内到账，充值完成后请到商店购买套餐激活账号；<br>本站不提供退款，
-									充值过程中如遇到问题，请   <a href="/user/ticket/create">发工单</a>   联系管理员处理。</p>
+									充值过程中如遇到问题，请   <a href="/user/ticket">发工单</a>   联系管理员处理。</p>
                                 </div>
                             </div>
                         </div>

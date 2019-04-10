@@ -20,9 +20,10 @@
 </style>
 <div class="card-inner">
     <div class="form-group pull-left">
-        <p class="modal-title">支付宝/微信充值</p>
-		<p><font color="red">充值时禁止关闭网页二维码，否则无法自动到账</font></p>
-		<p><a class="btn btn-brand waves-attach" href="/user/codefail">充值不到账点击这里</a></p>
+        <p class="modal-title">支付宝/微信充值<a class="btn btn-brand waves-attach" href="/user/codefail">充值不到账点击这里</a></p>
+		<p><font color="red">充值时禁止关闭网页二维码，否则无法自动到账</font>
+		<br>付款成功一分钟内到账，如未到账，请点击上面按钮解决。</p>
+		
         {if preg_match('/\|/', $config['Pay_Price'])}
         {$data = explode('|', $config['Pay_Price'])}
         <p>选择充值金额：</p>
