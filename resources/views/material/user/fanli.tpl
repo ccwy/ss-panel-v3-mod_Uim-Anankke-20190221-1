@@ -69,11 +69,11 @@
 															<tr>
 																<!-- <td>#{$code->id}</td> -->
 																<td>{$code->code}</td>
-																{if $code->type==-2}
+																{if $code->type==-3}
 																<td>返利提现</td>
 																{/if}
 																
-																{if $code->type==-2}
+																{if $code->type==-3}
 																<td>提现 {$code->number} 元</td>
 																{/if}
 																
