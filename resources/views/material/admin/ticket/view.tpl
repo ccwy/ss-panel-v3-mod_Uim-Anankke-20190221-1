@@ -42,23 +42,6 @@
 					</div>
 				</div>
 					
-				<div aria-hidden="true" class="modal modal-va-middle fade" id="edit_user_id" role="dialog" tabindex="-1">
-					<div class="modal-dialog modal-xs">
-						<div class="modal-content">
-							<div class="modal-heading">
-								<a class="modal-close" data-dismiss="modal">×</a>
-								<h2 class="modal-title">确认要切换为该用户？</h2>
-							</div>
-							<div class="modal-inner">
-								<p>请您确认。</p>
-							</div>
-							<div class="modal-footer">
-								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" id="edit_user_id_input" type="button">确定</button></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				
 					<div class="card">
 						<div class="card-main">
 							<div class="card-inner">
@@ -70,7 +53,7 @@
                                             <button id="close" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">添加并关闭</button>
                                             <button id="close_directly" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">直接关闭</button>
 											<a class="btn btn-block btn-brand waves-attach waves-light" id="changetouser" href="javascript:void(0);" onClick="changetouser_modal_show()">切换为该用户</a>
-											<a class="btn btn-block btn-brand waves-attach waves-light" id="edit_user_id" href="javascript:void(0);" onClick="edit_user_id()">编辑该用户</a>
+											<a class="btn btn-brand" href="/admin/user/{$ticket->User()->id}/edit">编辑</a>
 										</div>
 									</div>
 								</div>
@@ -106,9 +89,6 @@
 <script>
     function changetouser_modal_show() {
         $("#changetouser_modal").modal();
-    }
-	function edit_user_id() {
-        $("#edit_user_id").modal();
     }
     window.addEventListener('load', () => {
         function submit() {
@@ -208,38 +188,7 @@
     $$.getElementById('changetouser_input').addEventListener('click', ()=>{
 		changetouser_id();
 	});
-	
-   function edit_user_id(){
-		$.ajax({
-			type:"POST",
-			url:"/admin/user/edit",
-			dataType:"json",
-			data:{
-                userid: {$ticket->User()->id},
-                adminid: {$user->id},
-                local: '/admin/ticket/' + {$ticket->id} + '/view'
-			},
-            success: data =>{
-                if (data.ret) {
-					$("#result").modal();
-                    $$.getElementById('msg').innerHTML = data.msg;
-                    window.setTimeout("location.href='/admin/user/' + {$user->id} + '/edit'", {$config['jump_delay']});
-                } else {
-					$("#result").modal();
-                    $$.getElementById('msg').innerHTML = data.msg;
-				}
-			},
-            error: jqXHR => {
-				$("#result").modal();
-                $$.getElementById('msg').innerHTML = `发生错误：${ldelim}jqXHR.status{rdelim}`;
-			}
-		});
-	}
 
-    $$.getElementById('edit_user_id_input').addEventListener('click', ()=>{
-		edit_user_id();
-	});
-	
 	});
 
     (() => {
