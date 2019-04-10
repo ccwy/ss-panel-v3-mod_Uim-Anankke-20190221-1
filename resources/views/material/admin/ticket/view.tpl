@@ -53,7 +53,7 @@
                                             <button id="close" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">添加并关闭</button>
                                             <button id="close_directly" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">直接关闭</button>
 											<a class="btn btn-block btn-brand waves-attach waves-light" id="changetouser" href="javascript:void(0);" onClick="changetouser_modal_show()">切换为该用户</a>
-											<a class="btn btn-brand" href="/admin/user/{$user->id}/edit">编辑该用户</a>
+											<a class="btn btn-block btn-brand waves-attach waves-light" id="edit_user_id" href="javascript:void(0);>编辑该用户</a>
 										</div>
 									</div>
 								</div>
@@ -188,6 +188,33 @@
     $$.getElementById('changetouser_input').addEventListener('click', ()=>{
 		changetouser_id();
 	});
+	
+   function edit_user_id(){
+		$.ajax({
+			type:"POST",
+			url:"/admin/user/edit",
+			dataType:"json",
+			data:{
+                userid: {$ticket->User()->id},
+                adminid: {$user->id},
+                local: '/admin/ticket/' + {$ticket->id} + '/view'
+			},
+            success: data =>{
+                if (data.ret) {
+					$("#result").modal();
+                    $$.getElementById('msg').innerHTML = data.msg;
+                    window.setTimeout("location.href='/admin/user/' + {$user->id} + '/edit'", {$config['jump_delay']});
+                } else {
+					$("#result").modal();
+                    $$.getElementById('msg').innerHTML = data.msg;
+				}
+			},
+            error: jqXHR => {
+				$("#result").modal();
+                $$.getElementById('msg').innerHTML = `发生错误：${ldelim}jqXHR.status{rdelim}`;
+			}
+		});
+	}
 
 	});
 
