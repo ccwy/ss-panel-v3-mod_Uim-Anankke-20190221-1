@@ -142,6 +142,8 @@ $app->group('/user', function () {
     $this->get('/logout', 'App\Controllers\UserController:logout');
     $this->get('/backtoadmin', 'App\Controllers\UserController:backtoadmin');
     $this->get('/code', 'App\Controllers\UserController:code');
+	$this->get('/codefail', 'App\Controllers\UserController:codefail');  //充值失败
+	
     //易付通路由定义 start
     $this->post('/code/yft/pay', 'App\Services\Gateway\YftPay:yftPay');
     $this->get('/code/yft/pay/result', 'App\Services\Gateway\YftPay:notify');

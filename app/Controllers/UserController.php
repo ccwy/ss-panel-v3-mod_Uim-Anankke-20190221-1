@@ -122,7 +122,12 @@ class UserController extends BaseController
         $codes->setPath('/user/code');
         return $this->view()->assign('codes', $codes)->assign('pmw', Payment::purchaseHTML())->display('user/code.tpl');
     }
-
+    //充值失败
+	public function codefail($request, $response, $args)
+    {        
+        return $this->view()->display('user/codefail.tpl');
+    }
+	
     public function orderDelete($request, $response, $args)
     {
         return (new ChenPay())->orderDelete($request);
@@ -1873,7 +1878,7 @@ class UserController extends BaseController
            return $this->echoJson($response, $res);
 
     }
-		
+	
     public function backtoadmin($request, $response, $args)
     {
         $userid = Utils\Cookie::get('uid');
