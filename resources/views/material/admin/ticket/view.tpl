@@ -53,7 +53,6 @@
                                             <button id="close" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">提交并关闭</button>
                                             <button id="close_directly" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">直接关闭</button>
 											<a class="btn btn-block btn-brand waves-attach waves-light" id="changetouser" href="javascript:void(0);" onClick="changetouser_modal_show()">切换为该用户</a>
-											<a class="btn btn-block btn-brand waves-attach waves-light"  href='/admin/user/'{$ticket->User()->id}'/edit' >该用户</a>
 										</div>
 									</div>
 								</div>
@@ -172,7 +171,7 @@
                 if (data.ret) {
 					$("#result").modal();
                     $$.getElementById('msg').innerHTML = data.msg;
-                    window.setTimeout("location.href='/user'", {$config['jump_delay']});
+                    window.setTimeout("location.href='/admin/edit'", {$config['jump_delay']});
                 } else {
 					$("#result").modal();
                     $$.getElementById('msg').innerHTML = data.msg;
