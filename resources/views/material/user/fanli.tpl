@@ -50,7 +50,7 @@
 							<div class="card-main">
 								<div class="card-inner">
 									<div class="card-inner">
-									<p class="card-heading">充值记录</p>
+									<p class="card-heading">提现记录</p>
 										<div class="card-table">
 											<div class="table-responsive">
 											<nobr>
@@ -61,38 +61,22 @@
 														<th>代码</th>
 														<th>类型</th>
 														<th>操作</th>
-														<th>使用时间</th>
+														<th>操作时间</th>
 														
 													</tr>
 													{foreach $codes as $code}
-														{if $code->type!=-2}
+														{if $code->type==-3}
 															<tr>
 																<!-- <td>#{$code->id}</td> -->
 																<td>{$code->code}</td>
-																{if $code->type==-1}
-																<td>金额充值</td>
+																{if $code->type==-2}
+																<td>返利提现</td>
 																{/if}
-																{if $code->type==10001}
-																<td>流量充值</td>
+																
+																{if $code->type==-2}
+																<td>提现 {$code->number} 元</td>
 																{/if}
-																{if $code->type==10002}
-																<td>用户续期</td>
-																{/if}
-																{if $code->type>=1&&$code->type<=10000}
-																<td>等级续期 - 等级{$code->type}</td>
-																{/if}
-																{if $code->type==-1}
-																<td>充值 {$code->number} 元</td>
-																{/if}
-																{if $code->type==10001}
-																<td>充值 {$code->number} GB 流量</td>
-																{/if}
-																{if $code->type==10002}
-																<td>延长账户有效期 {$code->number} 天</td>
-																{/if}
-																{if $code->type>=1&&$code->type<=10000}
-																<td>延长等级有效期 {$code->number} 天</td>
-																{/if}
+																
 																<td>{$code->usedatetime}</td>
 															</tr>
 														{/if}

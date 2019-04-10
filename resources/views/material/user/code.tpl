@@ -25,8 +25,8 @@
 										<p><i class="icon icon-lg">monetization_on</i>&nbsp;余额：&nbsp;<font color="red" size="5">{$user->money}</font>&nbsp;元</p>
 									<p><i class="icon icon-lg">shop</i>&nbsp;商店：&nbsp;<a href="/user/shop">点击进入</a></p>
 									
-									<p>充值完成后需刷新网页以查看余额，通常一分钟内到账，充值完成后请到商店购买套餐激活账号；<br>本站不提供退款，
-									充值过程中如遇到问题，请   <a href="/user/ticket">发工单</a>   联系管理员处理。</p>
+									<p>充值完成后需刷新网页以查看余额，通常一分钟内到账，<font color="red">充值完成后请到商店购买套餐激活账号</font>；
+									<br>本站不提供退款，充值过程中遇到问题，请   <a href="/user/ticket">发工单</a>   联系管理员处理。</p>
                                 </div>
                             </div>
                         </div>
@@ -91,6 +91,9 @@
                                                             {if $code->type==-1}
                                                                 <td>金额充值</td>
                                                             {/if}
+															{if $code->type==-3}
+                                                                <td>返利提现</td>
+                                                            {/if}
                                                             {if $code->type==10001}
                                                                 <td>流量充值</td>
                                                             {/if}
@@ -102,6 +105,9 @@
                                                             {/if}
                                                             {if $code->type==-1}
                                                                 <td>充值 {$code->number} 元</td>
+                                                            {/if}
+															{if $code->type==-3}
+                                                                <td>提现 {$code->number} 元</td>
                                                             {/if}
                                                             {if $code->type==10001}
                                                                 <td>充值 {$code->number} GB 流量</td>

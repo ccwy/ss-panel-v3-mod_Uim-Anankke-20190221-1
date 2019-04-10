@@ -1859,10 +1859,13 @@ class UserController extends BaseController
      //       return $this->echoJson($response, $res);
     //    }
 		
-                $codeq=new Code();
-                $codeq->code="返利提现";
+                $id=$user->id;
+				$char="返利提现";
+				$time=date("Y-m-d H:i:s");
+				$codeq=new Code();				
+                $codeq->code=$id . $char . $time;
                 $codeq->isused=1;
-                $codeq->type=-1;
+                $codeq->type=-3;
                 $codeq->number=$fanli;
                 $codeq->usedatetime=date("Y-m-d H:i:s");
                 $codeq->userid=$user->id;
