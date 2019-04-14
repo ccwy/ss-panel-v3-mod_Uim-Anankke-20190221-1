@@ -26,6 +26,7 @@ class CodeController extends AdminController
         return $this->view()->assign('table_config', $table_config)->display('admin/code/index.tpl');
     }
 
+	
     public function create($request, $response, $args)
     {
         return $this->view()->display('admin/code/add.tpl');
