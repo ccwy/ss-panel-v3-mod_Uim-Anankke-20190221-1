@@ -92,7 +92,6 @@ class CodeController extends AdminController
     {
         $datatables = new Datatables(new DatatablesHelper());
         $datatables->query('Select code.id,code.code,code.type,code.number,code.isused,code.userid,code.userid as user_name,code.usedatetime from code');
-
         $datatables->edit('number', function ($data) {
             switch ($data['type']) {
               case -1:
