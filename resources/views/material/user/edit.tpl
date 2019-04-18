@@ -389,11 +389,6 @@ $(".copy-text").click(function () {
 </script>
 
 <script>
-	var ga_qrcode = '{$user->getGAurl()}',
-	qrcode1 = new QRCode(document.getElementById("ga-qr"));
-	
-    qrcode1.clear();
-    qrcode1.makeCode(ga_qrcode);
 
 	{if $config['enable_telegram'] == 'true'}
 
