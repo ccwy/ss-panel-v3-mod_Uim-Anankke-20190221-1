@@ -69,7 +69,7 @@ class HomeController extends BaseController
 	//商店
     public function shop($request, $response, $args)
     {
-        $shops = Shop::where("status", 1)->get();  //商品显示模式优化
+        $shops = Shop::where("status", 1)->orderBy('id', 'desc')->get();  //商品显示模式优化
         return $this->view()->assign('shops', $shops)->display('shop.tpl');
     }
 
