@@ -38,7 +38,7 @@
 											 <th>购买时间</th>
 												<th>商品名称</th>												
 												<th>价格</th>												
-												<th>是否重置流量</th>
+												<th>套餐类型</th>
 											</tr>
 											{foreach $shops as $shop}
 											<tr>											
@@ -46,7 +46,7 @@
                                 <td>{$shop->shop()->name}</td>							
 								<td>{$shop->price} 元</td> 								
 								{if $shop->shop()->auto_reset_day==0}
-								<td>不重置</td>
+								<td>按月付费</td>
 								{else}
 								{if $user->auto_reset_day !=0}
 								<td> 每月{$user->auto_reset_day} 日，流量重置为  {$user->auto_reset_bandwidth} GB</td>
