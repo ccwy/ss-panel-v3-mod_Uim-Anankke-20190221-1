@@ -66,7 +66,7 @@
 										<div class="cube-title">
 											SVIP年付
 										</div>
-										{else $shop->id == '68' }
+										{elseif $shop->id == 68 }
 										<div class="cube-detail">
 											<span></span>SVIP专用
 										</div>
