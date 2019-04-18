@@ -336,7 +336,7 @@
                                                       <!-- <p><a href="/user/announcement">点击这里查看iOS傻瓜式教程</a></p> -->
 													</div>
 													<div class="tab-pane fade" id="all_ssr_android">
-														<p><span class="icon icon-lg text-white">filter_1</span>点击下载<a href="https://raw.githubusercontent.com/asmop/client/master/ssr-android.apk" class="btn-dl"><i class="material-icons">save_alt</i> SSR </a> 或 <a href="https://client.yunxiao.us/ShadowsocksR/Android/ssr-android.apk" class="btn-dl"><i class="material-icons">save_alt</i> SSRR </a> 并安装</p>
+														<p><span class="icon icon-lg text-white">filter_1</span>点击<a href="https://raw.githubusercontent.com/asmop/client/master/ssr-android.apk" class="btn-dl"><i class="material-icons">save_alt</i> 这里 </a> 或 <a href="https://client.yunxiao.us/ShadowsocksR/Android/ssr-android.apk" class="btn-dl"><i class="material-icons">save_alt</i> 这里 </a> ，下载SSR安卓客户端，并安装</p>
                                                       <p><span class="icon icon-lg text-white">filter_2</span> 打开App，点击右下角的<span class="icon icon-lg text-white">add</span>号图标</p>
                                                         <p><span class="icon icon-lg text-white">filter_3</span> 添加/升级 SSR订阅</p>
                                                           <p><span class="icon icon-lg text-white">filter_4</span> 添加订阅地址，输入下方订阅地址后确定</p>

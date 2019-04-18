@@ -75,7 +75,7 @@
 											<span></span>流量包
 										</div>
 										<div class="cube-title">
-											年付用户使用
+											年付用户专用
 										</div>
 										{else}
 										<div class="cube-detail">
