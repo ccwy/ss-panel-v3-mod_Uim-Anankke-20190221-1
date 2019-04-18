@@ -68,10 +68,10 @@
 										</div>
 										{elseif $shop->id == 68 }
 										<div class="cube-detail">
-											<span></span>SVIP专用
+											<span></span>流量包
 										</div>
 										<div class="cube-title">
-											SVIP年付专用
+											年付用户使用
 										</div>
 										{else}
 										<div class="cube-detail">
