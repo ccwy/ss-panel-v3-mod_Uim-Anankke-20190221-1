@@ -35,7 +35,7 @@ $System_Config['db_password'] = 'sspanel';						//用户名对应的密码
 //订阅地址----------------------------------------------------------------------
 $System_Config['rssresd'] = 'https://';            // ssr订阅地址
 $System_Config['roudeurl'] = 'https://';            // ssr路由器订阅地址
-$System_Config['subUrl'] = $System_Config['rssresdd'].'/link/';	//订阅地址，如需和站点名称相同，请不要修改
+$System_Config['subUrl'] = $System_Config['rssresd'].'/link/';	//订阅地址，如需和站点名称相同，请不要修改
 $System_Config['payurlma'] = '';            // 充值码购买地址 
 $System_Config['connemail']='';      //联系邮件
 //单端口开关
@@ -114,7 +114,7 @@ $System_Config['checkinMax'] = '0';			//用户签到最多流量
 $System_Config['auto_clean_uncheck_days']='-1';	//自动清理多少天没签到的0级用户，小于等于0时关闭
 $System_Config['auto_clean_unused_days']='-1';	//自动清理多少天没使用的0级用户，小于等于0时关闭
 $System_Config['auto_clean_min_money']='1';		//余额低于多少的0级用户可以被清理
-$System_Config['code_payback']='10';			//充值返利百分比
+$System_Config['code_payback']='5';			//充值返利百分比
 $System_Config['invite_gift']='0';				//邀请新用户获得流量奖励，单位G
 $System_Config['enable_bought_reset']='false';      //购买时是否叠加等级过期时间和流量
 $System_Config['enable_bought_class']='false';      //购买时是否允许跨等级叠加
