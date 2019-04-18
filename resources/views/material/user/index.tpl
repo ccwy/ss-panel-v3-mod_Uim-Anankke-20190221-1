@@ -682,8 +682,8 @@
 						 {if $user->class >1} 
 							<div class="card">
 								<div class="card-main">
-								<p class="card-heading"><i class="icon icon-md">account_circle</i>流量使用情况</p>
 									<div class="card-inner">
+									<p class="card-heading"><i class="icon icon-md">account_circle</i>流量使用情况</p>
 										<div class="progressbar">
 	                                         <div class="before"></div>
 	                                         <div class="bar tuse color3" style="width:calc({($user->u+$user->d-$user->last_day_t)/$user->transfer_enable*100}%);"><span></span></div>
