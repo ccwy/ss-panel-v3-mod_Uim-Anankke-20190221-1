@@ -823,6 +823,160 @@ window.onload = function() {
  {/if}
 
 
+{if $geetest_html == null}
+
+var checkedmsgGE = '<p><a class="btn btn-brand disabled btn-flat waves-attach" href="#"><span class="icon">check</span>&nbsp;已签到</a></p>';
+window.onload = function() {
+    var myShakeEvent = new Shake({
+        threshold: 15
+    });
+
+    myShakeEvent.start();
+  	CountDown()
+
+    window.addEventListener('shake', shakeEventDidOccur, false);
+
+    function shakeEventDidOccur () {
+		if("vibrate" in navigator){
+			navigator.vibrate(500);
+		}
+
+        $.ajax({
+                type: "POST",
+                url: "/user/checkin",
+                dataType: "json",{if $recaptcha_sitekey != null}
+                data: {
+                    recaptcha: grecaptcha.getResponse()
+                },{/if}
+                success: function (data) {
+                    if (data.ret) {
+					$("#checkin-msg").html(data.msg);
+					$("#checkin-btn").html(checkedmsgGE);
+					$("#result").modal();
+					$("#msg").html(data.msg);
+					$('#remain').html(data.traffic);
+					$('.bar.remain.color').css('width',(data.unflowtraffic-({$user->u}+{$user->d}))/data.unflowtraffic*100+'%');
+				} else {
+					$("#result").modal();
+					$("#msg").html(data.msg);
+				}
+                },
+                error: function (jqXHR) {
+					$("#result").modal();
+                    $("#msg").html("发生错误：" + jqXHR.status);
+                }
+            });
+    }
+};
+
+
+$(document).ready(function () {
+	$("#checkin").click(function () {
+		$.ajax({
+			type: "POST",
+			url: "/user/checkin",
+			dataType: "json",{if $recaptcha_sitekey != null}
+            data: {
+                recaptcha: grecaptcha.getResponse()
+            },{/if}
+			success: function (data) {
+				if (data.ret) {
+					$("#checkin-msg").html(data.msg);
+					$("#checkin-btn").html(checkedmsgGE);
+					$("#result").modal();
+					$("#msg").html(data.msg);
+					$('#remain').html(data.traffic);
+					$('.bar.remain.color').css('width',(data.unflowtraffic-({$user->u}+{$user->d}))/data.unflowtraffic*100+'%');
+				} else {
+					$("#result").modal();
+					$("#msg").html(data.msg);
+				}
+			},
+			error: function (jqXHR) {
+				$("#result").modal();
+				$("#msg").html("发生错误：" + jqXHR.status);
+			}
+		})
+	})
+})
+
+
+{else}
+
+
+window.onload = function() {
+    var myShakeEvent = new Shake({
+        threshold: 15
+    });
+
+    myShakeEvent.start();
+
+    window.addEventListener('shake', shakeEventDidOccur, false);
+
+    function shakeEventDidOccur () {
+		if("vibrate" in navigator){
+			navigator.vibrate(500);
+		}
+
+        c.show();
+    }
+};
+
+
+
+var handlerPopup = function (captchaObj) {
+	c = captchaObj;
+	captchaObj.onSuccess(function () {
+		var validate = captchaObj.getValidate();
+		$.ajax({
+			url: "/user/checkin", // 进行二次验证
+			type: "post",
+			dataType: "json",
+			data: {
+				// 二次验证所需的三个值
+				geetest_challenge: validate.geetest_challenge,
+				geetest_validate: validate.geetest_validate,
+				geetest_seccode: validate.geetest_seccode
+			},
+			success: function (data) {
+				if (data.ret) {
+					$("#checkin-msg").html(data.msg);
+					$("#checkin-btn").html(checkedmsgGE);
+					$("#result").modal();
+					$("#msg").html(data.msg);
+					$('#remain').html(data.traffic);
+					$('.bar.remain.color').css('width',(data.unflowtraffic-({$user->u}+{$user->d}))/data.unflowtraffic*100+'%');
+				} else {
+					$("#result").modal();
+					$("#msg").html(data.msg);
+				}
+			},
+			error: function (jqXHR) {
+				$("#result").modal();
+				$("#msg").html("发生错误：" + jqXHR.status);
+			}
+		});
+	});
+	// 弹出式需要绑定触发验证码弹出按钮
+	//captchaObj.bindOn("#checkin")
+	// 将验证码加到id为captcha的元素里
+	captchaObj.appendTo("#popup-captcha");
+	// 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
+};
+
+initGeetest({
+	gt: "{$geetest_html->gt}",
+	challenge: "{$geetest_html->challenge}",
+	product: "popup", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+	offline: {if $geetest_html->success}0{else}1{/if} // 表示用户后台检测极验服务器是否宕机，与SDK配合，用户一般不需要关注
+}, handlerPopup);
+
+
+
+{/if}
+
+
+
 </script>
 {if $recaptcha_sitekey != null}<script src="https://recaptcha.net/recaptcha/api.js" async defer></script>{/if}
 
