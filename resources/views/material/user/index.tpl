@@ -679,9 +679,10 @@
 							</div>
 
                            
-						  {if $user->class >1} 
+						 {if $user->class >1} 
 							<div class="card">
 								<div class="card-main">
+								<p class="card-heading"><i class="icon icon-md">account_circle</i>流量使用情况</p>
 									<div class="card-inner">
 										<div class="progressbar">
 	                                         <div class="before"></div>
@@ -707,7 +708,7 @@
 									</div>
 								</div>
 							</div>
-							{/if}
+						{/if}
 							
 
 								</div>
