@@ -16,7 +16,7 @@
 								<div class="card-inner">
 									<div class="card-inner">
 										<p class="card-heading">说明</p>
-										<p>您每邀请1位用户注册，对方充值时您会获得对方首次充值金额的 <code>{$config["code_payback"]} %</code> 的返利。</p>
+										<p>您每邀请1位用户注册，对方首次充值时您会获得对方充值金额 <code>{$config["code_payback"]} %</code> 的返利。</p>
 										<p class="card-heading">累计返利总额：<code>{$paybacks_sum}</code> 元 （仅做统计）</p>
 										<p class="card-heading">剩余返利金额：<code>{$user->fanli} </code> 元</p>
 										
