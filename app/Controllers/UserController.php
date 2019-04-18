@@ -431,7 +431,7 @@ class UserController extends BaseController
             $rule->save();
         }
 
-        $user->money -= $price;
+        
         $user->save();
 
         $res['ret'] = 1;
@@ -897,7 +897,7 @@ class UserController extends BaseController
             return $response->getBody()->write(json_encode($res));
         }
         $user->invite_num += $num;
-        $user->money -= $amount;
+        //$user->money -= $amount;
         $user->save();
         $res['ret'] = 1;
         $res['msg'] = "邀请次数添加成功";
@@ -930,7 +930,7 @@ class UserController extends BaseController
         }
         $code = InviteCode::where('user_id', $user->id)->first();
         $code->code = $customcode;
-        $user->money -= $price;
+        //$user->money -= $price;
         $user->save();
         $code->save();
         $res['ret'] = 1;
