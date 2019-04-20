@@ -193,7 +193,7 @@
 
     (() => {
         editor = editormd("editormd", {
-            path : "https://cdn.jsdelivr.net/npm/editor.md@1.5.0/lib/", // Autoload modules mode, codemirror, marked... dependents libs path
+            path : "/theme/material/css/images/", // Autoload modules mode, codemirror, marked... dependents libs path
             height: 450,
             saveHTMLToTextarea : true,
             emoji : true
