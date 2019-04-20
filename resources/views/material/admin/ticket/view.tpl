@@ -15,7 +15,7 @@
 							<div class="card-inner">
 								<div class="form-group form-group-label">
 									<label class="floating-label" for="content">内容</label>
-									<link rel="stylesheet" href="/theme/material/css/editormd.min.css" />
+									<link rel="stylesheet" href="/theme/material/css/editormd/editormd.min.css" />
 									<div id="editormd">
 										<textarea style="display:none;" id="content"></textarea>
 									</div>
@@ -85,7 +85,7 @@
 
 {include file='admin/footer.tpl'}
 
-<script src="/theme/material/css/editormd1.min.js"></script>
+<script src="/theme/material/css/editormd/editormd1.min.js"></script>
 <script>
     function changetouser_modal_show() {
         $("#changetouser_modal").modal();
@@ -193,7 +193,7 @@
 
     (() => {
         editor = editormd("editormd", {
-            path : "/theme/material/css/images/", // Autoload modules mode, codemirror, marked... dependents libs path
+            path : "/theme/material/css/editormd/", // Autoload modules mode, codemirror, marked... dependents libs path
             height: 450,
             saveHTMLToTextarea : true,
             emoji : true
