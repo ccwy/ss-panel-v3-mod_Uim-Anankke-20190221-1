@@ -8,6 +8,8 @@
 <script src="/assets/js/util.js"></script>
 <script src="/assets/js/main.js"></script>
 
+{if $config["enable_crisp"] == 'true'}{include file='crisp.tpl'}{/if}
+
 {if $config["enable_analytics_code"] == 'true'}{include file='analytics.tpl'}{/if}
 
 <!-- js -->
