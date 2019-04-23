@@ -62,7 +62,7 @@
 					
 					{foreach $ticketset as $ticket}
 					<div class="card">
-						<aside class="card-side pull-left"><img alt="alt text for John Smith avatar" src="{$ticket->User()->gravatar}"></span></br>{$ticket->User()->user_name}</aside>
+						<aside class="card-side pull-left"><img alt="alt text for John Smith avatar" src="{$ticket->User()->gravatar}"></span></br>{if $ticket->User()->id != 2293}<br>{$ticket->User()->email}{else}<br>Admin{/if}</aside>
 						<div class="card-main">
 							<div class="card-inner">
 								{$ticket->content}
