@@ -55,6 +55,7 @@
                                             <button id="close" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">提交并关闭</button>
                                             <button id="close_directly" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">直接关闭</button>
 											<a class="btn btn-block btn-brand waves-attach waves-light" id="changetouser" href="javascript:void(0);" onClick="changetouser_modal_show()">切换为该用户</a>
+											<a href="/admin/user/{id}/edit">编辑用户</a>
 											
 										</div>
 									</div>
