@@ -15,7 +15,7 @@ class CodeController extends AdminController
 {
     public function index($request, $response, $args)
     {
-        $table_config['total_column'] = array("id" => "ID", "usedatetime" => "使用时间", "number" => "操作", "userid" => "用户ID", "user_name" => "用户名","code" => "内容",
+        $table_config['total_column'] = array("op" => "操作", "id" => "ID", "usedatetime" => "使用时间", "number" => "操作", "userid" => "用户ID", "user_name" => "用户名","code" => "内容",
                         "type" => "类型", "isused" => "是否已经使用"                      
                          );
         $table_config['default_show_column'] = array();
@@ -93,7 +93,12 @@ class CodeController extends AdminController
     {
         $datatables = new Datatables(new DatatablesHelper());
         $datatables->query('Select code.id,code.code,code.type,code.number,code.isused,code.userid,code.userid as user_name,code.usedatetime from code');
-        $datatables->edit('number', function ($data) {
+        
+	$datatables->edit('op', function ($data) {
+            return '<a class="btn btn-brand" href="/admin/user/'.$data['userid'].'/edit">编辑用户</a>';
+        }); 
+	    
+	$datatables->edit('number', function ($data) {
             switch ($data['type']) {
               case -1:
                 return "充值 ".$data['number']." 元";
