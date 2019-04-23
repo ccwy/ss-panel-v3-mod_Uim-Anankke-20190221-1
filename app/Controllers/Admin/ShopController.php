@@ -293,7 +293,7 @@ class ShopController extends AdminController
         $datatables->query('Select bought.id as op,bought.id as id,shop.id as content,bought.price,user.id as user_id,user.user_name,renew,shop.auto_reset_bandwidth,shop.auto_reset_day,bought.datetime from bought,user,shop where bought.shopid = shop.id and bought.userid = user.id');  //每月是否重置流量
 
         $datatables->edit('op', function ($data) {
-            return '<a class="btn btn-brand" href="/admin/user/'.$data['userid'].'/edit">编辑用户</a><a class="btn btn-brand-accent" '.($data['renew'] == 0 ? "disabled" : ' id="row_delete_'.$data['id'].'" href="javascript:void(0);" onClick="delete_modal_show(\''.$data['id'].'\')"').'>中止</a>';
+            return '<a class="btn btn-brand" href="/admin/user/'.$data['user_id'].'/edit">编辑用户</a><a class="btn btn-brand-accent" '.($data['renew'] == 0 ? "disabled" : ' id="row_delete_'.$data['id'].'" href="javascript:void(0);" onClick="delete_modal_show(\''.$data['id'].'\')"').'>中止</a>';
         });
 
         $datatables->edit('content', function ($data) {
