@@ -38,7 +38,7 @@
 								<p>请您确认。</p>
 							</div>
 							<div class="modal-footer">
-								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent waves-attach" data-dismiss="modal" id="changetouser_input" type="button">确定</button></p>
+								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent" data-dismiss="modal" id="changetouser_input" type="button">确定</button></p>
 							</div>
 						</div>
 					</div>
@@ -51,12 +51,13 @@
 								<div class="form-group">
 									<div class="row">
 										<div class="col-md-10 col-md-push-1">
+                                          
 											<button id="submit" type="submit" class="btn btn-block btn-brand waves-attach waves-light">提交</button>
                                             <button id="close" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">提交并关闭</button>
                                             <button id="close_directly" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">直接关闭</button>
 											<a class="btn btn-block btn-brand waves-attach waves-light" id="changetouser" href="javascript:void(0);" onClick="changetouser_modal_show()">切换为该用户</a>
-											
-											
+											<a class="btn btn-block btn-brand-accent waves-attach waves-light" href="/admin/code">充值记录</a>
+                                            <a class="btn btn-block btn-brand waves-attach waves-light" href="/admin/bought">购买记录</a>
 										</div>
 									</div>
 								</div>
@@ -67,12 +68,13 @@
 					{$ticketset->render()}
 					{foreach $ticketset as $ticket}
 					<div class="card">
-						<aside class="card-side pull-left"><img alt="alt text for John Smith avatar" src="{$ticket->User()->gravatar}"></span></br>{$ticket->User()->user_name}</aside>
+						<aside class="card-side pull-left"><img alt="alt text for John Smith avatar" src="{$ticket->User()->gravatar}"></span></br>{if $ticket->User()->id != 2293}ID：{$ticket->User()->id}<br>{$ticket->User()->email}<br><a class="btn btn-brand" href="/admin/user/{$ticket->User()->id}/edit">编辑用户</a>{else}<br>Admin{/if}</aside>
 						<div class="card-main">
 							<div class="card-inner">
 								{$ticket->content}
 							</div>
 							<div class="card-action"> {$ticket->datetime()}</div>
+                          
 						</div>
 					</div>
 					{/foreach}
