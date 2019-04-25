@@ -15,7 +15,7 @@ class CodeController extends AdminController
 {
     public function index($request, $response, $args)
     {
-        $table_config['total_column'] = array("op" => "操作", "id" => "ID", "usedatetime" => "使用时间", "number" => "操作", "userid" => "用户ID", "user_name" => "用户名","code" => "内容",
+        $table_config['total_column'] = array("op" => "操作", "id" => "ID", "usedatetime" => "使用时间", "number" => "金额", "userid" => "用户ID", "user_name" => "用户名","code" => "代码",
                         "type" => "类型", "isused" => "是否已经使用"                      
                          );
         $table_config['default_show_column'] = array();
