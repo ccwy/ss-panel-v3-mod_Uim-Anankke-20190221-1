@@ -84,7 +84,7 @@
 									</div>
 									<div>
 										<div class="cube-detail">
-											3<span> 个</span>
+											{if $shop->id == 60 }6{else}3{/if}<span> 个</span>
 										</div>
 										<div class="cube-title">
 											客户端数量
@@ -174,7 +174,7 @@
 								<div class="card-tag tag-black">端口限速</div> <div class="card-tag tag-blue">{$shop->speedlimit()} Mbps</div>
 								{/if}
 								
-								<div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">3 个</div>
+								<div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">{if $shop->id == 60 }6{else}3{/if} 个</div>
 								
 						</div>
 					</div>

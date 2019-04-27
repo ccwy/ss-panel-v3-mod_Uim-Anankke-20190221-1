@@ -1171,7 +1171,7 @@ class UserController extends BaseController
         if (isset($request->getQueryParams()["page"])) {
             $pageNum = $request->getQueryParams()["page"];
         }
-        $shops = Bought::where("userid", $this->user->id)->orderBy("id", "desc")->paginate(15, ['*'], 'page', $pageNum);
+        $shops = Bought::where("userid", $this->user->id)->orderBy("id", "desc")->paginate(30, ['*'], 'page', $pageNum);
         $shops->setPath('/user/bought');
 
         return $this->view()->assign('shops', $shops)->display('user/bought.tpl');
@@ -1896,6 +1896,19 @@ class UserController extends BaseController
             $res['msg'] = "余额不足，总价为 60 元。";
             return $response->getBody()->write(json_encode($res));
         }
+		
+        
+        $boughts = Bought::where("userid", $user->id)->get();       
+        $bought = new Bought();
+        $bought->userid = $user->id;
+        $bought->shopid = 0;
+        $bought->datetime = time();      
+        $bought->renew = 0;       
+        $bought->coupon = $code;
+        $bought->price = 60;
+        $bought->save();
+
+		
         $user->node_connector = 6;
         $user->money -= 60;
         $user->save();
