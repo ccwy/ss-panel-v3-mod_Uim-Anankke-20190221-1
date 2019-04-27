@@ -28,7 +28,7 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner">
-										<div class="nodename">在线设备数<code id="ajax-user-port">{$user->online_ip_count()} / {$user->node_connector}</code></div>
+										<div class="nodename">在线设备数：<code id="ajax-user-node_connector">{$user->online_ip_count()} / {$user->node_connector}</code></div>
 									
 										 <p><i class="icon icon-lg">monetization_on</i>&nbsp;账户余额：&nbsp;<font color="red" size="5">{$user->money}</font>&nbsp;元</p>
 										<p>点击下面按钮变更同时在线设备数为 6 个，并自动扣除账户余额 60 元。</p>
