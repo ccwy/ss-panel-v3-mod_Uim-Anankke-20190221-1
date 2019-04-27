@@ -75,10 +75,10 @@
 										</div>
 										{elseif $shop->id == 60 }
 										<div class="cube-detail">
-											<span></span>无
+											<span></span>仅
 										</div>
 										<div class="cube-title">
-											变更在线ip
+											变更在线ip数
 										</div>
 										{else}
 										<div class="cube-detail">
