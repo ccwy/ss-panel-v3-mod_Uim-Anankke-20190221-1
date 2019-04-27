@@ -46,7 +46,8 @@
 							 </div>
 						 </div>
 					</div>
-						
+			
+								
             <div class="shop-flex">
 				
 				{foreach $shops as $shop}
@@ -63,7 +64,7 @@
 								</div>
 								<div class="shop-cube">
 									<div>
-										{if $shop->auto_reset_day == 1 }
+									{if $shop->auto_reset_day == 1 }
 										<div class="cube-detail">
 											<span></span>SVIP
 										</div>
@@ -77,6 +78,13 @@
 										<div class="cube-title">
 											年付用户专用
 										</div>
+										{elseif $shop->id == 60 }
+										<div class="cube-detail">
+											<span></span>仅
+										</div>
+										<div class="cube-title">
+											变更在线ip数
+										</div>
 										{else}
 										<div class="cube-detail">
 											<span></span>VIP
@@ -88,7 +96,7 @@
 									</div>
 									<div>
 										<div class="cube-detail">
-											3<span> 个</span>
+											{if $shop->id == 60 }6 <span>个</span>{elseif $shop->id == 68}无{else}3 <span>个</span>{/if}
 										</div>
 										<div class="cube-title">
 											客户端数量
@@ -110,7 +118,11 @@
 									<div class="shop-content-left">仅重置流量为</div><div class="shop-content-right">50G</div>
 									<div class="shop-content-left">仅限流量用尽</div><div class="shop-content-right">购买</div>
 									<div class="shop-content-left">仅限年付用户</div><div class="shop-content-right">购买</div>
-								{else}
+								{elseif $shop->id == 60}
+								    <div class="shop-content-left">在线设备数</div><div class="shop-content-right">6个</div>
+									<div class="shop-content-left">永久有效</div><div class="shop-content-right">购买</div>
+									<div class="shop-content-left">无其他作用</div><div class="shop-content-right">购买</div>
+								{else}	
 									<div class="shop-content-left">等级有效期:</div><div class="shop-content-right">{$shop->class_expire()}<span>天</span></div>
 									<div class="shop-content-left">重置周期:</div><div class="shop-content-right">{if $shop->auto_reset_day == 0 }N / A{else}30<span>天</span>{/if}</div>
 									<div class="shop-content-left">每月流量:</div><div class="shop-content-right">{if $shop->auto_reset_day == 0 }N / A{else}{$shop->bandwidth()}<span>G</span> {/if}</div>
@@ -121,7 +133,7 @@
 									<div><span class="icon">{$service[0]}</span> {$service[1]}</div>
 									{/foreach}
 								</div>
-								<a class="btn btn-brand-accent shop-btn" href="/user/shop">购买</a>
+								<a class="btn btn-brand-accent shop-btn" href="javascript:void(0);" onClick="buy('{$shop->id}',{$shop->auto_renew})">购买</a>
 					  </div>
 				  </div>
 				{/foreach}
@@ -141,29 +153,38 @@
 									<div class="card-tag tag-gold">SVIP年付</div>
 									{elseif $shop->id == 68}
 									<div class="card-tag tag-gold">流量包</div>
+									{elseif $shop->id == 60}
+									<div class="card-tag tag-gold">变更同时在线ip为6个</div>
 									{else}
 									<div class="card-tag tag-gold">VIP月付</div>
 									{/if}
+									
 									<div class="card-tag tag-orange">¥ {$shop->price}</div>
+									
+									{if $shop->id != 60}
 									{if $shop->auto_reset_day!=1 }
 									<div class="card-tag tag-cyan">{$shop->bandwidth()} G</div>
 									{else}
 									<div class="card-tag tag-cyan">每月 {$shop->bandwidth()} G</div>
 									{/if}
-									{if $shop->id != 68}
+									
+									{if $shop->id != 68}									
 									<div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
+									{/if}
 									{/if}
 								</div>
 								<div>
 								<i class="material-icons">expand_more</i>
 								</div>	
 						</div>
-						<a class="btn btn-brand-accent shop-btn" href="/user/shop">购买</a>
+						<a class="btn btn-brand-accent shop-btn" href="javascript:void(0);" onClick="buy('{$shop->id}',{$shop->auto_renew})">购买</a>
 						
 						<div class="shop-drop dropdown-area">
-							{if $shop->id != 68}						       
+						{if $shop->id != 60}
+						        {if $shop->id != 68}
+						       
 							<div class="card-tag tag-black">等级有效期</div> <div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
-						        {/if}
+						        {/if}	
 							{if $shop->auto_reset_day!=1 }
 							<div class="card-tag tag-black">重置周期</div> <div class="card-tag tag-blue">N/A</div>
 							{else}
@@ -176,7 +197,10 @@
 								<div class="card-tag tag-black">端口限速</div> <div class="card-tag tag-blue">{$shop->speedlimit()} Mbps</div>
 								{/if}
 								
-								<div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">3 个</div>
+								<div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">{if $shop->id == 60 }6 个{elseif $shop->id == 68}无{else}3 个{/if}</div>
+						{else}
+							    <div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">{if $shop->id == 60 }6 个{elseif $shop->id == 68}无{else}3 个{/if}</div>
+						{/if}
 								
 						</div>
 					</div>
@@ -184,10 +208,9 @@
 				
             </div>
 					
-					
-					
+				
 					{include file='dialog.tpl'}
-	
+	</section>	
 			</div>
 			
 			
