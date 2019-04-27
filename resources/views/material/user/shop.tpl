@@ -175,7 +175,7 @@
 						<a class="btn btn-brand-accent shop-btn" href="javascript:void(0);" onClick="buy('{$shop->id}',{$shop->auto_renew})">购买</a>
 						
 						<div class="shop-drop dropdown-area">
-						{if $shop->id != 60 || $shop->id != 68}						       					       
+						{if $shop->id != 60 && $shop->id != 68}						       					       
 							<div class="card-tag tag-black">等级有效期</div> <div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
 						        	
 							{if $shop->auto_reset_day!=1 }
