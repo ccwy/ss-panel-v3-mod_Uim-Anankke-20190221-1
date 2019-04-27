@@ -28,10 +28,8 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner">
-										<div class="nodename">在线设备数</div>
-										<div class="nodetype">
-                                         <dd>{$user->online_ip_count()} / {$user->node_connector}</dd>
-										</dev>
+										<div class="nodename">在线设备数<dd>{$user->online_ip_count()} / {$user->node_connector}</dd></div>
+									
 										 
 										<p>点击按钮变更同时在线设备数为 6 个，并扣除账户余额 60 元。</p>
 										
@@ -48,7 +46,7 @@
 						</div>
 						
 					
-						
+					{include file='dialog.tpl'}	
 					
 				</div>
 			</section>
