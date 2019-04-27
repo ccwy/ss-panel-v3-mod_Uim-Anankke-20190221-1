@@ -147,7 +147,7 @@
 									</div>
 									<div class="user-info-bottom">
 										<div class="nodeinfo node-flex">
-											<span><a href="/user/aliveip"><i class="icon icon-md">donut_large</i>点这里增加在线设备数</a></span>
+											<span><i class="icon icon-md">donut_large</i>在线设备/设备限制数</span>
 										</div>
 									</div>
 								</div>
