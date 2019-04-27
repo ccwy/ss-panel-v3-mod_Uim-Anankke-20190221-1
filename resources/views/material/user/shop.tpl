@@ -91,7 +91,7 @@
 									</div>
 									<div>
 										<div class="cube-detail">
-											{if $shop->id == 60 }6 <span>个</span>{elseif $shop->id == 68}无{else}{$user->node_connector} <span>个</span>{/if}
+											{if $shop->id == 60 }{$shop->connector()} <span>个</span>{elseif $shop->id == 68}无{else}{$user->node_connector} <span>个</span>{/if}
 										</div>
 										<div class="cube-title">
 											客户端数量
@@ -114,7 +114,7 @@
 									<div class="shop-content-left">仅限流量用尽</div><div class="shop-content-right">购买</div>
 									<div class="shop-content-left">仅限年付用户</div><div class="shop-content-right">购买</div>
 								{elseif $shop->id == 60}
-								    <div class="shop-content-left">在线设备数</div><div class="shop-content-right">6个</div>
+								    <div class="shop-content-left">在线设备数</div><div class="shop-content-right">{$shop->connector()}个</div>
 									<div class="shop-content-left">永久有效</div><div class="shop-content-right">购买</div>
 									<div class="shop-content-left">无其他作用</div><div class="shop-content-right">购买</div>
 								{else}	
@@ -149,7 +149,7 @@
 									{elseif $shop->id == 68}
 									<div class="card-tag tag-gold">流量包</div>
 									{elseif $shop->id == 60}
-									<div class="card-tag tag-gold">变更同时在线ip为6个</div>
+									<div class="card-tag tag-gold">变更同时在线ip为{$shop->connector()}个</div>
 									{else}
 									<div class="card-tag tag-gold">VIP月付</div>
 									{/if}
@@ -190,13 +190,13 @@
 								<div class="card-tag tag-black">端口限速</div> <div class="card-tag tag-blue">{$shop->speedlimit()} Mbps</div>
 								{/if}
 								
-								<div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">{if $shop->id == 60 }6 个{elseif $shop->id == 68}无{else}{$user->node_connector} 个{/if}</div>
+								<div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">{if $shop->id == 60 }{$shop->connector()} 个{elseif $shop->id == 68}无{else}{$user->node_connector} 个{/if}</div>
 						{/if}		
 						{if $shop->id == 68 }
 						        <div class="card-tag tag-black">重置流量</div><div class="card-tag tag-blue">{$shop->bandwidth()}G</div>
 						{/if}		
 						{if $shop->id == 60 }		
-							    <div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">{if $shop->id == 60 }6 个{elseif $shop->id == 68}无{else}{$user->node_connector} 个{/if}</div>
+							    <div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">{if $shop->id == 60 }{$shop->connector()} 个{elseif $shop->id == 68}无{else}{$user->node_connector} 个{/if}</div>
 						{/if}
 								
 						</div>
