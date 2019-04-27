@@ -114,8 +114,8 @@
 									<div class="shop-content-left">仅限流量用尽</div><div class="shop-content-right">购买</div>
 									<div class="shop-content-left">仅限年付用户</div><div class="shop-content-right">购买</div>
 								{elseif $shop->id == 60}
-								    <div class="shop-content-left">永久变更在线ip为</div><div class="shop-content-right">6个</div>
-									<div class="shop-content-left">仅变更同时在线设备数</div><div class="shop-content-right">购买</div>
+								    <div class="shop-content-left">在线设备数</div><div class="shop-content-right">6个</div>
+									<div class="shop-content-left">永久有效</div><div class="shop-content-right">购买</div>
 									<div class="shop-content-left">无其他作用</div><div class="shop-content-right">购买</div>
 								{else}	
 									<div class="shop-content-left">等级有效期:</div><div class="shop-content-right">{$shop->class_expire()}<span>天</span></div>
