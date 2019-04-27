@@ -133,7 +133,7 @@
 									<div><span class="icon">{$service[0]}</span> {$service[1]}</div>
 									{/foreach}
 								</div>
-								<a class="btn btn-brand-accent shop-btn" href="javascript:void(0);" onClick="buy('{$shop->id}',{$shop->auto_renew})">购买</a>
+								<a class="btn btn-brand-accent shop-btn" href="/user/shop">购买</a>
 					  </div>
 				  </div>
 				{/foreach}
@@ -177,7 +177,7 @@
 								<i class="material-icons">expand_more</i>
 								</div>	
 						</div>
-						<a class="btn btn-brand-accent shop-btn" href="javascript:void(0);" onClick="buy('{$shop->id}',{$shop->auto_renew})">购买</a>
+						<a class="btn btn-brand-accent shop-btn" href="/user/shop">购买</a>
 						
 						<div class="shop-drop dropdown-area">
 						{if $shop->id != 60 && $shop->id != 68}						       					       
