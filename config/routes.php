@@ -110,6 +110,9 @@ $app->group('/user', function () {
     $this->post('/buy', 'App\Controllers\UserController:buy');
 
 
+	//在线设备
+	$this->get('/aliveip', 'App\Controllers\UserController:aliveip');
+	 
     // Relay Mange
     $this->get('/relay', 'App\Controllers\RelayController:index');
     $this->get('/relay/create', 'App\Controllers\RelayController:create');

@@ -1880,6 +1880,12 @@ class UserController extends BaseController
            return $this->echoJson($response, $res);
 
     }
+//在线设备
+	public function aliveip($request, $response, $args)
+    {
+
+        return $this->view()->display('user/aliveip.tpl');
+    }
 	
     public function backtoadmin($request, $response, $args)
     {
