@@ -180,7 +180,8 @@
 						<a class="btn btn-brand-accent shop-btn" href="javascript:void(0);" onClick="buy('{$shop->id}',{$shop->auto_renew})">购买</a>
 						
 						<div class="shop-drop dropdown-area">
-						{if $shop->id != 60 || $shop->id != 68}						       					       
+						{if $shop->id != 60}
+						{if $shop->id != 68}
 							<div class="card-tag tag-black">等级有效期</div> <div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
 						        	
 							{if $shop->auto_reset_day!=1 }
@@ -196,7 +197,7 @@
 								{/if}
 								
 								<div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">{if $shop->id == 60 }6 个{elseif $shop->id == 68}无{else}3 个{/if}</div>
-						{/if}		
+						{/if}{/if}		
 						{if $shop->id == 68 }
 						        <div class="card-tag tag-black">重置流量</div><div class="card-tag tag-blue">{$shop->bandwidth()}G</div>
 						{/if}
