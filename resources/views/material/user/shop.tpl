@@ -73,6 +73,13 @@
 										<div class="cube-title">
 											年付用户专用
 										</div>
+										{elseif $shop->id == 60 }
+										<div class="cube-detail">
+											<span></span>无
+										</div>
+										<div class="cube-title">
+											变更在线ip
+										</div>
 										{else}
 										<div class="cube-detail">
 											<span></span>VIP
@@ -84,7 +91,7 @@
 									</div>
 									<div>
 										<div class="cube-detail">
-											{if $shop->id == 60 }6 <span>个</span>{elseif $shop->id == 68}<span>无</span>{else}3 <span>个</span>{/if}
+											{if $shop->id == 60 }6 <span>个</span>{elseif $shop->id == 68}无{else}3 <span>个</span>{/if}
 										</div>
 										<div class="cube-title">
 											客户端数量
@@ -137,6 +144,8 @@
 									<div class="card-tag tag-gold">SVIP年付</div>
 									{elseif $shop->id == 68}
 									<div class="card-tag tag-gold">流量包</div>
+									{elseif $shop->id == 60}
+									<div class="card-tag tag-gold">变更在线ip</div>
 									{else}
 									<div class="card-tag tag-gold">VIP月付</div>
 									{/if}
@@ -146,7 +155,7 @@
 									{else}
 									<div class="card-tag tag-cyan">每月 {$shop->bandwidth()} G</div>
 									{/if}
-									{if $shop->id != 68}
+									{if $shop->id != 68 || if $shop->id != 60}
 									
 									<div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
 									{/if}
@@ -158,6 +167,7 @@
 						<a class="btn btn-brand-accent shop-btn" href="javascript:void(0);" onClick="buy('{$shop->id}',{$shop->auto_renew})">购买</a>
 						
 						<div class="shop-drop dropdown-area">
+						{if $shop->id != 60}
 						        {if $shop->id != 68}
 						       
 							<div class="card-tag tag-black">等级有效期</div> <div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
@@ -175,6 +185,9 @@
 								{/if}
 								
 								<div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">{if $shop->id == 60 }6 个{elseif $shop->id == 68}无{else}3 个{/if}</div>
+						{else}
+							<div class="card-tag tag-black">客户端限制</div> <div class="card-tag tag-blue">{if $shop->id == 60 }6 个{elseif $shop->id == 68}无{else}3 个{/if}</div>
+						{/if}
 								
 						</div>
 					</div>
