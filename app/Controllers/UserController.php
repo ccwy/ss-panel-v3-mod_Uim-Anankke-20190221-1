@@ -1886,6 +1886,24 @@ class UserController extends BaseController
 
         return $this->view()->display('user/aliveip.tpl');
     }
+
+    public function buyaliveip($request, $response, $args)
+    {
+
+        $user = $this->user;
+        if ($user->money < 60) {
+            $res['ret'] = 0;
+            $res['msg'] = "余额不足，总价为 60 元。";
+            return $response->getBody()->write(json_encode($res));
+        }
+        $user->node_connector = 6;
+        $user->money -= 60;
+        $user->save();
+        $res['ret'] = 1;
+        $res['msg'] = "同时在线设备已变更为 6 个。";
+        return $response->getBody()->write(json_encode($res));
+    }
+
 	
     public function backtoadmin($request, $response, $args)
     {
