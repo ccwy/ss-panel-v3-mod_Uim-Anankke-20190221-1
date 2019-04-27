@@ -32,7 +32,7 @@
                                          
 										<p>点击按钮变更同时在线设备数为 6 个，并扣除账户余额 60 元。</p>
 										<div class="form-group form-group-label">
-											<button class="btn btn-brand waves-attach" id="buy-aliveip"></button>
+											<button class="btn btn-brand waves-attach" id="buy-aliveip">购买在线设备数</button>
 										</div>
 
 										
