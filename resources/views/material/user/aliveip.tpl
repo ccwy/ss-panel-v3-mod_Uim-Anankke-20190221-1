@@ -74,7 +74,7 @@ $("#buy-aliveip").click(function () {
              if (data.ret) {
      			$("#result").modal();
 				$("#msg").html(data.msg);
-				window.setTimeout("location.href='/user/aliveip'", {$config['jump_delay']});
+				
 	        } else {
                 $("#result").modal();
 			    $("#msg").html(data.msg);
