@@ -145,19 +145,23 @@
 									{elseif $shop->id == 68}
 									<div class="card-tag tag-gold">流量包</div>
 									{elseif $shop->id == 60}
-									<div class="card-tag tag-gold">变更在线ip</div>
+									<div class="card-tag tag-gold">变更同时在线ip为6个</div>
 									{else}
 									<div class="card-tag tag-gold">VIP月付</div>
 									{/if}
+									
 									<div class="card-tag tag-orange">¥ {$shop->price}</div>
+									
+									{if $shop->id != 60}
 									{if $shop->auto_reset_day!=1 }
 									<div class="card-tag tag-cyan">{$shop->bandwidth()} G</div>
 									{else}
 									<div class="card-tag tag-cyan">每月 {$shop->bandwidth()} G</div>
 									{/if}
-									{if $shop->id != 68 || $shop->id != 60}
 									
+									{if $shop->id != 68}									
 									<div class="card-tag tag-blue">{$shop->class_expire()} 天</div>
+									{/if}
 									{/if}
 								</div>
 								<div>
