@@ -10,7 +10,7 @@ namespace App\Services;
 
 use App\Services\Config;
 use App\Services\Gateway\{
-    AopF2F, Codepay, TomatoPay, PaymentWall, ChenPay, SPay, TrimePay, YftPay
+    AopF2F, Codepay,  PaymentWall, ChenPay, SPay, TrimePay, YftPay
 };
 
 class Payment
@@ -20,9 +20,6 @@ class Payment
         switch($method){
             case("codepay"):
                 return new Codepay();
-	    case("tomatopay"):
-                return new TomatoPay();	
-            
             case("paymentwall"):
                 return new PaymentWall();
             case("spay"):
