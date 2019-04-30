@@ -192,7 +192,7 @@
 						</div>
 						{/if}
 
-                        {if $user->class > 1}
+                       {* {if $user->class > 1}
 						<div class="card margin-bottom-no">
 							<div class="card-main">
 								<div class="card-inner">
@@ -214,7 +214,7 @@
 								</div>
 							</div>
 						</div>
-						{/if}
+						{/if} *}
 
 						{if $config['enable_telegram'] == 'true'}
 						<div class="card margin-bottom-no">
