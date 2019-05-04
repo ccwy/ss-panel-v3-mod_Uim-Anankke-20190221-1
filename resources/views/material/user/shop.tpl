@@ -91,7 +91,7 @@
 									</div>
 									<div>
 										<div class="cube-detail">
-											{if $shop->id == 60 }{$shop->connector()} <span>个</span>{elseif $shop->id == 68}无效{else}{$user->node_connector} <span>个</span>{/if}
+											{if $shop->id == 60 }{$shop->connector()} <span>个</span>{elseif $shop->id == 68}不变{else}{$user->node_connector} <span>个</span>{/if}
 										</div>
 										<div class="cube-title">
 											客户端数量
