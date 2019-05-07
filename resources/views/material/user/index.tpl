@@ -19,7 +19,9 @@
 										<div class="nodemain">
 											<div class="nodehead node-flex">
 												<div class="nodename">帐号等级</div>
-												<a href="/user/shop" class="card-tag tag-orange">升级</a>
+												{if $user->class >1}<a href="/user/shop" class="card-tag tag-orange">升级</a>
+												{else}<a href="/user/shop" class="card-tag tag-orange">激活</a>
+												{/if}
 											</div>
 											<div class="nodemiddle node-flex">
 												<div class="nodetype">
@@ -81,10 +83,10 @@
 									</div>
 									<div class="user-info-bottom">
 										<div class="nodeinfo node-flex">
-										{if $user->class!=0}
+										{if $user->class>1}
 											<span><i class="icon icon-md">add_circle</i>到期流量清空</span>
 										{else}
-										    <span><i class="icon icon-md">add_circle</i>升级解锁VIP节点</span>
+										    <span><a href="/user/shop"><i class="icon icon-md">add_circle</i>请购买套餐激活账号</a></span>
 										{/if}
 										</div>
 									</div>
