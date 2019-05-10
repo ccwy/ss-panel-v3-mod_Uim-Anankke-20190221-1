@@ -618,7 +618,7 @@ class Job
 				
 			}
 			//解决到期前购买自动重置未去掉的问题
-			if ($user->class >=17 && $user->class <=19) {
+			if ($user->class >=11 && $user->class <=19) {
 				$user->auto_reset_day = 0;
 				$user->auto_reset_bandwidth = 0;
 			}
@@ -726,7 +726,7 @@ class Job
 			) {
                 $subject = Config::get('appName')."-您的账号已经被删除了";
                 $to = $user->email;
-                $text = "您好，感谢您的支持与使用，系统发现您的账号等级已于 ".$user->class_expire." 过期，根据网站用户协议约定，账号过期  7   天以上会被系统自动删除，您的帐号现已被删除，如需继续使用，请重新注册，如有疑问，请发邮件联系管理员，Email：asmark798@gmail.com" ;
+                $text = "您好，感谢您的支持与使用，系统发现您的账号等级已于 ".$user->class_expire." 过期，根据网站用户协议约定，账号过期  7   天以上会被系统自动删除，您的帐号现已被删除，如需继续使用，请重新注册，如有疑问，请发邮件联系管理员，Email：".Config::get('connemail');
                 try {
                     Mail::send($to, $subject, 'news/warn.tpl', [
                         "user" => $user,"text" => $text
@@ -775,7 +775,7 @@ class Job
             if (Config::get('auto_clean_unused_days')>0 && max($user->t, strtotime($user->reg_date)) + (Config::get('auto_clean_unused_days')*86400) < time() && strtotime($user->expire_in) < time() && $user->class == 0 && $user->money == 0 && $user->t == 0 && $user->transfer_enable == 0 && $user->lastSsTime() ==0) {
 				$subject = Config::get('appName')."-您的账号已经被删除了";
                 $to = $user->email;
-                $text = "您好，感谢您的支持，系统发现您并未购买与使用，根据网站用户协议约定，您的帐号现已被删除，如需继续使用，请重新注册，如有疑问，请发邮件联系管理员，Email：asmark798@gmail.com" ;
+                $text = "您好，感谢您的支持，系统发现您并未购买或使用，根据网站用户协议约定，您的帐号现已被删除，如需继续使用，请重新注册，如有疑问，请发邮件联系管理员，Email：".Config::get('connemail');
                 try {
                     Mail::send($to, $subject, 'news/warn.tpl', [
                         "user" => $user,"text" => $text
