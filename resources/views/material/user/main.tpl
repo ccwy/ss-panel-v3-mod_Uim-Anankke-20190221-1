@@ -102,7 +102,7 @@
                            
 						</ul>
 
-{if $user->class >1}
+                        {if $user->class >1}
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_use">使用</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_use">
 							<li>
@@ -132,7 +132,7 @@
 							</li>
 							
 						</ul>
-{/if}
+                        {/if}
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_detect">审计</a>
 						<ul class="menu-collapse collapse out" id="ui_menu_detect">
 							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
@@ -170,14 +170,17 @@
 						
                         <a class="waves-attach" data-toggle="collapse" href="#ui_menu_telegram">Telegram</a>
 						<ul class="menu-collapse collapse out" id="ui_menu_telegram">
-						{if $config['telegram1']!=''}
+						{if $config['telegram1']!='' && $config['telegram2']!='' && $user->class > 1}
 						<li>
 							<a href="{$config['telegram1']}" target="_blank"><span class="icon icon-lg">near_me</span> Telegram频道</a>
 						</li>
-						{/if}
-						{if $config['telegram2']!=''}
+						
 						<li>
 							<a href="{$config['telegram2']}" target="_blank"><span class="icon icon-lg">near_me</span> Telegram群组</a>
+						</li>
+						{else}
+						<li>
+							<a href="#"><span class="icon icon-lg">near_me</span> 不可用</a>
 						</li>
 						{/if}
 						</ul>
