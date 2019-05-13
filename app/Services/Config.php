@@ -55,8 +55,8 @@ class Config
 			"murss22" => self::get("murss22"),  // 单端口开关
 			"payurlma" => self::get("payurlma"),  // 充值码购买地址
 			"metodaes" => self::get("metodaes"),  // v2ray加密算法
-		    "telegram1" => self::get("telegram1"),  // TG vip群
-			"telegram2" => self::get("telegram2"),  // TG频道
+		    "telegram1" => self::get("telegram1"),  // TG频道
+			"telegram2" => self::get("telegram2"),  // TG vip群
 			"telegram3" => self::get("telegram3"),  // TG公众群
 			"cousemail" => self::get("cousemail"),  // 联系邮件
 			
