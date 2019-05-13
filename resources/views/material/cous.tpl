@@ -37,15 +37,17 @@
 													
 												</tr>
 												<tr>
-													<td>Email：<a href="mailto:{$config["connemail"]}">{$config["connemail"]}</a></td>
+													<td>Email：<a href="mailto:{$config["cousemail"]}">{$config["cousemail"]}</a></td>
 													
 												</tr>
-												{*
+												
+												{if $config['telegram3'] !=''}
 												<tr>
-													<td>Telegram群：<a href="{$config["telegram3"]}"  target="_blank">点击加入</a></td>
+													<td>Telegram群组：<a href="{$config["telegram3"]}"  target="_blank">点击加入</a></td>
 													
 												</tr>
-												*}
+												{/if}
+												
 												<tr>
 													<td>已经是我们用户？请登录后发送工单联系管理员可。</td>
 													

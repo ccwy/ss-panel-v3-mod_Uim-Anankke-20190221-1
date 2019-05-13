@@ -47,8 +47,7 @@ class Config
 			"register_mode" => self::get("register_mode"),
             "enable_flag" => self::get("enable_flag"),
             "enable_kill" => self::get("enable_kill"),
-            "custom_invite_price" => self::get("custom_invite_price"),
-            "telegram_grouplink" => self::get("telegram_grouplink"),
+            "custom_invite_price" => self::get("custom_invite_price"),           
 			
 			"roudeurl" => self::get("roudeurl"),  //ssr路由器订阅地址
 			"enable_account_expire_delete_days" => self::get("enable_account_expire_delete_days"),     //账号过期时间
@@ -56,7 +55,11 @@ class Config
 			"murss22" => self::get("murss22"),  // 单端口开关
 			"payurlma" => self::get("payurlma"),  // 充值码购买地址
 			"metodaes" => self::get("metodaes"),  // v2ray加密算法
-		    "connemail" => self::get("connemail"),  // 联系邮件
+		    "telegram1" => self::get("telegram1"),  // TG vip群
+			"telegram2" => self::get("telegram2"),  // TG频道
+			"telegram3" => self::get("telegram3"),  // TG公众群
+			"cousemail" => self::get("cousemail"),  // 联系邮件
+			
 			"fack" => self::get("fack"),  // 屏蔽360
 			"murss22" => self::get("murss22")  // 单端口开关
 			
