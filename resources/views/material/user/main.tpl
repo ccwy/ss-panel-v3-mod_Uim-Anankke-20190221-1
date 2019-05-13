@@ -168,8 +168,8 @@
 
 						</ul>
 						
-                        <a class="waves-attach" data-toggle="collapse" href="#ui_menu_help">Telegram</a>
-						<ul class="menu-collapse collapse out" id="ui_menu_help">
+                        <a class="waves-attach" data-toggle="collapse" href="#ui_menu_telegram">Telegram</a>
+						<ul class="menu-collapse collapse out" id="ui_menu_telegram">
 						{if $config['telegram1']!=''}
 						<li>
 							<a href="{$config['telegram1']}" target="_blank"><span class="icon icon-lg">near_me</span> Telegram频道</a>
