@@ -180,7 +180,7 @@
 						</li>
 						{else}
 						<li>
-							<a href="/#"><span class="icon icon-lg">near_me</span> 不可用</a>
+							<a href="#"><span class="icon icon-lg">near_me</span> 不可用</a>
 						</li>
 						{/if}
 						</ul>
