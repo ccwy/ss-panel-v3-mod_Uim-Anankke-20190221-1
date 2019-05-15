@@ -28,8 +28,7 @@
 
 											<tbody>
 												<tr>
-													<td>根据相关法律法规要求，你所在地区被禁止访问这个网站！</td>
-													<iframe width='320' height='36' scrolling='no' frameborder='0' allowTransparency='true' src='http://www.showaddress.net/ShowIP.asp?size=12&lineht=18&color=00FFFF&bgcolor=000000&type=3'></iframe>
+													<td>根据相关法律法规要求，你所在地区被禁止访问这个网站！</td>												
 												</tr>
 												
 												</tbody>
