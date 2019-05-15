@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>{$config["appName"]} --禁止访问！</title>
+		<title>禁止访问！</title>
         <meta name="keywords" content="{$config["appName"]}"/>
         <meta name="description" content="{$config["appName"]}"/>
         <meta charset="utf-8" />
