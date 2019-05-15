@@ -172,11 +172,11 @@
 						<ul class="menu-collapse collapse out" id="ui_menu_telegram">
 						{if $config['telegram1']!='' && $user->class > 1}
 						<li>
-							<a href="{$config['telegram1']}" target="_blank"><span class="icon icon-lg">near_me</span> Telegram频道</a>
+							<a href="{$config['telegram1']}" target="_blank"><span class="icon icon-lg">near_me</span> TG 频道</a>
 						</li>
 						{elseif  $config['telegram2']!='' && $user->class > 1}
 						<li>
-							<a href="{$config['telegram2']}" target="_blank"><span class="icon icon-lg">near_me</span> Telegram群组</a>
+							<a href="{$config['telegram2']}" target="_blank"><span class="icon icon-lg">near_me</span> TG VIP群组</a>
 						</li>
 						{else}
 						<li>
