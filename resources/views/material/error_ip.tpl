@@ -28,9 +28,11 @@
 
 											<tbody>
 												<tr>
-													<td>根据相关法律法规要求，你所在地区被禁止访问这个网站！</td>												
+													<td>根据本站用户协议要求，你所在地区（中国）被禁止访问这个网站！</td>												
 												</tr>
-												
+												<tr>
+												<td>查询我的ip地址所在地：<a href="https://www.ipip.net/ip.html" target="_blank">点击这里查询</a></td>
+												</tr>
 												</tbody>
 										</table>
 								</div>
