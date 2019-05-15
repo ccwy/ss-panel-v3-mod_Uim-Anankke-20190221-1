@@ -173,17 +173,18 @@
 						{if $config['telegram1']!='' && $user->class > 1}
 						<li>
 							<a href="{$config['telegram1']}" target="_blank"><span class="icon icon-lg">near_me</span> TG 频道</a>
-						</li>
-						{else}
-						<li>
-							<a href="#"><span class="icon icon-lg">near_me</span> 不可用</a>
-						</li>
+						</li>						
 						{/if}
 						{if  $config['telegram2']!='' && $user->class > 1}
 						<li>
 							<a href="{$config['telegram2']}" target="_blank"><span class="icon icon-lg">near_me</span> TG VIP群组</a>
 						</li>					
-						{/if}											
+						{/if}	
+                        {if $config['telegram1']=='' && $config['telegram2']=='' || $user->class == 0}
+						<li>
+							<a href="#"><span class="icon icon-lg">near_me</span> 不可用</a>
+						</li>
+                        {/if}						
 						</ul>
 
 						{if $user->isAdmin()}
