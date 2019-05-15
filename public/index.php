@@ -8,7 +8,7 @@ $countryCode = geoip_country_code_by_addr($geoData, $_SERVER['REMOTE_ADDR']);
 geoip_close($geoData);  
 global $countryCode;   
 if($countryCode == 'CN') {
-if (substr($_SERVER["REQUEST_URI"],0,8) === '/error_ip' or substr($_SERVER["REQUEST_URI"],0,4) === '/cous' or substr($_SERVER["REQUEST_URI"], 0, 6) === '/link/'){	
+if (substr($_SERVER["REQUEST_URI"],0,9) === '/error_ip' or substr($_SERVER["REQUEST_URI"],0,4) === '/cous' or substr($_SERVER["REQUEST_URI"], 0, 6) === '/link/'){	
 //  PUBLIC_PATH
 define('PUBLIC_PATH', __DIR__);
 // Bootstrap
