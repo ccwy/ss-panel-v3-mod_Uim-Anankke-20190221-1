@@ -180,7 +180,7 @@
 							<a href="{$config['telegram2']}" target="_blank"><span class="icon icon-lg">near_me</span> TG VIP群组</a>
 						</li>					
 						{/if}	
-                        {if $config['telegram1']=='' && $config['telegram2']=='' || $user->class == 0}
+                        {if ($config['telegram1']=='' && $config['telegram2']=='') || $user->class == 0}
 						<li>
 							<a href="#"><span class="icon icon-lg">near_me</span> 不可用</a>
 						</li>
