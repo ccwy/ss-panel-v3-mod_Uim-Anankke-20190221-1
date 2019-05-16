@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<title>禁止访问！</title>
-        <meta name="keywords" content="{$config["appName"]}"/>
-        <meta name="description" content="{$config["appName"]}"/>
+        <meta name="keywords" content="403"/>
+        <meta name="description" content="403"/>
         <meta charset="utf-8" />
         <link rel="shortcut icon" href="/favicon.ico"/>
         <link rel="bookmark" href="/favicon.ico"/>
