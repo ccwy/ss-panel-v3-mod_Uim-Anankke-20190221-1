@@ -1,5 +1,5 @@
 <?php
-
+/*
 //屏蔽中国ip
 include('ip/geoip.inc');    
 global $countryCode;    
@@ -27,8 +27,31 @@ require PUBLIC_PATH.'/../bootstrap.php';
 // Init slim routes
 require BASE_PATH.'/config/routes.php';
 }
-
-
+*/
+$ip = $_SERVER['REMOTE_ADDR'];
+$content = file_get_contents(‘http://ip.taobao.com/service/getIpInfo.php?ip=’.$ip);
+$banned = json_decode(trim($content), true);
+$lan = strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+if( $banned['data']['country_id'] == 'CN') {
+if (substr($_SERVER["REQUEST_URI"],0,9) === '/error_ip' or substr($_SERVER["REQUEST_URI"],0,5) === '/cous' or substr($_SERVER["REQUEST_URI"], 0, 6) === '/link/'){	
+//  PUBLIC_PATH
+define('PUBLIC_PATH', __DIR__);
+// Bootstrap
+require PUBLIC_PATH.'/../bootstrap.php';
+// Init slim routes
+require BASE_PATH.'/config/routes.php';
+}else {
+	header("Location: /error_ip"); 
+			exit;
+} 
+} else {
+//  PUBLIC_PATH
+define('PUBLIC_PATH', __DIR__);
+// Bootstrap
+require PUBLIC_PATH.'/../bootstrap.php';
+// Init slim routes
+require BASE_PATH.'/config/routes.php';
+}
 /*
 //  PUBLIC_PATH
 define('PUBLIC_PATH', __DIR__);
