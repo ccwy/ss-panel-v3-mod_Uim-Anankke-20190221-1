@@ -39,14 +39,20 @@
 									<div class="card-inner margin-bottom-no">
 											<div class="cardbtn-edit">
 													<div class="card-heading">邀请链接</div>
-													<div class="reset-flex"><span>重置链接</span><a class="reset-link btn btn-brand-accent btn-flat" ><i class="icon">autorenew</i>&nbsp;</a></div>
+													{if $config['register_mode']!='close'}<div class="reset-flex"><span>重置链接</span><a class="reset-link btn btn-brand-accent btn-flat" ><i class="icon">autorenew</i>&nbsp;</a></div>{/if}
 											</div>
 										<p>剩余可邀请次数：{if $user->invite_num<0}无限{else}<code>{$user->invite_num}</code>{/if}</p>
 										<p>发送邀请链接给有需要的人，邀请他人注册时，请将以下链接发给被邀请者</p>
+										{if $config['register_mode']!='close'}
 										<div class="invite-link">
 											<input type="text" class="input form-control form-control-monospace cust-link" name="input1" readonly="" value="{$config["baseUrl"]}/auth/register?code={$code->code}">
 											<button class="copy-text btn btn-subscription" type="button" data-clipboard-text="{$config["baseUrl"]}/auth/register?code={$code->code}">点击复制</button>				
 										</div>
+										{else}
+										<div class="form-group">
+							            <p>{$config["appName"]} 已停止新用户注册，请联系网站管理员</p>
+						                </div>
+										{/if}
 									</div>
 								</div>
 							</div>
