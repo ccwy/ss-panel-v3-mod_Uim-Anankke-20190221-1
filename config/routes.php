@@ -89,6 +89,7 @@ $app->group('/user', function () {
     $this->post('/checkin', 'App\Controllers\UserController:doCheckin');
     $this->get('/node', 'App\Controllers\UserController:node');
     $this->get('/announcement', 'App\Controllers\UserController:announcement');
+	$this->get('/guide', 'App\Controllers\UserController:guide');   //教程
     $this->get('/donate', 'App\Controllers\UserController:donate');
     $this->get('/lookingglass', 'App\Controllers\UserController:lookingglass');
     $this->get('/node/{id}', 'App\Controllers\UserController:nodeInfo');

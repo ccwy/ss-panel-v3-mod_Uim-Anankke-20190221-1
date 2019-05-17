@@ -198,18 +198,7 @@
 										{if $ann != null}
 										<p>{$ann->content}</p>
 										{/if}
-										{if $config["enable_admin_contact"] == 'true'}
-										<p class="card-heading">管理员联系方式</p>
-										{if $config["admin_contact1"]!=null}
-										<p>{$config["admin_contact1"]}</p>
-										{/if}
-										{if $config["admin_contact2"]!=null}
-										<p>{$config["admin_contact2"]}</p>
-										{/if}
-										{if $config["admin_contact3"]!=null}
-										<p>{$config["admin_contact3"]}</p>
-										{/if}
-										{/if}
+										<p>其他公告请到<a href="/user/announcement"/>公告面板</a>查看。</p>
 									</div>
 								</div>
 							</div>

@@ -833,6 +833,13 @@ class UserController extends BaseController
     }
 
 
+    //教程
+    public function guide($request, $response, $args)
+    {       
+        return $this->view()->display('user/guide.tpl');
+    }
+
+
     public function edit($request, $response, $args)
     {
         $themes = Tools::getDir(BASE_PATH . "/resources/views");
