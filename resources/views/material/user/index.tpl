@@ -326,8 +326,9 @@
 														<div><span class="icon icon-lg text-white">flash_auto</span> 单端口节点订阅地址：</div>
 														<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" id="sub1" readonly value="{$subUrl}{$ssr_sub_token}?mu=1" readonly="true"><button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=1">点击复制</button><br></div>
 														{/if}
-                                                      <!-- <p><a href="/user/guide">点击这里查看iOS傻瓜式教程</a></p> -->
+                                                       <p><a href="/user/guide">点击这里查看iOS傻瓜式教程</a></p> 
 													</div>
+													
 													<div class="tab-pane fade" id="all_ssr_android">
 														<p><span class="icon icon-lg text-white">filter_1</span>点击<a href="https://raw.githubusercontent.com/asmop/client/master/ssr-android.apk" class="btn-dl"><i class="material-icons">save_alt</i> 这里 </a> 或 <a href="https://client.yunxiao.us/ShadowsocksR/Android/ssr-android.apk" class="btn-dl"><i class="material-icons">save_alt</i> 这里 </a> ，下载SSR安卓客户端，并安装</p>
                                                       <p><span class="icon icon-lg text-white">filter_2</span> 打开App，点击右下角的<span class="icon icon-lg text-white">add</span>号图标</p>
@@ -348,6 +349,7 @@
 
                                                       <p><a href="/user/guide">点击这里查看Android傻瓜式教程</a></p>
 													</div>
+													
 													<div class="tab-pane fade" id="all_ssr_router">
 													<p>梅林：</p>
 													<p><span class="icon icon-lg text-white">filter_1</span><a href="https://github.com/hq450/fancyss_history_package" class="btn-dl"><i class="material-icons">save_alt</i> 进入下载页面 </a> 下载“科学上网”插件</p>
