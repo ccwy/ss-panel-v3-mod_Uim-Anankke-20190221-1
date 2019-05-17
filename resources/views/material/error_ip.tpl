@@ -56,7 +56,7 @@
                               </div>
                      <!-- 版权底部 -->
                       <footer id="footer">
-                   <p class="copyright">&copy;{date("Y-m-d H:i:s")} </p>
+                   <p class="copyright">&copy;{date("Y-m-d H:i")} </p>
                       </footer>
               <!-- 版权结束 -->
 			 </div>
