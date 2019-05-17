@@ -36,11 +36,15 @@
 													<td>请发送Email联系我们的管理员，有任何疑问都可以得到解答。</td>
 													
 												</tr>
+												
 												<tr>
 													<td>Email：<a href="mailto:{$config["cousemail"]}">{$config["cousemail"]}</a></td>
 													
 												</tr>
-												
+												<tr>
+													<td>如果屏幕右下角的蓝色小按钮可用，你也可以通过它联系管理员。</td>
+													
+												</tr>
 												{if $config['telegram3'] !=''}
 												<tr>
 													<td>Telegram群组：<a href="{$config["telegram3"]}"  target="_blank">点击加入</a></td>
