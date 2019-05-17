@@ -56,7 +56,7 @@
                               </div>
                      <!-- 版权底部 -->
                       <footer id="footer">
-                   <p class="copyright">&copy;{date("Y")} {$config["appName"]} |  <a href="/fstaffs">STAFF</a>  |  <a href="/toos">用户协议(TOS)</a></p>
+                   <p class="copyright">&copy;{date("Y-m-d H:i:s")} </p>
                       </footer>
               <!-- 版权结束 -->
 			 </div>
