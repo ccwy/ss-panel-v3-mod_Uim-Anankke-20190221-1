@@ -13,22 +13,16 @@ global $countryCode;
 $countryCode = $_SERVER["HTTP_CF_IPCOUNTRY"];
 if($countryCode == 'CN') {
 if (substr($_SERVER["REQUEST_URI"],0,9) === '/error_ip' or substr($_SERVER["REQUEST_URI"],0,5) === '/cous' or substr($_SERVER["REQUEST_URI"], 0, 6) === '/link/'){	
-//  PUBLIC_PATH
 define('PUBLIC_PATH', __DIR__);
-// Bootstrap
 require PUBLIC_PATH.'/../bootstrap.php';
-// Init slim routes
 require BASE_PATH.'/config/routes.php';
 }else {
 	header("Location: /error_ip"); 
-			exit;
+	exit;
 } 
 } else {
-//  PUBLIC_PATH
 define('PUBLIC_PATH', __DIR__);
-// Bootstrap
 require PUBLIC_PATH.'/../bootstrap.php';
-// Init slim routes
 require BASE_PATH.'/config/routes.php';
 }
 
