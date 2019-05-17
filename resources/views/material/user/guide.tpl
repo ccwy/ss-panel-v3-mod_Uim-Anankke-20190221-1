@@ -34,12 +34,12 @@
 												<li>
 													<a class="" data-toggle="tab" href="#all_ssr_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
 												</li>
-												<li>
+												{*<li>
 													<a class="" data-toggle="tab" href="#all_ssr_router"><i class="icon icon-lg">router</i>&nbsp;路由器</a>
 												</li>
 												<li>
 													<a class="" data-toggle="tab" href="#all_ssr_game"><i class="icon icon-lg">videogame_asset</i>&nbsp;游戏端</a>
-												</li>
+												</li>*}
 											</ul>
 										</nav>
                                       
@@ -162,13 +162,13 @@
 											<p>注释：国产安卓系统为定制系统，如需要Youtube、Google套件等，需要安装Google框架，具体机型如何安装各不相同，请直接查找教程</p>
 										</div>
 
-										<div class="tab-pane fade" id="all_ssr_router">
+										{*<div class="tab-pane fade" id="all_ssr_router">
 											<h2 class="major">路由器</h2>
 										</div>  
 										
 										<div class="tab-pane fade" id="all_ssr_game">
 											<h2 class="major">游戏端</h2>
-										</div>
+										</div>*}
 
 									</div>
 
