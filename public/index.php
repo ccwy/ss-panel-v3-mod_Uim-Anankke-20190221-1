@@ -20,11 +20,6 @@ require BASE_PATH.'/config/routes.php';
 	header("Location: /error_ip"); 
 	exit;
 } 
-if ($_SERVER["REMOTE_ADDR"] === '47.244.12.64') {
-define('PUBLIC_PATH', __DIR__);
-require PUBLIC_PATH.'/../bootstrap.php';
-require BASE_PATH.'/config/routes.php';
-}
 } else {
 define('PUBLIC_PATH', __DIR__);
 require PUBLIC_PATH.'/../bootstrap.php';
