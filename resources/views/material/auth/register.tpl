@@ -87,7 +87,7 @@
 		
 						{else}
 						<div class="form-group">
-							<p>{$config["appName"]} 已停止新用户注册，如有疑问，请<a href="/cous">点击这里</a>联系网站管理员</p>
+							<p>{$config["appName"]} 已停止用户注册，有其他问题，请<a href="/cous">点击这里</a>联系网站管理员</p>
 						</div>
 						{/if}
 						<div class="auth-bottom auth-row auth-reg">
