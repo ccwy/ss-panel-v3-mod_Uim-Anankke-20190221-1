@@ -27,7 +27,6 @@ require BASE_PATH.'/config/routes.php';
 }
 */
 
-
 //  PUBLIC_PATH
 define('PUBLIC_PATH', __DIR__);
 // Bootstrap
