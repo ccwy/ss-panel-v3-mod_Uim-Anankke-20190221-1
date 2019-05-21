@@ -31,3 +31,5 @@ script:
   - php xcat initdownload
   - php xcat initQQWry
   - php xcat update
+
+  
