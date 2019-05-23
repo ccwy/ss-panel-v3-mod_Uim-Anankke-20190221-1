@@ -8,7 +8,7 @@ $countryCode = geoip_country_code_by_addr($geoData, $_SERVER['REMOTE_ADDR']);
 geoip_close($geoData);  
 global $countryCode;  
 */
-/*
+
 //屏蔽中国ip，透过cf
 $countryCode = $_SERVER["HTTP_CF_IPCOUNTRY"];
 if($countryCode == 'CN') {
@@ -25,13 +25,13 @@ define('PUBLIC_PATH', __DIR__);
 require PUBLIC_PATH.'/../bootstrap.php';
 require BASE_PATH.'/config/routes.php';
 }
-*/
 
+/*
 //  PUBLIC_PATH
 define('PUBLIC_PATH', __DIR__);
 // Bootstrap
 require PUBLIC_PATH.'/../bootstrap.php';
 // Init slim routes
 require BASE_PATH.'/config/routes.php';
-
+*/
 
