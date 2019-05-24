@@ -135,7 +135,7 @@ class IpController extends AdminController
     public function ajax_login($request, $response, $args)
     {
         $datatables = new Datatables(new DatatablesHelper());
-        $datatables->query('Select login_ip.id as op,login_ip.userid,user.user_name,login_ip.ip,login_ip.ip as location,login_ip.datetime,login_ip.type from login_ip,user WHERE login_ip.userid = user.id');
+        $datatables->query('Select login_ip.id,login_ip.userid,user.user_name,login_ip.ip,login_ip.ip as location,login_ip.datetime,login_ip.type from login_ip,user WHERE login_ip.userid = user.id');
 
 		$datatables->edit('op', function ($data) {
             return '<a class="btn btn-brand" href="/admin/user/'.$data['userid'].'/edit">编辑用户</a>';
