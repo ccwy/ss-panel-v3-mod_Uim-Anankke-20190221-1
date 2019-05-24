@@ -111,7 +111,7 @@
                     if (data.ret) {
                         $("#result").modal();
                         $$.getElementById('msg').innerHTML = data.msg;
-                        window.setTimeout("location.href=top.document.referrer", {$config['jump_delay']});
+                        window.setTimeout("location.href='/admin/ticket'", {$config['jump_delay']});
                     } else {
                         $("#result").modal();
                         $$.getElementById('msg').innerHTML = data.msg;
