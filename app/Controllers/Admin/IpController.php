@@ -19,7 +19,7 @@ class IpController extends AdminController
 {
     public function index($request, $response, $args)
     {
-        $table_config['total_column'] = array("id" => "ID",  "datetime" => "时间",  "userid" => "用户ID",
+        $table_config['total_column'] = array("op" => "操作", "id" => "ID",  "datetime" => "时间",  "userid" => "用户ID",
                           "user_name" => "用户名", "ip" => "IP",
                           "location" => "归属地", "type" => "类型");
         $table_config['default_show_column'] = array();
@@ -135,8 +135,12 @@ class IpController extends AdminController
     public function ajax_login($request, $response, $args)
     {
         $datatables = new Datatables(new DatatablesHelper());
-        $datatables->query('Select login_ip.id,login_ip.userid,user.user_name,login_ip.ip,login_ip.ip as location,login_ip.datetime,login_ip.type from login_ip,user WHERE login_ip.userid = user.id');
+        $datatables->query('Select login_ip.id as op,login_ip.userid,user.user_name,login_ip.ip,login_ip.ip as location,login_ip.datetime,login_ip.type from login_ip,user WHERE login_ip.userid = user.id');
 
+		$datatables->edit('op', function ($data) {
+            return '<a class="btn btn-brand" href="/admin/user/'.$data['userid'].'/edit">编辑用户</a>';
+        });
+		
         $datatables->edit('datetime', function ($data) {
             return date('Y-m-d H:i:s', $data['datetime']);
         });
