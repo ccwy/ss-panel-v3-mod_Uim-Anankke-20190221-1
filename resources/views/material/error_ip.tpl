@@ -43,6 +43,7 @@
 
                            <nav>
 							<ul>  
+							<a href="/" class="button">返回到首页</a>
                           <a href="/cous"  class="button">联系管理员</a>  
                            </ul>
 						</nav>
