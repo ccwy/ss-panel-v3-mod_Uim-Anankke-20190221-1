@@ -47,7 +47,7 @@
 								<td>{$shop->price} 元</td> 								
 								{if $shop->shop()->auto_reset_day==0}
 								<td>按月付费</td>
-								{elseif $shop->id == 68 }
+								{elseif $shop->shop()->id == 68 }
 								<td>按次购买</td>
 								{else}
 								{if $user->auto_reset_day !=0}
