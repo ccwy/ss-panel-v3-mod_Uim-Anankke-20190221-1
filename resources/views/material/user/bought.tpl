@@ -47,6 +47,8 @@
 								<td>{$shop->price} 元</td> 								
 								{if $shop->shop()->auto_reset_day==0}
 								<td>按月付费</td>
+								{elseif $shop->id == 68 }
+								<td>按次购买</td>
 								{else}
 								{if $user->auto_reset_day !=0}
 								<td> 每月{$user->auto_reset_day} 日，流量重置为  {$user->auto_reset_bandwidth} GB</td>
