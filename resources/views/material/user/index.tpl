@@ -196,7 +196,7 @@
 									<div class="card-inner margin-bottom-no">
                                     <p class="card-heading"> <i class="icon icon-md">notifications_active</i>公告栏</p>
 										{if $ann != null}
-										<p><font color="red">{$ann->content}</font></p>
+										<p><font color="red"><b>{$ann->content}</b></font></p>
 										{/if}
 										<p>其他公告请到<a href="/user/announcement"/>公告面板</a>查看。</p>
 									</div>
