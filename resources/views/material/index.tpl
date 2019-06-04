@@ -96,7 +96,7 @@
 							<ul>
                                 <li><a href="#1">简介</a></li>
 					            <li><a href="/user">用户中心</a></li>
-								<li><a href="/toos">用户协议</a></li>
+								
 								<li><a href="/cous">联系我们</a></li>
 								<li><a href="/user/logout">退出登录</a></li>
                         </ul>
@@ -119,9 +119,7 @@
 								<li><a href="/auth/register">注册</a></li>
 								{if $config['register_mode']!='close'}
                                 <li><a href="/shop">价格</a></li>
-								{/if}
-								<li><a href="/toos">用户协议</a></li>
-								
+								{/if}																
 								<li><a href="/cous">联系我们</a></li>
                            </ul>
 						</nav>
