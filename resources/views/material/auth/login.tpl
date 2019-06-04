@@ -1,5 +1,28 @@
- {include file='header.tpl'}
-
+<!DOCTYPE HTML> 
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{if $config['appName'] == '跑路'}
+<script>window.location.href='{$config["baseUrl"]}/paolu.html';</script>
+{/if}
+<html>
+	<head>
+		<title>{$config["appName"]}</title>
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="/favicon.ico"/>
+        <link rel="bookmark" href="/favicon.ico"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<link rel="stylesheet" href="/assets/css/main.css"/>
+        <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript> 
+	
+  </head>
+  
+       <body>
+       
 
 <div class="authpage">
     <div class="container">
@@ -338,7 +361,12 @@
 $a=$_POST['Email'];
 $b=$_POST['Password'];
 ?>
-
+{include file='injs.tpl'}
 <!-- js -->
 {if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
 <!-- js -->
+
+
+
+	</body>
+</html>
