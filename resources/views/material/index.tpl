@@ -108,8 +108,8 @@
 								<!--
 								如果想自定义文本请删除下面这段script代码,格式为
 								<p>自定义文本</p>
-								-->
-								<script type="text/javascript" src="https://api.lwl12.com/hitokoto/v1?encode=js&charset=utf-8"></script><div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
+								
+								<script type="text/javascript" src="https://api.lwl12.com/hitokoto/v1?encode=js&charset=utf-8"></script><div id="lwlhitokoto"><script>lwlhitokoto()</script></div>-->
                           </div>
                       </div>	
                               <nav>
