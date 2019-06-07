@@ -87,7 +87,7 @@
 			<div class="menu-content">
 				<a class="menu-logo" href="/"><i class="icon icon-lg">person_pin</i>&nbsp;管理面板</a>
 				<ul class="nav">
-					<li>
+					
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_me">我的</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_me">
 							<li><a href="/admin"><i class="icon icon-lg">business_center</i>&nbsp;系统概览</a></li>
@@ -134,7 +134,7 @@
 						</ul>
 
 						<li><a href="/user"><i class="icon icon-lg">person</i>&nbsp;用户中心</a></li>
-					</li>
+					
 
 
 
