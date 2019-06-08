@@ -78,7 +78,7 @@
             'Douban': u.indexOf('com.douban.frodo') > -1,
             'Suning': u.indexOf('SNEBUY-APP') > -1,
             'iQiYi': u.indexOf('IqiyiApp') > -1,
-			'Duk': u.indexOf('DUK') > -1,
+			'HUAWEI': u.indexOf('HUAWEI') > -1 || u.indexOf('HUAWEIVIE') > -1,
             //系统或平台
             'Windows': u.indexOf('Windows') > -1,
             'Linux': u.indexOf('Linux') > -1 || u.indexOf('X11') > -1,
@@ -138,7 +138,7 @@
         //基本信息
         var hash = {
             engine: ['WebKit', 'Trident', 'Gecko', 'Presto'],
-            browser: ['Safari', 'Chrome', 'Edge', 'IE', 'Firefox', 'Firefox Focus', 'Chromium', 'Opera', 'Vivaldi', 'Yandex', 'Arora', 'Lunascape', 'QupZilla', 'Coc Coc', 'Kindle', 'Iceweasel', 'Konqueror', 'Iceape', 'SeaMonkey', 'Epiphany', '360', '360SE', '360EE', 'UC', 'QQBrowser', 'MQQBrowser', 'QQ', 'Baidu', 'Maxthon', 'Sogou', 'LBBROWSER', '2345Explorer', 'Mb2345Browser', 'TheWorld', 'XiaoMi', 'Quark', 'Qiyu', 'Wechat', 'Taobao', 'Alipay', 'Weibo', 'Douban','Suning', 'iQiYi', 'Duk'],
+            browser: ['Safari', 'Chrome', 'Edge', 'IE', 'Firefox', 'Firefox Focus', 'Chromium', 'Opera', 'Vivaldi', 'Yandex', 'Arora', 'Lunascape', 'QupZilla', 'Coc Coc', 'Kindle', 'Iceweasel', 'Konqueror', 'Iceape', 'SeaMonkey', 'Epiphany', '360', '360SE', '360EE', 'UC', 'QQBrowser', 'MQQBrowser', 'QQ', 'Baidu', 'Maxthon', 'Sogou', 'LBBROWSER', '2345Explorer', 'Mb2345Browser', 'TheWorld', 'XiaoMi', 'Quark', 'Qiyu', 'Wechat', 'Taobao', 'Alipay', 'Weibo', 'Douban','Suning', 'iQiYi', 'HUAWEI'],
             os: ['Windows', 'Linux', 'Mac OS', 'Android', 'Ubuntu', 'FreeBSD', 'Debian', 'iOS', 'Windows Phone', 'BlackBerry', 'MeeGo', 'Symbian', 'Chrome OS', 'WebOS'],
             device: ['Mobile', 'Tablet']
         };
@@ -173,6 +173,9 @@ if (new Browser().browser == '360' || new Browser().browser == '360EE' || new Br
 } else if (new Browser().browser == 'XiaoMi' ) {
     window.alert('为了您的人身安全，我们禁止您使用 小米浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
+} else if (new Browser().browser == 'HUAWEI' ) {
+    window.alert('为了您的人身安全，我们禁止您使用 华为浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.location.href='https://www.google.cn/chrome';	
 } else if (new Browser().browser == 'UC' ) {
     window.alert('为了您的人身安全，我们禁止您使用 UC浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
@@ -191,7 +194,7 @@ if (new Browser().browser == '360' || new Browser().browser == '360EE' || new Br
 }  else if(new Browser().browser == 'Alipay') {
     window.alert('为了您的人身安全，我们禁止您使用 支付宝 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
     bodyEl.innerHTML = mqqHTML;
-}  else if(new Browser().browser == 'Duk') {
+}  else if(new Browser().browser == 'Weibo') {
     window.alert('为了您的人身安全，我们禁止您使用 微博 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。');
     bodyEl.innerHTML = mqqHTML;
 } else if (new Browser().browser == '2345Explorer' || new Browser().browser == 'Mb2345Browser') {
