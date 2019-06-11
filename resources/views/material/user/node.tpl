@@ -167,7 +167,7 @@
 										{if $node['class']!=$class}
 											{$class=$node['class']}
 											
-											<p class="card-heading">{if $class == 0}普通{/if}{if $class < 22}VIP{/if}{if $class >=23}SVIP{/if}用户节点</p>	
+											<p class="card-heading">{if $class == 0}普通{/if}{if $class < 22}VIP{/if}{if $class >=23}SVIP{/if}用户节点（所有节点禁ping）</p>	
 										{/if}
 
 										<div class="tile tile-collapse">
