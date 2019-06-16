@@ -41,10 +41,12 @@
 													<td>Email：<a href="mailto:{$config["cousemail"]}">{$config["cousemail"]}</a></td>
 													
 												</tr>
+												{if $config["enable_crisp"] == 'true'}
 												<tr>
 													<td>如果屏幕右下角的蓝色小按钮可用，你也可以通过它联系管理员。</td>
 													
 												</tr>
+												{/if}
 												<tr>
 													<td>请在9点到21点之间联系管理员，其余时间管理员不在线。</td>
 													
