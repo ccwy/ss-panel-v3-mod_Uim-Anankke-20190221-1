@@ -59,7 +59,7 @@
 												{/if}
 												
 												<tr>
-													<td>已经是我们用户？请点击这里<a href="/user/ticket">发送工单</a>联系管理员。</td>
+													<td>已经是我们用户？请<a href="/user/ticket">点击这里发送工单联系管理员</a>。</td>
 													
 												</tr>
 												</tbody>
