@@ -43,7 +43,7 @@
 													{if $config['register_mode']!='close'}<div class="reset-flex"><span>重置链接</span><a class="reset-link btn btn-brand-accent btn-flat" ><i class="icon">autorenew</i>&nbsp;</a></div>{/if}
 											</div>
 										<p>剩余可邀请次数：{if $user->invite_num<0}无限{else}<code>{$user->invite_num}</code>{/if}</p>
-										<p>请将下面邀请链接给有需要的人注册使用，禁止将邀请链接给陌生人，禁止将邀请链接放到论坛，贴吧之类的地方，请保护好自己的邀请链接。</p>
+										<p>请将下面邀请链接给有需要的人注册使用，禁止将邀请链接给陌生人，禁止将邀请链接放到论坛，贴吧等公共场所，请保护好自己的邀请链接。</p>
 										{if $config['register_mode']!='close'}
 										<div class="invite-link">
 											<input type="text" class="input form-control form-control-monospace cust-link" name="input1" readonly="" value="{$config["baseUrl"]}/auth/register?code={$code->code}">
