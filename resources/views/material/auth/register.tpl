@@ -112,14 +112,14 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-heading">
-						<h2 class="modal-title">注册 TOS</h2>
+						<h2 class="modal-title">休注意事项</h2>
 					</div>
 					<div class="modal-inner">
 						{include file='reg_tos.tpl'}
 					</div>
 					<div class="modal-footer">
 						<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect"
-								data-dismiss="modal" type="button" id="cancel">我不同意</button>
+								data-dismiss="modal" type="button" id="cancel">我拒绝</button>
 							<button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" id="reg"
 								type="button">我同意</button>
 						</p>
