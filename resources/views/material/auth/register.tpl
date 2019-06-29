@@ -112,7 +112,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-heading">
-						<h2 class="modal-title">休注意事项</h2>
+						<h2 class="modal-title">注册</h2>
 					</div>
 					<div class="modal-inner">
 						{include file='reg_tos.tpl'}
