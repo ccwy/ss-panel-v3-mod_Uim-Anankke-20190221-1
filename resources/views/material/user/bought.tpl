@@ -22,7 +22,7 @@
 					<div class="card">
 						<div class="card-main">
 							<div class="card-inner">
-								<p>系统中您的购买记录。</p>
+								<p>系统中您的购买记录，此处数据仅供参考，请以实际使用套餐为准。</p>
 							</div>
 						</div>
 					</div>
