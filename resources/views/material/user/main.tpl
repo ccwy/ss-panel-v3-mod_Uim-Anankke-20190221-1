@@ -41,7 +41,6 @@
 					</a>
 					<ul class="dropdown-menu dropdown-menu-right">
 						<li><a class="waves-attach" href="/user/"><span class="icon icon-lg margin-right">account_box</span>用户中心</a></li>
-
 						<li><a class="padding-right-cd waves-attach" href="/user/logout"><span class="icon icon-lg margin-right">exit_to_app</span>退出登录</a></li>
 					</ul>
 				{else}
@@ -86,11 +85,13 @@
 							<li><a href="/user/trafficlog"><i class="icon icon-lg">hourglass_empty</i>&nbsp;流量记录</a></li>
 							<li><a href="/user/guide"><i class="icon icon-lg">start</i>&nbsp;使用教程</a></li>
 							{/if}
-							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
-							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;审计记录</a></li>
+							
+							
 							<li><a href="/user/code"><i class="icon icon-lg">code</i>&nbsp;充值</a></li>
 							<li><a href="/user/shop"><i class="icon icon-lg">shop</i>&nbsp;套餐购买</a></li>
 							<li><a href="/user/bought"><i class="icon icon-lg">shopping_cart</i>&nbsp;购买记录</a></li>
+							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
+							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;审计记录</a></li>
 							
                             {if $config['enable_donate']=='true'}
 							<li><a href="/user/donate"><i class="icon icon-lg">attach_money</i>&nbsp;捐赠公示</a></li>
@@ -106,7 +107,7 @@
                             {if ($config['telegram1']=='' && $config['telegram2']=='') || $user->class == 0}
 						    <li><a href="#"><span class="icon icon-lg">near_me</span> 不可用</a></li>
                             {/if}
-							 
+							<li><a href="/cous"><i class="icon icon-lg">question_answer</i>&nbsp;联系我们</a></li>
 						</ul>
 
 						{if $user->isAdmin()}
