@@ -10,7 +10,7 @@
 		<div class="container">
 			<section class="content-inner margin-top-no">
 				<div class="ui-card-wrap">
-                  
+                  {if $user->class>1}
 					
 						<div class="col-lg-12 col-md-12">
 							<div class="card">
@@ -179,11 +179,26 @@
 				
 							
 						
-						{include file='dialog.tpl'}
 						
-					</div>
+						
+					    </div>
 						
 					
+                   	{else}
+
+                  	<div class="col-xx-12">
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+                                 	
+									<h3>{$user->user_name}，您不是VIP暂时无法查看使用教程，<a href="/user/shop">成为VIP请点击这里</a></h3>
+								</div>
+							</div>
+						</div>
+					</div>
+					{/if}
+					
+					{include file='dialog.tpl'}
 				</div>
 			</section>
 		</div>
