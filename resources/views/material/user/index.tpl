@@ -588,7 +588,7 @@
 									<div class="card-inner margin-bottom-no">
 									<p class="card-heading">新用户使用引导：</p>
 									
-										<p>1，注册即代表同意并遵守本站<a href="/toos">用户协议（TOS）</a>，<br>
+										<p>1，注册即代表您同意并愿意遵守本站<a href="/toos">用户协议（TOS）</a>，<br>
 										2，本站不提供试用,节点不保证可以玩游戏，不保证可以观看TVB、NF等视频网站，<br>
 										3，请<a href="/user/code">点我充值</a>余额到账户，<br>
 										4，然后通过  <a href="/user/shop">商店</a> 购买激活账号，<br>
