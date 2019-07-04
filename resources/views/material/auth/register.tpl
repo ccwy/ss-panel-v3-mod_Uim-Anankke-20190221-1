@@ -79,8 +79,8 @@
                             </div>
                         {/if}
 
-										   
-										        <div class="tgauth" style="color: #ff4081">
+										    <div class="rowtocol">
+										        <div class="btn-auth auth-row" style="color: #ff4081">
 										            <div class="checkbox checkbox-adv">
 										                <label for="agree">
 										                    <input class="access-hide"  value="week" id="agree" name="agree" type="checkbox">
@@ -90,7 +90,7 @@
 										                </label>
 										            </div>
 										        </div>
-										   
+										    </div>
 															
 										
 						<div class="rowtocol">
