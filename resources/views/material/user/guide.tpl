@@ -25,9 +25,9 @@
 												<li>
 													<a class="" data-toggle="tab" href="#all_ssr_mac"><i class="icon icon-lg">laptop_mac</i>&nbsp;MacOS</a>
 												</li>
-												<li>
+												{*<li>
 													<a class="" data-toggle="tab" href="#all_ssr_linux"><i class="icon icon-lg">dvr</i>&nbsp;Linux</a>
-												</li>
+												</li>*}
 												<li>
 													<a class="" data-toggle="tab" href="#all_ssr_ios"><i class="icon icon-lg">phone_iphone</i>&nbsp;iOS</a>
 												</li>
@@ -87,6 +87,7 @@
 												<ol>
 													<li>找到系统托盘菜单中的SSR纸飞机图标右键调出菜单</li>
 													<li>服务器->找到对应本站的节点组->选择一个节点单击</li>
+													<li>负载均衡前面那个勾去掉</li>
 													<p><img src="/images/c_win_8.png"/></p>
 													<li>打开浏览器输入www.google.com试试吧！</li>
 												</ol>
@@ -112,7 +113,7 @@
 											
 										</div>
 
-										<div class="tab-pane fade page-course" id="all_ssr_linux">
+										{*<div class="tab-pane fade page-course" id="all_ssr_linux">
 											<h3>Ubuntu使用Shadowsocks-qt5科学上网</h3>
 											<h4>说明：shadowsocks-qt5是ubuntu上一个可视化的版本</h4>
 											<hr/>
@@ -133,7 +134,7 @@
 											<p><img src="/images/c-linux-7.png"/></p>
 											<hr/>
 											
-										</div>
+										</div>*}
 
 										<div class="tab-pane fade page-course" id="all_ssr_ios">
 											<p>1：前往用户中心查看App Store账号，国区App Store已下架)</p>
