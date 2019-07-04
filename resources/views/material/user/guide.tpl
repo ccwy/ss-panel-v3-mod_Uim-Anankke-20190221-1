@@ -148,7 +148,7 @@
 										</div>
 
 										<div class="tab-pane fade page-course" id="all_ssr_android">
-											<p>1：下载app</p>
+											<p>1：下载app（用户中心可以看到下载链接）</p>
 											<p><img src="/images/c_android_1.jpg"/></p>
 											<p>2：添加订阅并更新</p>
 											<p><img src="/images/c_android_2.jpg"/></p>
