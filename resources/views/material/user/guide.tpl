@@ -137,9 +137,9 @@
 										</div>*}
 
 										<div class="tab-pane fade page-course" id="all_ssr_ios">
-											<p>1：前往用户中心查看App Store账号，国区App Store已下架)</p>
+											<p>1：前往用户中心查看App Store账号，国区App Store已下架</p>
 											<p><img src="/images/c_ios_1.jpg"/></p>
-											<p>2：打开App Store 切换账号，并下载App</p>
+											<p>2：打开App Store 切换账号，并下载App（Apple Store账号需自行准备）</p>
 											<p><img src="/images/c_ios_2.jpg"/></p>
 											<p>3：打开Safari，登录到 {$config["appName"]} 的用户中心导入节点</p>
 											<p><img src="/images/c_ios_3.jpg"/></p>
