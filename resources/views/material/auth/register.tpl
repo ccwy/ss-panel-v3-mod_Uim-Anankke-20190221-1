@@ -79,7 +79,7 @@
                             </div>
                         {/if}
 
-										    <div class="auth-bottom auth-row auth-reg">
+										   
 										        <div class="tgauth" style="color: #ff4081">
 										            <div class="checkbox checkbox-adv">
 										                <label for="agree">
@@ -90,7 +90,7 @@
 										                </label>
 										            </div>
 										        </div>
-										    </div>
+										   
 															
 										
 						<div class="rowtocol">
