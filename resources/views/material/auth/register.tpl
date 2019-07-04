@@ -84,7 +84,7 @@
 										            <div class="checkbox checkbox-adv">
 										                <label for="agree">
 										                    <input class="access-hide"  value="week" id="agree" name="agree" type="checkbox">
-                                                          <span>我已阅读并知晓本站<a href="/toos">用户协议（TOS）</a></br>若违规使用账户将被封禁删除</span>
+                                                          <span>我已阅读完毕<a href="/toos">用户协议（TOS）</a></span>
 										                    <span class="checkbox-circle"></span>
 										                    <span class="checkbox-circle-check"></span><span class="checkbox-circle-icon icon">done</span>
 										                </label>
