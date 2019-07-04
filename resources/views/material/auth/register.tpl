@@ -107,7 +107,8 @@
 						<div class="auth-bottom auth-row auth-reg">
 							<div class="tgauth">
 		
-								<p>注册即代表同意<a href="/toos">用户协议（TOS）</a>，以及保证所录入信息的真实性，如有不实信息会导致账号被删除。</p>
+								
+								<p>极端政治人士请勿注册使用，注册即代表同意并愿意遵守本站<a href="/toos">用户协议（TOS）</a>，以及保证所录入信息的真实性，如有不实信息会导致账号被删除。</p>
 		
 								<!-- <span>Telegram</span><button class="btn" id="calltgauth"><i class="icon icon-lg">near_me</i></button><span>快捷登录</span> -->
 							</div>
