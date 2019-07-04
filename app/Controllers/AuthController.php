@@ -273,31 +273,6 @@ class AuthController extends BaseController
                 return $response->getBody()->write(json_encode($res));
             }
 	
-        //dumplin：1、邀请人等级为0则邀请码不可用；2、邀请人invite_num为可邀请次数，填负数则为无限
-        $c = InviteCode::where('code', $code)->first();
-        if ($c == null) {
-            if (Config::get('register_mode') == 'invite') {
-                $res['ret'] = 0;
-                $res['msg'] = "邀请码无效";
-                return $response->getBody()->write(json_encode($res));
-            }
-        } else if ($c->user_id != 0) {
-            $gift_user = User::where("id", "=", $c->user_id)->first();
-            if ($gift_user == null) {
-                $res['ret'] = 0;
-                $res['msg'] = "邀请人不存在";
-                return $response->getBody()->write(json_encode($res));
-            } else if ($gift_user->class == 0) {
-                $res['ret'] = 0;
-                $res['msg'] = "邀请人不是VIP";
-                return $response->getBody()->write(json_encode($res));
-            } else if ($gift_user->invite_num == 0) {
-                $res['ret'] = 0;
-                $res['msg'] = "邀请人可用邀请次数为0";
-                return $response->getBody()->write(json_encode($res));
-            }
-        }
-
             $code = Tools::genRandomNum(6);
 
             $ev = new EmailVerify();
