@@ -96,7 +96,7 @@
 										</div>
 
 										<div class="tab-pane fade page-course" id="all_ssr_mac">
-											<p>1：把下载的DMG包放入应用程序列表</p>
+											<p>1：把下载的DMG包放入应用程序列表（用户中心->快速添加节点处有下载链接）</p>
 											<p><img src="/images/c_mac_1.png"/></p>
 											<p>2：打开程式</p>
 											<p><img src="/images/c_mac_2.png"/></p>
