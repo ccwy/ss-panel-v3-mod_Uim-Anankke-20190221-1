@@ -79,12 +79,12 @@
                             </div>
                         {/if}
 
-										    <div class="rowtocol">
-										        <div class="btn-auth auth-row" style="color: #ff4081">
+										    <div class="auth-bottom auth-row auth-reg">
+										        <div class="tgauth" style="color: #ff4081">
 										            <div class="checkbox checkbox-adv">
 										                <label for="agree">
-										                    <input class="access-hide"  value="week" id="agree" name="agree" type="checkbox">我已阅读并知晓本站用户协议要求<br/>
-                                                          <span>我已阅读本站用户协议若违规使用账户将被封禁</span>
+										                    <input class="access-hide"  value="week" id="agree" name="agree" type="checkbox">
+                                                          <span>我已阅读并知晓本站<a href="/toos">用户协议（TOS）</a>，若违规使用账户将被封禁删除</span>
 										                    <span class="checkbox-circle"></span>
 										                    <span class="checkbox-circle-check"></span><span class="checkbox-circle-icon icon">done</span>
 										                </label>
@@ -107,7 +107,7 @@
 						<div class="auth-bottom auth-row auth-reg">
 							<div class="tgauth">
 		
-								<p>注册即代表同意<a href="/toos">用户协议</a>，以及保证所录入信息的真实性，如有不实信息会导致账号被删除。</p>
+								<p>注册即代表同意<a href="/toos">用户协议（TOS）</a>，以及保证所录入信息的真实性，如有不实信息会导致账号被删除。</p>
 		
 								<!-- <span>Telegram</span><button class="btn" id="calltgauth"><i class="icon icon-lg">near_me</i></button><span>快捷登录</span> -->
 							</div>
