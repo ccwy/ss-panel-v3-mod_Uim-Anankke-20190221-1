@@ -80,7 +80,7 @@
                         {/if}
 
 										    <div class="rowtocol">
-										        <div class="col-md-10 col-md-push-1" style="color: #ff4081">
+										        <div class="btn-auth auth-row" style="color: #ff4081">
 										            <div class="checkbox checkbox-adv">
 										                <label for="agree">
 										                    <input class="access-hide"  value="week" id="agree" name="agree" type="checkbox">我已阅读并知晓本站用户协议要求<br/>
@@ -133,9 +133,9 @@
 					</div>
 					<div class="modal-footer">
 						<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect"
-								data-dismiss="modal" type="button" id="cancel">我拒绝</button>
+								data-dismiss="modal" type="button" id="cancel">我不服</button>
 							<button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" id="reg"
-								type="button">我同意</button>
+								type="button">我接受</button>
 						</p>
 					</div>
 				</div>
@@ -167,6 +167,7 @@
 {include file='footer.tpl'}
 
 {if $config['register_mode']!='close'}
+
 <script type="text/javascript">
     	$("#agree").change(function() { 
 		if($("#agree").prop("checked")){
