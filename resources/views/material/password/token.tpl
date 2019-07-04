@@ -8,8 +8,8 @@
 			
 				<div class="auth-main auth-row auth-col-one">
 					<div class="auth-top auth-row">
-						<a class="boardtop-left" href="/">
-							<div>首 页</div>
+						<a class="boardtop-left" href="/cous">
+							<div>联系我们</div>
 						</a>
 						<div class="auth-logo">
 							<img src="/images/authlogo.jpg" alt="">

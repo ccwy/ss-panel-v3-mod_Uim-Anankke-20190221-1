@@ -6,8 +6,8 @@
 				<section class="content-inner">
 					<div class="auth-main auth-row">
 							<div class="auth-top auth-row">
-								<a class="boardtop-left" href="/">
-									<div>首 页</div>
+								<a class="boardtop-left" href="/shop">
+									<div>套餐价格</div>
 								</a>
 								<div class="auth-logo">
 									<img src="/images/authlogo.jpg" alt="">
