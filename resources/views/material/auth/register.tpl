@@ -79,7 +79,7 @@
                             </div>
                         {/if}
 
-										    <div class="rowtocol">
+										  {*  <div class="rowtocol">
 										        <div class="btn-auth auth-row" style="color: #ff4081">
 										            <div class="checkbox checkbox-adv">
 										                <label for="agree">
@@ -90,12 +90,12 @@
 										                </label>
 										            </div>
 										        </div>
-										    </div>
+										    </div>*}
 															
 										
 						<div class="rowtocol">
 							<div class="btn-auth auth-row">
-								<button id="tos" type="submit" disabled="disabled" class="btn-reg btn btn-block btn-brand waves-attach waves-light">确认注册</button>
+								<button id="tos" type="submit" class="btn-reg btn btn-block btn-brand waves-attach waves-light">确认注册</button>
 							</div>
 						</div>
 		
@@ -168,7 +168,7 @@
 {include file='footer.tpl'}
 
 {if $config['register_mode']!='close'}
-
+{*
 <script type="text/javascript">
     	$("#agree").change(function() { 
 		if($("#agree").prop("checked")){
@@ -180,6 +180,7 @@
 	});
 
 </script>
+*}
 <script>
     $(document).ready(function(){
         function register(){
