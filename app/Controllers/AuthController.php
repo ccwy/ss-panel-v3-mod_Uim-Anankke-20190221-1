@@ -239,7 +239,7 @@ class AuthController extends BaseController
 		
 	
 		//不能使用QQ邮箱
-       if (strstr($email, 'qq.com')) {
+       if (strstr($email, 'qq.com', 'QQ.com')) {
             $res['ret'] = 0;
             $res['msg'] = "不能使用QQ邮箱";
             return $response->getBody()->write(json_encode($res));
@@ -397,7 +397,7 @@ class AuthController extends BaseController
         }
 			
 		//不能使用QQ邮箱
-       if (strstr($email, 'qq.com')) {
+       if (strstr($email, 'qq.com', 'QQ.com')) {
             $res['ret'] = 0;
             $res['msg'] = "不能使用QQ邮箱";
             return $response->getBody()->write(json_encode($res));
