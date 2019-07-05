@@ -238,12 +238,12 @@ class AuthController extends BaseController
             }
 		
 	
-		//不能使用QQ邮箱
-       if (strstr($email, 'qq.com', 'QQ.com')) {
-            $res['ret'] = 0;
-            $res['msg'] = "不能使用QQ邮箱";
-            return $response->getBody()->write(json_encode($res));
-        }
+		     //不能使用QQ邮箱
+            if (strstr($email, 'qq.com') || strstr($email, 'QQ.com') || strstr($email, 'QQ.COM')) {
+                $res['ret'] = 0;
+                $res['msg'] = "不能使用QQ邮箱";
+                return $response->getBody()->write(json_encode($res));
+            }
             // check email format
             if (!Check::isEmailLegal($email)) {
                 $res['ret'] = 0;
@@ -395,13 +395,13 @@ class AuthController extends BaseController
             $res['msg'] = "邮箱无效";
             return $response->getBody()->write(json_encode($res));
         }
-			
-		//不能使用QQ邮箱
-       if (strstr($email, 'qq.com', 'QQ.com')) {
-            $res['ret'] = 0;
-            $res['msg'] = "不能使用QQ邮箱";
-            return $response->getBody()->write(json_encode($res));
-        }
+		
+		     //不能使用QQ邮箱
+            if (strstr($email, 'qq.com') || strstr($email, 'QQ.com') || strstr($email, 'QQ.COM')) {
+                $res['ret'] = 0;
+                $res['msg'] = "不能使用QQ邮箱";
+                return $response->getBody()->write(json_encode($res));
+            }
         // check email
         $user = User::where('email', $email)->first();
         if ($user != null) {
