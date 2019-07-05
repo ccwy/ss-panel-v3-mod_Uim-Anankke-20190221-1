@@ -211,4 +211,7 @@ if (new Browser().browser == '360' || new Browser().browser == '360EE' || new Br
 } else if (new Browser().browser == 'Maxthon' ) {
     window.alert('为了您的人身安全，我们禁止您使用 傲游浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
+} else if (new Browser().browser == 'Quark' ) {
+    window.alert('为了您的人身安全，我们禁止您使用 夸克浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.location.href='https://www.google.cn/chrome';
 }
