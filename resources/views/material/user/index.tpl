@@ -27,7 +27,8 @@
 												<div class="nodetype">
 											  {if $user->class ==0}
 											  <dd>账号未激活</dd>
-											  
+											  {elseif $user->class ==3}
+											  <dd> 永久会员</dd>
 											  {elseif $user->class ==11}
 											  <dd>月付VIP1</dd>
 											  {elseif $user->class ==12}
@@ -38,7 +39,7 @@
 											  <dd>月付VIP4</dd>
 											  
 											 
-											  {elseif $user->class ==3}
+											  {elseif $user->class ==16}
 											  <dd> 永久会员</dd>
 											  {elseif $user->class==17}											  
                                               <dd> 月付VIP1</dd>

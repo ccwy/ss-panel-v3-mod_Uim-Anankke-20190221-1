@@ -34,7 +34,9 @@
 							<div class="inner">
                                   <p>用户：<code>{$user->user_name}</code>
                                     等级：{if $user->class ==0}
-											  <dd>账号未激活</dd>											  
+											  <dd>账号未激活</dd>	
+											  {elseif $user->class ==3}
+											  <dd> 永久会员</dd>
 											  {elseif $user->class ==11}
 											  <dd>月付VIP1</dd>
 											  {elseif $user->class ==12}
@@ -44,7 +46,7 @@
 											  {elseif $user->class ==14}
 											  <dd>月付VIP4</dd>
 											  
-											  {elseif $user->class ==3}
+											  {elseif $user->class ==16}
 											  <dd> 永久会员</dd>
 											  {elseif $user->class==17}											  
                                               <dd> 月付VIP1</dd>
