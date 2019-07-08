@@ -279,10 +279,10 @@
 
 {include file='user/footer.tpl'}
 <script>
-
+$(document).ready(function(){
     $("#result").modal();
     $("#msg").html("在购买套餐前，建议您先到<a href="/user/node">节点列表看看节点分级</a>，然后再回到这里选购合适的套餐。");
-
+})
 </script>
 <script>
 function buy(id,auto) {
