@@ -49,7 +49,7 @@
 											  {elseif $user->class ==16}
 											  <dd> 永久会员</dd>
 											  {elseif $user->class==17}											  
-                                              <dd> 账号已激活</dd>
+                                              <dd> 等级未到期</dd>
                                               {elseif $user->class==18}
 											  <dd> 月付VIP2</dd>
 											  {elseif $user->class==19}
