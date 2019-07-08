@@ -133,7 +133,7 @@ class Analytics
 	//付费用户，排除443端口和管理员、测试账号
     public function classuseraa()
     {
-        return User::where('class', '>', 10)->where('class', '!=', 16)->where('id','!=',2293)->where('id','!=',1772)->count();
+        return User::where('class', '>', 10)->where('class', '>', 17)->where('class', '!=', 16)->where('id','!=',2293)->where('id','!=',1772)->count();
     }
 	//统计全站已用总流量
 	public function ssnodeTrafficUsage()
