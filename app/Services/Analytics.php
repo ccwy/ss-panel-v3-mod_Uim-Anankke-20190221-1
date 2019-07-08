@@ -149,7 +149,7 @@ class Analytics
 	//月付用户
 	public function classusermoth()
     {
-        return User::where('class', '>', 10)->where('class', '<', 19)->where('class', '!=', 16)->where('id','!=', 2291)->where('id','!=', 2293)->where('id','!=',1772)->count();
+        return User::where('class', '>', 10)->where('class', '<', 15)->where('class', '!=', 16)->where('id','!=', 2291)->where('id','!=', 2293)->where('id','!=',1772)->count();
      
     }
 }
