@@ -30,7 +30,7 @@
 							<div class="card-inner">
 								
 								   <p> 
-								     1，本站无游戏节点，不保证可以观看TVB\NF\huhu等视频网站；本站节点根据套餐等级不同来分级使用；<br>
+								     1，本站无游戏节点，不保证可以观看TVB\NF\huhu等视频网站；<font color="red">不同套餐可用节点数量不同，高等级可使用全部低等级节点</font>；<br>
 								     2，套餐不可叠加，新购套餐会覆盖旧套餐的效果，本站不提供任何技术支持，使用方法请看教程；<br>
 									 3，本站不提供试用和退款，注册或使用即代表您同意并愿意遵守本站<a href="/toos">用户协议（TOS）</a>。
 								   </p>
@@ -232,12 +232,6 @@
 
 {include file='footer.tpl'}
 
-<script>
-$(document).ready(function(){
-    $("#result").modal();
-    $("#msg").html("在购买套餐前，建议您先<a href='/user/node'>点击这里到节点列表查看节点分级</a>，然后再回到这里选购合适的套餐。");
-});
-</script>
 
 <script>
 function buy(id,auto) {
