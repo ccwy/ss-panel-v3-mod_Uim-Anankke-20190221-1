@@ -29,20 +29,20 @@
 											  <dd>账号未激活</dd>
 											  
 											  {elseif $user->class ==11}
-											  <dd>月付青铜VIP</dd>
+											  <dd>月付VIP1</dd>
 											  {elseif $user->class ==12}
-											  <dd>月付白银VIP</dd>
+											  <dd>月付VIP2</dd>
 											  {elseif $user->class ==13}
-											  <dd>月付黄金VIP</dd>
+											  <dd>月付VIP3</dd>
 											  {elseif $user->class ==14}
-											  <dd>月付钻石VIP</dd>
+											  <dd>月付VIP4</dd>
 											  
 											 
 											  {elseif $user->class ==3}
 											  <dd> 永久会员</dd>
 											  {elseif $user->class==17}											  
-                                                                                          <dd> 月付VIP1</dd>
-                                                                                          {elseif $user->class==18}
+                                              <dd> 月付VIP1</dd>
+                                              {elseif $user->class==18}
 											  <dd> 月付VIP2</dd>
 											  {elseif $user->class==19}
 											  <dd> 月付VIP3</dd>
@@ -60,13 +60,13 @@
 											  <dd> 年付SVIP3</dd>
 											  
 											  {elseif $user->class==26}
-											  <dd> 年付青铜SVIP</dd>
+											  <dd> 年付SVIP1</dd>
 											  {elseif $user->class==27}
-											  <dd> 年付白银SVIP</dd>
+											  <dd> 年付SVIP2</dd>
 											  {elseif $user->class==28}
-											  <dd> 年付黄金SVIP</dd>
+											  <dd> 年付SVIP3</dd>
 											  {elseif $user->class==29}
-											  <dd> 年付钻石SVIP</dd>
+											  <dd> 年付SVIP4</dd>
 											  
 											 
                                                                                           {else}
