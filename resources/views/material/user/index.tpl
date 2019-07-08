@@ -728,6 +728,12 @@
 {include file='user/footer.tpl'}
 
 <script src="/theme/material/js/shake.js/shake.js"></script>
+<script>
+$(document).ready(function(){
+    $("#result").modal();
+    $("#msg").html("本站已进行节点分级，请在用户中心查阅最新公告，在节点列表查阅节点等级，在商店查看套餐对应等级；本次节点分级不影响等级未到期用户正常使用。");
+});
+</script>
 
 <script>
 ;(function(){
