@@ -63,7 +63,7 @@
 							{if !$node@first}</div>{/if}
 							<div class="nodetitle">
 								<a class="waves-effect waves-button" data-toggle="collapse" href="#cardgroup{$class}" aria-expanded="true" aria-controls="cardgroup{$class}">
-								    <span>{if $class == 0}普通{/if}{if $class < 22}VIP{/if}{if $class >=23}SVIP{/if}(节点禁ping)</span><i class="material-icons">expand_more</i>
+								    <span>{if $class == 0}普通{/if}{if $class == 11}VIP1{/if}{if $class == 12}VIP2{/if}{if $class == 13}VIP3{/if}{if $class == 14}VIP4{/if}{if $class >=23}SVIP{/if}(节点禁ping)</span><i class="material-icons">expand_more</i>
 								</a>
 							</div>
 							<div class="card-row collapse in" id="cardgroup{$class}">
