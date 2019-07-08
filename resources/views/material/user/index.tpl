@@ -69,10 +69,9 @@
 											  {elseif $user->class==29}
 											  <dd> 年付SVIP4</dd>
 											  
-											 
-                                                                                          {else}
-                                                                                          <dd> 未知等级</dd>
-                                                                                          {/if}
+											  {else}
+                                              <dd> 未知等级</dd>
+                                              {/if}
 												</div>
 											</div>
 										</div>
@@ -85,7 +84,7 @@
 									<div class="user-info-bottom">
 										<div class="nodeinfo node-flex">
 										{if $user->class>1}
-											<span><i class="icon icon-md">add_circle</i>到期流量清空</span>
+											<span><i class="icon icon-md">add_circle</i>到期等级流量清空</span>
 										{else}
 										    <span><a href="/user/shop"><i class="icon icon-md">add_circle</i>请购买套餐激活账号</a></span>
 										{/if}
