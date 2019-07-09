@@ -518,6 +518,7 @@
 												<div class="tab-pane fade" id="all_v2ray">
 													<nav class="tab-nav margin-top-no">
 														<ul class="nav nav-list">
+														   {if $user->class >= 23}
 															<li class="active">
 																<a class="" data-toggle="tab" href="#all_v2ray_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
 															</li>
@@ -530,6 +531,11 @@
 															<li>
 																<a class="" data-toggle="tab" href="#all_v2ray_info"><i class="icon icon-lg">info_outline</i>&nbsp;连接信息</a>
 															</li>
+															{else}
+															<li class="active">
+																<a class="" data-toggle="tab" href="#all_v2ray_error"><i class="icon icon-lg">info_outline</i>&nbsp;错误提示</a>
+															</li>
+															{/if}
 														</ul>
 													</nav>
 													<div class="tab-pane fade active in" id="all_v2ray_windows">
@@ -571,6 +577,10 @@
 															
 														<div><span class="icon icon-lg text-white">flash_auto</span> ClashX订阅地址：</div>
 														<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$subUrl}{$ssr_sub_token}?mu=4" readonly="true"><button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=4">点击复制</button><br></div>
+													</div>
+													<div class="tab-pane fade" id="all_v2ray_error">
+													<p>v2ray节点仅限SVIP用户使用，如您需要使用，请到<a href="/user/shop">商店</a>升级套餐。</p>
+													
 													</div>
 												</div>
 											</div>
