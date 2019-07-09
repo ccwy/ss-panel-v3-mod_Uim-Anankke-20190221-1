@@ -1238,7 +1238,7 @@ class UserController extends BaseController
 
         if ($title == "" || $content == "") {
             $res['ret'] = 0;
-            $res['msg'] = "非法输入";
+            $res['msg'] = "工单标题或者工单内容没填写，请填写标题和内容。";
             return $this->echoJson($response, $res);
         }
 
@@ -1298,7 +1298,7 @@ class UserController extends BaseController
 
         if ($content == "" || $status == "") {
             $res['ret'] = 0;
-            $res['msg'] = "非法输入";
+            $res['msg'] = "工单内容不能为空";
             return $this->echoJson($response, $res);
         }
 
