@@ -580,7 +580,7 @@
 														<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$subUrl}{$ssr_sub_token}?mu=4" readonly="true"><button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=4">点击复制</button><br></div>
 													</div>
 													{else}
-													<div class="tab-pane fade" id="all_v2ray_error">
+													<div class="tab-pane fade active in" id="all_v2ray_error">
 													<p>v2ray节点仅限SVIP用户使用，如您需要使用，请到<a href="/user/shop">商店</a>升级套餐。</p>													
 													</div>
 													{/if}
