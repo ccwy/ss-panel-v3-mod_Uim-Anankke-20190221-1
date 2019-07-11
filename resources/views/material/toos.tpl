@@ -91,7 +91,7 @@
 												</tr>
 												
 												<tr>
-													<td>以上用户协议（TOS)最终解释权归本站所有，如有变动，以最新的为准，如有任何问题，请<br><a href="/user/ticket">建立工单</a>联系管理员</td>													
+													<td>以上用户协议（TOS)如有变动，以最新版为准，如有任何问题，请<br><a href="/user/ticket">建立工单</a>联系管理员</td>													
 												</tr>
 											</tbody>
 										</table>
