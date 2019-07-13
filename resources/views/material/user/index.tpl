@@ -68,7 +68,8 @@
 											  <dd> 年付SVIP3</dd>
 											  {elseif $user->class==29}
 											  <dd> 年付SVIP4</dd>
-											  
+											  {elseif $user->class==30}
+											  <dd> SVIP10</dd>
 											  {else}
                                               <dd> 未知等级</dd>
                                               {/if}
