@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>禁止访问！</title>
+		<META HTTP-EQUIV="REFRESH" CONTENT="0; URL=/user"></META>
         <meta name="keywords" content=""/>
         <meta name="description" content=""/>
         <meta charset="utf-8" />
