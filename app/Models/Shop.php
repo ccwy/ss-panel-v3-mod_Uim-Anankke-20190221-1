@@ -268,7 +268,7 @@ class Shop extends Model
 					}
 				}
                     $user->class=$value;
-                    
+                    $user->boughtd=1;
                     break;
                 case "speedlimit":
                     $user->node_speedlimit=$value;
