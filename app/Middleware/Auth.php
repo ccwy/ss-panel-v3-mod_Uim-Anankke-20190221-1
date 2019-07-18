@@ -20,7 +20,7 @@ class Auth
         }
 		
 		
-        if ($user->enable == 0 && $_SERVER["REQUEST_URI"] != "/user/disable" && substr($_SERVER["REQUEST_URI"], 0, 13) != "/user/ticket/" ) {
+        if ($user->enable == 0 && $_SERVER["REQUEST_URI"] != "/user/disable" && $_SERVER["REQUEST_URI"] != "/user/ticket/" ) {
             $newResponse = $response->withStatus(302)->withHeader('Location', '/user/disable');
             return $newResponse;
         }
