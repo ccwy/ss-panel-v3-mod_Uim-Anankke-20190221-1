@@ -23,7 +23,7 @@
 												
 												<li>2，点击网页屏幕左侧菜单栏那个联系我们</li>
 												<li>3，如果网页屏幕右下角那个蓝色按钮可用，请通过它联系管理员</li>
-												<li><a class="btn btn-brand waves-attach" href="/user/ticket">点击进入工单系统</a></li>
+												<p><a class="btn btn-brand waves-attach" href="/user/ticket">点击进入工单系统</a></p>
 											
 									</div>
 								</div>
