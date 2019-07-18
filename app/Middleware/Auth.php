@@ -6,6 +6,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use App\Services\Auth as AuthService;
 use App\Services\Config;
+use App\Models\Ticket;
 
 use App\Services\Jwt;
 
@@ -19,7 +20,7 @@ class Auth
             return $newResponse;
         }
 		
-        if ($user->enable == 0 && $_SERVER["REQUEST_URI"] != "/user/disable") {
+        if ($user->enable == 0 && $_SERVER["REQUEST_URI"] != "/user/disable" && $_SERVER["REQUEST_URI"] != "/user/ticket" && $_SERVER["REQUEST_URI"] != "/user/ticket/create" && $_SERVER["REQUEST_URI"] != "/user/ticket/".$ticket->id."/view") {
             $newResponse = $response->withStatus(302)->withHeader('Location', '/user/disable');
             return $newResponse;
         }
