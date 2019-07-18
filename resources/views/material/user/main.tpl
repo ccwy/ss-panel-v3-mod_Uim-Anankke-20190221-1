@@ -69,17 +69,15 @@
 						<ul class="menu-collapse collapse in" id="ui_menu_me">
 						
 							<li><a href="/user"><i class="icon icon-lg">account_balance_wallet</i>&nbsp;用户中心</a></li>
+							{if $user->enable != 0}
 							<li><a href="/user/edit"><i class="icon icon-lg">sync_problem</i>&nbsp;系统设置</a></li>
-							
-							
 							<li><a href="/user/node"><i class="icon icon-lg">airplanemode_active</i>&nbsp;节点列表</a></li>  
                             {if $user->class >1}							
 							<li><a href="/user/relay"><i class="icon icon-lg">compare_arrows</i>&nbsp;中转规则</a></li>
 							<li><a href="/user/trafficlog"><i class="icon icon-lg">hourglass_empty</i>&nbsp;流量记录</a></li>
 							<li><a href="/user/guide"><i class="icon icon-lg">start</i>&nbsp;使用教程</a></li>
 							{/if}
-							
-							
+													
 							<li><a href="/user/code"><i class="icon icon-lg">code</i>&nbsp;充值</a></li>
 							<li><a href="/user/shop"><i class="icon icon-lg">shop</i>&nbsp;套餐购买</a></li>
 							<li><a href="/user/bought"><i class="icon icon-lg">shopping_cart</i>&nbsp;购买记录</a></li>
@@ -93,20 +91,22 @@
                             {if $config['enable_donate']=='true'}
 							<li><a href="/user/donate"><i class="icon icon-lg">attach_money</i>&nbsp;捐赠公示</a></li>
 							{/if}
+							{/if}
 							
 							{if $config['enable_ticket']=='true'}
                             <li><a href="/user/ticket"><i class="icon icon-lg">question_answer</i>&nbsp;工单系统</a></li>
 							{/if}
 							
 							<li><a href="/cous"><i class="icon icon-lg">question_answer</i>&nbsp;联系我们</a></li>
-							
+							{if $user->enable != 0}
 							{if $config['telegram1']!='' && $user->class > 1}
 						    <li><a href="{$config['telegram1']}" target="_blank"><span class="icon icon-lg">near_me</span> TG 频道</a></li>							
 						    {/if}
 						
 						    {if  $config['telegram2']!='' && $user->class > 1}
 						    <li><a href="{$config['telegram2']}" target="_blank"><span class="icon icon-lg">near_me</span> TG VIP群组</a></li>							
-						    {/if}	
+						    {/if}
+							{/if}
 						
 						</ul>
 
