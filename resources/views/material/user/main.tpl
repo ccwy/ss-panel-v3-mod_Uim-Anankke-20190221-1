@@ -98,15 +98,15 @@
 							{/if}
 							
 							<li><a href="/cous"><i class="icon icon-lg">question_answer</i>&nbsp;联系我们</a></li>
-							{if $user->enable != 0}
-							{if $config['telegram1']!='' && $user->class > 1}
+							
+							{if $config['telegram1']!='' && $user->class > 1 && $user->enable != 0}
 						    <li><a href="{$config['telegram1']}" target="_blank"><span class="icon icon-lg">near_me</span> TG 频道</a></li>							
 						    {/if}
 						
-						    {if  $config['telegram2']!='' && $user->class > 1}
+						    {if  $config['telegram2']!='' && $user->class > 1 && $user->enable != 0}
 						    <li><a href="{$config['telegram2']}" target="_blank"><span class="icon icon-lg">near_me</span> TG VIP群组</a></li>							
 						    {/if}
-							{/if}
+							
 						
 						</ul>
 
