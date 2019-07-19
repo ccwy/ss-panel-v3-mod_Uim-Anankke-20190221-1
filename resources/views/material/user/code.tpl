@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                {if $user->id != 16 || $user->id != 57 || $user->id !=36 || $user->id != 63 || $user->id != 147 || $user->id !=85 }
+                {if $user->id != 16 && $user->id != 57 && $user->id !=36 && $user->id != 63 && $user->id != 147 && $user->id !=85 }	
                 {if $pmw!=''}
                     <div class="col-lg-12 col-md-12">
                         <div class="card margin-bottom-no">

@@ -78,7 +78,7 @@
 							<li><a href="/user/guide"><i class="icon icon-lg">start</i>&nbsp;使用教程</a></li>
 							{/if}
 							
-							{if $user->id !=85 || $user->id !=2293}						
+							{if $user->id != 16 && $user->id != 57 && $user->id !=36 && $user->id != 63 && $user->id != 147 && $user->id !=85 }						
 							<li><a href="/user/code"><i class="icon icon-lg">code</i>&nbsp;充值</a></li>
 							{/if}
 							<li><a href="/user/shop"><i class="icon icon-lg">shop</i>&nbsp;套餐购买</a></li>
