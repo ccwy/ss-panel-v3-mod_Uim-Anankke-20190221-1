@@ -316,7 +316,7 @@
 																<button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$ios_password}">点击复制</button><br>
 															</div>
 														
-														
+														<p>注意：以上IOS账号严禁泄露给他人，不保证长期可用，密码不定期修改，禁止登陆icloud，建议自行注册外区Apple ID并购买此类软件。</p>
 													{/if}
 													<p><span class="icon icon-lg text-white">filter_1</span> 在 Safari 中<a class="btn-dl" href="https://itunes.apple.com/us/app/potatso-lite/id1239860606?mt=8"><i class="material-icons">save_alt</i> 点击安装 Potatso Lite</a> 或在非国区AppStore中搜索<code>Shadowrocket</code>下载安装 </p>
 														<p><span class="icon icon-lg text-white">filter_2</span> 打开 Potatso Lite，点击添加代理，点击右上角的 + 号，选择“订阅”，名字任意填写，开启自动更新，URL填写以下地址并保存即可</p>
