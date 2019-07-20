@@ -163,7 +163,7 @@
 									<div class="card-inner">
 										<div class="cardbtn-edit">
 												<div class="card-heading">重置端口</div>
-												<button class="btn btn-flat" id="portreset"><span class="icon">autorenew</span>&nbsp;</button>
+												<button class="btn btn-flat" id="port_reset_modal"><span class="icon">autorenew</span>&nbsp;</button>
 										</div>
 										
 										<p>重置后1分钟内生效</p>
@@ -242,6 +242,24 @@
 					    </div>
 						{/if}
 					</div>
+					
+					<div aria-hidden="true" class="modal modal-va-middle fade" id="port_reset" role="dialog" tabindex="-1">
+					<div class="modal-dialog modal-xs">
+						<div class="modal-content">
+							<div class="modal-heading">
+								<a class="modal-close" data-dismiss="modal">×</a>
+								<h2 class="modal-title">确认要重置连接端口？？</h2>
+							</div>
+							<div class="modal-inner">
+								<p>重置端口立即生效，请及时更新客户端端口信息，请您确认。</p>
+							</div>
+							<div class="modal-footer">
+								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent" data-dismiss="modal" id="portreset" type="button">确定</button></p>
+							</div>
+						</div>
+					</div>
+				    </div>
+				
 
 
 
@@ -299,7 +317,12 @@ $(".copy-text").click(function () {
 					$("#msg").html(data.msg+"     出现了一些错误。");
                 }
             })
-        })
+        });
+		
+	$("#port_reset_modal").click(function () {	
+	$("#port_reset").modal();
+		})
+		
     })
 </script>
 <script>

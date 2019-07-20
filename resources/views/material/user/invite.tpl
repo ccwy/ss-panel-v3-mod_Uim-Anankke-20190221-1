@@ -242,7 +242,6 @@ $("#invite_reset_link").click(function () {
 	$("#msg").html("已重置您的邀请链接，复制您的邀请链接发送给其他人！");
 	window.setTimeout("location.href='/user/inviteurl_reset'", {$config['jump_delay']});
 });
-
 </script>
 
 <!-- js -->
