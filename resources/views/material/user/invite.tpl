@@ -41,7 +41,7 @@
 									<div class="card-inner margin-bottom-no">
 											<div class="cardbtn-edit">
 													<div class="card-heading">邀请链接</div>
-													{if $config['register_mode']!='close'}<div class="reset-flex"><span>重置链接</span><a class="reset-link btn btn-brand-accent btn-flat" ><i class="icon">autorenew</i>&nbsp;</a></div>{/if}
+													{if $config['register_mode']!='close'}<div class="reset-flex"><span>重置链接</span><a class="reset-link btn btn-brand-accent btn-flat"><i class="icon">autorenew</i>&nbsp;</a></div>{/if}
 											</div>
 										<p>剩余可邀请次数：{if $user->invite_num<0}无限{else}<code>{$user->invite_num}</code>{/if}</p>
 										<p>请将下面邀请链接给有需要的人注册使用，禁止将邀请链接给陌生人，禁止将邀请链接放到论坛，贴吧等公共场所，请保护好自己的邀请链接。</p>
@@ -121,7 +121,24 @@
 
 					{/if}
 					
-
+	
+				<div aria-hidden="true" class="modal modal-va-middle fade" id="invite_reset_modal" role="dialog" tabindex="-1">
+					<div class="modal-dialog modal-xs">
+						<div class="modal-content">
+							<div class="modal-heading">
+								<a class="modal-close" data-dismiss="modal">×</a>
+								<h2 class="modal-title">确认要重置邀请链接？</h2>
+							</div>
+							<div class="modal-inner">
+								<p>请您确认。</p>
+							</div>
+							<div class="modal-footer">
+								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent" data-dismiss="modal" id="invite_reset_link" type="button">确定</button></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 					{include file='dialog.tpl'}
 
 				</div>
@@ -140,6 +157,8 @@
 		$("#result").modal();
 		$("#msg").html("已复制到您的剪贴板，请您继续接下来的操作。");
 	});
+	
+
 
     $(document).ready(function () {
         $("#invite").click(function () {
@@ -214,8 +233,11 @@ $("#custom-invite-confirm").click(function () {
 </script>
 
 <script>
-
 $(".reset-link").click(function () {
+ $("#invite_reset_modal").modal();
+});
+	
+$("#invite_reset_link").click(function () {
 	$("#result").modal();
 	$("#msg").html("已重置您的邀请链接，复制您的邀请链接发送给其他人！");
 	window.setTimeout("location.href='/user/inviteurl_reset'", {$config['jump_delay']});
