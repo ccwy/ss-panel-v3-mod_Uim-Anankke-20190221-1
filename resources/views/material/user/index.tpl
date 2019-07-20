@@ -723,6 +723,25 @@
 
 								</div>
 							</div>
+							
+							
+				<div aria-hidden="true" class="modal modal-va-middle fade" id="rss_reset_modal" role="dialog" tabindex="-1">
+					<div class="modal-dialog modal-xs">
+						<div class="modal-content">
+							<div class="modal-heading">
+								<a class="modal-close" data-dismiss="modal">×</a>
+								<h2 class="modal-title">确认要重置订阅地址？</h2>
+							</div>
+							<div class="modal-inner">
+								<p>确认后原订阅地址立即失效，新地址即刻生效，请及时更换客户端订阅地址，请您确认。</p>
+							</div>
+							<div class="modal-footer">
+								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent" data-dismiss="modal" id="rss_reset_link" type="button">确定</button></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 						{include file='dialog.tpl'}
 
 					</div>
@@ -821,11 +840,12 @@ $(".copy-text").click(function () {
 	$("#result").modal();
 	$("#msg").html("已拷贝订阅链接，请您继续接下来的操作。");
 });
-$(function(){
-	new Clipboard('.reset-link');
-});
 
 $(".reset-link").click(function () {
+ $("#rss_reset_modal").modal();
+});
+
+$("#rss_reset_link").click(function () {
 	$("#result").modal();
 	$("#msg").html("已重置您的订阅链接，请变更或添加您的订阅链接！");
 	window.setTimeout("location.href='/user/url_reset'", {$config['jump_delay']});

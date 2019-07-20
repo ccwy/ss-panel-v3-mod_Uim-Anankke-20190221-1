@@ -248,10 +248,10 @@
 						<div class="modal-content">
 							<div class="modal-heading">
 								<a class="modal-close" data-dismiss="modal">×</a>
-								<h2 class="modal-title">确认要重置连接端口？？</h2>
+								<h2 class="modal-title">确认要重置连接端口？</h2>
 							</div>
 							<div class="modal-inner">
-								<p>重置端口立即生效，请及时更新客户端端口信息，请您确认。</p>
+								<p>确认后原端口立即无法使用，新端口一分钟内生效，请您确认。</p>
 							</div>
 							<div class="modal-footer">
 								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent" data-dismiss="modal" id="portreset" type="button">确定</button></p>
