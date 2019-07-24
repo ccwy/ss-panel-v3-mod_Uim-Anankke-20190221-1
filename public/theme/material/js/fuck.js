@@ -78,6 +78,7 @@
             'Douban': u.indexOf('com.douban.frodo') > -1,
             'Suning': u.indexOf('SNEBUY-APP') > -1,
             'iQiYi': u.indexOf('IqiyiApp') > -1,
+			'OnePlusBrowser': u.indexOf('OnePlusBrowser') > -1,
             //系统或平台
             'Windows': u.indexOf('Windows') > -1,
             'Linux': u.indexOf('Linux') > -1 || u.indexOf('X11') > -1,
@@ -137,7 +138,7 @@
         //基本信息
         var hash = {
             engine: ['WebKit', 'Trident', 'Gecko', 'Presto'],
-            browser: ['Safari', 'Chrome', 'Edge', 'IE', 'Firefox', 'Firefox Focus', 'Chromium', 'Opera', 'Vivaldi', 'Yandex', 'Arora', 'Lunascape', 'QupZilla', 'Coc Coc', 'Kindle', 'Iceweasel', 'Konqueror', 'Iceape', 'SeaMonkey', 'Epiphany', '360', '360SE', '360EE', 'UC', 'QQBrowser', 'MQQBrowser', 'QQ', 'Baidu', 'Maxthon', 'Sogou', 'LBBROWSER', '2345Explorer', 'Mb2345Browser', 'TheWorld', 'XiaoMi', 'Quark', 'Qiyu', 'Wechat', 'Taobao', 'Alipay', 'Weibo', 'Douban','Suning', 'iQiYi'],
+            browser: ['Safari', 'Chrome', 'Edge', 'IE', 'Firefox', 'Firefox Focus', 'Chromium', 'Opera', 'Vivaldi', 'Yandex', 'Arora', 'Lunascape', 'QupZilla', 'Coc Coc', 'Kindle', 'Iceweasel', 'Konqueror', 'Iceape', 'SeaMonkey', 'Epiphany', '360', '360SE', '360EE', 'UC', 'QQBrowser', 'MQQBrowser', 'QQ', 'Baidu', 'Maxthon', 'Sogou', 'LBBROWSER', '2345Explorer', 'Mb2345Browser', 'TheWorld', 'XiaoMi', 'Quark', 'Qiyu', 'Wechat', 'Taobao', 'Alipay', 'Weibo', 'Douban','Suning', 'iQiYi', 'OnePlusBrowser'],
             os: ['Windows', 'Linux', 'Mac OS', 'Android', 'Ubuntu', 'FreeBSD', 'Debian', 'iOS', 'Windows Phone', 'BlackBerry', 'MeeGo', 'Symbian', 'Chrome OS', 'WebOS'],
             device: ['Mobile', 'Tablet']
         };
@@ -213,5 +214,8 @@ if (new Browser().browser == '360' || new Browser().browser == '360EE' || new Br
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'Quark' ) {
     window.alert('为了您的人身安全，我们禁止您使用 夸克浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.location.href='https://www.google.cn/chrome';
+} else if (new Browser().browser == 'OnePlusBrowser' ) {
+    window.alert('为了您的人身安全，我们禁止您使用 OnePlus浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 }
