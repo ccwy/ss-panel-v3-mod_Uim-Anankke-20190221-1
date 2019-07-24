@@ -171,8 +171,8 @@ if (new Browser().browser == '360' || new Browser().browser == '360EE' || new Br
     window.alert('为了您的人身安全，我们禁止您使用 360 浏览器访问本站，我们要求您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'XiaoMi' ) {
-    window.alert('为了您的人身安全，我们禁止您使用 小米浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
-    window.location.href='https://www.google.cn/chrome';
+    window.alert('为了您的人身安全，我们禁止您使用 MIUI浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
+    window.location.href='https://apkpure.com/google-chrome-fast-secure/com.android.chrome';
 } else if (new Browser().browser == 'UC' ) {
     window.alert('为了您的人身安全，我们禁止您使用 UC浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
     window.location.href='https://www.google.cn/chrome';
@@ -217,5 +217,5 @@ if (new Browser().browser == '360' || new Browser().browser == '360EE' || new Br
     window.location.href='https://www.google.cn/chrome';
 } else if (new Browser().browser == 'OnePlusBrowser' ) {
     window.alert('为了您的人身安全，我们禁止您使用 OnePlus浏览器 访问本站，我们推荐您通过 Chrome 或 Firefox 浏览器访问本站。\n点击确定后将会跳转至 Chrome 浏览器下载');
-    window.location.href='https://www.google.cn/chrome';
+    window.location.href='https://apkpure.com/google-chrome-fast-secure/com.android.chrome';
 }
