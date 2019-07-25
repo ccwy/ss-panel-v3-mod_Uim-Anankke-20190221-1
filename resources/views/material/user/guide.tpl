@@ -140,15 +140,15 @@
 											<ul>
 												<h3><li>下载软件</li> </h3>
 												<ol>
-													<li>1，注册一个非中国区的Apple ID账号（不会注册的百度搜一下就有教程了）</li>
-													<li>2，回到主屏幕，点击设置</li>
+													<li>注册一个非中国区的Apple ID账号（不会注册的百度搜一下就有教程了）</li>
+													<li>回到主屏幕，点击设置</li>
 													<p><img src="/images/ios-14.jpg"/></p>
-													<li>3，滑动到itunes store与Apple store，点击进去</li>
+													<li>滑动到itunes store与Apple store，点击进去</li>
 													<p><img src="/images/ios-18.jpg"/></p>
-													<li>4，点击你的apple账号，点击退出登录</li>
+													<li>点击你的apple账号，点击退出登录</li>
 													<p><img src="/images/ios-17.jpg"/></p>
-													<li>5，退出你的apple账号后，点击登录，登录你新注册的外区apple ID</li>
-													<li>6，回到主屏幕，点击Apple store，点击屏幕右下角的搜索（Search）在搜索框里面输入<code>shadowrocket</code>，看到<code>shadowrocket</code>软件，点击购买(Get)或者下载</li>
+													<li>出你的apple账号后，点击登录，登录你新注册的外区apple ID</li>
+													<li>回到主屏幕，点击Apple store，点击屏幕右下角的搜索（Search）在搜索框里面输入shadowrocket，看到shadowrocket软件，点击购买(Get)或者下载</li>
 													<p><img src="/images/ios-3.jpg"/></p>
 													
 												</ol>
@@ -156,22 +156,22 @@
 											<ul>
 												<h3><li>导入节点</li> </h3>
 												<ul>
-													<li>返回浏览器，打开云霄阁网站，登录后在用户中心，往下滑动找到<code>快速添加节点</code>，点击SSR，点击IOS，下面有两种添加节点方法</li>
+													<li>返回浏览器，打开云霄阁网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS，下面有两种添加节点方法</li>
 													<p><img src="/images/ios-1.jpg"></p>
 													<li>方法一（推荐）：</li>
 													<ol>
-														<li>1，找到订阅地址，点击复制订阅地址</li>
+														<li>找到订阅地址，点击复制订阅地址</li>
 														<p><img src="/images/ios-2.jpg"/></p>
-														<li>2，返回主屏幕，找到<code>shadowrocket</code>软件，点击打开，然后点击软件右上角的<code>+<code>号</li>
+														<li>返回主屏幕，找到shadowrocket软件，点击打开，然后点击软件右上角的+号</li>
 														<p><img src="/images/ios-4.jpg"/></p>
 														
-														<li>3，点击类型</li>
+														<li>点击类型</li>
 														<p><img src="/images/ios-5.jpg"/></p>
-														<li>4，类型选择<code>Subscribe</code></li>
+														<li>类型选择Subscribe</li>
 														<p><img src="/images/ios-6.jpg"/></p>
-														<li>5，在URI输入框粘贴前面在网站复制的订阅地址，在备注里面填入云霄阁，点击右上角的完成</li>
+														<li>在URI输入框粘贴前面在网站复制的订阅地址，在备注里面填入云霄阁，点击右上角的完成</li>
 														<p><img src="/images/ios-7.jpg"/></p>
-														<li>6，更新完成后节点就会出来了，由于节点是禁Ping的，所以你点击那个延迟测试是会显示超时的，如需要测试，请到软件设置里面把延迟测试方法改为TCP就可以测试了。</li>
+														<li>更新完成后节点就会出来了，由于节点是禁Ping的，所以你点击那个延迟测试是会显示超时的，如需要测试，请到软件设置里面把延迟测试方法改为TCP就可以测试了。</li>
 														<p><img src="/images/ios-8.jpg"/></p>
 														
 													</ol>
@@ -187,15 +187,15 @@
 											<ul>
 												<h3><li>选择节点并开始使用</li></h3>
 												<ol>
-												    <li>1，选择一个节点</li>
+												    <li>选择一个节点</li>
 													<p><img src="/images/ios-9.jpg"/></p>
-													<li>2，滑动到最顶部，全局路由那里要选择配置或者全局，点击箭头所示的开关按钮</li>
+													<li>滑动到最顶部，全局路由那里要选择配置或者全局，点击箭头所示的开关按钮</li>
 													<p><img src="/images/ios-10.jpg"/></p>
-													<li>3，在弹出的弹窗点击Allow</li>
+													<li>在弹出的弹窗点击Allow</li>
 													<p><img src="/images/ios-11.jpg"/></p>
-													<li>4，输入手机锁屏密码或者通过指纹、面部识别确认</li>
+													<li>输入手机锁屏密码或者通过指纹、面部识别确认</li>
 													<p><img src="/images/ios-12.jpg"/></p>
-													<li>5，如箭头所示，这就表示连上节点了，你可以在Safari浏览器打开谷歌或者YouTube试试了</li>
+													<li>如箭头所示，这就表示连上节点了，你可以在Safari浏览器打开谷歌或者YouTube试试了</li>
 													<p><img src="/images/ios-13.jpg"/></p>
 													
 												</ol>
