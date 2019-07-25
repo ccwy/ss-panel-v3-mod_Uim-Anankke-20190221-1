@@ -169,7 +169,7 @@
 														<p><img src="/images/ios-5.jpg"/></p>
 														<li>类型选择Subscribe</li>
 														<p><img src="/images/ios-6.jpg"/></p>
-														<li>在URI输入框粘贴前面在网站复制的订阅地址，在备注里面填入云霄阁，点击右上角的完成</li>
+														<li>在URL输入框粘贴前面在网站复制的订阅地址，在备注里面填入云霄阁，点击右上角的完成</li>
 														<p><img src="/images/ios-7.jpg"/></p>
 														<li>更新完成后节点就会出来了，由于节点是禁Ping的，所以你点击那个延迟测试是会显示超时的，如需要测试，请到软件设置里面把延迟测试方法改为TCP就可以测试了。</li>
 														<p><img src="/images/ios-8.jpg"/></p>
