@@ -58,7 +58,7 @@
             '360': u.indexOf('QihooBrowser') > -1 || u.indexOf('QHBrowser') > -1,
             '360EE': u.indexOf('360EE') > -1,
             '360SE': u.indexOf('360SE') > -1,
-            'UC': u.indexOf('UC') > -1 || u.indexOf(' UBrowser') > -1,
+            'UC': u.indexOf('UC') > -1 || u.indexOf(' UBrowser') > -1 || u.indexOf(' UCBrowser') > -1,
             'QQBrowser': u.indexOf('QQBrowser') > -1,
             'MQQBrowser': u.indexOf('MQQBrowser') > -1,
             'QQ': u.indexOf('QQ/') > -1,
