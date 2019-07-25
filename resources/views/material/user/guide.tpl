@@ -140,15 +140,15 @@
 											<ul>
 												<h3><li>下载软件</li> </h3>
 												<ol>
-													<li>注册一个非中国区的Apple ID账号（不会注册的百度搜一下就有教程了）</li>
+													<li>注册一个非中国区的Apple ID账号（一般注册美区或港区的比较多，不会注册的百度搜一下就有教程了）</li>
 													<li>回到主屏幕，点击设置</li>
 													<p><img src="/images/ios-14.jpg"/></p>
 													<li>滑动到itunes store与Apple store，点击进去</li>
 													<p><img src="/images/ios-18.jpg"/></p>
 													<li>点击你的apple账号，点击退出登录</li>
 													<p><img src="/images/ios-17.jpg"/></p>
-													<li>出你的apple账号后，点击登录，登录你新注册的外区apple ID</li>
-													<li>回到主屏幕，点击Apple store，点击屏幕右下角的搜索（Search）在搜索框里面输入shadowrocket，看到shadowrocket软件，点击购买(Get)或者下载</li>
+													<li>退出你的apple账号后，点击登录，登录你新注册的外区apple ID</li>
+													<li>回到主屏幕，点击Apple store，点击屏幕右下角的搜索（Search）在搜索框里面输入shadowrocket，看到shadowrocket软件，点击购买(Get)或者下载，此软件非免费，并非本站开发和提供，属于第三方软件，自身不带任何节点，售价在2.99美元，请自行决定是否购买，Apple Store有免费的第三方SSR软件Potatso Lite可供下载使用，此软件同样不带节点，以上两款SSR软件都可可使用本站节点</li>
 													<p><img src="/images/ios-3.jpg"/></p>
 													
 												</ol>
