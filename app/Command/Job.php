@@ -799,7 +799,7 @@ class Job
             }
 
 			//等级到期前2天自动发邮件提醒用户			
-			if($user->class!=0 && strtotime($user->class_expire) - time() < 2*86400 && $user->tixing == 0)
+		/*	if($user->class!=0 && strtotime($user->class_expire) - time() < 2*86400 && $user->tixing == 0)
 			{				
 					
 					$subject = Config::get('appName')."-您的账号等级有效期不足 2 天啦";
@@ -828,12 +828,12 @@ class Job
 		
 				   $user->tixing =1;	
 				
-			}
+			}*/
 
 			
 			
 		      	//等级到期3天后提醒用户续费	
-		     	if($user->class ==0 && time() - strtotime($user->class_expire) >= 3*86400 && $user->tixing == 2)
+		     /*	if($user->class ==0 && time() - strtotime($user->class_expire) >= 3*86400 && $user->tixing == 2)
 			    {				
 					
 					$subject = Config::get('appName')."-您的账号等级已过期 3 天了";
@@ -862,12 +862,12 @@ class Job
 		
 				   $user->tixing =3;	
 				
-			    }
+			    }*/
 
 			
 			
 			//等级到期删除用户前7天最后提醒
-			if($user->class ==0 && time() - strtotime($user->class_expire) >= 7*86400 && $user->tixing ==3)
+		/*	if($user->class ==0 && time() - strtotime($user->class_expire) >= 7*86400 && $user->tixing ==3)
 			{				
 					
 					$subject = Config::get('appName')."-您的账号已过期7天以上，账号即将被删除";
@@ -896,7 +896,7 @@ class Job
 				   
 				   $user->tixing =4;	
 				
-			}
+			}*/
 
 
             if ($user->class!=0 && 
