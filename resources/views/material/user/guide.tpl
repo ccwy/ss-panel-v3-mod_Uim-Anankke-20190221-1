@@ -47,51 +47,68 @@
 											<ul>
 												<h3><li>下载软件</li> </h3>
 												<ol>
-													<li>点击左侧用户中心(手机需先点左上角按钮调出导航菜单)</li>
-													<li>找到快速添加节点</li>
-													<li>点击下载客户端</li>
-													<p><img src="/images/c_win_1.png"/></p>
+													<li>这里介绍Windows系统使用方法，使用系统是win7 64位旗舰版</li>
+													<li>请打开网站用户中心，往下滑动到快速添加节点处，点击下载SSR软件</li>
+													<p><img src="/images/m-win-1.png"/></p>
+													<li>下载SSR软件到桌面并解压缩</li>
 												</ol>
 											</ul>
 											<ul>
 												<h3><li>导入节点</li> </h3>
 												<ul>
-													<li>解压客户端，双击shadowsocksr4.0的客户端(打不开就用2.0，2.0打不开请下载安装net.framework3.0，还打不开麻烦升级到win7)</li>
-													<li>方法一：</li>
+													<li>解压客户端，双击shadowsocksr4.0的客户端(打不开就用2.0，2.0打不开请下载安装net.framework4.0，还打不开麻烦升级到win7系统)</li>
+													<p><img src="/images/m-win-3.png"/></p>
+													<li>方法一（推荐）：</li>
 													<ol>
-														<li>在快速添加节点中找到【备用节点导入方法】</li>
-														<li>点击其中的链接</li>
-														<p><img src="/images/c_win_2.png"/></p>
-														<li>找到系统托盘菜单中的SSR纸飞机图标右键调出菜单</li>
-														<li>点击剪贴板批量导入ssr://链接</li>
-														<p><img src="/images/c_win_3.png"/></p>
+														<li>在快速添加节点中找到订阅地址</li>
+														<p><img src="/images/m-win-2.png"/></p>
+														<li>在屏幕右下角找到小飞机图标，如截图</li>
+														<p><img src="/images/m-win-4.png"/></p>
+														<li>鼠标右键点击小飞机图标，鼠标左键点击下那个负载均衡，取消掉负载均衡</li>
+														<p><img src="/images/m-win-5.png"/></p>
+														<li>再次鼠标右键点击小飞机图标，点击服务器订阅</li>
+														<p><img src="/images/m-win-6.png"/></p>
+														<li>鼠标左键点击服务器订阅设置</li>
+														<p><img src="/images/m-win-7.png"/></p>
+														<li>点击Add，添加订阅地址</li>
+														<p><img src="/images/m-win-8.png"/></p>
+														<li>点击网址输入框，选中里面的全部内容，然后删除</li>
+														<p><img src="/images/m-win-9.png"/></p>
+														<li>然后把刚刚在网站复制的订阅地址粘贴到网址输入框，并点击下方的确定按钮</li>
+														<p><img src="/images/m-win-10.png"/></p>
+														<li>鼠标右键点击屏幕右下角的小飞机图标，然后点击服务器订阅，然后点击更新SSR服务器订阅（不通过代理）</li>
+														<p><img src="/images/m-win-11.png"/></p>
+														<li>屏幕右下角出现如图所示的通知就表示获取节点成功，订阅更新成功了</li>
+														<p><img src="/images/m-win-12.png"/></p>
+														
+														
+														
 													</ol>
-													<li>方法二(推荐)：</li>
+													<li>方法二：</li>
 													<ol>
-														<li>在快速添加节点中找到节点订阅地址</li>
-														<li>点击按钮复制订阅链接</li>
-														<p><img src="/images/c_win_4.png"/></p>
-														<li>找到系统托盘菜单中的SSR纸飞机图标右键调出菜单</li>
-														<li>打开SSR服务器订阅链接设置</li>
-														<p><img src="/images/c_win_5.png"/></p>
-														<li>点击add添加一个订阅，将复制的链接填入右侧框内点击确定</li>
-														<p><img src="/images/c_win_6.png"/></p>
-														<li>找到系统托盘菜单中的SSR纸飞机图标右键调出菜单</li>
-														<li>点击更新SSR服务器订阅(不通过代理)</li>
-														<p><img src="/images/c_win_7.png"/></p>
+														<li>在快速添加节点中找到【备用导入节点方法】，点击点击复制链接小按钮</li>
+														<p><img src="/images/m-win-17.png"/></p>
+														<li>鼠标右键点击小飞机图标，鼠标左键点击下那个负载均衡，取消掉负载均衡</li>
+														<p><img src="/images/m-win-5.png"/></p>
+														<li>再次鼠标右键点击小飞机图标，点击【剪切板批量导入ssr://链接】，等待导入节点完成，弹出页面点击确定，节点导入完成</li>
+														<p><img src="/images/m-win-18.png"/></p>
+														
 													</ol>
 												</ul>
 											</ul>
 											<ul>
-												<h3><li>选择节点</li></h3>
+												<h3><li>选择节点并开始使用</li></h3>
 												<ol>
-													<li>找到系统托盘菜单中的SSR纸飞机图标右键调出菜单</li>
-													<li>服务器->找到对应本站的节点组->选择一个节点单击</li>
-													<li>负载均衡前面那个勾去掉</li>
-													<p><img src="/images/c_win_8.png"/></p>
-													<li>打开浏览器输入www.google.com试试吧！</li>
+													<li>找到屏幕有下角小飞机图标，鼠标左键点击一下，在弹出页面里面删除最顶上那个无效节点FreeSSR-public，然后点击确定</li>
+													<p><img src="/images/m-win-13.png"/></p>
+													<li>鼠标右键点击小飞机，然后点击服务器->找到云霄阁->选择一个节点单击</li>
+													<p><img src="/images/m-win-15.png"/></p>
+													<li>然后打开浏览器输入www.google.com试试吧！</li>
+													<p><img src="/images/m-win-16.png"/></p>
 												</ol>
 												<ul>以上教程均为电脑没有安装过任何代理软件的步骤，如果安装过其他代理软件可能产生冲突</ul>
+												<ul>如果出现端口占用提示，请鼠标右键点击小飞机，点击选项设置，找到本地代理，本地端口默认是1080，你可以把它改成1081或者1082之类的，以避免端口冲突</ul>
+												<ul>更新订阅方式：鼠标右键点击小飞机->点击服务器订阅->点击更新SSR服务器订阅（不通过代理），等待更新成功的提示即可。</ul>
 											</ul>
 										</div>
 
