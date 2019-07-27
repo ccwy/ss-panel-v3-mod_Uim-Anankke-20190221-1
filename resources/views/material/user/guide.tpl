@@ -56,7 +56,7 @@
 											<ul>
 												<h3><li>导入节点</li> </h3>
 												<ul>
-													<li>解压SSR客户端，双击shadowsocksr4.0的客户端(打不开就用2.0，2.0打不开请下载安装net.framework4.0，还打不开麻烦升级到win7或者win10系统)</li>
+													<li>解压SSR客户端，双击shadowsocksr4.0的客户端(打不开就用2.0，2.0打不开请下载安装net.framework4.0系统组件（百度搜一下就有了），还打不开麻烦升级到win7或者win10系统)</li>
 													<p><img src="/images/m-win-3.png"/></p>
 													<li>方法一（推荐）：</li>
 													<ol>
