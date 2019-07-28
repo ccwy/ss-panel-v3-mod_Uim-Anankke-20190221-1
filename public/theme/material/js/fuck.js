@@ -162,7 +162,7 @@
     };
 }));
 
-var mqqHTML = '<div style="padding: 15px"><h2>请从菜单中选择「从浏览器中打开」</h2></div>';
+var mqqHTML = '<div style="padding: 15px"><h2>请使用 Chrome 或 Firefox 浏览器访问本站。</h2></div>';
 
 var bodyEl = document.getElementsByTagName('body')[0];
 
