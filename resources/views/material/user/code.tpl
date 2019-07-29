@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                {if $user->id != 16 && $user->id != 36 && $user->id != 63 && $user->id != 85 && $user->id !=147 }	
+               
                 {if $pmw!=''}
                     <div class="col-lg-12 col-md-12">
                         <div class="card margin-bottom-no">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 {/if}
-				{/if}
+				
                 {if $config['payurlma'] != ''} 
                 <div class="col-lg-12 col-md-12">
                     <div class="card margin-bottom-no">

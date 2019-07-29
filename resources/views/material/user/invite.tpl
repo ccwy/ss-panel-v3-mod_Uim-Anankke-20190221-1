@@ -33,7 +33,6 @@
 					
 
 					{if $user->invite_num!=-1}
-					{if $user->id != 16 && $user->id != 36 && $user->id != 63 && $user->id != 85 && $user->id !=147 }	
 					<div class="col-xx-12">
 						<div class="card margin-bottom-no">
 							<div class="card-main">
@@ -82,7 +81,7 @@
 						</div>
 						{/if}
 					{/if}
-					{/if}
+					
 
 					{if $config['invite_price']>=0}
 					<div class="col-xx-12 {if $config['custom_invite_price']>=0}col-lg-6{/if}">
