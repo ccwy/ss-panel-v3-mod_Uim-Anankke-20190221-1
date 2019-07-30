@@ -48,7 +48,7 @@
 												<h3><li>下载软件</li> </h3>
 												<ol>
 													<li>这里介绍Windows系统使用方法，使用系统是win7 64位旗舰版，XP系统、win10也是可以一样设置，不建议使用XP系统</li>
-													<li>请打开网站用户中心，往下滑动到快速添加节点处，点击下载SSR客户端</li>
+													<li>请打开{$config["appName"]}网站（本次演示使用的是chrome浏览器），登录后在用户中心，，往下滑动到快速添加节点处，点击下载SSR客户端</li>
 													<p><img src="/images/m-win-1.png"/></p>
 													<li>下载SSR客户端到桌面并解压缩到桌面</li>
 												</ol>
@@ -174,7 +174,7 @@
 											<ul>
 												<h3><li>导入节点</li> </h3>
 												<ul>
-													<li>返回浏览器，打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS，下面有两种添加节点方法</li>
+													<li>返回浏览器（本次演示使用的是chrome浏览器），打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS，下面有两种添加节点方法</li>
 													<p><img src="/images/m-ios-1.jpg"></p>
 													<li>方法一（推荐）：</li>
 													<ol>
@@ -227,14 +227,14 @@
 										    <ul>
 												<h3><li>下载软件</li> </h3>
 												<ol>
-													<li>打开网站用户中心，滑动到快速添加节点处，下载SSR客户端，下载后完成安装，SSR客户端并非由本站开发和提供，开发者是破娃，属于开源软件，托管在github</li>
+													<li>打开{$config["appName"]}网站登陆后到用户中心（本次演示使用的是chrome浏览器），滑动到快速添加节点处，下载SSR客户端，下载后完成安装，并打开SSR客户端；</li>
 													<p><img src="/images/m-android-1.png"/></p>												
 												</ol>
 											</ul>
 											<ul>
 												<h3><li>导入节点</li> </h3>
 												<ul>
-													<li>返回浏览器，打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击ANDROID，下面有两种添加节点方法</li>
+													<li>返回浏览器（本次演示使用的是chrome浏览器），打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击ANDROID，下面有两种添加节点方法</li>
 													<p><img src="/images/m-android-16.png"/></p>	
 													<li>方法一（推荐）：</li>
 													<ol>
