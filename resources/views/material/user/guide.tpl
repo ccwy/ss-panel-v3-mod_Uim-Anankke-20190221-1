@@ -86,7 +86,7 @@
 													</ol>
 													<li>方法二：</li>
 													<ol>
-														<li>在快速添加节点中找到【备用导入节点方法】，点击点击复制链接小按钮</li>
+														<li>在快速添加节点中找到【备用导入节点方法】，点击 链接 小按钮</li>
 														<p><img src="/images/m-win-17.png"/></p>
 														<li>鼠标右键点击小飞机图标，鼠标左键点击下那个负载均衡，取消掉负载均衡</li>
 														<p><img src="/images/m-win-5.png"/></p>
@@ -224,19 +224,69 @@
 										</div>
 
 										<div class="tab-pane fade page-course" id="all_ssr_android">
-											<p>1：下载app（用户中心可以看到下载链接）</p>
-											<p><img src="/images/c_android_1.jpg"/></p>
-											<p>2：添加订阅并更新</p>
-											<p><img src="/images/c_android_2.jpg"/></p>
-											<p><img src="/images/c_android_3.jpg"/></p>
-											<p><img src="/images/c_android_4.jpg"/></p>
-											<p><img src="/images/c_android_5.jpg"/></p>
-											<p>3：选择一个节点并设置路由</p>
-											<p><img src="/images/c_android_6.jpg"/></p>
-											<p><img src="/images/c_android_7.jpg"/></p>
-											<p>4：连接</p>
-											<p><img src="/images/c_android_8.jpg"/></p>
-											<p>注释：国产安卓系统为定制系统，如需要Youtube、Google套件等，需要安装Google框架，具体机型如何安装各不相同，请直接查找教程</p>
+										    <ul>
+												<h3><li>下载软件</li> </h3>
+												<ol>
+													<li>打开网站用户中心，滑动到快速添加节点处，下载SSR客户端，下载后完成安装，SSR客户端并非由本站开发和提供，开发者是破娃，属于开源软件，托管在github</li>
+													<p><img src="/images/m-android-1.png"/></p>												
+												</ol>
+											</ul>
+											<ul>
+												<h3><li>导入节点</li> </h3>
+												<ul>
+													<li>返回浏览器，打开云霄阁网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击ANDROID，下面有两种添加节点方法</li>
+													<p><img src="/images/m-android-16.png"/></p>	
+													<li>方法一（推荐）：</li>
+													<ol>
+														<li>找到订阅地址，点击复制订阅地址</li>
+														<p><img src="/images/m-android-2.png"/></p>
+														<li>返回主屏幕，找到SSR软件，点击打开，然后点击软件左上角箭头所指处的ShadowsocksR</li>
+														<p><img src="/images/m-android-3.png"/></p>
+														
+														<li>向左滑动删除Android SSR Default，然后点击屏幕右下角的那个大 + 号，看箭头所指</li>
+														<p><img src="/images/m-android-4.png"/></p>
+														<li>点击添加/升级SSR订阅</li>
+														<p><img src="/images/m-android-5.png"/></p>
+														<li>删除订阅列表里面默认的那个订阅地址FreeSSR-public（一定要删除这个，否则会导致无法更新订阅），然后点击添加订阅地址</li>
+														<p><img src="/images/m-android-6.png"/></p>
+														<li>在输入框里面粘贴你在网站复制的订阅地址，点击确定</li>
+														<p><img src="/images/m-android-7.png"/></p>
+														<li>更新出订阅列表了，里面显示了云霄阁就表示有订阅了，然后点击确定并升级</li>
+														<p><img src="/images/m-android-8.png"/></p>
+														<li>更新完成订阅后是这样的，节点都出来了</li>
+														
+														
+													</ol>
+													<li>方法二：</li>
+													<ol>
+														<li>在快速添加节点中找到【备用导入节点方法】，点击 链接 小按钮，就会自动跳转到SSR客户端里面，会提示是否添加，点击确定就会自动添加节点了</li>
+														
+														<p><img src="/images/m-android-15.png"/></p>
+														
+													</ol>
+												</ul>
+											</ul>
+											<ul>
+												<h3><li>选择节点并开始使用</li></h3>
+												<ol>
+												    <li>随便选择一个节点，例如HK03，点击它就是选择它了</li>
+													<p><img src="/images/m-android-9.png"/></p>
+													<li>点击箭头所示的开关按钮开启代理</li>
+													<p><img src="/images/m-android-10.png"/></p>
+													<li>在弹出的弹窗点击确定</li>
+													<p><img src="/images/m-android-11.png"/></p>
+													<li>看到小飞机上面的斜杠没了就表示开启代理了，并且手机状态栏会显示vpn图标</li>
+													<p><img src="/images/m-android-12.png"/></p>
+													<li>你可以在浏览器打开谷歌或者YouTube试试了</li>
+													<p><img src="/images/m-android-13.png"/></p>
+													
+												</ol>
+												<ul>以上教程均为安卓系统SSR代理软件的步骤，如果安装过其他代理软件可能产生冲突</ul>
+												<ul>SSR客户端还可以通过扫码添加节点，你可以在节点列表点击查看节点二维码</ul>
+												<ul>SSR客户端更新订阅方法，点击添加/升级SSR订阅，点击确定并升级，就会自动更新订阅了</ul>
+												<ul>注释：国产安卓系统为定制系统，如需要Youtube、Google软件等，需要安装Google框架，具体机型如何安装各不相同，请直接在谷歌/百度查找教程</ul>
+											</ul>	
+										
 										</div>
 
 										{*<div class="tab-pane fade" id="all_ssr_router">
