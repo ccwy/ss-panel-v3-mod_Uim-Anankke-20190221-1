@@ -227,7 +227,7 @@
 										    <ul>
 												<h3><li>下载软件</li> </h3>
 												<ol>
-													<li>打开{$config["appName"]}网站登陆后到用户中心（本次演示使用的是chrome浏览器），滑动到快速添加节点处，下载SSR客户端，下载后完成安装，并打开SSR客户端；</li>
+													<li>请打开{$config["appName"]}网站（本次演示使用的是chrome浏览器），登陆后到用户中心，滑动到快速添加节点处，下载SSR安卓客户端，下载后完成安装，并打开SSR客户端；</li>
 													<p><img src="/images/m-android-1.png"/></p>												
 												</ol>
 											</ul>
