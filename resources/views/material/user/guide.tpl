@@ -101,7 +101,7 @@
 												<ol>
 													<li>找到屏幕有下角小飞机图标，鼠标左键点击一下，在弹出页面里面删除最顶上那个无效节点FreeSSR-public，然后点击确定</li>
 													<p><img src="/images/m-win-13.png"/></p>
-													<li>鼠标右键点击小飞机，然后点击服务器->找到云霄阁->选择一个节点单击</li>
+													<li>鼠标右键点击小飞机，然后点击服务器->找到{$config["appName"]}->选择一个节点单击</li>
 													<p><img src="/images/m-win-15.png"/></p>
 													<li>然后打开浏览器输入www.google.com试试吧！</li>
 													<p><img src="/images/m-win-16.png"/></p>
@@ -158,7 +158,7 @@
 											<ul>
 												<h3><li>下载软件</li> </h3>
 												<ol>
-													<li>注册一个非中国区的Apple ID账号（一般注册美区或港区的比较多，不会注册的百度搜一下就有教程了）</li>
+													<li>由于政策原因，Apple Store中国区代理类软件被强制下架，所以需要注册一个非中国区的Apple ID账号（一般注册美区或港区的比较多，不会注册的百度搜一下就有教程了）；由于IOS系统限制，必须要IOS9以上系统才可以使用此类代理软件</li>
 													<li>回到主屏幕，点击设置</li>
 													<p><img src="/images/m-ios-14.jpg"/></p>
 													<li>滑动到itunes store与Apple store，点击进去</li>
@@ -174,7 +174,7 @@
 											<ul>
 												<h3><li>导入节点</li> </h3>
 												<ul>
-													<li>返回浏览器，打开云霄阁网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS，下面有两种添加节点方法</li>
+													<li>返回浏览器，打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS，下面有两种添加节点方法</li>
 													<p><img src="/images/m-ios-1.jpg"></p>
 													<li>方法一（推荐）：</li>
 													<ol>
@@ -187,7 +187,7 @@
 														<p><img src="/images/m-ios-5.jpg"/></p>
 														<li>类型选择Subscribe</li>
 														<p><img src="/images/m-ios-6.jpg"/></p>
-														<li>在URL输入框粘贴前面在网站复制的订阅地址，在备注里面填入云霄阁，点击右上角的完成</li>
+														<li>在URL输入框粘贴前面在网站复制的订阅地址，在备注里面填入{$config["appName"]}，点击右上角的完成</li>
 														<p><img src="/images/m-ios-7.jpg"/></p>
 														<li>更新完成后节点就会出来了，由于节点是禁Ping的，所以你点击那个延迟测试是会显示超时的，如需要测试，请到软件设置里面把延迟测试方法改为TCP就可以测试了。</li>
 														<p><img src="/images/m-ios-8.jpg"/></p>
@@ -234,7 +234,7 @@
 											<ul>
 												<h3><li>导入节点</li> </h3>
 												<ul>
-													<li>返回浏览器，打开云霄阁网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击ANDROID，下面有两种添加节点方法</li>
+													<li>返回浏览器，打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击ANDROID，下面有两种添加节点方法</li>
 													<p><img src="/images/m-android-16.png"/></p>	
 													<li>方法一（推荐）：</li>
 													<ol>
@@ -251,7 +251,7 @@
 														<p><img src="/images/m-android-6.png"/></p>
 														<li>在输入框里面粘贴你在网站复制的订阅地址，点击确定</li>
 														<p><img src="/images/m-android-7.png"/></p>
-														<li>更新出订阅列表了，里面显示了云霄阁就表示有订阅了，然后点击确定并升级</li>
+														<li>更新出订阅列表了，里面显示了{$config["appName"]}就表示有订阅了，然后点击确定并升级</li>
 														<p><img src="/images/m-android-8.png"/></p>
 														<li>更新完成订阅后节点就都出来了</li>
 														
