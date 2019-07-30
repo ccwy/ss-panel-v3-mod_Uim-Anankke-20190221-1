@@ -253,7 +253,7 @@
 														<p><img src="/images/m-android-7.png"/></p>
 														<li>更新出订阅列表了，里面显示了云霄阁就表示有订阅了，然后点击确定并升级</li>
 														<p><img src="/images/m-android-8.png"/></p>
-														<li>更新完成订阅后是这样的，节点都出来了</li>
+														<li>更新完成订阅后节点就都出来了</li>
 														
 														
 													</ol>
