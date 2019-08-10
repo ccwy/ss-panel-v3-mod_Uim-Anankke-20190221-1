@@ -279,14 +279,14 @@
 
 
 {include file='user/footer.tpl'}
-
+{*
 <script>
 $(document).ready(function(){
     $("#result").modal();
     $("#msg").html("不同套餐可用节点数量不同，为保障您的知情权和使用体验，在购买套餐前，请您先到<a href='/user/node'>节点列表</a>查看VIP等级对应的可用节点等级，然后再回到这里选购合适的套餐。");
 });
 </script>
-
+*}
 <script>
 function buy(id,auto) {
 	if(auto==0)
