@@ -155,6 +155,17 @@
 										</div>*}
 
 										<div class="tab-pane fade page-course" id="all_ssr_ios">
+										            <nav class="tab-nav margin-top-no">
+														<ul class="nav nav-list">
+															<li class="active">
+																<a class="" data-toggle="tab" href="#ios_ssr_shadowrocket">Shadowrocket</a>
+															</li>
+															<li>
+																<a class="" data-toggle="tab" href="#ios_ssr_Potatso">Potatso Lite</a>
+															</li>
+														</ul>
+													</nav>
+										    <div class="tab-pane fade page-course" id="ios_ssr_shadowrocket">
 											<ul>
 												<h3><li>下载软件</li> </h3>
 												<ol>
@@ -220,7 +231,8 @@
 												<ul>以上教程均为IOS系统shadowrocket代理软件的步骤，如果安装过其他代理软件可能产生冲突</ul>
 												<ul>shadowrocket还可以通过扫码添加节点，你可以在节点列表点击查看节点二维码</ul>
 												<ul>shadowrocket更新订阅方法，向左滑动订阅选项，就会出现更新按钮了</ul>
-											</ul>											
+											</ul>
+											</div>
 										</div>
 
 										<div class="tab-pane fade page-course" id="all_ssr_android">
