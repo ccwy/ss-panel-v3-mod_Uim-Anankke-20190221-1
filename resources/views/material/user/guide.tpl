@@ -183,7 +183,7 @@
 											</ul>
 											<ul>
 												<h3><li>导入节点</li> </h3>
-												<ul>
+												
 													<li>返回浏览器（本次演示使用的是chrome浏览器），打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS，下面有两种添加节点方法</li>
 													<p><img src="/images/m-ios-1.jpg"></p>
 													<li>方法一（推荐）：</li>
@@ -207,7 +207,7 @@
 														<li>找到小火箭一键订阅按钮，在Safari浏览器里面点击它，就会自动跳转到shadowrocket并添加节点了</li>														
 														<p><img src="/images/m-ios-2.1.jpg"/></p>														
 													</ol>
-												</ul>
+												
 											</ul>
 											<ul>
 												<h3><li>选择节点并开始使用</li></h3>
