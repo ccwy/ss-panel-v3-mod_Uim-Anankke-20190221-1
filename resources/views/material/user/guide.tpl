@@ -235,7 +235,7 @@
 											</ul>
 											</div>
 											
-											<div class="tab-pane fade active in" id="ios_ssr_Potatso">
+											<div class="tab-pane fade page-course" id="ios_ssr_Potatso">
 											<ul>
 												<h3><li>下载软件</li> </h3>
 												<ol>
