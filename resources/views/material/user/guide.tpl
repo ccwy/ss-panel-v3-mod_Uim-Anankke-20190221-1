@@ -226,6 +226,7 @@
 													<p><img src="/images/m-ios-12.jpg"/></p>
 													<li>如箭头所示，这就表示连上节点了，你可以在Safari浏览器打开谷歌或者YouTube试试了</li>
 													<p><img src="/images/m-ios-13.jpg"/></p>
+													<p><img src="/images/m-ios-29.jpg"/></p>
 													
 												</ol>
 												<ul>以上教程均为IOS系统shadowrocket代理软件的步骤，如果安装过其他代理软件可能产生冲突</ul>
@@ -233,6 +234,78 @@
 												<ul>shadowrocket更新订阅方法，向左滑动订阅选项，就会出现更新按钮了</ul>
 											</ul>
 											</div>
+											
+											<div class="tab-pane fade active in" id="ios_ssr_Potatso">
+											<ul>
+												<h3><li>下载软件</li> </h3>
+												<ol>
+													<li>由于政策原因，Apple Store中国区代理类软件被强制下架，所以需要注册一个非中国区的Apple ID账号（一般注册美区或港区的比较多，不会注册的百度搜一下就有教程了）；由于IOS系统限制，必须要IOS9以上系统才可以使用此类代理软件</li>
+													<li>回到主屏幕，点击设置</li>
+													<p><img src="/images/m-ios-14.jpg"/></p>
+													<li>滑动到itunes store与Apple store，点击进去</li>
+													<p><img src="/images/m-ios-18.jpg"/></p>
+													<li>点击你的apple账号，点击退出登录</li>
+													<p><img src="/images/m-ios-17.jpg"/></p>
+													<li>退出你的apple账号后，点击登录，登录你新注册的外区apple ID</li>
+													<li>回到主屏幕，点击Apple store，点击屏幕右下角的搜索（Search）在搜索框里面输入Potatso Lite，看到Potatso Lite软件，点击购买(Get)或者下载，此软件非免费，并非本站开发和提供，属于第三方软件，自身不带任何节点，免费SSR代理软件</li>
+													<p><img src="/images/m-ios-19.jpg"/></p>
+													
+												</ol>
+											</ul>
+											<ul>
+												<h3><li>导入节点</li> </h3>
+												<ul>
+													<li>返回浏览器（本次演示使用的是chrome浏览器），打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS，下面有两种添加节点方法</li>
+													<p><img src="/images/m-ios-1.jpg"></p>
+													<li>方法一（推荐）：</li>
+													<ol>
+														<li>找到订阅地址，点击复制订阅地址</li>
+														<p><img src="/images/m-ios-2.jpg"/></p>
+														<li>返回主屏幕，找到Potatso Lite软件，点击打开，然后点击软件右上角的+号</li>
+														<p><img src="/images/m-ios-20.jpg"/></p>
+														<li>点击立即使用</li>
+														<p><img src="/images/m-ios-21.jpg"/></p>
+														<li>点击现在添加</li>
+														<p><img src="/images/m-ios-22.jpg"/></p>
+														<li>点击订阅</li>
+														<p><img src="/images/m-ios-23.jpg"/></p>
+														<li>在Subscription URL输入框粘贴前面在网站复制的订阅地址，在Name里面填入{$config["appName"]}，点击右上角的 √ 完成</li>
+														<p><img src="/images/m-ios-24.jpg"/></p>
+														<li>更新完成后节点就会出来了</li>
+														
+														
+													</ol>
+													<li>方法二：</li>
+													<ol>
+														<li>到网站节点列表，点开并查看节点信息，使用Potatso Lite里面的二维码功能扫描网页提供的二维码添加节点</li>
+														
+														
+														
+													</ol>
+												</ul>
+											</ul>
+											<ul>
+												<h3><li>选择节点并开始使用</li></h3>
+												<ol>
+												    <li>选择一个可用节点</li>
+													<p><img src="/images/m-ios-25.jpg"/></p>
+													<li>开启智能路由，并点击下方的开始</li>
+													<p><img src="/images/m-ios-26.jpg"/></p>
+													<li>在弹出的弹窗点击Allow</li>
+													<p><img src="/images/m-ios-27.jpg"/></p>
+													<li>输入手机锁屏密码或者通过指纹、面部识别确认</li>
+													<p><img src="/images/m-ios-12.jpg"/></p>
+													<li>如箭头所示，这就表示连上节点了，你可以在Safari浏览器打开谷歌或者YouTube试试了</li>
+													<p><img src="/images/m-ios-28.jpg"/></p>
+													<p><img src="/images/m-ios-29.jpg"/></p>
+													
+												</ol>
+												<ul>以上教程均为IOS系统Potatso Lite代理软件的步骤，如果安装过其他代理软件可能产生冲突</ul>
+												
+												<ul>Potatso Lite更新订阅方法，点击节点，点击订阅为{$config["appName"]}这个，点击右上角那个 √ 就会自动更新订阅了</ul>
+											</ul>
+											</div>
+											
 										</div>
 
 										<div class="tab-pane fade page-course" id="all_ssr_android">
