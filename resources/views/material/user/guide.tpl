@@ -165,7 +165,7 @@
 															</li>
 														</ul>
 													</nav>
-										    <div class="tab-pane fade page-course" id="ios_ssr_shadowrocket">
+										    <div class="tab-pane fade active in" id="ios_ssr_shadowrocket">
 											<ul>
 												<h3><li>下载软件</li> </h3>
 												<ol>
