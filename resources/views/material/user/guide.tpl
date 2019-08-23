@@ -178,8 +178,7 @@
 													<p><img src="/images/m-ios-17.jpg"/></p>
 													<li>退出你的apple账号后，点击登录，登录你新注册的外区apple ID</li>
 													<li>回到主屏幕，点击Apple store，点击屏幕右下角的搜索（Search）在搜索框里面输入shadowrocket，看到shadowrocket软件，点击购买(Get)或者下载，此软件非免费，并非本站开发和提供，属于第三方软件，自身不带任何节点，售价在2.99美元，请自行决定是否购买，Apple Store有免费的第三方SSR软件Potatso Lite可供下载使用，此软件同样不带节点，以上两款SSR软件都可可使用本站节点</li>
-													<p><img src="/images/m-ios-3.jpg"/></p>
-													
+													<p><img src="/images/m-ios-3.jpg"/></p>													
 												</ol>
 											</ul>
 											<ul>
@@ -192,8 +191,7 @@
 														<li>找到订阅地址，点击复制订阅地址</li>
 														<p><img src="/images/m-ios-2.jpg"/></p>
 														<li>返回主屏幕，找到shadowrocket软件，点击打开，然后点击软件右上角的+号</li>
-														<p><img src="/images/m-ios-4.jpg"/></p>
-														
+														<p><img src="/images/m-ios-4.jpg"/></p>														
 														<li>点击类型</li>
 														<p><img src="/images/m-ios-5.jpg"/></p>
 														<li>类型选择Subscribe</li>
@@ -206,10 +204,8 @@
 													</ol>
 													<li>方法二：</li>
 													<ol>
-														<li>找到小火箭一键订阅按钮，在Safari浏览器里面点击它，就会自动跳转到shadowrocket并添加节点了</li>
-														
-														<p><img src="/images/m-ios-2.1.jpg"/></p>
-														
+														<li>找到小火箭一键订阅按钮，在Safari浏览器里面点击它，就会自动跳转到shadowrocket并添加节点了</li>														
+														<p><img src="/images/m-ios-2.1.jpg"/></p>														
 													</ol>
 												</ul>
 											</ul>
@@ -226,8 +222,7 @@
 													<p><img src="/images/m-ios-12.jpg"/></p>
 													<li>如箭头所示，这就表示连上节点了，你可以在Safari浏览器打开谷歌或者YouTube试试了</li>
 													<p><img src="/images/m-ios-13.jpg"/></p>
-													<p><img src="/images/m-ios-29.jpg"/></p>
-													
+													<p><img src="/images/m-ios-29.jpg"/></p>													
 												</ol>
 												<ul>以上教程均为IOS系统shadowrocket代理软件的步骤，如果安装过其他代理软件可能产生冲突</ul>
 												<ul>shadowrocket还可以通过扫码添加节点，你可以在节点列表点击查看节点二维码</ul>
@@ -248,13 +243,11 @@
 													<p><img src="/images/m-ios-17.jpg"/></p>
 													<li>退出你的apple账号后，点击登录，登录你新注册的外区apple ID</li>
 													<li>回到主屏幕，点击Apple store，点击屏幕右下角的搜索（Search）在搜索框里面输入Potatso Lite，看到Potatso Lite软件，点击购买(Get)或者下载，此软件非免费，并非本站开发和提供，属于第三方软件，自身不带任何节点，免费SSR代理软件</li>
-													<p><img src="/images/m-ios-19.jpg"/></p>
-													
+													<p><img src="/images/m-ios-19.jpg"/></p>													
 												</ol>
 											</ul>
 											<ul>
 												<h3><li>导入节点</li> </h3>
-												<ul>
 												<ol>
 													<li>返回浏览器（本次演示使用的是chrome浏览器），打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS</li>
 													<p><img src="/images/m-ios-1.jpg"></p>
@@ -271,7 +264,7 @@
 													<li>在Subscription URL输入框粘贴前面在网站复制的订阅地址，在Name里面填入{$config["appName"]}，点击右上角的 √ 完成</li>
 													<p><img src="/images/m-ios-24.jpg"/></p>
 													<li>更新完成后节点就会出来了</li>
-												</ul>
+												</ol>
 											</ul>
 											<ul>
 												<h3><li>选择节点并开始使用</li></h3>
