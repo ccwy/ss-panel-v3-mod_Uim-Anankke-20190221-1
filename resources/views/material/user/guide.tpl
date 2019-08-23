@@ -184,7 +184,7 @@
 											</ul>
 											<ul>
 												<h3><li>导入节点</li> </h3>
-												
+												<ul>
 													<li>返回浏览器（本次演示使用的是chrome浏览器），打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS，下面有两种添加节点方法</li>
 													<p><img src="/images/m-ios-1.jpg"></p>
 													<li>方法一（推荐）：</li>
@@ -211,7 +211,7 @@
 														<p><img src="/images/m-ios-2.1.jpg"/></p>
 														
 													</ol>
-												
+												</ul>
 											</ul>
 											<ul>
 												<h3><li>选择节点并开始使用</li></h3>
@@ -254,7 +254,7 @@
 											</ul>
 											<ul>
 												<h3><li>导入节点</li> </h3>
-												
+												<ul>
 												<ol>
 													<li>返回浏览器（本次演示使用的是chrome浏览器），打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS</li>
 													<p><img src="/images/m-ios-1.jpg"></p>
@@ -271,8 +271,7 @@
 													<li>在Subscription URL输入框粘贴前面在网站复制的订阅地址，在Name里面填入{$config["appName"]}，点击右上角的 √ 完成</li>
 													<p><img src="/images/m-ios-24.jpg"/></p>
 													<li>更新完成后节点就会出来了</li>
-												</ol>
-												
+												</ul>
 											</ul>
 											<ul>
 												<h3><li>选择节点并开始使用</li></h3>
