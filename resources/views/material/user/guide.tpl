@@ -255,33 +255,23 @@
 											<ul>
 												<h3><li>导入节点</li> </h3>
 												<ul>
-													<li>返回浏览器（本次演示使用的是chrome浏览器），打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS，下面有两种添加节点方法</li>
+												<ol>
+													<li>返回浏览器（本次演示使用的是chrome浏览器），打开{$config["appName"]}网站，登录后在用户中心，往下滑动找到快速添加节点，点击SSR，点击IOS</li>
 													<p><img src="/images/m-ios-1.jpg"></p>
-													<li>方法一（推荐）：</li>
-													<ol>
-														<li>找到订阅地址，点击复制订阅地址</li>
-														<p><img src="/images/m-ios-2.jpg"/></p>
-														<li>返回主屏幕，找到Potatso Lite软件，点击打开，然后点击软件右上角的+号</li>
-														<p><img src="/images/m-ios-20.jpg"/></p>
-														<li>点击立即使用</li>
-														<p><img src="/images/m-ios-21.jpg"/></p>
-														<li>点击现在添加</li>
-														<p><img src="/images/m-ios-22.jpg"/></p>
-														<li>点击订阅</li>
-														<p><img src="/images/m-ios-23.jpg"/></p>
-														<li>在Subscription URL输入框粘贴前面在网站复制的订阅地址，在Name里面填入{$config["appName"]}，点击右上角的 √ 完成</li>
-														<p><img src="/images/m-ios-24.jpg"/></p>
-														<li>更新完成后节点就会出来了</li>
-														
-														
-													</ol>
-													<li>方法二：</li>
-													<ol>
-														<li>到网站节点列表，点开并查看节点信息，使用Potatso Lite里面的二维码功能扫描网页提供的二维码添加节点</li>
-														
-														
-														
-													</ol>
+													<li>找到订阅地址，点击复制订阅地址</li>
+													<p><img src="/images/m-ios-2.jpg"/></p>
+													<li>返回主屏幕，找到Potatso Lite软件，点击打开</li>
+													<p><img src="/images/m-ios-20.jpg"/></p>
+													<li>点击立即使用</li>
+													<p><img src="/images/m-ios-21.jpg"/></p>
+													<li>点击现在添加</li>
+													<p><img src="/images/m-ios-22.jpg"/></p>
+													<li>点击订阅</li>
+													<p><img src="/images/m-ios-23.jpg"/></p>
+													<li>在Subscription URL输入框粘贴前面在网站复制的订阅地址，在Name里面填入{$config["appName"]}，点击右上角的 √ 完成</li>
+													<p><img src="/images/m-ios-24.jpg"/></p>
+													<li>更新完成后节点就会出来了</li>
+												</ol>
 												</ul>
 											</ul>
 											<ul>
