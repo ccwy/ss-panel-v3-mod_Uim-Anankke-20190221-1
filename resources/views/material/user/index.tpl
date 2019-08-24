@@ -211,7 +211,7 @@
 									<div class="card-inner margin-bottom-no">
 									<div class="cardbtn-edit">
 											<div class="card-heading"><i class="icon icon-md">phonelink</i> 快速添加节点</div>
-											{*<div class="reset-flex"><span>重置订阅地址</span><a class="reset-link btn btn-brand-accent btn-flat" ><i class="icon">autorenew</i>&nbsp;</a></div>*}
+											<div class="reset-flex"><span>重置订阅地址</span><a class="reset-link btn btn-brand-accent btn-flat" ><i class="icon">autorenew</i>&nbsp;</a></div>
 									</div>
 										<nav class="tab-nav margin-top-no">
 											<ul class="nav nav-list">
@@ -736,7 +736,7 @@
 								<p>确认后原订阅地址立即失效，新地址立即生效，请及时更换客户端订阅地址，请您确认。</p>
 							</div>
 							<div class="modal-footer">
-								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent" data-dismiss="modal" id="rss_reset_link" type="button">确定</button></p>
+								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent" data-dismiss="modal" id="rss_reset_link" type="button">确认</button></p>
 							</div>
 						</div>
 					</div>
