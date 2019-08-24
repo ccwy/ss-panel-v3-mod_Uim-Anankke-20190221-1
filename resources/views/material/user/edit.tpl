@@ -254,7 +254,7 @@
 								<p>确认后原端口立即无法使用，新端口一分钟内生效，请您确认。</p>
 							</div>
 							<div class="modal-footer">
-								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent" data-dismiss="modal" id="portreset" type="button">确定</button></p>
+								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent" data-dismiss="modal" id="portreset" type="button">确认</button></p>
 							</div>
 						</div>
 					</div>
