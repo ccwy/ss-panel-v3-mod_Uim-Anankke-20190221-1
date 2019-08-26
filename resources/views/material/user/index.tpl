@@ -211,7 +211,7 @@
 									<div class="card-inner margin-bottom-no">
 									<div class="cardbtn-edit">
 											<div class="card-heading"><i class="icon icon-md">phonelink</i> 快速添加节点</div>
-											<div class="reset-flex"><span>重置订阅地址</span><a class="reset-link btn btn-brand-accent btn-flat" ><i class="icon">autorenew</i>&nbsp;</a></div>
+											{*<div class="reset-flex"><span>重置订阅地址</span><a class="reset-link btn btn-brand-accent btn-flat" ><i class="icon">autorenew</i>&nbsp;</a></div>*}
 									</div>
 										<nav class="tab-nav margin-top-no">
 											<ul class="nav nav-list">
