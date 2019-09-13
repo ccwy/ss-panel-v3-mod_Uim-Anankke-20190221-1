@@ -22,7 +22,7 @@
 					<div class="card">
 						<div class="card-main">
 							<div class="card-inner">
-								<p>有任何问题请直接右下角的+号提交新问题</p>
+								<p>有任何问题请直接右下角的+号提交新问题，工单回复时间在24小时内，工单回复时间在上午9点到晚上21点之间。</p>
 							</div>
 						</div>
 					</div>
