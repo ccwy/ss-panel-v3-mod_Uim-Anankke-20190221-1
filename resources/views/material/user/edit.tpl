@@ -200,9 +200,13 @@
 												<div class="card-heading">重置订阅地址</div>
 												<a class="reset-link btn btn-brand-accent btn-flat" ><i class="icon">autorenew</i>&nbsp;</a>												
 										</div>									
-										<p>重置后立即生效，订阅地址在用户中心快速添加节点处查看</p>
-										<div><span class="icon icon-lg text-white">flash_auto</span>当前订阅地址：</div>
-										<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" readonly value="{$subUrl}{$ssr_sub_token}?mu=0" readonly="true"><button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=0">点击复制</button><br></div>								
+										<p>重置订阅地址后立即生效</p>
+										<div><span class="icon icon-lg text-white">flash_auto</span> 当前{if !$mergeSub}普通节点{/if}订阅地址：</div>
+										<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" id="sub0" readonly value="{$subUrl}{$ssr_sub_token}?mu=0" readonly="true"><button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=0">点击复制</button><br></div>
+										{if !$mergeSub}
+										<div><span class="icon icon-lg text-white">flash_auto</span> 当前单端口节点订阅地址：</div>
+										<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" id="sub1" readonly value="{$subUrl}{$ssr_sub_token}?mu=1" readonly="true"><button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=1">点击复制</button><br></div>
+										{/if}						
 									</div>
 								</div>
 							</div>

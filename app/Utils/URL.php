@@ -213,7 +213,7 @@ class URL
                     $query->where('sort', 0)
                         ->orwhere('sort', 10);
                 }
-            )->where("type", "1")->orderBy("name")->get();
+            )->where("type", "1")->orderBy("name", 'desc')->get();
         } else {
             $nodes=Node::where(
                 function ($query) {
@@ -225,7 +225,7 @@ class URL
                     $query->where("node_group", "=", $user->node_group)
                         ->orWhere("node_group", "=", 0);
                 }
-            )->where("type", "1")->where("node_class", "<=", $user->class)->orderBy("name")->get();
+            )->where("type", "1")->where("node_class", "<=", $user->class)->orderBy("name", 'desc')->get();
         }
         if($is_mu) {
             if ($user->is_admin) {
