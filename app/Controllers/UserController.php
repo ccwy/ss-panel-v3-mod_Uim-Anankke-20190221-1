@@ -842,6 +842,8 @@ class UserController extends BaseController
 
     public function edit($request, $response, $args)
     {
+		$user = $this->user;
+		$ssr_sub_token = LinkController::GenerateSSRSubCode($this->user->id, 0);
         $themes = Tools::getDir(BASE_PATH . "/resources/views");
 
         $BIP = BlockIp::where("ip", $_SERVER["REMOTE_ADDR"])->first();
@@ -857,7 +859,7 @@ class UserController extends BaseController
 
         $config_service = new Config();
 
-        return $this->view()->assign('user', $this->user)->assign('themes', $themes)->assign('isBlock', $isBlock)->assign('Block', $Block)->assign('bind_token', $bind_token)->assign('telegram_bot', Config::get('telegram_bot'))->assign('config_service', $config_service)
+        return $this->view()->assign('user', $this->user)->assign('themes', $themes)->assign('isBlock', $isBlock)->assign('Block', $Block)->assign('bind_token', $bind_token)->assign('telegram_bot', Config::get('telegram_bot'))->assign('config_service', $config_service)->assign('ssr_sub_token', $ssr_sub_token)
             ->registerClass("URL", "App\Utils\URL")->display('user/edit.tpl');
     }
 
@@ -1799,7 +1801,7 @@ class UserController extends BaseController
     {
         $user = $this->user;
         $user->clean_link();
-        $newResponse = $response->withStatus(302)->withHeader('Location', '/user');
+        $newResponse = $response->withStatus(302)->withHeader('Location', '/user/edit');
         return $newResponse;
     }
 

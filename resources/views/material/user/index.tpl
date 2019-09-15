@@ -724,7 +724,7 @@
 								</div>
 							</div>
 							
-					{*		
+						
 				<div aria-hidden="true" class="modal modal-va-middle fade" id="rss_reset_modal" role="dialog" tabindex="-1">
 					<div class="modal-dialog modal-xs">
 						<div class="modal-content">
@@ -740,7 +740,7 @@
 							</div>
 						</div>
 					</div>
-				</div>*}
+				</div>
 				
 						{include file='dialog.tpl'}
 
@@ -842,7 +842,7 @@ $(".copy-text").click(function () {
 	$("#msg").html("已拷贝订阅链接，请您继续接下来的操作。");
 });
 
-{*
+
 $(".reset-link").click(function () {
  $("#rss_reset_modal").modal();
 });
@@ -852,7 +852,7 @@ $("#rss_reset_link").click(function () {
 	$("#msg").html("已重置您的订阅链接，请变更或添加您的订阅链接！");
 	window.setTimeout("location.href='/user/url_reset'", {$config['jump_delay']});
 });
-*}
+
 
  {if $user->transfer_enable-($user->u+$user->d) == 0}
 window.onload = function() {
