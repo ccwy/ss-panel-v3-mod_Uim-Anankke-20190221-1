@@ -162,7 +162,7 @@ class URL
                     $query->where("node_group", "=", $user->node_group)
                         ->orWhere("node_group", "=", 0);
                 }
-            )->where("type", "1")->where("node_class", "<=", $user->class)->orderBy("name", 'desc')->get();
+            )->where("type", "1")->where("node_class", "<=", $user->class)->orderBy("name")->get();
 
             foreach ($shadowsocks_nodes as $node) {
                 $result[] = [
