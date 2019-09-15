@@ -859,7 +859,7 @@ class UserController extends BaseController
 
         $config_service = new Config();
 
-        return $this->view()->assign('user', $this->user)->assign('themes', $themes)->assign('isBlock', $isBlock)->assign('Block', $Block)->assign('bind_token', $bind_token)->assign('telegram_bot', Config::get('telegram_bot'))->assign('config_service', $config_service)->assign('ssr_sub_token', $ssr_sub_token)
+        return $this->view()->assign('user', $this->user)->assign('themes', $themes)->assign('isBlock', $isBlock)->assign('Block', $Block)->assign('bind_token', $bind_token)->assign('telegram_bot', Config::get('telegram_bot'))->assign('config_service', $config_service)->assign('ssr_sub_token', $ssr_sub_token)->assign('subUrl', Config::get('subUrl'))->assign('mergeSub', Config::get('mergeSub'))
             ->registerClass("URL", "App\Utils\URL")->display('user/edit.tpl');
     }
 
