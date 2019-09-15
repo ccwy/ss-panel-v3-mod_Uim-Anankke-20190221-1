@@ -190,6 +190,24 @@
 								</div>
 							</div>
 						</div>
+						
+						<div class="card margin-bottom-no">
+							<div class="card-main">
+								<div class="card-inner">
+									
+									<div class="card-inner">
+										<div class="cardbtn-edit">
+												<div class="card-heading">重置订阅地址</div>
+												<a class="reset-link btn btn-brand-accent btn-flat" ><i class="icon">autorenew</i>&nbsp;</a>
+												
+										</div>
+										
+										<p>重置后立即生效，订阅地址在用户中心快速添加节点处查看</p>
+										
+									</div>
+								</div>
+							</div>
+						</div>
 						{/if}
 
                        {* {if $user->class > 1}
@@ -259,6 +277,23 @@
 						</div>
 					</div>
 				    </div>
+				    			
+				<div aria-hidden="true" class="modal modal-va-middle fade" id="rss_reset_modal" role="dialog" tabindex="-1">
+					<div class="modal-dialog modal-xs">
+						<div class="modal-content">
+							<div class="modal-heading">
+								<a class="modal-close" data-dismiss="modal">×</a>
+								<h2 class="modal-title">确认要重置订阅地址？</h2>
+							</div>
+							<div class="modal-inner">
+								<p>确认后原订阅地址立即失效，新地址立即生效，请及时更换客户端订阅地址，请您确认。</p>
+							</div>
+							<div class="modal-footer">
+								<p class="text-right"><button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">取消</button><button class="btn btn-flat btn-brand-accent" data-dismiss="modal" id="rss_reset_link" type="button">确认</button></p>
+							</div>
+						</div>
+					</div>
+				</div>
 				
 
 
@@ -287,8 +322,17 @@ $(".copy-text").click(function () {
 	$("#result").modal();
 	$("#msg").html("已复制到您的剪贴板。");
 });
+</script>
 
-
+<script>
+$(".reset-link").click(function () {
+ $("#rss_reset_modal").modal();
+});
+$("#rss_reset_link").click(function () {
+	$("#result").modal();
+	$("#msg").html("已重置您的订阅地址！");
+	window.setTimeout("location.href='/user/url_reset'", {$config['jump_delay']});
+});
 </script>
 
 <script>
