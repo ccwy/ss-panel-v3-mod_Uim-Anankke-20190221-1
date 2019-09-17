@@ -826,14 +826,9 @@ class UserController extends BaseController
 
     public function announcement($request, $response, $args)
     {
-       
-       $pageNum = 1;
-        if (isset($request->getQueryParams()["page"])) {
-            $pageNum = $request->getQueryParams()["page"];
-        }
-        $Anns = Ann::where('id', $id)->orderBy('date', 'desc')->paginate(20, ['*'], 'page', $pageNum);
-        $Anns->setPath('/user/announcement');
-        
+        $Anns = Ann::orderBy('date', 'desc')->get();
+
+
         return $this->view()->assign("anns", $Anns)->display('user/announcement.tpl');
     }
 
