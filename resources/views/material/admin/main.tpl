@@ -101,6 +101,8 @@
 							<li><a href="/admin/node"><i class="icon icon-lg">router</i>&nbsp;节点列表</a></li>
 							<li><a href="/admin/trafficlog"><i class="icon icon-lg">traffic</i>&nbsp;流量记录</a></li>
 							<li><a href="/admin/alive"><i class="icon icon-lg">important_devices</i>&nbsp;在线IP</a></li>
+							<li><a href="/admin/block"><i class="icon icon-lg">dialer_sip</i>&nbsp;已封禁IP</a></li>
+							<li><a href="/admin/unblock"><i class="icon icon-lg">dialer_sip</i>&nbsp;已解封IP</a></li>
 						</ul>
 
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_user">用户</a>
