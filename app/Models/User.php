@@ -95,6 +95,11 @@ class User extends Model
     {
         return str_replace(",", PHP_EOL, $this->attributes['forbidden_ip']);
     }
+	//人工封禁IP
+	public function get_disconnect_ip()
+    {
+        return str_replace(",", PHP_EOL, $this->attributes['disconnect_ip']);
+    }
 
     public function get_forbidden_port()
     {

@@ -241,6 +241,11 @@
 									<label class="floating-label" for="node_speedlimit">禁止用户访问的端口，一行一个</label>
 									<textarea class="form-control maxwidth-edit" id="forbidden_port" rows="8">{$edit_user->get_forbidden_port()}</textarea>
 								</div>
+								
+								<div class="form-group form-group-label">
+									<label class="floating-label" for="node_speedlimit">封禁连接IP，一行一个</label>
+									<textarea class="form-control maxwidth-edit" id="forbidden_port" rows="8">{$edit_user->get_disconnect_ip()}</textarea>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -321,6 +326,7 @@
                 ga_enable,
                 ref_by: $$getValue('ref_by'),
                 forbidden_ip: $$getValue('forbidden_ip'),
+				disconnect_ip: $$getValue('disconnect_ip'),
                 forbidden_port: $$getValue('forbidden_port'),
                 class: $$getValue('class'),
                 class_expire: $$getValue('class_expire'),

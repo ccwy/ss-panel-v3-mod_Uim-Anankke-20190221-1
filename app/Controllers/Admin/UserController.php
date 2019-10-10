@@ -196,6 +196,7 @@ class UserController extends AdminController
         $user->expire_in = $request->getParam('expire_in');
 
         $user->forbidden_ip = str_replace(PHP_EOL, ",", $request->getParam('forbidden_ip'));
+		$user->disconnect_ip = str_replace(PHP_EOL, ",", $request->getParam('disconnect_ip'));  //人工封禁IP
         $user->forbidden_port = str_replace(PHP_EOL, ",", $request->getParam('forbidden_port'));
 
         if (!$user->save()) {
