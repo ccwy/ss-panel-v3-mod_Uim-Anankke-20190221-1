@@ -243,7 +243,7 @@
 								</div>
 								
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="node_speedlimit">封禁连接IP，一行一个</label>
+									<label class="floating-label" for="disconnect_ip">封禁连接IP，一行一个</label>
 									<textarea class="form-control maxwidth-edit" id="forbidden_port" rows="8">{$edit_user->get_disconnect_ip()}</textarea>
 								</div>
 							</div>
