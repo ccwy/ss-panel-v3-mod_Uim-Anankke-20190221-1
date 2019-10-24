@@ -26,7 +26,7 @@
 								<div class="card-inner">
 									<div class="card-doubleinner">
 											<p class="card-heading">最近五分钟使用IP</p>
-											<p>请确认都为自己的IP，如有异常请及时修改连接密码。</p>
+											<p>请确认都为自己的IP，如有异常请及时修改连接密码或联系管理员封禁异常IP。</p>
 									</div>
 									<div class="card-table">
 										<div class="table-responsive table-user">
@@ -83,6 +83,27 @@
 									</div>
 								</div>
 
+							</div>
+						</div>
+						
+						<div class="card">
+							<div class="card-main">
+								<div class="card-inner">
+									<div class="card-inner">
+										<div class="card-doubleinner">
+												<div class="card-heading">已封禁IP列表</div>
+												<p>以下IP已被封禁，将无法连接本账号下的任何节点，请确认，如有异常或者误封，请联系管理员处理。
+												
+										</div>
+										
+										<div class="form-group form-group-label control-highlight-custom">
+											<label class="floating-label">规则书写区</label>
+											<code contenteditable="true" class="form-control maxwidth-edit">{$user->pac}</code>
+										</div>
+
+									</div>
+					
+								</div>
 							</div>
 						</div>
 
