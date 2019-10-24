@@ -98,7 +98,7 @@
 										
 										<div class="form-group form-group-label">
 									<p>已封禁的连接IP，一行一个</p>
-									<div class="float-clear"><input type="text"  class="input form-control form-control-monospace disabled" name="input1" rows="10">{$user->disconnect_ip}</div>
+									<div class="float-clear"><input type="text"  class="input form-control maxwidth-edit" name="input1" rows="10">{$user->disconnect_ip}</div>
 								</div>
 
 									</div>
