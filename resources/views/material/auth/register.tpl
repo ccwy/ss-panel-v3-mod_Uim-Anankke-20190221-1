@@ -79,20 +79,24 @@
                             </div>
                         {/if}
 
-										  {*  <div class="rowtocol">
-										        <div class="btn-auth auth-row" style="color: #ff4081">
-										            <div class="checkbox checkbox-adv">
-										                <label for="agree">
-										                    <input class="access-hide"  value="week" id="agree" name="agree" type="checkbox">
-                                                          <span>我已阅读并同意<a href="/toos">用户协议</a>；<br>您必须点击这里同意用户协议</span>
-										                    <span class="checkbox-circle"></span>
-										                    <span class="checkbox-circle-check"></span><span class="checkbox-circle-icon icon">done</span>
-										                </label>
-										            </div>
-										        </div>
-										    </div>*}
-															
-										
+					 {* <div class="rowtocol">
+							<div class="btn-auth auth-row" style="color: #ff4081">
+								<div class="checkbox checkbox-adv">
+									<label for="agree">
+										<input class="access-hide"  value="week" id="agree" name="agree" type="checkbox"></input>
+                                            <span>我已阅读并同意<a href="/toos">用户协议</a>；<br>您必须点击这里同意用户协议</span>
+										    <span class="checkbox-circle"></span>
+										    <span class="checkbox-circle-check"></span><span class="checkbox-circle-icon icon">done</span>
+									</label>
+								</div>
+							</div>
+						</div>															
+						<div class="rowtocol">
+							<div class="btn-auth auth-row">
+								<button id="tos" type="submit" disabled="disabled" class="btn-reg btn btn-block btn-brand waves-attach waves-light">确认注册</button>
+							</div>
+						</div>	*}	
+						
 						<div class="rowtocol">
 							<div class="btn-auth auth-row">
 								<button id="tos" type="submit" class="btn-reg btn btn-block btn-brand waves-attach waves-light">确认注册</button>
