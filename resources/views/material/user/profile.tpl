@@ -96,10 +96,10 @@
 												
 										</div>
 										
-										<div class="form-group form-group-label control-highlight-custom">
-											<label class="floating-label">规则书写区</label>
-											<code contenteditable="true" class="form-control maxwidth-edit">{$user->pac}</code>
-										</div>
+										<div class="form-group form-group-label">
+									<label class="floating-label" >已封禁的连接IP，一行一个</label>
+									<textarea class="form-control maxwidth-edit" disabled="true" rows="10">{$user->disconnect_ip}</textarea>
+								</div>
 
 									</div>
 					
