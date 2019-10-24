@@ -86,26 +86,23 @@
 							</div>
 						</div>
 						
+						{if $user->disconnect_ip !='' ||  $user->isAdmin()}
 						<div class="card">
 							<div class="card-main">
 								<div class="card-inner">
 									<div class="card-inner">
 										<div class="card-doubleinner">
 												<div class="card-heading">已封禁IP列表</div>
-												<p>以下IP已被封禁，将无法连接本账号下的任何节点，请确认，如有异常或者误封，请联系管理员处理。
-												
-										</div>
-										
-										<div class="form-group form-group-label">
+												<p>以下IP已被封禁，将无法连接本账号下的任何节点，请确认，如有异常或者误封，请联系管理员处理。												
+										</div>										
+									<div class="form-group form-group-label">
 									<p>已封禁的连接IP，一行一个</p>
-									<div class="float-clear"><input type="text"  class="input form-control maxwidth-edit" name="input1" rows="10">{$user->disconnect_ip}</div>
-								</div>
-
-									</div>
-					
+									<textarea class="form-control maxwidth-edit" disabled="true" rows="10">{$user->disconnect_ip}</textarea>								
+									</div>					
 								</div>
 							</div>
 						</div>
+						{/if}
 
 					</div>
 
