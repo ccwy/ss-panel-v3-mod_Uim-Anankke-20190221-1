@@ -83,7 +83,7 @@
 							<div class="btn-auth auth-row" style="color: #ff4081">
 								<div class="checkbox checkbox-adv">
 									<label for="agree">
-										<input class="access-hide"  value="week" id="agree" name="agree" type="checkbox"></input>
+										<input class="access-hide"  value="week" id="agree" name="agree" type="checkbox">
                                             <span>我已阅读并同意<a href="/toos">用户协议</a>；<br>您必须点击这里同意用户协议</span>
 										    <span class="checkbox-circle"></span>
 										    <span class="checkbox-circle-check"></span><span class="checkbox-circle-icon icon">done</span>
