@@ -94,7 +94,7 @@
 										<div class="card-doubleinner">
 											 <div class="card-heading">已封禁IP列表</div>
 											 <div class="form-group form-group-label">
-											 <label class="floating-label">以下IP已被封禁，将无法连接本账号下的任何节点，请确认，如有异常或者误封，请联系管理员处理。</label>													
+											 <p>以下IP已被封禁，将无法连接本账号下的任何节点，请确认，如有异常或者误封，请联系管理员处理。</p>													
 									         <textarea class="form-control maxwidth-edit" disabled="true" rows="10">{$user->get_disconnect_ip()}</textarea>
 											 </div>
 									    </div>	
