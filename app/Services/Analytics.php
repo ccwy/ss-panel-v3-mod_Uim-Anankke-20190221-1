@@ -187,7 +187,7 @@ class Analytics
 	//去年流水
     public function yesteryearIncome()
     {
-        $number = Code::where('usedatetime', 'like', date('Y%', strtotime('-1 years')))->sum('number');
+        $number = Code::where('usedatetime', 'like', date('Y%', strtotime('2018')))->sum('number');
         return is_null($number)?0:$number;
     }
     //网站运营总金额
