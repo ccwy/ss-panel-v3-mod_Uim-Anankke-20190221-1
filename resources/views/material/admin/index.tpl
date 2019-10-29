@@ -36,7 +36,7 @@
 											var chart = new CanvasJS.Chart("check_chart",
 											{
 												title:{
-													text: "本月(流水 {$sts->thisMonthIncome()} 元，余额 {$sts->moneyone()} 元)",
+													text: "{$sts->datetimem()}月(流水 {$sts->thisMonthIncome()} 元，余额 {$sts->moneyone()} 元)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -56,17 +56,20 @@
 													type: "doughnut",
 													showInLegend: true,
 													dataPoints: [
-														{
-															y: {$sts->threedayIncome()/$sts->thisyearIncome()*100}, legendText:"大前天流水 {number_format($sts->threedayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->threedayIncome()}元", indexLabel: "大前天流水 {number_format($sts->threedayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->threedayIncome()}元"
+													    {
+															y: {$sts->fourdayIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->datetimem()-4}日流水 {number_format($sts->fourdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->fourdayIncome()}元", indexLabel: "{$sts->datetimem()-4}日流水 {number_format($sts->fourdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->fourdayIncome()}元"
 														},
 														{
-															y: {$sts->twodayIncome()/$sts->thisyearIncome()*100}, legendText:"前天流水 {number_format($sts->twodayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twodayIncome()}元", indexLabel: "前天流水 {number_format($sts->twodayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twodayIncome()}元"
+															y: {$sts->threedayIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->datetimem()-3}日流水 {number_format($sts->threedayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->threedayIncome()}元", indexLabel: "{$sts->datetimem()-3}日流水 {number_format($sts->threedayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->threedayIncome()}元"
 														},
 														{
-															y: {$sts->yesterdayIncome()/$sts->thisyearIncome()*100}, legendText:"昨天流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元", indexLabel: "昨天流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元"
+															y: {$sts->twodayIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->datetimed()-2}日流水 {number_format($sts->twodayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twodayIncome()}元", indexLabel: "{$sts->datetimed()-2}日流水 {number_format($sts->twodayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twodayIncome()}元"
+														},
+														{
+															y: {$sts->yesterdayIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->datetimem()-1}日流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元", indexLabel: "{$sts->datetimem()-1}日流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元"
 														},														
 														{
-															y: {$sts->todayIncome()/$sts->thisyearIncome()*100}, legendText:"今天流水 {number_format($sts->todayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->todayIncome()}元", indexLabel: "今日流水 {number_format($sts->todayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->todayIncome()}元"
+															y: {$sts->todayIncome()/$sts->thisyearIncome()*100}, legendText:"今日流水 {number_format($sts->todayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->todayIncome()}元", indexLabel: "今日流水 {number_format($sts->todayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->todayIncome()}元"
 														}													
 													]
 												}

@@ -57,16 +57,16 @@
 													showInLegend: true,
 													dataPoints: [														
 														{
-															y: {$sts->thisyearIncome()/$sts->totalIncome()*100}, legendText:"2019年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元", indexLabel: "2019年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元"
+															y: {$sts->thisyearIncome()/$sts->totalIncome()*100}, legendText:"{$sts->datetimey()}年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元", indexLabel: "{$sts->datetimey()}年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元"
 														},
 														{
-															y: {$sts->threeyearIncome()/$sts->totalIncome()*100}, legendText:"2018年流水 {number_format($sts->threeyearIncome()/$sts->totalIncome()*100,2)}% {$sts->threeyearIncome()}元", indexLabel: "2018年流水 {number_format($sts->threeyearIncome()/$sts->totalIncome()*100,2)}% {$sts->threeyearIncome()}元"
+															y: {$sts->threeyearIncome()/$sts->totalIncome()*100}, legendText:"{$sts->datetimey()-1}年流水 {number_format($sts->threeyearIncome()/$sts->totalIncome()*100,2)}% {$sts->threeyearIncome()}元", indexLabel: "{$sts->datetimey()-1}年流水 {number_format($sts->threeyearIncome()/$sts->totalIncome()*100,2)}% {$sts->threeyearIncome()}元"
 														},
 														{
-															y: {$sts->twoyearIncome()/$sts->totalIncome()*100}, legendText:"2017年流水 {number_format($sts->twoyearIncome()/$sts->totalIncome()*100,2)}% {$sts->twoyearIncome()}元", indexLabel: "2017年流水 {number_format($sts->twoyearIncome()/$sts->totalIncome()*100,2)}% {$sts->twoyearIncome()}元"
+															y: {$sts->twoyearIncome()/$sts->totalIncome()*100}, legendText:"{$sts->datetimey()-2}年流水 {number_format($sts->twoyearIncome()/$sts->totalIncome()*100,2)}% {$sts->twoyearIncome()}元", indexLabel: "{$sts->datetimey()-2}年流水 {number_format($sts->twoyearIncome()/$sts->totalIncome()*100,2)}% {$sts->twoyearIncome()}元"
 														},
 														{
-															y: {$sts->oneyearIncome()/$sts->totalIncome()*100}, legendText:"2016年流水 {number_format($sts->oneyearIncome()/$sts->totalIncome()*100,2)}% {$sts->oneyearIncome()}元", indexLabel: "2016年流水 {number_format($sts->oneyearIncome()/$sts->totalIncome()*100,2)}% {$sts->oneyearIncome()}元"
+															y: {$sts->oneyearIncome()/$sts->totalIncome()*100}, legendText:"{$sts->datetimey()-3}年流水 {number_format($sts->oneyearIncome()/$sts->totalIncome()*100,2)}% {$sts->oneyearIncome()}元", indexLabel: "{$sts->datetimey()-3}年流水 {number_format($sts->oneyearIncome()/$sts->totalIncome()*100,2)}% {$sts->oneyearIncome()}元"
 														},
 														{
 															y: {$sts->moneyone()/$sts->totalIncome()*100}, legendText:"用户总余额 {number_format($sts->moneyone()/$sts->totalIncome()*100,2)}% {$sts->moneyone()}元", indexLabel: "用户总余额 {number_format($sts->moneyone()/$sts->totalIncome()*100,2)}% {$sts->moneyone()}元"
@@ -120,7 +120,7 @@
 											var chart = new CanvasJS.Chart("alive_chart",
 											{
 												title:{
-													text: "今年月度流水(总流水 {$sts->datetimev()-1}人)",
+													text: "{$sts->datetimey()}年月度流水(总流水 {$sts->thisyearIncome()}人)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -141,16 +141,16 @@
 													showInLegend: true,
 													dataPoints: [
 														{
-															y: {$sts->thisMonthIncome()/$sts->thisyearIncome()*100}, legendText:"本月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元", indexLabel: "本月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元"
+															y: {$sts->thisMonthIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->datetimem()}月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元", indexLabel: "{$sts->datetimem()}月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元"
 														},
 														{
-															y: {$sts->lastMonthIncome()/$sts->thisyearIncome()*100}, legendText:"上月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元", indexLabel: "上月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元"
+															y: {$sts->lastMonthIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->datetimem()-1}月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元", indexLabel: "{$sts->datetimem()-1}月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元"
 														},
 														{
-															y: {$sts->oneMonthIncome()/$sts->thisyearIncome()*100}, legendText:"上上个月 {number_format($sts->oneMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->oneMonthIncome()}元", indexLabel: "上上个月 {number_format($sts->oneMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->oneMonthIncome()}元"
+															y: {$sts->oneMonthIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->datetimem()-2}月流水 {number_format($sts->oneMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->oneMonthIncome()}元", indexLabel: "上上个月 {number_format($sts->oneMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->oneMonthIncome()}元"
 														},
 														{
-															y: {$sts->twoMonthIncome()/$sts->thisyearIncome()*100}, legendText:"上上上个月 {number_format($sts->twoMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twoMonthIncome()}元", indexLabel: "上上上个月 {number_format($sts->twoMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twoMonthIncome()}元"
+															y: {$sts->twoMonthIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->datetimem()-3}月流水 {number_format($sts->twoMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twoMonthIncome()}元", indexLabel: "{$sts->datetimem()-3}月流水 {number_format($sts->twoMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twoMonthIncome()}元"
 														}
 													]
 												}

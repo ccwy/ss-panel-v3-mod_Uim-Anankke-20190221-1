@@ -160,6 +160,12 @@ class Analytics
         return User::where('class', '=', 0)->count();
      
     }
+	//大大前天流水
+	public function fourdayIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y-m-d%', strtotime('-4 days')))->sum('number');
+        return is_null($number)?0:$number;
+    }
    //大前天流水
 	public function threedayIncome()
     {
@@ -238,9 +244,16 @@ class Analytics
         $number = Code::where('usedatetime', 'like', date('%'))->sum('number');
         return is_null($number)?0:$number;
     }
-	public function datetimev()
+	public function datetimey()
     {
         return date('Y', time());
     }
-	
+	public function datetimem()
+    {
+        return date('M', time());
+    }
+	public function datetimed()
+    {
+        return date('D', time());
+    }
 }
