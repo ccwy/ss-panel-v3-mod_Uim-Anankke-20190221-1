@@ -176,6 +176,8 @@ $app->group('/user', function () {
     //Reconstructed Payment System
     $this->post('/payment/purchase', 'App\Services\Payment:purchase');
     $this->get('/payment/return', 'App\Services\Payment:returnHTML');
+	// getPcClient
+    $this->get('/getPcClient', App\Controllers\UserController::class . ':getPcClient');
 })->add(new Auth());
 
 $app->group('/payment', function () {
