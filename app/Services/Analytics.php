@@ -254,6 +254,6 @@ class Analytics
     }
 	public function datetimed()
     {
-        return date('D');
+        return date("d");
     }
 }
