@@ -57,7 +57,7 @@
 													showInLegend: true,
 													dataPoints: [
 														{
-															y: {$sts->yesterdayIncome()/$sts->thisyearIncome()*100}, legendText:"今日流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元", indexLabel: "今日流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元"
+															y: {$sts->yesterdayIncome()/$sts->thisyearIncome()*100}, legendText:"昨日流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元", indexLabel: "昨日流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元"
 														},
 														{
 															y: {$sts->todayIncome()/$sts->thisyearIncome()*100}, legendText:"今日流水 {number_format($sts->todayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->todayIncome()}元", indexLabel: "今日流水 {number_format($sts->todayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->todayIncome()}元"
