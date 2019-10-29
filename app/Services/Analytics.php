@@ -250,7 +250,7 @@ class Analytics
     }
 	public function datetimemothd()
     {
-        return date('M',time());
+        return date('M%',time());
     }
 	public function datetimed()
     {
