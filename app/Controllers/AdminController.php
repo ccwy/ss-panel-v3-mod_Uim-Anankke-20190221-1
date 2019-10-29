@@ -28,7 +28,13 @@ class AdminController extends UserController
         $sts = new Analytics();
         return $this->view()->assign('sts', $sts)->display('admin/index.tpl');
     }
-
+	
+    public function user_index($request, $response, $args)
+    {
+        $sts = new Analytics();
+        return $this->view()->assign('sts', $sts)->display('admin/user/index.tpl');
+    }
+	
     public function node($request, $response, $args)
     {
         $nodes = Node::all();

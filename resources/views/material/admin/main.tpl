@@ -91,6 +91,7 @@
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_me">我的</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_me">
 							<li><a href="/admin"><i class="icon icon-lg">business_center</i>&nbsp;系统概览</a></li>
+							<li><a href="/admin/user/userindex"><i class="icon icon-lg">text_fields</i>&nbsp;系统分析</a></li>
 							<li><a href="/admin/announcement"><i class="icon icon-lg">announcement</i>&nbsp;公告管理</a></li>
 							<li><a href="/admin/ticket"><i class="icon icon-lg">question_answer</i>&nbsp;工单管理</a></li>
 							<li><a href="/admin/email"><i class="icon icon-lg">email</i>&nbsp;邮件记录</a></li>

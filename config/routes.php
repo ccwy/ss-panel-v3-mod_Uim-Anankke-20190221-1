@@ -209,6 +209,7 @@ $app->group('/password', function () {
 $app->group('/admin', function () {
     $this->get('', 'App\Controllers\AdminController:index');
     $this->get('/', 'App\Controllers\AdminController:index');
+	$this->get('/user/userindex', 'App\Controllers\AdminController:user_index');
 
     $this->get('/trafficlog', 'App\Controllers\AdminController:trafficLog');
     $this->post('/trafficlog/ajax', 'App\Controllers\AdminController:ajax_trafficLog');
