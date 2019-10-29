@@ -158,6 +158,32 @@
 											});
 
 											chart.render();
+											
+											
+											function chartRender(chart){
+                                                chart.render();
+                                                chart.ctx.shadowBlur = 8;
+                                                chart.ctx.shadowOffsetX = 4;
+                                                chart.ctx.shadowColor = "black";
+
+                                                for (let i in chart.plotInfo.plotTypes) {
+                                                    let plotType = chart.plotInfo.plotTypes[i];
+                                                    for (let j in plotType.plotUnits) {
+                                                        let plotUnit = plotType.plotUnits[j];
+                                                        if (plotUnit.type === "doughnut") {
+                                                            // For Column Chart
+                                                            chart.renderDoughnut(plotUnit);
+                                                        } else if (plotUnit.type === "bar") {
+                                                            // For Bar Chart
+                                                            chart.renderBar(plotUnit);
+                                                        }
+                                                    }
+                                                }
+                                                chart.ctx.shadowBlur = 0;
+                                                chart.ctx.shadowOffsetX = 0;
+                                                chart.ctx.shadowColor = "transparent";
+                                            }
+											
 										</script>
 										
 									</div>
