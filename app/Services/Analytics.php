@@ -246,14 +246,14 @@ class Analytics
     }
 	public function datetimey()
     {
-        return date('Y', time());
+        return date('Y');
     }
 	public function datetimemothd()
     {
-        return date('M', time());
+        return date('M');
     }
 	public function datetimed()
     {
-        return date('D', time());
+        return date('D');
     }
 }
