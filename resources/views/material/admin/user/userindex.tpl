@@ -57,16 +57,16 @@
 													showInLegend: true,
 													dataPoints: [														
 														{
-															y: {$sts->thisyearIncome()/$sts->totalIncome()*100}, legendText:"{date("y")}年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元", indexLabel: "{date("y")}年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元"
+															y: {$sts->thisyearIncome()/$sts->totalIncome()*100}, legendText:"{date("Y")}年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元", indexLabel: "{date("Y")}年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元"
 														},
 														{
-															y: {$sts->threeyearIncome()/$sts->totalIncome()*100}, legendText:"{date("y")-1}年流水 {number_format($sts->threeyearIncome()/$sts->totalIncome()*100,2)}% {$sts->threeyearIncome()}元", indexLabel: "{date("y")-1}年流水 {number_format($sts->threeyearIncome()/$sts->totalIncome()*100,2)}% {$sts->threeyearIncome()}元"
+															y: {$sts->threeyearIncome()/$sts->totalIncome()*100}, legendText:"{date("Y")-1}年流水 {number_format($sts->threeyearIncome()/$sts->totalIncome()*100,2)}% {$sts->threeyearIncome()}元", indexLabel: "{date("Y")-1}年流水 {number_format($sts->threeyearIncome()/$sts->totalIncome()*100,2)}% {$sts->threeyearIncome()}元"
 														},
 														{
-															y: {$sts->twoyearIncome()/$sts->totalIncome()*100}, legendText:"{date("y")-2}年流水 {number_format($sts->twoyearIncome()/$sts->totalIncome()*100,2)}% {$sts->twoyearIncome()}元", indexLabel: "{date("y")-2}年流水 {number_format($sts->twoyearIncome()/$sts->totalIncome()*100,2)}% {$sts->twoyearIncome()}元"
+															y: {$sts->twoyearIncome()/$sts->totalIncome()*100}, legendText:"{date("Y")-2}年流水 {number_format($sts->twoyearIncome()/$sts->totalIncome()*100,2)}% {$sts->twoyearIncome()}元", indexLabel: "{date("Y")-2}年流水 {number_format($sts->twoyearIncome()/$sts->totalIncome()*100,2)}% {$sts->twoyearIncome()}元"
 														},
 														{
-															y: {$sts->oneyearIncome()/$sts->totalIncome()*100}, legendText:"{date("y")-3}年流水 {number_format($sts->oneyearIncome()/$sts->totalIncome()*100,2)}% {$sts->oneyearIncome()}元", indexLabel: "{date("y")-3}年流水 {number_format($sts->oneyearIncome()/$sts->totalIncome()*100,2)}% {$sts->oneyearIncome()}元"
+															y: {$sts->oneyearIncome()/$sts->totalIncome()*100}, legendText:"{date("Y")-3}年流水 {number_format($sts->oneyearIncome()/$sts->totalIncome()*100,2)}% {$sts->oneyearIncome()}元", indexLabel: "{date("Y")-3}年流水 {number_format($sts->oneyearIncome()/$sts->totalIncome()*100,2)}% {$sts->oneyearIncome()}元"
 														},
 														{
 															y: {$sts->moneyone()/$sts->totalIncome()*100}, legendText:"用户总余额 {number_format($sts->moneyone()/$sts->totalIncome()*100,2)}% {$sts->moneyone()}元", indexLabel: "用户总余额 {number_format($sts->moneyone()/$sts->totalIncome()*100,2)}% {$sts->moneyone()}元"
