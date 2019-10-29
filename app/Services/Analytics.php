@@ -250,10 +250,10 @@ class Analytics
     }
 	public function datetimem()
     {
-        return date('Y-M', time());
+        return date('M', time());
     }
 	public function datetimed()
     {
-        return date('Y-M-D', time());
+        return date('D', time());
     }
 }
