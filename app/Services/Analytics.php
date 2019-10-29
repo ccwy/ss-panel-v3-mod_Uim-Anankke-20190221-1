@@ -5,6 +5,8 @@ namespace App\Services;
 use App\Models\User;
 use App\Models\Node;
 use App\Utils\Tools;
+use App\Models\Code;
+use App\Models\Bought;
 
 class Analytics
 {
@@ -152,4 +154,36 @@ class Analytics
         return User::where('class', '>', 10)->where('class', '<', 15)->where('class', '!=', 16)->where('id','!=', 2291)->where('id','!=', 2293)->where('id','!=',1772)->count();
      
     }
+	
+	public function yesterdayIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y-m-d%', strtotime('-1 days')))->sum('number');
+        return is_null($number)?0:$number;
+    }
+
+    public function todayIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y-m-d%'))->sum('number');
+        return is_null($number)?0:$number;
+    }
+
+    public function thisMonthIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y-m%'))->sum('number');
+        return is_null($number)?0:$number;
+    }
+
+    public function lastMonthIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y-m%', strtotime('-1 months')))->sum('number');
+        return is_null($number)?0:$number;
+    }
+
+    public function totalIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('%'))->sum('number');
+        return is_null($number)?0:$number;
+    }
+	
+	
 }

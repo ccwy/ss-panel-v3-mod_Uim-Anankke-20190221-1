@@ -36,7 +36,7 @@
 											var chart = new CanvasJS.Chart("check_chart",
 											{
 												title:{
-													text: "用户签到情况(总用户 {$sts->getTotalUser()}人)",
+													text: "网站金额(总金额 {$sts->yesterdayIncome()} 元)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
