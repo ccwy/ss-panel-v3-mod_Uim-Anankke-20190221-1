@@ -183,7 +183,7 @@
 											var chart = new CanvasJS.Chart("node_chart",
 											{
 												title:{
-													text: "节点在线情况(节点数 {$sts->getTotalNodes()}个)",
+													text: "付费用户统计(用户数 {$sts->classuseraa()}人)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -203,14 +203,12 @@
 													type: "doughnut",
 													showInLegend: true,
 													dataPoints: [
-														{if $sts->getTotalNodes()!=0}
-															{
-																y: {(1-($sts->getAliveNodes()/$sts->getTotalNodes()))*100}, legendText:"离线节点 {number_format((1-($sts->getAliveNodes()/$sts->getTotalNodes()))*100,2)}% {$sts->getTotalNodes()-$sts->getAliveNodes()}个", indexLabel: "离线节点 {number_format((1-($sts->getAliveNodes()/$sts->getTotalNodes()))*100,2)}% {$sts->getTotalNodes()-$sts->getAliveNodes()}个"
-															},
-															{
-																y: {(($sts->getAliveNodes()/$sts->getTotalNodes()))*100}, legendText:"在线节点 {number_format((($sts->getAliveNodes()/$sts->getTotalNodes()))*100,2)}% {$sts->getAliveNodes()}个", indexLabel: "在线节点 {number_format((($sts->getAliveNodes()/$sts->getTotalNodes()))*100,2)}% {$sts->getAliveNodes()}个"
-															}
-														{/if}
+														   {
+															y: {$sts->classusermoth()/$sts->classuseraa()*100}, legendText:"月付用户 {number_format($sts->classusermoth()/$sts->classuseraa()*100,2)}% {$sts->classusermoth()}人", indexLabel: "月付用户 {number_format($sts->classusermoth()/$sts->classuseraa()*100,2)}% {$sts->classusermoth()}人"
+														},														
+														{
+															y: {$sts->classuseryear()/$sts->classuseraa()*100}, legendText:"年付用户 {number_format($sts->classuseryear()/$sts->classuseraa()*100,2)}% {$sts->classuseryear()}人", indexLabel: "年付用户 {number_format($sts->classuseryear()/$sts->classuseraa()*100,2)}% {$sts->classuseryear()}人"
+														}	
 													]
 												}
 												]
