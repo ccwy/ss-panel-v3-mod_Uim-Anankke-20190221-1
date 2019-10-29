@@ -154,6 +154,12 @@ class Analytics
         return User::where('class', '>', 10)->where('class', '<', 15)->where('class', '!=', 16)->where('id','!=', 2291)->where('id','!=', 2293)->where('id','!=',1772)->count();
      
     }
+	//前天流水
+	public function twodayIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y-m-d%', strtotime('-1 days')))->sum('number');
+        return is_null($number)?0:$number;
+    }
 	//昨日流水
 	public function yesterdayIncome()
     {
