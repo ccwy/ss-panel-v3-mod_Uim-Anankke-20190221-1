@@ -155,6 +155,54 @@ class Analytics
      
     }
 	//前天流水
+	public function twodaypid()
+    {
+        $number = Bought::where(date('Y-m-d H:i:s', 'datetime'), 'like', date('Y-m-d%', strtotime('-2 days')))->count();
+        return is_null($number)?0:$number;
+    }
+	//昨日流水
+	public function yesterdaypid()
+    {
+        $number = Bought::where(date('Y-m-d H:i:s', 'datetime'), 'like', date('Y-m-d%', strtotime('-1 days')))->count();
+        return is_null($number)?0:$number;
+    }
+    //今日流水
+    public function todaypid()
+    {
+        $number = Bought::where(date('Y-m-d H:i:s', 'datetime'), 'like', date('Y-m-d%'))->count();
+        return is_null($number)?0:$number;
+    }
+    //本月流水
+    public function thisMonthpid()
+    {
+        $number = Bought::where(date('Y-m-d H:i:s', 'datetime'), 'like', date('Y-m%'))->count();
+        return is_null($number)?0:$number;
+    }
+    //上月流水
+    public function lastMonthpid()
+    {
+        $number = Bought::where(date('Y-m-d H:i:s', 'datetime'), 'like', date('Y-m%', strtotime('-1 months')))->count();
+        return is_null($number)?0:$number;
+    }
+	//今年流水
+    public function thisyearpid()
+    {
+        $number = Bought::where(date('Y-m-d H:i:s', 'datetime'), 'like', date('Y%'))->count();
+        return is_null($number)?0:$number;
+    }
+	
+    //网站运营总金额
+    public function totalpid()
+    {
+        $number = Bought::where(date('Y-m-d H:i:s', 'datetime'), 'like', date('%'))->count();
+        return is_null($number)?0:$number;
+    }
+	
+	
+	
+	
+	
+	//前天流水
 	public function twodayIncome()
     {
         $number = Code::where('usedatetime', 'like', date('Y-m-d%', strtotime('-2 days')))->sum('number');
