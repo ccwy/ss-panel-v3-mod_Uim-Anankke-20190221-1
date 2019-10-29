@@ -157,7 +157,7 @@ class Analytics
 	//前天流水
 	public function twodayIncome()
     {
-        $number = Code::where('usedatetime', 'like', date('Y-m-d%', strtotime('-1 days')))->sum('number');
+        $number = Code::where('usedatetime', 'like', date('Y-m-d%', strtotime('-2 days')))->sum('number');
         return is_null($number)?0:$number;
     }
 	//昨日流水

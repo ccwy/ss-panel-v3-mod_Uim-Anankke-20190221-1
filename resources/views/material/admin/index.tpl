@@ -36,7 +36,7 @@
 											var chart = new CanvasJS.Chart("check_chart",
 											{
 												title:{
-													text: "本月流水(总流水 {$sts->thisMonthIncome()} 元)，总余额 {$sts->moneyone()} 元",
+													text: "本月流水(总流水 {$sts->thisMonthIncome()} 元，总余额 {$sts->moneyone()} 元)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
