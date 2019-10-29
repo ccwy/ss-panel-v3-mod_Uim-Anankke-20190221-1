@@ -154,7 +154,7 @@ class Analytics
         return User::where('class', '>', 10)->where('class', '<', 15)->where('class', '!=', 16)->where('id','!=', 2291)->where('id','!=', 2293)->where('id','!=',1772)->count();
      
     }
-	//前天流水
+/*	//前天流水
 	public function twodaypid()
     {
         $number = Bought::where(date('Y-m-d H:i:s', 'datetime'), 'like', date('Y-m-d%', strtotime('-2 days')))->count();
@@ -198,7 +198,7 @@ class Analytics
         return is_null($number)?0:$number;
     }
 	
-	
+	*/
 	
 	
 	
