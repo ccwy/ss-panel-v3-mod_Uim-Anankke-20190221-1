@@ -238,6 +238,9 @@ class Analytics
         $number = Code::where('usedatetime', 'like', date('%'))->sum('number');
         return is_null($number)?0:$number;
     }
-	
+	public function datetimev($time)
+    {
+        return date('Y%', $time);
+    }
 	
 }
