@@ -183,7 +183,7 @@
 											var chart = new CanvasJS.Chart("node_chart",
 											{
 												title:{
-													text: "付费用户统计(用户数 {$sts->classuseraa()}人)",
+													text: "用户数量(总用户数 {$sts->getTotalUser()}人，付费用户数{$sts->classuseraa()}人)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -203,11 +203,14 @@
 													type: "doughnut",
 													showInLegend: true,
 													dataPoints: [
-														   {
-															y: {$sts->classusermoth()/$sts->classuseraa()*100}, legendText:"月付用户 {number_format($sts->classusermoth()/$sts->classuseraa()*100,2)}% {$sts->classusermoth()}人", indexLabel: "月付用户 {number_format($sts->classusermoth()/$sts->classuseraa()*100,2)}% {$sts->classusermoth()}人"
+													    {
+															y: {$sts->classuseroff()/$sts->getTotalUser()*100}, legendText:"未激活 {number_format($sts->classuseroff()/$sts->getTotalUser()*100,2)}% {$sts->classuseroff()}人", indexLabel: "未激活 {number_format($sts->classuseroff()/$sts->getTotalUser()*100,2)}% {$sts->classuseroff()}人"
+														},
+														{
+															y: {$sts->classusermoth()/$sts->getTotalUser()*100}, legendText:"月付用户 {number_format($sts->classusermoth()/$sts->getTotalUser()*100,2)}% {$sts->classusermoth()}人", indexLabel: "月付用户 {number_format($sts->classusermoth()/$sts->getTotalUser()*100,2)}% {$sts->classusermoth()}人"
 														},														
 														{
-															y: {$sts->classuseryear()/$sts->classuseraa()*100}, legendText:"年付用户 {number_format($sts->classuseryear()/$sts->classuseraa()*100,2)}% {$sts->classuseryear()}人", indexLabel: "年付用户 {number_format($sts->classuseryear()/$sts->classuseraa()*100,2)}% {$sts->classuseryear()}人"
+															y: {$sts->classuseryear()/$sts->getTotalUser()*100}, legendText:"年付用户 {number_format($sts->classuseryear()/$sts->getTotalUser()*100,2)}% {$sts->classuseryear()}人", indexLabel: "年付用户 {number_format($sts->classuseryear()/$sts->getTotalUser()*100,2)}% {$sts->classuseryear()}人"
 														}	
 													]
 												}
