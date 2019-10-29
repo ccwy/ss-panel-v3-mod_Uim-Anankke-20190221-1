@@ -36,7 +36,7 @@
 											var chart = new CanvasJS.Chart("check_chart",
 											{
 												title:{
-													text: "年度累计流水(总流水 {$sts->totalIncome()} 元)",
+													text: "累计流水(总流水 {$sts->totalIncome()} 元)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -97,7 +97,7 @@
 											var chart = new CanvasJS.Chart("alive_chart",
 											{
 												title:{
-													text: "{date("Y")}年月度流水(总流水 {$sts->thisyearIncome()}人)",
+													text: "{date("Y")}年月度流水(总流水 {$sts->thisyearIncome()}元)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
