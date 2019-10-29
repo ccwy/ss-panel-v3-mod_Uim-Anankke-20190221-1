@@ -240,7 +240,7 @@ class Analytics
     }
 	public function datetimev()
     {
-        return date('Y%', time());
+        return date('Y', time());
     }
 	
 }
