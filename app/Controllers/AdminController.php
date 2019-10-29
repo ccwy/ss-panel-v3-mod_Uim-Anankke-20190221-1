@@ -32,7 +32,7 @@ class AdminController extends UserController
     public function user_index($request, $response, $args)
     {
         $sts = new Analytics();
-        return $this->view()->assign('sts', $sts)->display('admin/user/index.tpl');
+        return $this->view()->assign('sts', $sts)->display('admin/user/userindex.tpl');
     }
 	
     public function node($request, $response, $args)
