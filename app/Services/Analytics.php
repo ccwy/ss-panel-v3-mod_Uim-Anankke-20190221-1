@@ -154,7 +154,7 @@ class Analytics
         return User::where('class', '>', 10)->where('class', '<', 15)->where('class', '!=', 16)->where('id','!=', 2291)->where('id','!=', 2293)->where('id','!=',1772)->count();
      
     }
-	//未激活
+	//已过期用户
 	public function classuseroff()
     {
         return User::where('class', '=', 0)->count();
@@ -194,6 +194,18 @@ class Analytics
     public function lastMonthIncome()
     {
         $number = Code::where('usedatetime', 'like', date('Y-m%', strtotime('-1 months')))->sum('number');
+        return is_null($number)?0:$number;
+    }
+	//上上月流水
+    public function oneMonthIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y-m%', strtotime('-2 months')))->sum('number');
+        return is_null($number)?0:$number;
+    }
+	//上上上月流水
+    public function twoMonthIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y-m%', strtotime('-3 months')))->sum('number');
         return is_null($number)?0:$number;
     }
 	//今年流水

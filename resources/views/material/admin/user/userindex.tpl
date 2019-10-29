@@ -108,19 +108,18 @@
 								</div>
 							</div>
 							
-							
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner">
 									
-										<div id="alive_chart" style="height: 300px; width: 100%;"></div>
+										<div id="check_chart" style="height: 300px; width: 100%;"></div>
 										
 										<script src="/theme/material/js/canvasjs.min.js"></script>
-										<script type="text/javascript">
-											var chart = new CanvasJS.Chart("alive_chart",
+                                        <script>
+											var chart = new CanvasJS.Chart("check_chart",
 											{
 												title:{
-													text: "用户在线情况(总用户 {$sts->getTotalUser()}人)",
+													text: "今年月度流水(总流水 {$sts->thisyearIncome()} 元)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -139,35 +138,58 @@
 													indexLabelPlacement: "outside",
 													type: "doughnut",
 													showInLegend: true,
-													dataPoints: [
+													dataPoints: [														
 														{
-															y: {(($sts->getUnusedUser()/$sts->getTotalUser()))*100}, legendText:"从未在线的用户 {number_format((($sts->getUnusedUser()/$sts->getTotalUser()))*100,2)}% {(($sts->getUnusedUser()))}人", indexLabel: "从未在线的用户 {number_format((($sts->getUnusedUser()/$sts->getTotalUser()))*100,2)}% {(($sts->getUnusedUser()))}人"
+															y: {$sts->thisMonthIncome()/$sts->thisyearIncome()*100}, legendText:"本月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元", indexLabel: "本月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元"
 														},
 														{
-															y: {(($sts->getTotalUser()-$sts->getOnlineUser(86400)-$sts->getUnusedUser())/$sts->getTotalUser())*100}, legendText:"一天以前在线的用户 {number_format((($sts->getTotalUser()-$sts->getOnlineUser(86400)-$sts->getUnusedUser())/$sts->getTotalUser())*100,2)}% {($sts->getTotalUser()-$sts->getOnlineUser(86400)-$sts->getUnusedUser())}人", indexLabel: "一天以前在线的用户 {number_format((($sts->getTotalUser()-$sts->getOnlineUser(86400)-$sts->getUnusedUser())/$sts->getTotalUser())*100,2)}% {($sts->getTotalUser()-$sts->getOnlineUser(86400)-$sts->getUnusedUser())}人"
+															y: {$sts->lastMonthIncome()/$sts->thisyearIncome()*100}, legendText:"上月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元", indexLabel: "上月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元"
 														},
 														{
-															y: {($sts->getOnlineUser(86400)-$sts->getOnlineUser(3600))/$sts->getTotalUser()*100}, legendText:"一天内在线的用户 {number_format(($sts->getOnlineUser(86400)-$sts->getOnlineUser(3600))/$sts->getTotalUser()*100,2)}% {($sts->getOnlineUser(86400)-$sts->getOnlineUser(3600))}人", indexLabel: "一天内在线的用户 {number_format(($sts->getOnlineUser(86400)-$sts->getOnlineUser(3600))/$sts->getTotalUser()*100,2)}% {($sts->getOnlineUser(86400)-$sts->getOnlineUser(3600))}人"
+															y: {$sts->oneMonthIncome()/$sts->thisyearIncome()*100}, legendText:"上上个月 {number_format($sts->oneMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->oneMonthIncome()}元", indexLabel: "上上个月 {number_format($sts->oneMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->oneMonthIncome()}元"
 														},
 														{
-															y: {($sts->getOnlineUser(3600)-$sts->getOnlineUser(60))/$sts->getTotalUser()*100}, legendText:"一小时内在线的用户 {number_format(($sts->getOnlineUser(3600)-$sts->getOnlineUser(60))/$sts->getTotalUser()*100,2)}% {($sts->getOnlineUser(3600)-$sts->getOnlineUser(60))}人", indexLabel: "一小时内在线的用户 {number_format(($sts->getOnlineUser(3600)-$sts->getOnlineUser(60))/$sts->getTotalUser()*100,2)}% {($sts->getOnlineUser(3600)-$sts->getOnlineUser(60))}人"
-														},
-														{
-															y: {($sts->getOnlineUser(60))/$sts->getTotalUser()*100}, legendText:"一分钟内在线的用户 {number_format(($sts->getOnlineUser(60))/$sts->getTotalUser()*100,2)}% {($sts->getOnlineUser(60))}人", indexLabel: "一分钟内在线的用户 {number_format(($sts->getOnlineUser(60))/$sts->getTotalUser()*100,2)}% {($sts->getOnlineUser(60))}人"
+															y: {$sts->twoMonthIncome()/$sts->thisyearIncome()*100}, legendText:"上上上个月 {number_format($sts->twoMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twoMonthIncome()}元", indexLabel: "上上上个月 {number_format($sts->twoMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twoMonthIncome()}元"
 														}
+														
 													]
 												}
 												]
 											});
 
 											chart.render();
+
+											function chartRender(chart){
+                                                chart.render();
+                                                chart.ctx.shadowBlur = 8;
+                                                chart.ctx.shadowOffsetX = 4;
+                                                chart.ctx.shadowColor = "black";
+
+                                                for (let i in chart.plotInfo.plotTypes) {
+                                                    let plotType = chart.plotInfo.plotTypes[i];
+                                                    for (let j in plotType.plotUnits) {
+                                                        let plotUnit = plotType.plotUnits[j];
+                                                        if (plotUnit.type === "doughnut") {
+                                                            // For Column Chart
+                                                            chart.renderDoughnut(plotUnit);
+                                                        } else if (plotUnit.type === "bar") {
+                                                            // For Bar Chart
+                                                            chart.renderBar(plotUnit);
+                                                        }
+                                                    }
+                                                }
+                                                chart.ctx.shadowBlur = 0;
+                                                chart.ctx.shadowOffsetX = 0;
+                                                chart.ctx.shadowColor = "transparent";
+                                            }
 										</script>
 										
 									</div>
 									
 								</div>
 							</div>
-						
+							
+							
 						
 						</div>
 						

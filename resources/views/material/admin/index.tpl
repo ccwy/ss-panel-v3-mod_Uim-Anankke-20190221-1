@@ -36,7 +36,7 @@
 											var chart = new CanvasJS.Chart("check_chart",
 											{
 												title:{
-													text: "本月(总流水 {$sts->thisMonthIncome()} 元，总余额 {$sts->moneyone()} 元)",
+													text: "本月(流水 {$sts->thisMonthIncome()} 元，余额 {$sts->moneyone()} 元)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -183,7 +183,7 @@
 											var chart = new CanvasJS.Chart("node_chart",
 											{
 												title:{
-													text: "用户数量(总用户数 {$sts->getTotalUser()}人，付费用户数{$sts->classuseraa()}人)",
+													text: "用户数量(总数 {$sts->getTotalUser()}人，付费数{$sts->classuseraa()}人)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -204,7 +204,7 @@
 													showInLegend: true,
 													dataPoints: [
 													    {
-															y: {$sts->classuseroff()/$sts->getTotalUser()*100}, legendText:"未激活 {number_format($sts->classuseroff()/$sts->getTotalUser()*100,2)}% {$sts->classuseroff()}人", indexLabel: "未激活 {number_format($sts->classuseroff()/$sts->getTotalUser()*100,2)}% {$sts->classuseroff()}人"
+															y: {$sts->classuseroff()/$sts->getTotalUser()*100}, legendText:"已过期用户 {number_format($sts->classuseroff()/$sts->getTotalUser()*100,2)}% {$sts->classuseroff()}人", indexLabel: "已过期用户 {number_format($sts->classuseroff()/$sts->getTotalUser()*100,2)}% {$sts->classuseroff()}人"
 														},
 														{
 															y: {$sts->classusermoth()/$sts->getTotalUser()*100}, legendText:"月付用户 {number_format($sts->classusermoth()/$sts->getTotalUser()*100,2)}% {$sts->classusermoth()}人", indexLabel: "月付用户 {number_format($sts->classusermoth()/$sts->getTotalUser()*100,2)}% {$sts->classusermoth()}人"
