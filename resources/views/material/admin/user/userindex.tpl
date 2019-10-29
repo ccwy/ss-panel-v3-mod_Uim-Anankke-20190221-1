@@ -141,7 +141,7 @@
 													showInLegend: true,
 													dataPoints: [
 														{
-															y: {$sts->thisMonthIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->datetimem()}月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元", indexLabel: "{$sts->datetimem()}月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元"
+															y: {$sts->thisMonthIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->datetimemoth()}月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元", indexLabel: "{$sts->datetimemoth()}月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元"
 														},
 														{
 															y: {$sts->lastMonthIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->datetimem()-1}月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元", indexLabel: "{$sts->datetimem()-1}月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元"

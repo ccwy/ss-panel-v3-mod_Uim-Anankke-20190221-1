@@ -248,7 +248,7 @@ class Analytics
     {
         return date('Y', time());
     }
-	public function datetimem()
+	public function datetimemoth()
     {
         return date('M', time());
     }
