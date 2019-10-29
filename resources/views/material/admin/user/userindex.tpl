@@ -120,7 +120,7 @@
 											var chart = new CanvasJS.Chart("alive_chart",
 											{
 												title:{
-													text: "今年月度流水(总流水 {$sts->datetimev(-1)}人)",
+													text: "今年月度流水(总流水 {$sts->datetimev()}人)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
