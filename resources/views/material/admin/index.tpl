@@ -57,7 +57,7 @@
 													showInLegend: true,
 													dataPoints: [
 														{
-															y: {(1-($sts->yesterdayIncome()/$sts->totalIncome()))*100}, legendText:"昨日流水 {number_format((1-($sts->yesterdayIncome()/$sts->totalIncome()))*100,2)}% {$sts->totalIncome()-$sts->yesterdayIncome()}人", indexLabel: "昨日流水 {number_format((1-($sts->yesterdayIncome()/$sts->totalIncome()))*100,2)}% {$sts->totalIncome()-$sts->getCheckinUser()}人"
+															y: {$sts->yesterdayIncome()/$sts->totalIncome()*100}, legendText:"今日流水 {number_format($sts->yesterdayIncome()/$sts->totalIncome()*100,2)}% {$sts->yesterdayIncome()}元", indexLabel: "今日流水 {number_format($sts->yesterdayIncome()/$sts->totalIncome()*100,2)}% {$sts->yesterdayIncome()}元"
 														},
 														{
 															y: {(($sts->getCheckinUser()-$sts->getTodayCheckinUser())/$sts->totalIncome())*100}, legendText:"曾经签到过的用户 {number_format((($sts->getCheckinUser()-$sts->getTodayCheckinUser())/$sts->totalIncome())*100,2)}% {$sts->getCheckinUser()-$sts->getTodayCheckinUser()}人", indexLabel: "曾经签到过的用户 {number_format((($sts->getCheckinUser()-$sts->getTodayCheckinUser())/$sts->totalIncome())*100,2)}% {$sts->getCheckinUser()-$sts->getTodayCheckinUser()}人"
