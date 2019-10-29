@@ -108,18 +108,19 @@
 								</div>
 							</div>
 							
+							
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner">
 									
-										<div id="check_chart" style="height: 300px; width: 100%;"></div>
+										<div id="alive_chart" style="height: 300px; width: 100%;"></div>
 										
 										<script src="/theme/material/js/canvasjs.min.js"></script>
-                                        <script>
-											var chart = new CanvasJS.Chart("check_chart",
+										<script type="text/javascript">
+											var chart = new CanvasJS.Chart("alive_chart",
 											{
 												title:{
-													text: "今年月度流水(总流水 {$sts->thisyearIncome()} 元)",
+													text: "今年月度流水(总流水 {$sts->thisyearIncome()}人)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -138,7 +139,7 @@
 													indexLabelPlacement: "outside",
 													type: "doughnut",
 													showInLegend: true,
-													dataPoints: [														
+													dataPoints: [
 														{
 															y: {$sts->thisMonthIncome()/$sts->thisyearIncome()*100}, legendText:"本月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元", indexLabel: "本月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元"
 														},
@@ -151,45 +152,19 @@
 														{
 															y: {$sts->twoMonthIncome()/$sts->thisyearIncome()*100}, legendText:"上上上个月 {number_format($sts->twoMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twoMonthIncome()}元", indexLabel: "上上上个月 {number_format($sts->twoMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twoMonthIncome()}元"
 														}
-														
 													]
 												}
 												]
 											});
 
 											chart.render();
-
-											function chartRender(chart){
-                                                chart.render();
-                                                chart.ctx.shadowBlur = 8;
-                                                chart.ctx.shadowOffsetX = 4;
-                                                chart.ctx.shadowColor = "black";
-
-                                                for (let i in chart.plotInfo.plotTypes) {
-                                                    let plotType = chart.plotInfo.plotTypes[i];
-                                                    for (let j in plotType.plotUnits) {
-                                                        let plotUnit = plotType.plotUnits[j];
-                                                        if (plotUnit.type === "doughnut") {
-                                                            // For Column Chart
-                                                            chart.renderDoughnut(plotUnit);
-                                                        } else if (plotUnit.type === "bar") {
-                                                            // For Bar Chart
-                                                            chart.renderBar(plotUnit);
-                                                        }
-                                                    }
-                                                }
-                                                chart.ctx.shadowBlur = 0;
-                                                chart.ctx.shadowOffsetX = 0;
-                                                chart.ctx.shadowColor = "transparent";
-                                            }
 										</script>
 										
 									</div>
 									
 								</div>
 							</div>
-							
-							
+						
 						
 						</div>
 						
