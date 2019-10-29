@@ -69,10 +69,16 @@
 															y: {$sts->lastMonthIncome()/$sts->totalIncome()*100}, legendText:"上月流水 {number_format($sts->lastMonthIncome()/$sts->totalIncome()*100,2)}% {$sts->lastMonthIncome()}元", indexLabel: "上月流水 {number_format($sts->lastMonthIncome()/$sts->totalIncome()*100,2)}% {$sts->lastMonthIncome()}元"
 														},
 														{
-															y: {$sts->thisyearIncome()/$sts->totalIncome()*100}, legendText:"今年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元", indexLabel: "今年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元"
+															y: {$sts->thisyearIncome()/$sts->totalIncome()*100}, legendText:"2019年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元", indexLabel: "2019年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元"
 														},
 														{
 															y: {$sts->2018yearIncome()/$sts->totalIncome()*100}, legendText:"2018年流水 {number_format($sts->2018yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2018yearIncome()}元", indexLabel: "2018年流水 {number_format($sts->2018yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2018yearIncome()}元"
+														},
+														{
+															y: {$sts->2017yearIncome()/$sts->totalIncome()*100}, legendText:"2017年流水 {number_format($sts->2017yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2017yearIncome()}元", indexLabel: "2017年流水 {number_format($sts->2017yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2017yearIncome()}元"
+														},
+														{
+															y: {$sts->2016yearIncome()/$sts->totalIncome()*100}, legendText:"2016年流水 {number_format($sts->2016yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2016yearIncome()}元", indexLabel: "2016年流水 {number_format($sts->2016yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2016yearIncome()}元"
 														},
 														{
 															y: {$sts->moneyone()/$sts->totalIncome()*100}, legendText:"用户总余额 {number_format($sts->moneyone()/$sts->totalIncome()*100,2)}% {$sts->moneyone()}元", indexLabel: "用户总余额 {number_format($sts->moneyone()/$sts->totalIncome()*100,2)}% {$sts->moneyone()}元"

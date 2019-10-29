@@ -187,7 +187,7 @@ class Analytics
 	//去年流水
     public function 2018yearIncome()
     {
-        $number = Code::where('usedatetime', 'like', date('Y', '=', 2018))->sum('number');
+        $number = Code::where('usedatetime', 'like', date('Y%', strtotime('-1 years')))->sum('number');
         return is_null($number)?0:$number;
     }
 
