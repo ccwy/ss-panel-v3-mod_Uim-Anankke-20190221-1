@@ -67,10 +67,7 @@
 														},
 														{
 															y: {$sts->lastMonthIncome()/$sts->thisyearIncome()*100}, legendText:"上月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元", indexLabel: "上月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元"
-														},
-														{
-															y: {$sts->thisyearIncome()/$sts->totalIncome()*100}, legendText:"2019年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元", indexLabel: "2019年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元"
-														},													
+														},																									
 														{
 															y: {$sts->moneyone()/$sts->thisyearIncome()*100}, legendText:"用户总余额 {number_format($sts->moneyone()/$sts->thisyearIncome()*100,2)}% {$sts->moneyone()}元", indexLabel: "用户总余额 {number_format($sts->moneyone()/$sts->thisyearIncome()*100,2)}% {$sts->moneyone()}元"
 														}
