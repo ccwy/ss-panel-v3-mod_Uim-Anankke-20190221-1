@@ -244,16 +244,5 @@ class Analytics
         $number = Code::where('usedatetime', 'like', date('%'))->sum('number');
         return is_null($number)?0:$number;
     }
-	public function datetimey()
-    {
-        return date('Y',time());
-    }
-	public function datetimemothd()
-    {
-        return date('M',time());
-    }
-	public function datetimed()
-    {
-        return date('d',time());
-    }
+
 }
