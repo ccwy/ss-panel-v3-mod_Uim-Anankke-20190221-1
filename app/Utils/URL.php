@@ -614,9 +614,6 @@ class URL
         if($mu_port != 0 && !Config::get('mergeSub')) {
             $return_array['group'] .= ' - 单端口';
         }
-		$return_array['ratio'] = ($relay_rule != null
-            ? $node->traffic_rate + $relay_rule->dist_node()->traffic_rate
-            : $node->traffic_rate);
         return $return_array;
     }
     public static function cloneUser($user) {

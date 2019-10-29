@@ -276,7 +276,6 @@ $System_Config['pwdMethod'] = 'sha256';				//密码加密   可选 md5,sha256，
 $System_Config['db_charset'] = 'utf8';
 $System_Config['db_collation'] = 'utf8_general_ci';
 $System_Config['db_prefix'] = '';
-$System_Config['subscribe_client'] = 'false';        //下载协议客户端时附带节点和订阅信息
 
 #aws
 $System_Config['aws_access_key_id'] = '';
