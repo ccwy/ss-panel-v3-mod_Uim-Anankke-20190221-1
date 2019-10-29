@@ -72,13 +72,13 @@
 															y: {$sts->thisyearIncome()/$sts->totalIncome()*100}, legendText:"2019年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元", indexLabel: "2019年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元"
 														},
 														{
-															y: {$sts->2018yearIncome()/$sts->totalIncome()*100}, legendText:"2018年流水 {number_format($sts->2018yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2018yearIncome()}元", indexLabel: "2018年流水 {number_format($sts->2018yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2018yearIncome()}元"
+															y: {$sts->threeyearIncome()/$sts->totalIncome()*100}, legendText:"2018年流水 {number_format($sts->threeyearIncome()/$sts->totalIncome()*100,2)}% {$sts->threeyearIncome()}元", indexLabel: "2018年流水 {number_format($sts->threeyearIncome()/$sts->totalIncome()*100,2)}% {$sts->threeyearIncome()}元"
 														},
 														{
-															y: {$sts->2017yearIncome()/$sts->totalIncome()*100}, legendText:"2017年流水 {number_format($sts->2017yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2017yearIncome()}元", indexLabel: "2017年流水 {number_format($sts->2017yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2017yearIncome()}元"
+															y: {$sts->twoyearIncome()/$sts->totalIncome()*100}, legendText:"2017年流水 {number_format($sts->twoyearIncome()/$sts->totalIncome()*100,2)}% {$sts->twoyearIncome()}元", indexLabel: "2017年流水 {number_format($sts->twoyearIncome()/$sts->totalIncome()*100,2)}% {$sts->twoyearIncome()}元"
 														},
 														{
-															y: {$sts->2016yearIncome()/$sts->totalIncome()*100}, legendText:"2016年流水 {number_format($sts->2016yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2016yearIncome()}元", indexLabel: "2016年流水 {number_format($sts->2016yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2016yearIncome()}元"
+															y: {$sts->oneyearIncome()/$sts->totalIncome()*100}, legendText:"2016年流水 {number_format($sts->oneyearIncome()/$sts->totalIncome()*100,2)}% {$sts->oneyearIncome()}元", indexLabel: "2016年流水 {number_format($sts->oneyearIncome()/$sts->totalIncome()*100,2)}% {$sts->oneyearIncome()}元"
 														},
 														{
 															y: {$sts->moneyone()/$sts->totalIncome()*100}, legendText:"用户总余额 {number_format($sts->moneyone()/$sts->totalIncome()*100,2)}% {$sts->moneyone()}元", indexLabel: "用户总余额 {number_format($sts->moneyone()/$sts->totalIncome()*100,2)}% {$sts->moneyone()}元"
