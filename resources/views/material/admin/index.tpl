@@ -36,7 +36,7 @@
 											var chart = new CanvasJS.Chart("check_chart",
 											{
 												title:{
-													text: "累计金额(总金额 {$sts->totalIncome()} 元)",
+													text: "累计流水(总流水 {$sts->totalIncome()} 元)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -72,7 +72,7 @@
 															y: {$sts->thisyearIncome()/$sts->totalIncome()*100}, legendText:"今年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元", indexLabel: "今年流水 {number_format($sts->thisyearIncome()/$sts->totalIncome()*100,2)}% {$sts->thisyearIncome()}元"
 														},
 														{
-															y: {$sts->yesteryearIncome()/$sts->totalIncome()*100}, legendText:"去年流水 {number_format($sts->yesteryearIncome()/$sts->totalIncome()*100,2)}% {$sts->yesteryearIncome()}元", indexLabel: "去年流水 {number_format($sts->yesteryearIncome()/$sts->totalIncome()*100,2)}% {$sts->yesteryearIncome()}元"
+															y: {$sts->2018yearIncome()/$sts->totalIncome()*100}, legendText:"2018年流水 {number_format($sts->2018yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2018yearIncome()}元", indexLabel: "2018年流水 {number_format($sts->2018yearIncome()/$sts->totalIncome()*100,2)}% {$sts->2018yearIncome()}元"
 														},
 														{
 															y: {$sts->moneyone()/$sts->totalIncome()*100}, legendText:"用户总余额 {number_format($sts->moneyone()/$sts->totalIncome()*100,2)}% {$sts->moneyone()}元", indexLabel: "用户总余额 {number_format($sts->moneyone()/$sts->totalIncome()*100,2)}% {$sts->moneyone()}元"

@@ -185,9 +185,23 @@ class Analytics
         return is_null($number)?0:$number;
     }
 	//去年流水
-    public function yesteryearIncome()
+    public function 2018yearIncome()
     {
-        $number = Code::where('usedatetime', 'like', date('Y%', '=', '2018'))->sum('number');
+        $number = Code::where('usedatetime', 'like', date('Y%', strtotime('= 2018')))->sum('number');
+        return is_null($number)?0:$number;
+    }
+	//去年流水
+   
+	//去年流水
+    public function 2017yearIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y%', strtotime('-2 years')))->sum('number');
+        return is_null($number)?0:$number;
+    }
+	//去年流水
+    public function 2016yearIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y%', strtotime('-3 years')))->sum('number');
         return is_null($number)?0:$number;
     }
     //网站运营总金额
