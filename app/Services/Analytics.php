@@ -154,31 +154,43 @@ class Analytics
         return User::where('class', '>', 10)->where('class', '<', 15)->where('class', '!=', 16)->where('id','!=', 2291)->where('id','!=', 2293)->where('id','!=',1772)->count();
      
     }
-	
+	//昨日流水
 	public function yesterdayIncome()
     {
         $number = Code::where('usedatetime', 'like', date('Y-m-d%', strtotime('-1 days')))->sum('number');
         return is_null($number)?0:$number;
     }
-
+    //今日流水
     public function todayIncome()
     {
         $number = Code::where('usedatetime', 'like', date('Y-m-d%'))->sum('number');
         return is_null($number)?0:$number;
     }
-
+    //本月流水
     public function thisMonthIncome()
     {
         $number = Code::where('usedatetime', 'like', date('Y-m%'))->sum('number');
         return is_null($number)?0:$number;
     }
-
+    //上月流水
     public function lastMonthIncome()
     {
         $number = Code::where('usedatetime', 'like', date('Y-m%', strtotime('-1 months')))->sum('number');
         return is_null($number)?0:$number;
     }
-
+	//今年流水
+    public function thisyearIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y%'))->sum('number');
+        return is_null($number)?0:$number;
+    }
+	//去年流水
+    public function yesteryearIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y%', strtotime('-1 years')))->sum('number');
+        return is_null($number)?0:$number;
+    }
+    //网站运营总金额
     public function totalIncome()
     {
         $number = Code::where('usedatetime', 'like', date('%'))->sum('number');
