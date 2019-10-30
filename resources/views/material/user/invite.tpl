@@ -20,7 +20,7 @@
 										<br>返利满100元以上可提现到支付宝，100元以下仅支持提现到账户余额。</p>
 										
 										<p class="card-heading">累计返利总额：<code>{$paybacks_sum}</code> 元 （仅做统计）</p>
-										<p class="card-heading">剩余返利金额：<code>{$user->fanli} </code> 元</p>
+										<p class="card-heading">可提现返利金额：<code>{$user->fanli} </code> 元</p>
 										
 										<p>返利记录：<a class="btn btn-brand waves-attach" href="/user/fanlifile">点击查询</a> </p>    
 										<p>返利提现：<a class="btn btn-brand waves-attach" href="/user/fanli">点击提现</a></p>
