@@ -216,7 +216,7 @@
 											var chart = new CanvasJS.Chart("traffic_chart",
 											{
 												title:{
-													text: "流量使用情况(总分配流量 {$sts->lastMonthreg()})",
+													text: "用户数量(总数 {$sts->getTotalUser()}人)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -236,17 +236,22 @@
 													type: "doughnut",
 													showInLegend: true,
 													dataPoints: [
-														{if $sts->getRawTotalTraffic()!=0}
-															{
-																y: {(($sts->getRawUnusedTrafficUsage()/$sts->getRawTotalTraffic()))*100},label: "总剩余可用", legendText:"总剩余可用 {number_format((($sts->getRawUnusedTrafficUsage()/$sts->getRawTotalTraffic()))*100,2)}% {(($sts->getUnusedTrafficUsage()))}", indexLabel: "总剩余可用 {number_format((($sts->getRawUnusedTrafficUsage()/$sts->getRawTotalTraffic()))*100,2)}% {(($sts->getUnusedTrafficUsage()))}"
-															},
-															{
-																y: {(($sts->getRawLastTrafficUsage()/$sts->getRawTotalTraffic()))*100},label: "总过去已用", legendText:"总过去已用 {number_format((($sts->getRawLastTrafficUsage()/$sts->getRawTotalTraffic()))*100,2)}% {(($sts->getLastTrafficUsage()))}", indexLabel: "总过去已用 {number_format((($sts->getRawLastTrafficUsage()/$sts->getRawTotalTraffic()))*100,2)}% {(($sts->getLastTrafficUsage()))}"
-															},
-															{
-																y: {(($sts->getRawTodayTrafficUsage()/$sts->getRawTotalTraffic()))*100},label: "总今日已用", legendText:"总今日已用 {number_format((($sts->getRawTodayTrafficUsage()/$sts->getRawTotalTraffic()))*100,2)}% {(($sts->getTodayTrafficUsage()))}", indexLabel: "总今日已用 {number_format((($sts->getRawTodayTrafficUsage()/$sts->getRawTotalTraffic()))*100,2)}% {(($sts->getTodayTrafficUsage()))}"
-															}
-														{/if}
+														
+														{
+															y: {$sts->todayreg()/$sts->getTotalUser()*100}, legendText:"今天新增 {number_format($sts->todayreg()/$sts->getTotalUser()*100,2)}% {$sts->todayreg()}人", indexLabel: "今天新增 {number_format($sts->todayreg()/$sts->getTotalUser()*100,2)}% {$sts->todayreg()}人"
+														},
+														{
+															y: {$sts->yesterdayreg()/$sts->getTotalUser()*100}, legendText:"昨天新增 {number_format($sts->yesterdayreg()/$sts->getTotalUser()*100,2)}% {$sts->yesterdayreg()}人", indexLabel: "昨天新增 {number_format($sts->yesterdayreg()/$sts->getTotalUser()*100,2)}% {$sts->yesterdayreg()}人"
+														},														
+														{
+															y: {$sts->thisMonthreg()/$sts->getTotalUser()*100}, legendText:"本月新增 {number_format($sts->thisMonthreg()/$sts->getTotalUser()*100,2)}% {$sts->thisMonthreg()}人", indexLabel: "本月新增 {number_format($sts->thisMonthreg()/$sts->getTotalUser()*100,2)}% {$sts->thisMonthreg()}人"
+														},
+														{
+															y: {$sts->lastMonthreg()/$sts->getTotalUser()*100}, legendText:"上月新增 {number_format($sts->lastMonthreg()/$sts->getTotalUser()*100,2)}% {$sts->lastMonthreg()}人", indexLabel: "上月新增 {number_format($sts->lastMonthreg()/$sts->getTotalUser()*100,2)}% {$sts->lastMonthreg()}人"
+														},	
+														{
+															y: {$sts->thisyearreg()/$sts->getTotalUser()*100}, legendText:"今年新增 {number_format($sts->thisyearreg()/$sts->getTotalUser()*100,2)}% {$sts->thisyearreg()}人", indexLabel: "今年新增 {number_format($sts->thisyearreg()/$sts->getTotalUser()*100,2)}% {$sts->thisyearreg()}人"
+														}	
 													]
 												}
 												]
