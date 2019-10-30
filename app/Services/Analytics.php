@@ -244,5 +244,35 @@ class Analytics
         $number = Code::where('usedatetime', 'like', date('%'))->sum('number');
         return is_null($number)?0:$number;
     }
-
+	
+    //昨日注册
+	public function yesterdayreg()
+    {
+        $number = User::where('reg_date', 'like', date('Y-m-d%', strtotime('-1 days')))->count();
+        return is_null($number)?0:$number;
+    }
+    //今日注册
+    public function todayreg()
+    {
+        $number = User::where('reg_date', 'like', date('Y-m-d%'))->count();
+        return is_null($number)?0:$number;
+    }
+    //本月注册
+    public function thisMonthreg()
+    {
+        $number = User::where('reg_date', 'like', date('Y-m%'))->count();
+        return is_null($number)?0:$number;
+    }
+    //上月注册
+    public function lastMonthreg()
+    {
+        $number = User::where('reg_date', 'like', date('Y-m%', strtotime('-1 months')))->count();
+        return is_null($number)?0:$number;
+    }
+	//今年注册
+    public function thisyearreg()
+    {
+        $number = User::where('reg_date', 'like', date('Y%'))->count();
+        return is_null($number)?0:$number;
+    }
 }

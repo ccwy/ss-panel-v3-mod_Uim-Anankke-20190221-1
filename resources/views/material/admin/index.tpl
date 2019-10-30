@@ -216,7 +216,7 @@
 											var chart = new CanvasJS.Chart("traffic_chart",
 											{
 												title:{
-													text: "流量使用情况(总分配流量 {$sts->getTotalTraffic()})",
+													text: "流量使用情况(总分配流量 {$sts->thisMonthreg()})",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
