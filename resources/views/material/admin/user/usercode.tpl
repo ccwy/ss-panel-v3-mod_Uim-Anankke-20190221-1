@@ -59,7 +59,7 @@
 										<br>{date("d")-27}日流水{$sts->yesterdayIncome()}元
 										<br>{date("d")-28}日流水{$sts->yesterdayIncome()}元
 										<br>{date("d")-29}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-30}日流水{$sts->yesterdayIncome()}元
+										
 										</p>
 										
 										
