@@ -30,7 +30,16 @@
 									<div class="card-inner">
 									<div class="card-heading">最近30天充值金额</div>
 										<p>{date("Y-m-d")}流水{$sts->todayIncome()}元
-										<br>{date("Y-m-d")-1}流水{$sts->yesterdayIncome()}</p>
+										<br>{date("d")-1}流水{$sts->yesterdayIncome()}
+										<br>{date("d")-2}流水{$sts->twodayIncome()}
+										<br>{date("d")-3}流水{$sts->threedayIncome()}
+										<br>{date("d")-4}流水{$sts->fourdayIncome()}
+										<br>{date("d")-5}流水{$sts->yesterdayIncome()}
+										<br>{date("d")-6}流水{$sts->yesterdayIncome()}
+										<br>{date("d")-7}流水{$sts->yesterdayIncome()}
+										<br>{date("d")-8}流水{$sts->yesterdayIncome()}
+										
+										</p>
 										
 										
 										
