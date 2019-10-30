@@ -29,16 +29,37 @@
 								<div class="card-main">
 									<div class="card-inner">
 									<div class="card-heading">最近30天充值金额</div>
-										<p>{date("Y-m-d")}流水{$sts->todayIncome()}元
-										<br>{date("d")-1}流水{$sts->yesterdayIncome()}
-										<br>{date("d")-2}流水{$sts->twodayIncome()}
-										<br>{date("d")-3}流水{$sts->threedayIncome()}
-										<br>{date("d")-4}流水{$sts->fourdayIncome()}
-										<br>{date("d")-5}流水{$sts->yesterdayIncome()}
-										<br>{date("d")-6}流水{$sts->yesterdayIncome()}
-										<br>{date("d")-7}流水{$sts->yesterdayIncome()}
-										<br>{date("d")-8}流水{$sts->yesterdayIncome()}
-										
+										<p>{date("m-d")}日流水{$sts->todayIncome()}元
+										<br>{date("d")-1}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-2}日流水{$sts->twodayIncome()}元
+										<br>{date("d")-3}日流水{$sts->threedayIncome()}元
+										<br>{date("d")-4}日流水{$sts->fourdayIncome()}元
+										<br>{date("d")-5}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-6}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-7}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-8}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-9}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-10}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-11}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-12}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-13}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-14}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-15}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-16}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-17}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-18}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-19}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-20}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-21}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-22}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-23}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-24}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-25}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-26}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-27}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-28}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-29}日流水{$sts->yesterdayIncome()}元
+										<br>{date("d")-30}日流水{$sts->yesterdayIncome()}元
 										</p>
 										
 										

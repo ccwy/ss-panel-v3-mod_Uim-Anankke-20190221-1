@@ -13,7 +13,7 @@
 						<div class="card margin-bottom-no">
 							<div class="card-main">
 								<div class="card-inner">
-									<p>下面是系统运行情况简报；用户总余额  {$sts->moneyone()} 元，用户总返利  {$sts->fanlione()} 元，总付费用户  {$sts->classuseraa()}  人 ，月付用户   {$sts->classusermoth()}   人，年付用户   {$sts->classuseryear()}   人， 全站已用总流量   {$sts->ssnodeTrafficUsage()}  系统分析<a href="/admin/user/usercode">分析记录</a></p>
+									<p>下面是系统运行情况简报；用户总余额  {$sts->moneyone()} 元，用户总返利  {$sts->fanlione()} 元，总付费用户  {$sts->classuseraa()}  人 ，月付用户   {$sts->classusermoth()}   人，年付用户   {$sts->classuseryear()}   人， 全站已用总流量   {$sts->ssnodeTrafficUsage()} </p>
 								</div>
 							</div>
 						</div>
