@@ -216,7 +216,7 @@
 											var chart = new CanvasJS.Chart("traffic_chart",
 											{
 												title:{
-													text: "用户数量(总数 {$sts->getTotalUser()}人)",
+													text: "今年新增( {$sts->thisyearreg()}人)",
 													fontFamily: "Impact",
 													fontWeight: "normal"
 												},
@@ -238,20 +238,17 @@
 													dataPoints: [
 														
 														{
-															y: {$sts->todayreg()/$sts->getTotalUser()*100}, legendText:"今天新增 {number_format($sts->todayreg()/$sts->getTotalUser()*100,2)}% {$sts->todayreg()}人", indexLabel: "今天新增 {number_format($sts->todayreg()/$sts->getTotalUser()*100,2)}% {$sts->todayreg()}人"
+															y: {$sts->todayreg()/$sts->thisyearreg()*100}, legendText:"今天新增 {number_format($sts->todayreg()/$sts->thisyearreg()*100,2)}% {$sts->todayreg()}人", indexLabel: "今天新增 {number_format($sts->todayreg()/$sts->thisyearreg()*100,2)}% {$sts->todayreg()}人"
 														},
 														{
-															y: {$sts->yesterdayreg()/$sts->getTotalUser()*100}, legendText:"昨天新增 {number_format($sts->yesterdayreg()/$sts->getTotalUser()*100,2)}% {$sts->yesterdayreg()}人", indexLabel: "昨天新增 {number_format($sts->yesterdayreg()/$sts->getTotalUser()*100,2)}% {$sts->yesterdayreg()}人"
+															y: {$sts->yesterdayreg()/$sts->thisyearreg()*100}, legendText:"昨天新增 {number_format($sts->yesterdayreg()/$sts->thisyearreg()*100,2)}% {$sts->yesterdayreg()}人", indexLabel: "昨天新增 {number_format($sts->yesterdayreg()/$sts->thisyearreg()*100,2)}% {$sts->yesterdayreg()}人"
 														},														
 														{
-															y: {$sts->thisMonthreg()/$sts->getTotalUser()*100}, legendText:"本月新增 {number_format($sts->thisMonthreg()/$sts->getTotalUser()*100,2)}% {$sts->thisMonthreg()}人", indexLabel: "本月新增 {number_format($sts->thisMonthreg()/$sts->getTotalUser()*100,2)}% {$sts->thisMonthreg()}人"
+															y: {$sts->thisMonthreg()/$sts->thisyearreg()*100}, legendText:"本月新增 {number_format($sts->thisMonthreg()/$sts->thisyearreg()*100,2)}% {$sts->thisMonthreg()}人", indexLabel: "本月新增 {number_format($sts->thisMonthreg()/$sts->thisyearreg()*100,2)}% {$sts->thisMonthreg()}人"
 														},
 														{
-															y: {$sts->lastMonthreg()/$sts->getTotalUser()*100}, legendText:"上月新增 {number_format($sts->lastMonthreg()/$sts->getTotalUser()*100,2)}% {$sts->lastMonthreg()}人", indexLabel: "上月新增 {number_format($sts->lastMonthreg()/$sts->getTotalUser()*100,2)}% {$sts->lastMonthreg()}人"
-														},	
-														{
-															y: {$sts->thisyearreg()/$sts->getTotalUser()*100}, legendText:"今年新增 {number_format($sts->thisyearreg()/$sts->getTotalUser()*100,2)}% {$sts->thisyearreg()}人", indexLabel: "今年新增 {number_format($sts->thisyearreg()/$sts->getTotalUser()*100,2)}% {$sts->thisyearreg()}人"
-														}	
+															y: {$sts->lastMonthreg()/$sts->thisyearreg()*100}, legendText:"上月新增 {number_format($sts->lastMonthreg()/$sts->thisyearreg()*100,2)}% {$sts->lastMonthreg()}人", indexLabel: "上月新增 {number_format($sts->lastMonthreg()/$sts->thisyearreg()*100,2)}% {$sts->lastMonthreg()}人"
+														}
 													]
 												}
 												]
