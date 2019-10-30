@@ -96,7 +96,7 @@
 											 <div class="form-group form-group-label">
 											 <p>以下IP已被封禁，将无法连接本账号下的任何节点，请确认，如有异常或者误封，请联系管理员处理。
 											 <br>PS：此处仅封禁用户指定的异常IP，以及超出设备连接数的IP，超出设备连接数的IP会在该IP断开连接5分钟后自动解封。</p>													
-									         <textarea class="form-control maxwidth-edit" rows="10" readonly>{$user->get_disconnect_ip()}</textarea>
+									         <textarea class="form-control maxwidth-edit" disabled="true" rows="10">{$user->get_disconnect_ip()}</textarea>
 											 </div>
 									    </div>	
 									</div>		
