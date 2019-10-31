@@ -60,16 +60,16 @@
 															y: {$sts->todayIncome()/$sts->thisyearIncome()*100}, legendText:"今日流水 {number_format($sts->todayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->todayIncome()}元", indexLabel: "今日流水 {number_format($sts->todayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->todayIncome()}元"
 														},
 														{
-															y: {$sts->yesterdayIncome()/$sts->thisyearIncome()*100}, legendText:"{date("d")-1}日流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元", indexLabel: "{date("d")-1}日流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元"
+															y: {$sts->yesterdayIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->onedays()}日流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元", indexLabel: "{$sts->onedays()}日流水 {number_format($sts->yesterdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->yesterdayIncome()}元"
 														},
 														{
-															y: {$sts->twodayIncome()/$sts->thisyearIncome()*100}, legendText:"{date("d")-2}日流水 {number_format($sts->twodayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twodayIncome()}元", indexLabel: "{date("d")-2}日流水 {number_format($sts->twodayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twodayIncome()}元"
+															y: {$sts->twodayIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->twodays()}日流水 {number_format($sts->twodayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twodayIncome()}元", indexLabel: "{$sts->twodays()}日流水 {number_format($sts->twodayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->twodayIncome()}元"
 														},
 														{
-															y: {$sts->threedayIncome()/$sts->thisyearIncome()*100}, legendText:"{date("d")-3}日流水 {number_format($sts->threedayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->threedayIncome()}元", indexLabel: "{date("d")-3}日流水 {number_format($sts->threedayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->threedayIncome()}元"
+															y: {$sts->threedayIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->threedays()}日流水 {number_format($sts->threedayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->threedayIncome()}元", indexLabel: "{$sts->threedays()}日流水 {number_format($sts->threedayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->threedayIncome()}元"
 														},
 													    {
-															y: {$sts->fourdayIncome()/$sts->thisyearIncome()*100}, legendText:"{date("d")-4}日流水 {number_format($sts->fourdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->fourdayIncome()}元", indexLabel: "{date("d")-4}日流水 {number_format($sts->fourdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->fourdayIncome()}元"
+															y: {$sts->fourdayIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->fourdays()}日流水 {number_format($sts->fourdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->fourdayIncome()}元", indexLabel: "{$sts->fourdays()}日流水 {number_format($sts->fourdayIncome()/$sts->thisyearIncome()*100,2)}% {$sts->fourdayIncome()}元"
 														}													
 													]
 												}

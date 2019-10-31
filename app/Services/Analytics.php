@@ -202,11 +202,7 @@ class Analytics
         $number = Code::where('usedatetime', 'like', date('Y-m%', strtotime('-1 months')))->sum('number');
         return is_null($number)?0:$number;
     }
-	 public function lastMonthp()
-    {
-        $number = date('m%', strtotime('-1 months'));
-        return $number;
-    }
+	
 	//上上月流水
     public function oneMonthIncome()
     {
@@ -280,4 +276,41 @@ class Analytics
         $number = User::where('reg_date', 'like', date('Y%'))->count();
         return is_null($number)?0:$number;
     }
+	 public function oneMonth()
+    {
+        $number = date('m', strtotime('-1 months'));
+        return $number;
+    }
+	 public function twoMonth()
+    {
+        $number = date('m', strtotime('-2 months'));
+        return $number;
+    }
+	 public function threeMonth()
+    {
+        $number = date('m', strtotime('-3 months'));
+        return $number;
+    }
+	 public function onedays()
+    {
+        $number = date('d', strtotime('-1 days'));
+        return $number;
+    }
+	 public function twodays()
+    {
+        $number = date('d', strtotime('-2 days'));
+        return $number;
+    }
+	 public function threedays()
+    {
+        $number = date('d', strtotime('-3 days'));
+        return $number;
+    }
+	 public function fourdays()
+    {
+        $number = date('d', strtotime('-4 days'));
+        return $number;
+    }
+	
+	
 }
