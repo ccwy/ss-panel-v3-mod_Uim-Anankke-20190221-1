@@ -16,8 +16,7 @@
 								<div class="card-inner">
 									<div class="card-inner">
 										<p class="card-heading">说明</p>
-										<p>您每邀请1位用户注册，对方首次充值时您会获得对方充值金额 <code>{$config["code_payback"]} %</code> 的返利。
-										<br>返利满100元以上可提现到支付宝，100元以下仅支持提现到账户余额。</p>
+										<p>您每邀请1位用户注册，您会获得对方首次充值金额 <code>{$config["code_payback"]} %</code> 的返利。</p>
 										
 										<p class="card-heading">累计返利总额：<code>{$paybacks_sum}</code> 元 （仅做统计）</p>
 										<p class="card-heading">可提现返利金额：<code>{$user->fanli} </code> 元</p>

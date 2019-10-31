@@ -25,7 +25,7 @@
 										<p>返利记录：<a class="btn btn-brand waves-attach" href="/user/fanlifile">点击查询</a> </p>   
 										<p>1，每次提现最低1元，提现金额不能大于返利金额；
 										
-										<br>2，提现到账户余额秒到帐，刷新页面就可以看到充值记录和账户余额变化，提现到账户余额完成后可<a href="/user/shop">到商店</a> 购买套餐；
+										<br>2，提现到账户余额秒到帐，刷新页面就可以看到提现记录和账户余额变化，提现到账户余额完成后可<a href="/user/shop">到商店</a> 购买套餐；
 										<br>3，提现到支付宝请发工单联系管理员操作（注：提现到支付宝仅支持100元以上金额）。</p>
 										
 										<p class="card-heading">账户余额：<code>{$user->money}  </code>元</p>
