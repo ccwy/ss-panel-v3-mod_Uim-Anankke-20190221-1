@@ -204,7 +204,7 @@ class Analytics
     }
 	 public function lastMonthp()
     {
-        $number = date('Y-m%', strtotime('-1 months'));
+        $number = date('m%', strtotime('-1 months'));
         return $number;
     }
 	//上上月流水

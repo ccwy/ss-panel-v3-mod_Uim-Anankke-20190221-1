@@ -121,7 +121,7 @@
 															y: {$sts->thisMonthIncome()/$sts->thisyearIncome()*100}, legendText:"本月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元", indexLabel: "本月流水 {number_format($sts->thisMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->thisMonthIncome()}元"
 														},
 														{
-															y: {$sts->lastMonthIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->lastMonthp()}月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元", indexLabel: "{date("m")-1}月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元"
+															y: {$sts->lastMonthIncome()/$sts->thisyearIncome()*100}, legendText:"{$sts->lastMonthp()}月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元", indexLabel: "{$sts->lastMonthp()}月流水 {number_format($sts->lastMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->lastMonthIncome()}元"
 														},
 														{
 															y: {$sts->oneMonthIncome()/$sts->thisyearIncome()*100}, legendText:"{date("m")-2}月流水 {number_format($sts->oneMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->oneMonthIncome()}元", indexLabel: "{date("m")-2}月流水 {number_format($sts->oneMonthIncome()/$sts->thisyearIncome()*100,2)}% {$sts->oneMonthIncome()}元"
