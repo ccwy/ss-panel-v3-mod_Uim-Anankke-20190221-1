@@ -202,6 +202,11 @@ class Analytics
         $number = Code::where('usedatetime', 'like', date('Y-m%', strtotime('-1 months')))->sum('number');
         return is_null($number)?0:$number;
     }
+	 public function lastMonthp()
+    {
+        $number = date('Y-m%', strtotime('-1 months'));
+        return $number;
+    }
 	//上上月流水
     public function oneMonthIncome()
     {
