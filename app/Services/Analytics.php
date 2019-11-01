@@ -276,41 +276,243 @@ class Analytics
         $number = User::where('reg_date', 'like', date('Y%'))->count();
         return is_null($number)?0:$number;
     }
+	//日期
+	//去年
+	 public function oneyear()
+    {
+        $number = date('Y', strtotime('-1 years'));
+        return $number;
+    }
+	//前年
+	 public function twoyear()
+    {
+        $number = date('Y', strtotime('-2 years'));
+        return $number;
+    }
+	//大前年
+	 public function threeyear()
+    {
+        $number = date('Y', strtotime('-3 years'));
+        return $number;
+    }
+	//上个月
 	 public function oneMonth()
     {
-        $number = date('m', strtotime('-1 months'));
+        $number = date('Y-m', strtotime('-1 months'));
         return $number;
     }
+	//上上个月
 	 public function twoMonth()
     {
-        $number = date('m', strtotime('-2 months'));
+        $number = date('Y-m', strtotime('-2 months'));
         return $number;
     }
+	
+	//上上上个月
 	 public function threeMonth()
     {
-        $number = date('m', strtotime('-3 months'));
+        $number = date('Y-m', strtotime('-3 months'));
         return $number;
     }
+	 public function fourMonth()
+    {
+        $number = date('Y-m', strtotime('-4 months'));
+        return $number;
+    }
+	 public function FivesMonth()
+    {
+        $number = date('Y-m', strtotime('-5 months'));
+        return $number;
+    }
+	 public function sixMonth()
+    {
+        $number = date('Y-m', strtotime('-6 months'));
+        return $number;
+    }
+	 public function SevenMonth()
+    {
+        $number = date('Y-m', strtotime('-7 months'));
+        return $number;
+    }
+	 public function EightMonth()
+    {
+        $number = date('Y-m', strtotime('-8 months'));
+        return $number;
+    }
+	 public function nineMonth()
+    {
+        $number = date('Y-m', strtotime('-9 months'));
+        return $number;
+    }
+	 public function tenMonth()
+    {
+        $number = date('Y-m', strtotime('-10 months'));
+        return $number;
+    }
+	 public function elevenMonth()
+    {
+        $number = date('Y-m', strtotime('-11 months'));
+        return $number;
+    }
+	 public function twelveMonth()
+    {
+        $number = date('Y-m', strtotime('-12 months'));
+        return $number;
+    }
+	
+	//昨天
 	 public function onedays()
     {
-        $number = date('d', strtotime('-1 days'));
+        $number = date('Y-m-d', strtotime('-1 days'));
         return $number;
     }
+	//前天
 	 public function twodays()
     {
-        $number = date('d', strtotime('-2 days'));
+        $number = date('Y-m-d', strtotime('-2 days'));
         return $number;
     }
+	//大前天
 	 public function threedays()
     {
         $number = date('d', strtotime('-3 days'));
         return $number;
     }
+	//大大前天
 	 public function fourdays()
     {
         $number = date('d', strtotime('-4 days'));
         return $number;
     }
-	
-	
+	 public function Fivesdays()
+    {
+        $number = date('d', strtotime('-5 days'));
+        return $number;
+    }
+	 public function sixdays()
+    {
+        $number = date('d', strtotime('-6 days'));
+        return $number;
+    }
+	 public function Sevendays()
+    {
+        $number = date('d', strtotime('-7 days'));
+        return $number;
+    }
+	 public function Eightdays()
+    {
+        $number = date('d', strtotime('-8 days'));
+        return $number;
+    }
+	 public function ninedays()
+    {
+        $number = date('d', strtotime('-9 days'));
+        return $number;
+    }
+	 public function tendays()
+    {
+        $number = date('d', strtotime('-10 days'));
+        return $number;
+    }
+	 public function elevendays()
+    {
+        $number = date('d', strtotime('-11 days'));
+        return $number;
+    }
+	 public function twelvedays()
+    {
+        $number = date('d', strtotime('-12 days'));
+        return $number;
+    }
+	 public function thirteendays()
+    {
+        $number = date('d', strtotime('-13 days'));
+        return $number;
+    }
+	 public function fourteendays()
+    {
+        $number = date('d', strtotime('-14 days'));
+        return $number;
+    }
+	 public function fifteendays()
+    {
+        $number = date('d', strtotime('-15 days'));
+        return $number;
+    }
+	 public function sixteendays()
+    {
+        $number = date('d', strtotime('-16 days'));
+        return $number;
+    }
+	 public function Seventeendays()
+    {
+        $number = date('d', strtotime('-17 days'));
+        return $number;
+    }
+	 public function eighteendays()
+    {
+        $number = date('d', strtotime('-18 days'));
+        return $number;
+    }
+	 public function Nineteendays()
+    {
+        $number = date('d', strtotime('-19 days'));
+        return $number;
+    }
+	 public function twentydays()
+    {
+        $number = date('d', strtotime('-20 days'));
+        return $number;
+    }
+	 public function twentyonedays()
+    {
+        $number = date('d', strtotime('-21 days'));
+        return $number;
+    }
+	 public function twentytwodays()
+    {
+        $number = date('d', strtotime('-22 days'));
+        return $number;
+    }
+	 public function twentythreedays()
+    {
+        $number = date('d', strtotime('-23 days'));
+        return $number;
+    }
+	 public function twentyfourdays()
+    {
+        $number = date('d', strtotime('-24 days'));
+        return $number;
+    }
+	 public function twentyfivedays()
+    {
+        $number = date('d', strtotime('-25 days'));
+        return $number;
+    }
+	public function Twentysixdays()
+    {
+        $number = date('d', strtotime('-26 days'));
+        return $number;
+    }
+	 public function Twentysevendays()
+    {
+        $number = date('d', strtotime('-27 days'));
+        return $number;
+    }
+	 public function Twentyeightdays()
+    {
+        $number = date('d', strtotime('-28 days'));
+        return $number;
+    }
+	 public function Twentyninedays()
+    {
+        $number = date('d', strtotime('-29 days'));
+        return $number;
+    }
+	 public function thirtydays()
+    {
+        $number = date('d', strtotime('-30 days'));
+        return $number;
+    }
+
 }
