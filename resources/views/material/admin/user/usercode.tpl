@@ -29,37 +29,37 @@
 								<div class="card-main">
 									<div class="card-inner">
 									<div class="card-heading">最近30天充值金额</div>
-										<p>{date("m-d")}日流水{$sts->todayIncome()}元
+										<p>{date("Y-m-d")}日流水{$sts->todayIncome()}元
 										<br>{$sts->onedays()}日流水{$sts->yesterdayIncome()}元
 										<br>{$sts->twodays()}日流水{$sts->twodayIncome()}元
 										<br>{$sts->threedays()}日流水{$sts->threedayIncome()}元
-										<br>{date("d")-4}日流水{$sts->fourdayIncome()}元
-										<br>{date("d")-5}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-6}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-7}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-8}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-9}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-10}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-11}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-12}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-13}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-14}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-15}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-16}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-17}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-18}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-19}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-20}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-21}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-22}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-23}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-24}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-25}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-26}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-27}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-28}日流水{$sts->yesterdayIncome()}元
-										<br>{date("d")-29}日流水{$sts->yesterdayIncome()}元
-										
+										<br>{$sts->fourdays()}日流水{$sts->fourdayIncome()}元
+										<br>{$sts->Fivesdays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->sixdays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->Sevendays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->Eightdays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->ninedays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->tendays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->elevendays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->twelvedays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->thirteendays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->fourteendays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->fifteendays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->sixteendays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->Seventeendays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->eighteendays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->Nineteendays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->twentydays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->twentyonedays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->twentytwodays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->twentythreedays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->twentyfourdays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->twentyfivedays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->Twentysixdays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->Twentysevendays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->Twentyeightdays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->Twentyninedays()}日流水{$sts->yesterdayIncome()}元
+										<br>{$sts->thirtydays()}日流水{$sts->yesterdayIncome()}元
 										</p>
 										
 										

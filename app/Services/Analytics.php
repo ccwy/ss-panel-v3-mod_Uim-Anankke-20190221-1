@@ -298,20 +298,20 @@ class Analytics
 	//上个月
 	 public function oneMonth()
     {
-        $number = date('Y-m', strtotime('-1 months'));
+        $number = date('m', strtotime('-1 months'));
         return $number;
     }
 	//上上个月
 	 public function twoMonth()
     {
-        $number = date('Y-m', strtotime('-2 months'));
+        $number = date('m', strtotime('-2 months'));
         return $number;
     }
 	
 	//上上上个月
 	 public function threeMonth()
     {
-        $number = date('Y-m', strtotime('-3 months'));
+        $number = date('m', strtotime('-3 months'));
         return $number;
     }
 	 public function fourMonth()
@@ -363,13 +363,13 @@ class Analytics
 	//昨天
 	 public function onedays()
     {
-        $number = date('Y-m-d', strtotime('-1 days'));
+        $number = date('d', strtotime('-1 days'));
         return $number;
     }
 	//前天
 	 public function twodays()
     {
-        $number = date('Y-m-d', strtotime('-2 days'));
+        $number = date('d', strtotime('-2 days'));
         return $number;
     }
 	//大前天
