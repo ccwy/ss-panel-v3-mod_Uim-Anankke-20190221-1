@@ -213,7 +213,7 @@ class URL
                     $query->where('sort', 0)
                         ->orwhere('sort', 10);
                 }
-            )->where("type", "1")->orderBy("name", 'desc')->get();
+            )->where("type", "1")->orderBy("name", 'desc')->get();  //节点排序
         } else {
             $nodes=Node::where(
                 function ($query) {
@@ -225,14 +225,14 @@ class URL
                     $query->where("node_group", "=", $user->node_group)
                         ->orWhere("node_group", "=", 0);
                 }
-            )->where("type", "1")->where("node_class", "<=", $user->class)->orderBy("name", 'desc')->get();
+            )->where("type", "1")->where("node_class", "<=", $user->class)->orderBy("name", 'desc')->get();  //节点排序
         }
         if($is_mu) {
             if ($user->is_admin) {
             	if ($is_mu!=1){
-            		$mu_nodes = Node::where('sort', 9)->where('server', '=', $is_mu)->where("type", "1")->get();
+            		$mu_nodes = Node::where('sort', 9)->where('server', '=', $is_mu)->where("type", "1")->orderBy("name", 'desc')->get();  //节点排序
             	}else{
-                	$mu_nodes = Node::where('sort', 9)->where("type", "1")->get();
+                	$mu_nodes = Node::where('sort', 9)->where("type", "1")->orderBy("name", 'desc')->get();
             	}
             } else {
                 if ($is_mu!=1){
@@ -241,18 +241,18 @@ class URL
                             $query->where("node_group", "=", $user->node_group)
                                 ->orWhere("node_group", "=", 0);
                         }
-                    )->get();
+                    )->orderBy("name", 'desc')->get();  //节点排序
                 }else{
                     $mu_nodes = Node::where('sort', 9)->where('node_class', '<=', $user->class)->where("type", "1")->where(
                         function ($query) use ($user) {
                             $query->where("node_group", "=", $user->node_group)
                                 ->orWhere("node_group", "=", 0);
                         }
-                    )->get();
+                    )->orderBy("name", 'desc')->get();   //节点排序
                 }
             }
         }
-        $relay_rules = Relay::where('user_id', $user->id)->orwhere('user_id', 0)->orderBy('id', 'asc')->get();
+        $relay_rules = Relay::where('user_id', $user->id)->orwhere('user_id', 0)->orderBy('id', 'asc')->get();  //节点排序
         if (!Tools::is_protocol_relay($user)) {
             $relay_rules = array();
         }
@@ -319,7 +319,7 @@ class URL
                 $return_url .= URL::getItemUrl($item, $is_ss).($enter == 0 ? ' ' : "\n");
             }
         }
-		$return_url .= URL::getUserTraffic($user, $is_mu).($enter == 0 ? ' ' : "\n");
+		$return_url .= URL::getUserTraffic($user, $is_mu).($enter == 0 ? ' ' : "\n");  //更改订阅排序，等级过期时间和剩余流量排序最底下
         $return_url .= URL::getUserClassExpiration($user, $is_mu).($enter == 0 ? ' ' : "\n");
         return $return_url;
     }
