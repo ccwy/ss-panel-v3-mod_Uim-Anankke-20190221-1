@@ -304,8 +304,7 @@ class URL
     }
     public static function getAllUrl($user, $is_mu, $is_ss = 0, $enter = 0) {
         $return_url = '';
-        $return_url .= URL::getUserTraffic($user, $is_mu).($enter == 0 ? ' ' : "\n");
-        $return_url .= URL::getUserClassExpiration($user, $is_mu).($enter == 0 ? ' ' : "\n");
+        
         if(strtotime($user->expire_in)<time()){
 			return $return_url;
 		}
@@ -320,6 +319,8 @@ class URL
                 $return_url .= URL::getItemUrl($item, $is_ss).($enter == 0 ? ' ' : "\n");
             }
         }
+		$return_url .= URL::getUserTraffic($user, $is_mu).($enter == 0 ? ' ' : "\n");
+        $return_url .= URL::getUserClassExpiration($user, $is_mu).($enter == 0 ? ' ' : "\n");
         return $return_url;
     }
 
