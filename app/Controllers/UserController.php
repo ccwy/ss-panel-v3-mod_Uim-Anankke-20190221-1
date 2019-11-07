@@ -835,7 +835,7 @@ class UserController extends BaseController
         if (isset($request->getQueryParams()["page"])) {
             $pageNum = $request->getQueryParams()["page"];
         }
-        $Anns = Ann::orderBy("datetime", "desc")->paginate(15, ['*'], 'page', $pageNum);
+        $Anns = Ann::orderBy("date", "desc")->paginate(15, ['*'], 'page', $pageNum);
         $Anns->setPath('/user/announcement');
 
         return $this->view()->assign('Anns', $Anns)->display('user/announcement.tpl');
