@@ -29,6 +29,7 @@
 										<p class="card-heading">公告历史记录</p>
 										<div class="card-table">
 											<div class="table-responsive">
+											{$anns->render()}
 												<table class="table">
 													<tr>
 														<th>ID</th>
@@ -43,6 +44,7 @@
 														</tr>
 													{/foreach}
 												</table>
+												{$anns->render()}
 											</div>
 										</div>
 									</div>
