@@ -29,7 +29,7 @@
 										<p class="card-heading">公告历史记录</p>
 										<div class="card-table">
 											<div class="table-responsive">
-											<nobr>
+											
 												<table class="table">
 													<tr>
 														<th>ID</th>
@@ -45,18 +45,14 @@
 													{/foreach}
 												</table>
 												{$anns->render()}
-												</nobr>
+												
 											</div>
 										</div>
 									</div>
 									
 								</div>
 							</div>
-							
-						
-				
-							
-						
+												
 						{include file='dialog.tpl'}
 						
 					</div>
