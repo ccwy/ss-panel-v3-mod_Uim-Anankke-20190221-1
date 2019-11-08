@@ -823,7 +823,7 @@ class UserController extends BaseController
         return $this->view()->assign("userip", $userip)->assign("userloginip", $userloginip)->display('user/profile.tpl');
     }
 
-
+     //公告面板分页
     public function announcement($request, $response, $args)
     {
        // $Anns = Ann::orderBy('date', 'desc')->get();
