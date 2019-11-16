@@ -124,7 +124,7 @@ class CodeController extends AdminController
 
         $datatables->edit('user_name', function ($data) {
           
-            return $data['user_name'] == 0 ? '未使用' : $data['user_name'];
+            return $data['userid'] == 0 ? '未使用' : $data['user_name'];
         });
 
         $datatables->edit('type', function ($data) {
