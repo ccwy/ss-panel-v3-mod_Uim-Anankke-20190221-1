@@ -127,7 +127,7 @@ class CodeController extends AdminController
           /*  if ($user == null) {
                 return "未使用";
             }*/
-			 return $data['userid'] == 0 ? '未使用' : $data['user_name'];
+			 return $user == null ? '未使用' : $data['user_name'];
 
           //  return $user->user_name;
         });
