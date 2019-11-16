@@ -123,8 +123,8 @@ class CodeController extends AdminController
         });
 
         $datatables->edit('user_name', function ($data) {
-			$user = User::find($data['user_name']);
-           return $user == null ? '未使用' : $data['user_name'];
+			
+            return $data['userid'] == 0 ? '未使用' : $data['user_name'];
         });
 
         $datatables->edit('type', function ($data) {
