@@ -92,7 +92,7 @@ class CodeController extends AdminController
     public function ajax_code($request, $response, $args)
     {
         $datatables = new Datatables(new DatatablesHelper());
-        $datatables->query('Select code.id,code.code,code.type,code.number,code.isused,code.userid,code.userid as user_name,code.usedatetime from code');
+        $datatables->query('Select code.id,code.code,code.type,code.number,code.isused,code.userid,user.user_name,code.usedatetime from code,user where code.userid = user.id');
         
 	$datatables->edit('op', function ($data) {
             return '<a class="btn btn-brand" href="/admin/user/'.$data['userid'].'/edit">编辑用户</a>';
@@ -128,7 +128,7 @@ class CodeController extends AdminController
                 return "未使用";
             }
 
-            return $user->user_name;
+            return $data['user_name'];
         });
 
         $datatables->edit('type', function ($data) {
