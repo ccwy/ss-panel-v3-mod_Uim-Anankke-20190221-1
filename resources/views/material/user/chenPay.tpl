@@ -25,6 +25,7 @@
 		<br>付款成功一分钟内到账，如未到账，请点击上面按钮解决。</p>
 		<p>{if $config['AliPay_Status']!=1}<font color="red">网路故障，支付宝暂不可用，请联系管理员。{/if}</font></p><p>{if $config['WxPay_Status']!=1}<font color="red">网路故障，微信支付暂不可用，请联系管理员。{/if}</font></p>
 		
+		{if $config['AliPay_Status']==1 || $config['WxPay_Status']==1}
         {if preg_match('/\|/', $config['Pay_Price'])}
         {$data = explode('|', $config['Pay_Price'])}
         <p>选择充值金额：</p>
@@ -40,6 +41,7 @@
                 <input type="number" id="AliPayType" class="form-control" name="amount"/>
             </div>
             {/if}
+		{/if}	
         
 
         {if $config['AliPay_Status']==1}
