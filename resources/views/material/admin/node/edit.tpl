@@ -88,6 +88,14 @@
 									</div>
 
 									<div class="form-group form-group-label">
+										<div class="checkbox switch">
+											<label for="auto_update_ip">
+												<input checked class="access-hide" id="auto_update_ip" type="checkbox" name="auto_update_ip"><span class="switch-toggle"></span>是否自动更新ip
+											</label>
+										</div>
+									</div>
+
+									<div class="form-group form-group-label">
 										<label class="floating-label" for="status">节点状态</label>
 										<input class="form-control maxwidth-edit" id="status" name="status" type="text" value="{$node->status}">
 									</div>
@@ -205,6 +213,11 @@
             } else {
                 var type = 0;
 			}
+			if ($$.getElementById('auto_update_ip').checked) {
+				var auto_update_ip=1;
+            } else {
+				var auto_update_ip=0;
+			}
 {/literal}
             if ($$.getElementById('custom_rss').checked) {
                 var custom_rss = 1;
@@ -227,6 +240,7 @@
                     rate: $$getValue('rate'),
                     info: $$getValue('info'),
                     type,
+					auto_update_ip,
                     group: $$getValue('group'),
                     status: $$getValue('status'),
                     sort: $$getValue('sort'),

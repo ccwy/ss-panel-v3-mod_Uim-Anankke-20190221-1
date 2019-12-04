@@ -38,14 +38,14 @@ class Job
     {
         $nodes = Node::all();
         foreach ($nodes as $node) {
-            if ($node->sort == 11) {
+            if ($node->sort == 11 && $node->auto_update_ip == 1) {
 				$server_list = explode(";", $node->server);
 				if(!Tools::is_ip($server_list[0])){
 					if($node->changeNodeIp($server_list[0])){
 						$node->save();
 					}					
 				}
-			} else if($node->sort == 0 || $node->sort == 1 || $node->sort == 10){
+			} else if($node->auto_update_ip == 1 && ($node->sort == 0 || $node->sort == 1 || $node->sort == 10)){
 				if(!Tools::is_ip($node->server)){
 					if($node->changeNodeIp($node->server)){
 						$node->save();

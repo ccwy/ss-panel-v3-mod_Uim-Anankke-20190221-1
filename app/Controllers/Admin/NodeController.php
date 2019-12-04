@@ -49,6 +49,7 @@ class NodeController extends AdminController
         $node->traffic_rate = $request->getParam('rate');
         $node->info = $request->getParam('info');
         $node->type = $request->getParam('type');
+		$node->auto_update_ip = $request->getParam('auto_update_ip');  //自动更新IP
         $node->node_group = $request->getParam('group');
         $node->node_speedlimit = $request->getParam('node_speedlimit');
         $node->status = $request->getParam('status');
@@ -59,14 +60,14 @@ class NodeController extends AdminController
 			$req_node_ip=$node->server;
 		}
                   
-        if ($node->sort == 11) {
+        if ($node->sort == 11 && $node->auto_update_ip == 1) {
             $server_list = explode(";", $node->server);
 			if(!Tools::is_ip($server_list[0])){
 				$node->node_ip = gethostbyname($server_list[0]);
 			}else{
 				$node->node_ip = $req_node_ip;
 			}
-        } else if ($node->sort == 0 || $node->sort == 1 || $node->sort == 10){
+        } else if ($node->auto_update_ip == 1 && ($node->sort == 0 || $node->sort == 1 || $node->sort == 10)){
 			if(!Tools::is_ip($node->server)){
 				$node->node_ip = gethostbyname($node->server);
 			}else{
@@ -128,6 +129,7 @@ class NodeController extends AdminController
         $node->info = $request->getParam('info');
         $node->node_speedlimit = $request->getParam('node_speedlimit');
         $node->type = $request->getParam('type');
+		$node->auto_update_ip = $request->getParam('auto_update_ip');
         $node->sort = $request->getParam('sort');
 
 		$req_node_ip=trim($request->getParam('node_ip'));
@@ -136,14 +138,14 @@ class NodeController extends AdminController
 		}
 
 		$success=true;
-		if ($node->sort == 11) {
+		if ($node->sort == 11 && $node->auto_update_ip == 1) {
             $server_list = explode(";", $node->server);
 			if(!Tools::is_ip($server_list[0])){
 				$success=$node->changeNodeIp($server_list[0]);
 			}else{
 				$success=$node->changeNodeIp($req_node_ip);
 			}
-        } else if ($node->sort == 0 || $node->sort == 1 || $node->sort == 10){
+        } else if ($node->auto_update_ip == 1 && ($node->sort == 0 || $node->sort == 1 || $node->sort == 10)){
 			if(!Tools::is_ip($node->server)){
 				$success=$node->changeNodeIp($node->server);
 			}else{
@@ -215,7 +217,7 @@ class NodeController extends AdminController
 
 
         $total_column = Array("op" => "操作", "id" => "ID", "name" => "节点名称",
-                              "type" => "显示与隐藏", "sort" => "类型",
+                              "type" => "显示与隐藏", "auto_update_ip" => "自动获取ip", "sort" => "类型",
                               "server" => "节点地址", "node_ip" => "节点IP",
                               "info" => "节点信息",
                               "status" => "状态", "traffic_rate" => "流量比率", "node_group" => "节点群组",
@@ -280,6 +282,10 @@ class NodeController extends AdminController
 
         $datatables->edit('type', function ($data) {
             return $data['type'] == 1 ? '显示' : '隐藏';
+        });
+		
+		 $datatables->edit('auto_update_ip', function ($data) {
+            return $data['auto_update_ip'] == 1 ? '启用' : '关闭';
         });
 
         $datatables->edit('custom_method', function ($data) {
