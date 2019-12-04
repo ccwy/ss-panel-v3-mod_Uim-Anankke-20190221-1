@@ -90,7 +90,7 @@
 									<div class="form-group form-group-label">
 										<div class="checkbox switch">
 											<label for="auto_update_ip">
-												<input checked class="access-hide" id="auto_update_ip" type="checkbox" name="auto_update_ip"><span class="switch-toggle"></span>是否自动更新ip
+												<input {if $node->auto_update_ip==1}checked{/if} class="access-hide" id="auto_update_ip" name="auto_update_ip" auto_update_ip="checkbox"><span class="switch-toggle"></span>是否显示
 											</label>
 										</div>
 									</div>
