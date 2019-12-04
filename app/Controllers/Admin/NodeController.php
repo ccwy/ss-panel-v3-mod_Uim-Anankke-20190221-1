@@ -152,7 +152,7 @@ class NodeController extends AdminController
 				$success=$node->changeNodeIp($req_node_ip);
 			}                        
         } else {
-            $node->node_ip = $node->node_ip;
+            $node->node_ip =  $request->getParam('node_ip');
         }
 
 		if (!$success) {
