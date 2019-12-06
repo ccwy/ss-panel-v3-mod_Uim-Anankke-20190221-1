@@ -146,12 +146,12 @@ class Analytics
 	//年付用户
 	public function classuseryear()
     {
-        return User::where('class', '>=', 23)->where('id','!=', 2293)->count();
+        return User::where('class', '>=', 23)->where('class', '<', 30)->where('id','!=', 2293)->count();
     }
 	//月付用户
 	public function classusermoth()
     {
-        return User::where('class', '>', 10)->where('class', '<', 15)->where('id','!=', 2293)->count();
+        return User::where('class', '>=', 10)->where('class', '<', 16)->where('id','!=', 2293)->count();
      
     }
 	//已过期用户
