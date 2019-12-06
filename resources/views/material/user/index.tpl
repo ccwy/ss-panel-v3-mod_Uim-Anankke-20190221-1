@@ -694,14 +694,6 @@
 								<div class="card-main">
 									<div class="card-inner">
 									<p class="card-heading"><i class="icon icon-md">account_circle</i>流量使用情况</p>
-									    <div class="progressbar">
-	                                         <div class="before"></div>
-	                                         <div class="bar tuse color3" style="width:calc({$user->transfer_enable});"><span></span></div>
-											 <div class="label-flex">
-												<div class="label la-top"><div class="bar ard color3"><span></span></div><span class="traffic-info">总流量</span><code class="card-tag tag-blue">{$user->transfer_enable}</code></div>
-											 </div>
-										</div>
-										
 										<div class="progressbar">
 	                                         <div class="before"></div>
 	                                         <div class="bar tuse color3" style="width:calc({($user->u+$user->d-$user->last_day_t)/$user->transfer_enable*100}%);"><span></span></div>
