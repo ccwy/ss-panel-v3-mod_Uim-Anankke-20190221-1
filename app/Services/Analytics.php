@@ -135,7 +135,7 @@ class Analytics
 	//付费用户，排除443端口和管理员、测试账号
     public function classuseraa()
     {
-        return User::where('class', '>', 10)->where('class', '!=', 16)->where('id','!=',2293)->where('id','!=',1772)->count();
+        return User::where('class', '>', 10)->where('id','!=',2293)->count();
     }
 	//统计全站已用总流量
 	public function ssnodeTrafficUsage()
@@ -146,19 +146,18 @@ class Analytics
 	//年付用户
 	public function classuseryear()
     {
-        return User::where('class', '>=', 23)->where('id','!=', 2291)->where('id','!=', 2293)->where('id','!=',1772)->count();
+        return User::where('class', '>=', 23)->where('id','!=', 2293)count();
     }
 	//月付用户
 	public function classusermoth()
     {
-        return User::where('class', '>', 10)->where('class', '<', 15)->where('class', '!=', 16)->where('id','!=', 2291)->where('id','!=', 2293)->where('id','!=',1772)->count();
+        return User::where('class', '>', 10)->where('class', '<', 15)->where('id','!=', 2293)->count();
      
     }
 	//已过期用户
 	public function classuseroff()
     {
         return User::where('class', '=', 0)->count();
-     
     }
 	//大大前天流水
 	public function fourdayIncome()
