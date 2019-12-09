@@ -38,6 +38,20 @@
 									</div>
 								</div>
 							</div>
+							
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner">
+										<p>解决方法：请按以下格式发工单联系管理员处理。</p>										
+										<p>工单标题：充值失败</p>
+										<p>工单内容按下面格式填写：</p>
+										<p>付款方式：<input class="form-control" id="meto" type="text">支付宝？微信 （使用的付款方式）<br>
+										充值金额：<input class="form-control" id="pay_money" type="text"> 元 （充值了多少钱）<br>
+										付款订单号：<input class="form-control" id="oride" type="text">  （付款订单号在支付宝/微信账单里面可以找到）<br>										
+										充值时间：<input class="form-control" id="fanli" type="text"> （填写实际付款时间）</p>										
+									</div>
+								</div>
+							</div>
 
 							
 							<div class="card">
