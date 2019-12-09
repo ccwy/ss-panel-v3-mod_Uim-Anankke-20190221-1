@@ -140,7 +140,7 @@ class TicketController extends AdminController
 	 public function update_money($request, $response, $args)
     {
         $id = $args['id'];
-        $user = $this->user;
+        
 		$user->money = $request->getParam('money');
 		 if (!$user->save()) {
             $rs['ret'] = 0;
