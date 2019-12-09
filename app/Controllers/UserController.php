@@ -1903,7 +1903,7 @@ class UserController extends BaseController
 	    $code_money = $request->getParam('code_money');
 	    $code_olrid = $request->getParam('code_olrid');
 	    $code_time = $request->getParam('code_time');
-		$time =  date('Ymd');
+		$time =  date('YmdHis');
 	    $title = "充值失败". $time;
         $content = "付款方式：" .$code_meto ."<br>付款金额：". $code_money ."<br>订单号：". $code_olrid ."<br>付款时间：". $code_time;
 
