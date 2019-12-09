@@ -94,44 +94,37 @@
 {if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
 <!-- js -->
 
+	
 <script>
-    $(document).ready(function () {
-        function code_pay_update() {
-			$("#result").modal();
-            $("#msg").html("正在提交。");
-            $.ajax({
-                type: "POST",
-                url: "codefil",
-                dataType: "json",
-                data: {
-                    code_meto: $("#code_meto").val(),
+	$(document).ready(function () {
+		$("#code_pay_update").click(function () {
+			$.ajax({
+				type: "POST",
+				url: "codefil",
+				dataType: "json",
+				data: {
+					code_meto: $("#code_meto").val(),
 					code_money: $("#code_money").val(),
 					code_olrid: $("#code_olrid").val(),
 					code_money: $("#code_time").val()
-					
-                },
-                success: function (data) {
-                    if (data.ret) {
-                        $("#result").modal();
-                        $("#msg").html(data.msg);
-                        
-                    } else {
-                        $("#result").modal();
-                        $("#msg").html(data.msg);
-                    }
-                },
-                error: function (jqXHR) {
-                    $("#msg-error").hide(10);
-                    $("#msg-error").show(100);
-                    $("#msg-error-p").html("发生错误：" + jqXHR.status);
-                }
-            });
-        }
+				},
+				success: function (data) {
+					if (data.ret) {
+						$("#result").modal();
+						$("#msg").html(data.msg);
+						window.setTimeout("location.href=window.location.href", {$config['jump_delay']});
+					} else {
+						$("#result").modal();
+						$("#msg").html(data.msg);
+						window.setTimeout("location.href=window.location.href", {$config['jump_delay']});
+					}
+				},
+				error: function (jqXHR) {
+					$("#result").modal();
+					$("#msg").html("发生错误：" + jqXHR.status);
+				}
+			})
+		})
+})
+</script>
 		
-        $("#code_pay_update").click(function () {
-            code_pay_update();
-        });
-    });
-</script>	
-	
-	
