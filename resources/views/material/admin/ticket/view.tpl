@@ -108,8 +108,8 @@
 	$(document).ready(function () {
 		$("#money-update").click(function () {
 			$.ajax({
-				type: "PUT",
-				url: "/admin/ticket/{$id}/money",
+				type: "POST",
+				url: "/admin/ticket/{$id}",
 				dataType: "json",
 				data: {
 					money: $$getValue('money'),
