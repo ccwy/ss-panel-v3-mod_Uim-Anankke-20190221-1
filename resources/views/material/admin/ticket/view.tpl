@@ -68,7 +68,7 @@
 					{$ticketset->render()}
 					{foreach $ticketset as $ticket}
 					<div class="card">
-						<aside class="card-side pull-left"><img alt="alt text for John Smith avatar" src="{$ticket->User()->gravatar}"></span></br>{if $ticket->User()->id != 2293}ID：{$ticket->User()->id}<br>{$ticket->User()->email}<br><a class="btn btn-brand" href="/admin/user/{$ticket->User()->id}/edit">编辑用户</a>{else}<br>Admin{/if}</aside>
+						<aside class="card-side pull-left"><img alt="alt text for John Smith avatar" src="{$ticket->User()->gravatar}"></span></br>{if $ticket->User()->id != 2293}ID：{$ticket->User()->id}<br>{$ticket->User()->email}<br><a class="btn btn-brand" href="/admin/user/{$ticket->User()->id}/edit">编辑用户</a>{else}<br>Admin{/if}</aside><p>{$ticket->User()->email}</p>
 						<div class="card-main">
 							<div class="card-inner">
 								{$ticket->content}
