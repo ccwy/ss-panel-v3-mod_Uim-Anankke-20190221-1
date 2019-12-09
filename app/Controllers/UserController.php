@@ -1905,7 +1905,7 @@ class UserController extends BaseController
 	    $code_time = $request->getParam('code_time');
 		$time =  date('YmdHis');
 	    $title = "充值失败". $time;
-        $content = "付款方式：" .$code_meto ."<br>付款金额：". $code_money ."<br>订单号：". $code_olrid ."<br>付款时间：". $code_time;
+        $content = "充值方式：" .$code_meto ."<br>充值金额：". $code_money ."<br>付款订单号：". $code_olrid ."<br>充值时间：". $code_time;
 
         if ($code_meto == '' || $code_money == '' || $code_olrid == '' || $code_time == '') {
             $res['ret'] = 0;
@@ -1949,7 +1949,7 @@ class UserController extends BaseController
         }
 
         $res['ret'] = 1;
-        $res['msg'] = "提交成功";
+        $res['msg'] = "工单提交成功，正在跳转到工单系统";
         return $this->echoJson($response, $res);
     
 		
