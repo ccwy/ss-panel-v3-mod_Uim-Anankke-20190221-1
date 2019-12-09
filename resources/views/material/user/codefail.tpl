@@ -63,7 +63,7 @@
 										</div>
 									</div>
 									<div class="card-action-btn pull-left">
-											<button class="btn btn-flat waves-attach" id="fanli-update" ><span class="icon">check</span>&nbsp;提交</button>
+											<button class="btn btn-brand waves-attach" id="fanli-update" >提交工单</button>
 									</div>
 								</div>
 							</div>
