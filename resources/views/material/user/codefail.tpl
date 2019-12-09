@@ -28,20 +28,19 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner">
-										<h3>解决方法：请填好下面内容，然后点击提交工单，提交后可点击查询工单处理进度，工单处理完就到账了。</h3>									
-												
-										<div class="form-group form-group-label dropdown">
-									    <label class="floating-label" for="code_meto">付款方式：（支付宝？微信）</label>
-									    <button class="form-control maxwidth-auth" id="code_meto" data-toggle="dropdown">
+										<h3>解决方法：请填好下面内容，然后点击提交工单，提交后可点击查询工单处理进度，工单处理完就到账了。</h3>										
 										
-									    </button>
-									    <ul class="dropdown-menu" aria-labelledby="code_meto">
-										<li><a href="#" class="dropdown-option" onclick="return false;" val="微信" data="code_meto">微信</a></li>
-										<li><a href="#" class="dropdown-option" onclick="return false;" val="支付宝" data="code_meto">支付宝</a></li>
 										
-									    </ul>
-								       </div>
-								
+										<div class="form-group form-group-label">
+										<label class="floating-label" for="code_meto">付款方式：（支付宝？微信）</label>
+													<select class="form-control" id="code_meto">
+														
+														<option value="支付宝">支付宝</option>
+														<option value="微信">微信</option>
+														
+													</select>
+										</div>		
+										
 										<div class="form-group form-group-label">
 										<label class="floating-label" for="code_money">充值金额 </label>
 										<input class="form-control maxwidth-edit" id="code_money" type="text">
