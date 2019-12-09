@@ -231,6 +231,7 @@ $app->group('/admin', function () {
     $this->get('/ticket', 'App\Controllers\Admin\TicketController:index');
     $this->get('/ticket/{id}/view', 'App\Controllers\Admin\TicketController:show');
     $this->put('/ticket/{id}', 'App\Controllers\Admin\TicketController:update');
+	$this->put('/ticket/{id}/money', 'App\Controllers\Admin\TicketController:update_money');// 更新用户余额
     $this->post('/ticket/ajax', 'App\Controllers\Admin\TicketController:ajax');
 
     // Relay Mange

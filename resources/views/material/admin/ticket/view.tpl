@@ -70,7 +70,15 @@
 					<div class="card">
 						<aside class="card-side pull-left"><img alt="alt text for John Smith avatar" src="{$ticket->User()->gravatar}"></span></br>{if $ticket->User()->id != 2293}ID：{$ticket->User()->id}<br>{$ticket->User()->email}<br><a class="btn btn-brand" href="/admin/user/{$ticket->User()->id}/edit">编辑用户</a>{else}<br>Admin{/if}</aside>
 						
-						<aside>{$ticket->User()->money}</aside>
+						<aside>
+						<div class="form-group form-group-label">
+											<label class="floating-label" for="money">金额</label>
+											<input class="form-control" id="money" type="text"  value="{$edit_ticket->User()->money}">
+										</div>
+										<div class="card-action-btn pull-left">
+											<button class="btn btn-flat waves-attach" id="money-update" ><span class="icon">check</span>&nbsp;提交</button>
+										</div>
+						{$ticket->User()->money}</aside>
 						
 						<div class="card-main">
 							<div class="card-inner">
@@ -94,6 +102,40 @@
 {include file='admin/footer.tpl'}
 <!--<script src="https://cdn.jsdelivr.net/npm/editor.md@1.5.0/editormd.min.js"></script> -->
  <script src="/theme/material/editormd//lib/editormd.min.js"></script>
+ 
+ 
+<script>
+	$(document).ready(function () {
+		$("#money-update").click(function () {
+			$.ajax({
+				type: "PUT",
+				url: "/admin/ticket/{$id}/money",
+				dataType: "json",
+				data: {
+					money: $$getValue('money'),
+				},
+				success: function (data) {
+					if (data.ret) {
+						$("#result").modal();
+						$("#msg").html(data.msg);
+						window.setTimeout("location.href=window.location.href", {$config['jump_delay']});
+					} else {
+						$("#result").modal();
+						$("#msg").html(data.msg);
+						window.setTimeout("location.href=window.location.href", {$config['jump_delay']});
+					}
+				},
+				error: function (jqXHR) {
+					$("#result").modal();
+					$("#msg").html("发生错误：" + jqXHR.status);
+				}
+			})
+		})
+})
+</script>
+
+
+
 <script>
     function changetouser_modal_show() {
         $("#changetouser_modal").modal();
@@ -218,3 +260,4 @@
     })();
 
 </script>
+		

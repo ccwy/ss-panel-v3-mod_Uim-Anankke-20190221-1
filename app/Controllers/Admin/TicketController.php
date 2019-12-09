@@ -137,4 +137,19 @@ class TicketController extends AdminController
         $body = $response->getBody();
         $body->write($datatables->generate());
     }
+	 public function update_money($request, $response, $args)
+    {
+        
+        $user = $this->user;
+		$user->money = $request->getParam('money');
+		 if (!$user->save()) {
+            $rs['ret'] = 0;
+            $rs['msg'] = "修改失败";
+            return $response->getBody()->write(json_encode($rs));
+        }
+        $rs['ret'] = 1;
+        $rs['msg'] = "修改成功";
+        return $response->getBody()->write(json_encode($rs));
+    }
+		
 }
