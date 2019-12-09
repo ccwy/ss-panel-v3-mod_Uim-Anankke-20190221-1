@@ -1905,7 +1905,7 @@ class UserController extends BaseController
 	    $code_money = $request->getParam('code_money');
 		
 	    $title = '充值失败';
-        $content = $code_meto .'/n'. $code_money .'/n'. $code_olrid .'/n'. $code_money;
+        $content = "付款方式：" .$code_meto ."<br>付款金额：". $code_money ."<br>订单号：". $code_olrid ."<br>付款时间：". $code_money;
 
         if ($code_meto == '' || $code_money == '' || $code_olrid == '' || $code_money == '') {
             $res['ret'] = 0;
