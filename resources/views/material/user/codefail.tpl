@@ -28,26 +28,19 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner">
-										<p>解决方法：请按以下格式发工单联系管理员处理。</p>										
-										<p>工单标题：充值失败</p>
-										<p>工单内容按下面格式填写：</p>
-										<p>付款方式：支付宝？微信 （使用的付款方式）<br>
-										充值金额：xx元 （充值了多少钱）<br>
-										付款订单号：xxxxxxxxxxxxxxxxxxxxxxxxx  （付款订单号在支付宝/微信账单里面可以找到）<br>										
-										充值时间：2019/4/10 09:12:22 （填写实际付款时间）</p>										
-									</div>
-								</div>
-							</div>
-							
-							<div class="card">
-								<div class="card-main">
-									<div class="card-inner">
-										<p>解决方法：请按以下格式发工单联系管理员处理。</p>										
+										<h3>解决方法：请填好下面内容，然后点击提交工单，提交后可点击查询工单处理进度，工单处理完就到账了。</h3										
+										
 										
 										<div class="form-group form-group-label">
-										<label class="floating-label" for="code_meto">付款方式：支付宝？微信 </label>
-										<input class="form-control maxwidth-edit" id="code_meto" type="text">
-										</div>
+										<label class="floating-label" for="code_meto">付款方式：（支付宝？微信）</label>
+													<select class="form-control" id="code_meto">
+														
+														<option value="支付宝">支付宝</option>
+														<option value="微信">微信</option>
+														
+													</select>
+										</div>		
+										
 										<div class="form-group form-group-label">
 										<label class="floating-label" for="code_money">充值金额 </label>
 										<input class="form-control maxwidth-edit" id="code_money" type="text">
@@ -62,17 +55,7 @@
 										</div>
 									</div>
 									<div class="card-action-btn pull-left">
-											<button class="btn btn-brand waves-attach" id="code_pay_update" >提交工单</button>
-									</div>
-								</div>
-							</div>
-
-							
-							<div class="card">
-								<div class="card-main">
-									<div class="card-inner">
-										<p>点击下面按钮进入工单系统，点击右下角红色+号创建工单，然后按上面格式填写工单，提交后请留意查看管理员回复工单内容，工单系统入口在菜单栏可以看到。</p>										
-										<p><a class="btn btn-brand waves-attach" href="/user/ticket">点击进入工单系统</a></p>										
+											<button class="btn btn-brand waves-attach" id="code_pay_update" >提交工单</button>   <a class="btn btn-brand waves-attach" href="/user/ticket">查询工单进度</a>
 									</div>
 								</div>
 							</div>
@@ -106,13 +89,13 @@
 					code_meto: $("#code_meto").val(),
 					code_money: $("#code_money").val(),
 					code_olrid: $("#code_olrid").val(),
-					code_money: $("#code_time").val()
+					code_time: $("#code_time").val()
 				},
 				success: function (data) {
 					if (data.ret) {
 						$("#result").modal();
 						$("#msg").html(data.msg);
-						
+						window.setTimeout("location.href='/user/ticket'", {$config['jump_delay']});
 					} else {
 						$("#result").modal();
 						$("#msg").html(data.msg);
