@@ -43,27 +43,26 @@
 								<div class="card-main">
 									<div class="card-inner">
 										<p>解决方法：请按以下格式发工单联系管理员处理。</p>										
-										<p>工单标题：充值失败</p>
-										<p>工单内容按下面格式填写：</p>
+										
 										<div class="form-group form-group-label">
-										<label class="floating-label" for="code">付款方式：支付宝？微信 </label>
-										<input class="form-control maxwidth-edit" id="meto" type="text">
+										<label class="floating-label" for="code_meto">付款方式：支付宝？微信 </label>
+										<input class="form-control maxwidth-edit" id="code_meto" type="text">
 										</div>
 										<div class="form-group form-group-label">
-										<label class="floating-label" for="code">充值金额 </label>
-										<input class="form-control maxwidth-edit" id="meto" type="text">
+										<label class="floating-label" for="code_money">充值金额 </label>
+										<input class="form-control maxwidth-edit" id="code_money" type="text">
 										</div>
 										<div class="form-group form-group-label">
-										<label class="floating-label" for="code">付款订单号 </label>
-										<input class="form-control maxwidth-edit" id="meto" type="text">
+										<label class="floating-label" for="code_olrid">付款订单号 </label>
+										<input class="form-control maxwidth-edit" id="code_olrid" type="text">
                                         </div>
 										<div class="form-group form-group-label">
-										<label class="floating-label" for="code">付款时间 </label>
-										<input class="form-control maxwidth-edit" id="meto" type="text">
+										<label class="floating-label" for="code_time">付款时间 </label>
+										<input class="form-control maxwidth-edit" id="code_time" type="text">
 										</div>
 									</div>
 									<div class="card-action-btn pull-left">
-											<button class="btn btn-brand waves-attach" id="fanli-update" >提交工单</button>
+											<button class="btn btn-brand waves-attach" id="code_pay_update" >提交工单</button>
 									</div>
 								</div>
 							</div>
@@ -89,15 +88,50 @@
 	</main>
 
 
-
-
-
-
-
 {include file='user/footer.tpl'}
-
-
 
 <!-- js -->
 {if $config["fack"] == 'true'}{include file='fuck.tpl'}{/if}
 <!-- js -->
+
+<script>
+    $(document).ready(function () {
+        function code_pay_update() {
+			$("#result").modal();
+            $("#msg").html("正在提交。");
+            $.ajax({
+                type: "POST",
+                url: "codefil",
+                dataType: "json",
+                data: {
+                    code_meto: $("#code_meto").val(),
+					code_money: $("#code_money").val(),
+					code_olrid: $("#code_olrid").val(),
+					code_money: $("#code_time").val()
+					
+                },
+                success: function (data) {
+                    if (data.ret) {
+                        $("#result").modal();
+                        $("#msg").html(data.msg);
+                        
+                    } else {
+                        $("#result").modal();
+                        $("#msg").html(data.msg);
+                    }
+                },
+                error: function (jqXHR) {
+                    $("#msg-error").hide(10);
+                    $("#msg-error").show(100);
+                    $("#msg-error-p").html("发生错误：" + jqXHR.status);
+                }
+            });
+        }
+		
+        $("#code_pay_update").click(function () {
+            code_pay_update();
+        });
+    });
+</script>	
+	
+	

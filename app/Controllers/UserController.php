@@ -122,12 +122,7 @@ class UserController extends BaseController
         $codes->setPath('/user/code');
         return $this->view()->assign('codes', $codes)->assign('pmw', Payment::purchaseHTML())->display('user/code.tpl');
     }
-    //充值失败
-	public function codefail($request, $response, $args)
-    {        
-        return $this->view()->display('user/codefail.tpl');
-    }
-	
+   
     public function orderDelete($request, $response, $args)
     {
         return (new ChenPay())->orderDelete($request);
@@ -1893,6 +1888,71 @@ class UserController extends BaseController
           
            return $this->echoJson($response, $res);
 
+    }
+	
+	 //充值失败
+	public function codefail($request, $response, $args)
+    {        
+        return $this->view()->display('user/codefail.tpl');
+    }
+	
+	public function code_pay_file($request, $response, $args)
+    {    
+        $user = $this->user;
+        $code_meto = $request->getParam('code_meto');
+	    $code_money = $request->getParam('code_money');
+	    $code_olrid = $request->getParam('code_olrid');
+	    $code_money = $request->getParam('code_money');
+		
+	    $title = '充值失败';
+        $content = $code_meto .'/n'. $code_money .'/n'. $code_olrid .'/n'. $code_money;
+
+        if ($code_meto == '' || $code_money == '' || $code_olrid == '' || $code_money == '') {
+            $res['ret'] = 0;
+            $res['msg'] = "请填全！";
+            return $this->echoJson($response, $res);
+        }
+
+
+        $ticket = new Ticket();
+        $antiXss = new AntiXSS();
+        $ticket->title = $antiXss->xss_clean($title);
+        $ticket->content = $antiXss->xss_clean($content);
+        $ticket->rootid = 0;
+        $ticket->userid = $this->user->id;
+        $ticket->datetime = time();
+        $ticket->save();
+
+        $adminUser = User::where("is_admin", "=", "1")->get();
+        foreach ($adminUser as $user) {
+            $subject = Config::get('appName') . "-新工单被开启";
+            $to = $user->email;
+            $text = "管理员您好，用户id： ".$this->user->id."   ，邮箱： ".$this->user->email."   ，开启了新工单，内容如下：<br>".$content ;  //工单优化
+            try {
+                Mail::send($to, $subject, 'news/warn.tpl', [
+                    "user" => $user, "text" => $text
+                ], [
+                ]);
+            } catch (\Exception $e) {
+                echo $e->getMessage();
+            }
+			//工单优化	
+		$antiXss = new AntiXSS();
+		$emailjilu = new Emailjilu();
+		$emailjilu->userid = $this->user->id;
+		$emailjilu->username = $this->user->user_name;
+		$emailjilu->useremail = $this->user->email;
+		$emailjilu->biaoti = $antiXss->xss_clean($subject);
+		$emailjilu->neirong = $antiXss->xss_clean($text);
+		$emailjilu->datetime = time();
+		$emailjilu->save();
+        }
+
+        $res['ret'] = 1;
+        $res['msg'] = "提交成功";
+        return $this->echoJson($response, $res);
+    
+		
     }
 	
     public function backtoadmin($request, $response, $args)

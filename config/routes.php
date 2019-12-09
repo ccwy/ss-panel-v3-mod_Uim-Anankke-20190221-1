@@ -122,6 +122,7 @@ $app->group('/user', function () {
     $this->get('/ticket', 'App\Controllers\UserController:ticket');
     $this->get('/ticket/create', 'App\Controllers\UserController:ticket_create');
     $this->post('/ticket', 'App\Controllers\UserController:ticket_add');
+	$this->post('/codefil', 'App\Controllers\UserController:code_pay_file'); //充值失败添加工单
     $this->get('/ticket/{id}/view', 'App\Controllers\UserController:ticket_view');
     $this->put('/ticket/{id}', 'App\Controllers\UserController:ticket_update');
 	
