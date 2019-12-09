@@ -145,12 +145,12 @@ class AdminController extends UserController
 
     public function trafficLog($request, $response, $args)
     {
-        $table_config['total_column'] = array("id" => "ID", "user_id" => "用户ID",
+        $table_config['total_column'] = array("op" => "操作", "id" => "ID", "user_id" => "用户ID",
                           "user_name" => "用户名", "node_name" => "使用节点",
                           "rate" => "倍率", "origin_traffic" => "实际使用流量",
                           "traffic" => "结算流量",
                           "log_time" => "记录时间");
-        $table_config['default_show_column'] = array("id", "user_id",
+        $table_config['default_show_column'] = array("op", "id", "user_id",
                                   "user_name", "node_name",
                                   "rate", "origin_traffic",
                                   "traffic", "log_time");
@@ -162,10 +162,10 @@ class AdminController extends UserController
    
     public function email($request, $response, $args)
     {
-        $table_config['total_column'] = array("id" => "ID", "userid" => "用户ID", "username" => "用户名",
+        $table_config['total_column'] = array("op" => "操作", "id" => "ID", "userid" => "用户ID", "username" => "用户名",
                            "useremail" => "用户邮箱", "datetime" => "发送时间",
                           "biaoti" => "邮件标题", "neirong" => "邮件内容");           
-        $table_config['default_show_column'] = array("id", "userid", "username",
+        $table_config['default_show_column'] = array("op", "id", "userid", "username",
                                   "useremail", "datetime", "biaoti",
                                   "neirong");
         $table_config['ajax_url'] = 'email/ajax';
@@ -177,7 +177,11 @@ class AdminController extends UserController
     {
         $datatables = new Datatables(new DatatablesHelper());
         $datatables->query('Select emailjilu.id,emailjilu.userid,emailjilu.username,emailjilu.useremail,emailjilu.datetime,emailjilu.biaoti,emailjilu.neirong from emailjilu');
-
+		
+        $datatables->edit('op', function ($data) {
+            return '<a class="btn btn-brand" href="/admin/user/'.$data['userid'].'/edit">编辑用户</a>';
+        });
+		
         $datatables->edit('datetime', function ($data) {
             return date('Y-m-d H:i:s', $data['datetime']);
         });
@@ -191,6 +195,10 @@ class AdminController extends UserController
         $datatables = new Datatables(new DatatablesHelper());
         $datatables->query('Select log.id,log.user_id,user.user_name,node.name as node_name,log.rate,(log.u + log.d) as origin_traffic,log.traffic,log.log_time from user_traffic_log as log,user,ss_node as node WHERE log.user_id = user.id AND log.node_id = node.id');
 
+        $datatables->edit('op', function ($data) {
+            return '<a class="btn btn-brand" href="/admin/user/'.$data['user_id'].'/edit">编辑用户</a>';
+        });
+		
         $datatables->edit('log_time', function ($data) {
             return date('Y-m-d H:i:s', $data['log_time']);
         });
