@@ -62,7 +62,9 @@
 										<input class="form-control maxwidth-edit" id="meto" type="text">
 										</div>
 									</div>
-									<button class="btn btn-flat" id="code-update" ><span class="icon">favorite_border</span></button>
+									<div class="card-action-btn pull-left">
+											<button class="btn btn-flat waves-attach" id="fanli-update" ><span class="icon">check</span>&nbsp;提交</button>
+									</div>
 								</div>
 							</div>
 
