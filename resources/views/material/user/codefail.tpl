@@ -62,6 +62,7 @@
 										<input class="form-control maxwidth-edit" id="meto" type="text">
 										</div>
 									</div>
+									<button class="btn btn-flat" id="code-update" ><span class="icon">favorite_border</span></button>
 								</div>
 							</div>
 
