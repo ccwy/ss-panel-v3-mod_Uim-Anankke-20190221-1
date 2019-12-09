@@ -28,7 +28,7 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner">
-										<h3>解决方法：请填好下面内容，然后点击提交工单，提交后可点击查询工单处理进度，工单处理完就到账了。</h3										
+										<h3>解决方法：请填好下面内容，然后点击提交工单，提交后可点击查询工单处理进度，工单处理完就到账了。</h3>									
 												
 										<div class="form-group form-group-label dropdown">
 									    <label class="floating-label" for="code_meto">付款方式：（支付宝？微信）</label>
