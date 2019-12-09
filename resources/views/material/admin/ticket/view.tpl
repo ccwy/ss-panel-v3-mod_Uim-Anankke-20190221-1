@@ -51,13 +51,10 @@
 								<div class="form-group">
 									<div class="row">
 										<div class="col-md-10 col-md-push-1">
-                                          
 											<button id="submit" type="submit" class="btn btn-block btn-brand waves-attach waves-light">提交</button>
                                             <button id="close" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">提交并关闭</button>
                                             <button id="close_directly" type="submit" class="btn btn-block btn-brand-accent waves-attach waves-light">直接关闭</button>
 											<a class="btn btn-block btn-brand waves-attach waves-light" id="changetouser" href="javascript:void(0);" onClick="changetouser_modal_show()">切换为该用户</a>
-											<a class="btn btn-block btn-brand-accent waves-attach waves-light" href="/admin/code">充值记录</a>
-                                            <a class="btn btn-block btn-brand waves-attach waves-light" href="/admin/bought">购买记录</a>
 										</div>
 									</div>
 								</div>
@@ -69,28 +66,35 @@
 					{foreach $ticketset as $ticket}
 					<div class="card">
 						<aside class="card-side pull-left"><img alt="alt text for John Smith avatar" src="{$ticket->User()->gravatar}"></span></br>{if $ticket->User()->id != 2293}ID：{$ticket->User()->id}<br>{$ticket->User()->email}<br><a class="btn btn-brand" href="/admin/user/{$ticket->User()->id}/edit">编辑用户</a>{else}<br>Admin{/if}</aside>
+						
+						{if $ticket->User()->id != 2293}
+						<aside>
+						<p><br>用户余额： {$ticket->User()->money} 元</p>
+						<input class="form-control" id="money" type="text">
+						<button class="btn btn-flat waves-attach" id="money-update" ><span class="icon">check</span>&nbsp;提交</button>
+						</aside>
+						{/if}
+						
 						<div class="card-main">
 							<div class="card-inner">
 								{$ticket->content}
 							</div>
-							<div class="card-action"> {$ticket->datetime()}</div>
-                          
+							<div class="card-action">{if $ticket->User()->id == 2293}工单ID：{$ticket->rootid}{/if}<br>提交时间： {$ticket->datetime()}</div>                       
 						</div>
 					</div>
 					{/foreach}
 					{$ticketset->render()}
-					
-					
+									
 					{include file='dialog.tpl'}
 
 			</div>
-
 		</div>
 	</main>
 
 {include file='admin/footer.tpl'}
 <!--<script src="https://cdn.jsdelivr.net/npm/editor.md@1.5.0/editormd.min.js"></script> -->
  <script src="/theme/material/editormd//lib/editormd.min.js"></script>
+ 
 <script>
     function changetouser_modal_show() {
         $("#changetouser_modal").modal();
@@ -143,7 +147,7 @@
                 url: "/admin/ticket/{$id}",
                 dataType: "json",
                 data: {
-                    content: '这条工单已被关闭',
+                    content: '这条工单已关闭，如有其它疑问，可直接在此处回复。',
                     status
                 },
                 success: data => {
@@ -162,6 +166,38 @@
                 }
             });
         });
+
+
+        $$.getElementById('money-update').addEventListener('click', () => {
+            status = 0;
+            $("#result").modal();
+            $$.getElementById('msg').innerHTML = `正在提交。`;
+            $.ajax({
+                type: "PUT",
+                url: "/admin/ticket/{$id}",
+                dataType: "json",
+                data: {
+                    content: '已处理，请返回充值页面，刷新网页查看余额。',
+                    status,
+					money: $$getValue('money')
+                },
+                success: data => {
+                    if (data.ret) {
+                        $("#result").modal();
+                        $$.getElementById('msg').innerHTML = data.msg;
+                       window.setTimeout("location.reload()", {$config['jump_delay']});
+                    } else {
+                        $("#result").modal();
+                        $$.getElementById('msg').innerHTML = data.msg;
+                    }
+                },
+                error: jqXHR => {
+                    $("#result").modal();
+					$$.getElementById('msg').innerHTML = `发生错误：${ldelim}jqXHR.status{rdelim}`;
+                }
+            });
+        });
+
 
 	function changetouser_id(){
 		$.ajax({

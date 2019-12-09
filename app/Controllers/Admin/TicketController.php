@@ -96,6 +96,13 @@ class TicketController extends AdminController
         $ticket_main->save();
         $ticket->save();
 
+		//更新用户余额
+		$money = $request->getParam('money');
+		if ($money!='') {
+		$user->money += $money;
+		$user->save();
+		}
+
         $res['ret'] = 1;
         $res['msg'] = "提交成功";
         return $this->echoJson($response, $res);
