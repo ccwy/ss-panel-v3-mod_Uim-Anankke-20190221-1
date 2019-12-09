@@ -179,7 +179,7 @@ class AdminController extends UserController
         $datatables->query('Select emailjilu.id,emailjilu.userid,emailjilu.username,emailjilu.useremail,emailjilu.datetime,emailjilu.biaoti,emailjilu.neirong from emailjilu');
 		
         $datatables->edit('op', function ($data) {
-            return '<a class="btn btn-brand" href="/admin/user/'.$data['userid'].'/edit">编辑用户</a>';
+            return '<a class="btn btn-brand" href="/admin/user/'.$data['userid'].'/edit">编辑</a>';
         });
 		
         $datatables->edit('datetime', function ($data) {
@@ -196,7 +196,7 @@ class AdminController extends UserController
         $datatables->query('Select log.id,log.user_id,user.user_name,node.name as node_name,log.rate,(log.u + log.d) as origin_traffic,log.traffic,log.log_time from user_traffic_log as log,user,ss_node as node WHERE log.user_id = user.id AND log.node_id = node.id');
 
         $datatables->edit('op', function ($data) {
-            return '<a class="btn btn-brand" href="/admin/user/'.$data['user_id'].'/edit">编辑用户</a>';
+            return '<a class="btn btn-brand" href="/admin/user/'.$data['user_id'].'/edit">编辑</a>';
         });
 		
         $datatables->edit('log_time', function ($data) {
