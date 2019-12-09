@@ -30,7 +30,7 @@
 									<div class="card-inner">
 										<h4>解决方法：请填写下面内容，然后点击提交工单，你可以随时点击查询工单处理进度，工单处理完就到账了，请留意工单回复内容。</h4>																														
 										<div class="form-group form-group-label">
-										<label class="floating-label" for="code_meto">充值方式：（支付宝？微信）</label>
+										<label class="floating-label" for="code_meto">付款方式：（支付宝？微信）</label>
 										<select class="form-control maxwidth-edit" id="code_meto">														
 										<option value="支付宝">支付宝</option>
 										<option value="微信">微信</option>														
@@ -45,7 +45,7 @@
 										<input class="form-control maxwidth-edit" id="code_olrid" type="text">
                                         </div>
 										<div class="form-group form-group-label">
-										<label class="floating-label" for="code_time">充值时间：（实际付款时间）</label>
+										<label class="floating-label" for="code_time">付款时间：（实际付款时间）</label>
 										<input class="form-control maxwidth-edit" id="code_time" type="text">
 										</div>
 									
