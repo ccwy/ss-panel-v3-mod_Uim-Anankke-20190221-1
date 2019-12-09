@@ -48,10 +48,16 @@
 										<div class="form-group form-group-label">
 										<label class="floating-label" for="code">付款方式：支付宝？微信 </label>
 										<input class="form-control maxwidth-edit" id="meto" type="text">
+										</div>
+										<div class="form-group form-group-label">
 										<label class="floating-label" for="code">充值金额 </label>
 										<input class="form-control maxwidth-edit" id="meto" type="text">
+										</div>
+										<div class="form-group form-group-label">
 										<label class="floating-label" for="code">付款订单号 </label>
-										<input class="form-control maxwidth-edit" id="meto" type="text">							
+										<input class="form-control maxwidth-edit" id="meto" type="text">
+                                        </div>
+										<div class="form-group form-group-label">
 										<label class="floating-label" for="code">付款时间 </label>
 										<input class="form-control maxwidth-edit" id="meto" type="text">
 										</div>
