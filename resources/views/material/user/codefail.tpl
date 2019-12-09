@@ -42,7 +42,7 @@
 										<input class="form-control maxwidth-edit" id="code_money" type="text">
 										</div>
 										<div class="form-group form-group-label">
-										<label class="floating-label" for="code_olrid">付款订单号： （可在支付宝微信账单里面找到）</label>
+										<label class="floating-label" for="code_olrid">付款订单号： （可在账单里面找到）</label>
 										<input class="form-control maxwidth-edit" id="code_olrid" type="text">
                                         </div>
 										<div class="form-group form-group-label">
