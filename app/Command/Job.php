@@ -224,7 +224,7 @@ class Job
 
         #https://github.com/shuax/QQWryUpdate/blob/master/update.php
 
-        $copywrite = file_get_contents("http://update.cz88.net/ip/copywrite.rar");
+    /*    $copywrite = file_get_contents("http://update.cz88.net/ip/copywrite.rar");
 
         $adminUser = User::where("is_admin", "=", "1")->get();
 
@@ -261,7 +261,7 @@ class Job
         }
 
         Job::updatedownload();
-        
+        */
     }
 //   定时任务开启的情况下，每天自动检测有没有最新版的后端，github源来自Miku
   /*   public static function updatedownload()
