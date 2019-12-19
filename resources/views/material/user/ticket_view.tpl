@@ -117,7 +117,7 @@ function time(o) {
 	}
 
     $(document).ready(function () {
-	time($("#submit"));
+	
         function submit() {
 			$("#result").modal();
             $("#msg").html("正在提交。");
@@ -147,7 +147,7 @@ function time(o) {
                 }
             });
         }
-		
+		time($("#submit"));
         $("#submit").click(function () {
 			status=1;
             submit();
