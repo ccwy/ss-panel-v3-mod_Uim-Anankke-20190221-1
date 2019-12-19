@@ -94,11 +94,11 @@ var wait=60;
 function time(o) {
 		if (wait == 0) {
 			o.removeAttr("disabled");
-			o.text("提交工单");
+			o.text("提交");
 			wait = 60;
 		} else {
 			o.attr("disabled","disabled");
-			o.text("重新提交(" + wait + ")");
+			o.text("提交(" + wait + ")");
 			wait--;
 			setTimeout(function() {
 				time(o)
