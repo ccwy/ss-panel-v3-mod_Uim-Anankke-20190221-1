@@ -110,7 +110,6 @@ function time(o) {
     $(document).ready(function () {
 	
 	function submit() {
-		time($("#submit"));
 			$("#result").modal();
             $("#msg").html("正在提交。");
             $.ajax({
@@ -140,6 +139,7 @@ function time(o) {
         }
 		
         $("#submit").click(function () {
+			time($("#submit"));
             submit();
         });
     });

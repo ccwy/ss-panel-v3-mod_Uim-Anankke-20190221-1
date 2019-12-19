@@ -118,8 +118,7 @@ function time(o) {
 
     $(document).ready(function () {
 	
-        function submit() {
-		time($("#submit"));
+        function submit() {		
 			$("#result").modal();
             $("#msg").html("正在提交。");
             $.ajax({
@@ -150,16 +149,19 @@ function time(o) {
         }
 		
         $("#submit").click(function () {
+		time($("#submit"));
 			status=1;
             submit();
         });
 		
 		$("#close").click(function () {
+		time($("#close"));
 			status=0;
             submit();
         });
 
         $("#close_directly").click(function () {
+		time($("#close_directly"));
             status = 0;
 			$("#result").modal();
             $("#msg").html("正在提交。");
