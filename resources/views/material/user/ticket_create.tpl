@@ -108,9 +108,9 @@ function time(o) {
 	}
 
     $(document).ready(function () {
-	time($("#submit"));
+	
 	function submit() {
-		
+		time($("#submit"));
 			$("#result").modal();
             $("#msg").html("正在提交。");
             $.ajax({
