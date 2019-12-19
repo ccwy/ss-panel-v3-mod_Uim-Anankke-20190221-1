@@ -75,8 +75,27 @@
 
 	
 <script>
+
+var wait=60;
+function time(o) {
+		if (wait == 0) {
+			o.removeAttr("disabled");
+			o.text("获取验证码");
+			wait = 60;
+		} else {
+			o.attr("disabled","disabled");
+			o.text("重新发送(" + wait + ")");
+			wait--;
+			setTimeout(function() {
+				time(o)
+			},
+			1000)
+		}
+	}
+
 	$(document).ready(function () {
 		$("#code_pay_update").click(function () {
+		time($("#code_pay_update"));
 			$.ajax({
 				type: "POST",
 				url: "codefil",
