@@ -89,8 +89,28 @@
 <!--<script src="https://cdn.jsdelivr.net/npm/editor.md@1.5.0/editormd.min.js"></script> -->
  <script src="/theme/material/editormd//lib/editormd.min.js"></script>
 <script>
+
+var wait=60;
+function time(o) {
+		if (wait == 0) {
+			o.removeAttr("disabled");
+			o.text("提交工单");
+			wait = 60;
+		} else {
+			o.attr("disabled","disabled");
+			o.text("重新提交(" + wait + ")");
+			wait--;
+			setTimeout(function() {
+				time(o)
+			},
+			1000)
+		}
+	}
+
     $(document).ready(function () {
-        function submit() {
+	time($("#submit"));
+	function submit() {
+		
 			$("#result").modal();
             $("#msg").html("正在提交。");
             $.ajax({

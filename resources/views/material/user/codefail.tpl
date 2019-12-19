@@ -76,12 +76,12 @@
 	
 <script>
 
-var wait=30;
+var wait=60;
 function time(o) {
 		if (wait == 0) {
 			o.removeAttr("disabled");
 			o.text("提交工单");
-			wait = 30;
+			wait = 60;
 		} else {
 			o.attr("disabled","disabled");
 			o.text("重新提交(" + wait + ")");
