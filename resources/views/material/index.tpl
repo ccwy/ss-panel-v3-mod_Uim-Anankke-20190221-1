@@ -75,7 +75,12 @@
 											  <dd> 年付SVIP3</dd>
 											  {elseif $user->class==29}
 											  <dd> 年付SVIP4</dd>
-											  
+											   {elseif $user->class==30}
+											  <dd> 年付SVIP5</dd>
+											  {elseif $user->class==31}
+											  <dd> 年付SVIP6</dd>
+											  {elseif $user->class==32}
+											  <dd> 年付SVIP7</dd>
 											  
 											  {elseif $user->class==5}
 											  <dd> 年付VIP</dd>
