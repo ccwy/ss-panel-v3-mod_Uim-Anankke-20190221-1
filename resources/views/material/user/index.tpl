@@ -678,6 +678,13 @@
 											<p><dt>帐号注册时间</dt>
 											<dd><i class="icon icon-md">event</i>&nbsp;{$user->reg_date}</dd>	
 											</p>
+											<p><dt>上次使用</dt>
+                                            {if $user->lastSsTime()!="从未使用喵"}
+											<dd><i class="icon icon-md">event</i>&nbsp;{$user->lastSsTime()}</dd>
+                                            {else}
+                                            <dd><i class="icon icon-md">event</i>&nbsp;从未使用</dd>
+                                            {/if}
+											</p>
 
 											{if $user->auto_reset_day > 0}
                                           	<p><dt>重置流量</dt>											
@@ -685,6 +692,30 @@
 											</p>
 											{/if}
 											
+											<p><dt>上次签到时间：</dt>
+                                            <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastCheckInTime()}</dd></p>
+											<p id="checkin-msg"></p>
+											{if $geetest_html != null}
+												<div id="popup-captcha"></div>
+											{/if}
+											{if $recaptcha_sitekey != null && $user->isAbleToCheckin()}
+                                                <div class="g-recaptcha" data-sitekey="{$recaptcha_sitekey}"></div>
+                                            {/if}
+									<div class="card-action">
+										<div class="usercheck pull-left">
+											{if $user->isAbleToCheckin() }
+
+												<div id="checkin-btn">
+													<button id="checkin" class="btn btn-brand btn-flat"><span class="icon">check</span>&nbsp;点我签到&nbsp;
+													<div><span class="icon">screen_rotation</span>&nbsp;或者摇动手机签到</div>
+													</button>
+												</div>
+											{else}
+												<p><a class="btn btn-brand disabled btn-flat" href="#"><span class="icon">check</span>&nbsp;今日已签到</a></p>
+											{/if}
+										</div>
+									</div>
+
 
 										</dl>
 									</div>
