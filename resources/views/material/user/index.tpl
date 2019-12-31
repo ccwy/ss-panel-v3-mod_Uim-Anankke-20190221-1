@@ -702,13 +702,11 @@
                                                 <div class="g-recaptcha" data-sitekey="{$recaptcha_sitekey}"></div>
                                             {/if}
 									<div class="card-action">
-									<p>小游戏：每天可签到一次，每次签到随机获得 {$config["checkinMin"]}MB ~ {$config["checkinMax"]}MB 流量，签到获得流量实时自动到账。</p>
-										<div class="usercheck pull-left">
-										
+									<p>小游戏：每天可签到一次，每次签到随机获得 {$config["checkinMin"]}MB ~ {$config["checkinMax"]}MB 流量，签到获得流量实时自动到账。<a href="/user/checktime">查询签到记录</a></p>
+										<div class="usercheck pull-left">										
 											{if $user->isAbleToCheckin()}
 												<div id="checkin-btn">
-													<button id="checkin" class="btn btn-brand btn-flat"><span class="icon">check</span>&nbsp;点我签到&nbsp;
-													<div><span class="icon">screen_rotation</span>&nbsp;或者摇动手机签到</div>
+													<button id="checkin" class="btn btn-brand btn-flat"><span class="icon">check</span>&nbsp;点我签到&nbsp;													
 													</button>
 												</div>
 											{else}

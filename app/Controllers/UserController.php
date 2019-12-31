@@ -46,6 +46,7 @@ use App\Utils\URL;
 use App\Services\Mail;
 //邮件记录
 use App\Models\Emailjilu;
+use App\Models\Check_in_time;
 
 /**
  *  HomeController
@@ -1714,6 +1715,15 @@ class UserController extends BaseController
         $this->user->transfer_enable = $this->user->transfer_enable + Tools::toMB($traffic);
         $this->user->last_check_in_time = time();
         $this->user->save();
+		//签到记录
+		$Check_in_time = new Check_in_time();
+		$Check_in_time->user_id = $this->user->id;
+		$Check_in_time->user_name = $this->user->user_name;		
+		$Check_in_time->traffic = $traffic;
+		$Check_in_time->check_time = date("Y-m-d H:i:s");
+		$Check_in_time->datetime = date("Y-m-d H:i:s");
+		$Check_in_time->save();
+		
         $res['msg'] = sprintf("获得了 %d MB流量.", $traffic);
         $res['unflowtraffic'] = $this->user->transfer_enable;
         $res['traffic'] = Tools::flowAutoShow($this->user->transfer_enable);
@@ -1953,6 +1963,19 @@ class UserController extends BaseController
         return $this->echoJson($response, $res);
     
 		
+    }
+	
+	 //签到记录
+     public function Checktime($request, $response, $args)
+    {
+        $pageNum = 1;
+        if (isset($request->getQueryParams()["page"])) {
+            $pageNum = $request->getQueryParams()["page"];
+        }		
+        $Check_in_times = Check_in_time::orderBy('id', 'desc')->paginate(20, ['*'], 'page', $pageNum);
+        $Check_in_times->setPath('/user/Checktime');
+		
+        return $this->view()->assign('Check_in_times', $Check_in_times)->display('user/Checktime.tpl');
     }
 	
     public function backtoadmin($request, $response, $args)

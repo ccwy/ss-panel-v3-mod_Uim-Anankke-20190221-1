@@ -17,6 +17,7 @@ use Ozdemir\Datatables\Datatables;
 use App\Utils\DatatablesHelper;
 //增加邮件记录
 use App\Models\Emailjilu;
+use App\Models\Check_in_time;
 
 /**
  *  Admin Controller
@@ -170,6 +171,25 @@ class AdminController extends UserController
                                   "neirong");
         $table_config['ajax_url'] = 'email/ajax';
         return $this->view()->assign('table_config', $table_config)->display('admin/email.tpl');
+    }
+	//签到记录
+    public function Checktime($request, $response, $args)
+    {
+        $table_config['total_column'] = array("id" => "ID", "user_id" => "用户ID", "user_name" => "用户名","traffic" => "签到流量","check_time" => "签到时间", "datetime" => "记录时间");           
+        $table_config['default_show_column'] = array("op", "id", "user_id", "user_name",
+                                  "traffic", "check_time", "datetime");
+        $table_config['ajax_url'] = 'email/ajax';
+        return $this->view()->assign('table_config', $table_config)->display('admin/email.tpl');
+    }
+
+//签到记录
+    public function ajax_Checktime($request, $response, $args)
+    {
+        $datatables = new Datatables(new DatatablesHelper());
+        $datatables->query('Select check_in_time.id,check_in_time.user_id,check_in_time.user_name,check_in_time.traffic,check_in_time.check_time,check_in_time.datetime from check_in_time');
+		
+        $body = $response->getBody();
+        $body->write($datatables->generate());
     }
 
 //邮件发送记录
