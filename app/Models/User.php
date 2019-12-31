@@ -187,11 +187,10 @@ class User extends Model
     public function isAbleToCheckin()
     {
         $last = $this->attributes['last_check_in_time'];
-
-        $now = time();
-        if (date("Ymd", $now) != date("Ymd", $last)) {  //禁止签到
+        $now = time();	
+        if (date("Ymd", $now) != date("Ymd", $last) && Config::get('checkinMin') != 0 && Config::get('checkinMax') != 0) {  //禁止签到
             return true;
-        }
+        } 
         return false;
     }
 

@@ -692,6 +692,7 @@
 											</p>
 											{/if}
 											
+											{if $config['checkinMin'] != 0 && $config['checkinMax'] != 0}
 											<p><dt>上次签到时间：</dt>
                                             <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastCheckInTime()}</dd></p>
 											<p id="checkin-msg"></p>
@@ -714,6 +715,7 @@
 											{/if}
 										</div>
 									</div>
+									{/if}
 
 
 										</dl>
