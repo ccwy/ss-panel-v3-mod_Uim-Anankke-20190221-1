@@ -702,8 +702,9 @@
                                                 <div class="g-recaptcha" data-sitekey="{$recaptcha_sitekey}"></div>
                                             {/if}
 									<div class="card-action">
+									<p>每次签到可获得{$config["checkinMin"]}MB~{$config["checkinMax"]}MB流量</p>
 										<div class="usercheck pull-left">
-										<p>每次签到可获得{$config["checkinMin"]}MB~{$config["checkinMax"]}MB流量</p>
+										
 											{if $user->isAbleToCheckin()}
 												<div id="checkin-btn">
 													<button id="checkin" class="btn btn-brand btn-flat"><span class="icon">check</span>&nbsp;点我签到&nbsp;
