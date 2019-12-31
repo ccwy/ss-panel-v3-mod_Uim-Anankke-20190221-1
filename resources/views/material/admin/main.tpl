@@ -111,7 +111,6 @@
 							<li><a href="/admin/relay"><i class="icon icon-lg">compare_arrows</i>&nbsp;中转规则</a></li>
 							<li><a href="/admin/invite"><i class="icon icon-lg">loyalty</i>&nbsp;邀请与返利</a></li>
 							<li><a href="/admin/login"><i class="icon icon-lg">text_fields</i>&nbsp;登录记录</a></li>
-							<li><a href="/admin/checktime"><i class="icon icon-lg">text_fields</i>&nbsp;签到记录</a></li>
 							
 						</ul>
 

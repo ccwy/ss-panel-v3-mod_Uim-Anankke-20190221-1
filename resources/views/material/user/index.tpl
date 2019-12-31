@@ -692,7 +692,7 @@
 											</p>
 											{/if}
 											
-											<p><dt>上次签到时间：</dt>
+											{*<p><dt>上次签到时间：</dt>
                                             <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastCheckInTime()}</dd></p>
 											<p id="checkin-msg"></p>
 											{if $geetest_html != null}
@@ -702,7 +702,7 @@
                                                 <div class="g-recaptcha" data-sitekey="{$recaptcha_sitekey}"></div>
                                             {/if}
 									<div class="card-action">
-									<p>小游戏：每天可签到一次，每次签到随机获得 {$config["checkinMin"]}MB ~ {$config["checkinMax"]}MB 流量，签到获得流量实时自动到账。<a href="/user/checktime">查询签到记录</a></p>
+									<p>小游戏：每天可签到一次，每次签到随机获得 {$config["checkinMin"]}MB ~ {$config["checkinMax"]}MB 流量，签到获得流量实时自动到账。</p>
 										<div class="usercheck pull-left">										
 											{if $user->isAbleToCheckin()}
 												<div id="checkin-btn">
@@ -713,7 +713,7 @@
 												<p><a class="btn btn-brand disabled btn-flat" href="#"><span class="icon">check</span>&nbsp;今日已签到</a></p>
 											{/if}
 										</div>
-									</div>
+									</div>*}
 
 
 										</dl>
