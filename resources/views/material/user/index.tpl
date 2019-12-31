@@ -678,7 +678,7 @@
 											<p><dt>帐号注册时间</dt>
 											<dd><i class="icon icon-md">event</i>&nbsp;{$user->reg_date}</dd>	
 											</p>
-											<p><dt>上次使用</dt>
+											<p><dt>上次使用时间</dt>
                                             {if $user->lastSsTime()!="从未使用喵"}
 											<dd><i class="icon icon-md">event</i>&nbsp;{$user->lastSsTime()}</dd>
                                             {else}
