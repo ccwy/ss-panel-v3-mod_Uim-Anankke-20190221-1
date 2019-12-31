@@ -1966,7 +1966,7 @@ class UserController extends BaseController
     }
 	
 	 //签到记录
-     public function Checktime($request, $response, $args)
+     public function checktime($request, $response, $args)
     {
         $pageNum = 1;
         if (isset($request->getQueryParams()["page"])) {

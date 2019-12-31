@@ -173,7 +173,7 @@ class AdminController extends UserController
         return $this->view()->assign('table_config', $table_config)->display('admin/email.tpl');
     }
 	//签到记录
-    public function Checktime($request, $response, $args)
+    public function checktime($request, $response, $args)
     {
         $table_config['total_column'] = array("id" => "ID", "user_id" => "用户ID", "user_name" => "用户名","traffic" => "签到流量","check_time" => "签到时间", "datetime" => "记录时间");           
         $table_config['default_show_column'] = array("op", "id", "user_id", "user_name",
@@ -183,7 +183,7 @@ class AdminController extends UserController
     }
 
 //签到记录
-    public function ajax_Checktime($request, $response, $args)
+    public function ajax_checktime($request, $response, $args)
     {
         $datatables = new Datatables(new DatatablesHelper());
         $datatables->query('Select check_in_time.id,check_in_time.user_id,check_in_time.user_name,check_in_time.traffic,check_in_time.check_time,check_in_time.datetime from check_in_time');

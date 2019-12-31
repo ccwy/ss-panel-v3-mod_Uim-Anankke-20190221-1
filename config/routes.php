@@ -101,7 +101,7 @@ $app->group('/user', function () {
 	$this->post('/fanli', 'App\Controllers\UserController:fanlipost');
 	$this->get('/fanlifile', 'App\Controllers\UserController:fanlifile');
 	//签到记录
-	$this->get('/Checktime', 'App\Controllers\UserController:Checktime');
+	$this->get('/checktime', 'App\Controllers\UserController:checktime');
 	
     $this->get('/detect', 'App\Controllers\UserController:detect_index');
     $this->get('/detect/log', 'App\Controllers\UserController:detect_log');
@@ -231,7 +231,7 @@ $app->group('/admin', function () {
 	$this->get('/email', 'App\Controllers\AdminController:email');
 	$this->post('/email/ajax', 'App\Controllers\AdminController:ajax_email');
 	//签到记录
-	$this->get('/Checktime', 'App\Controllers\AdminController:Checktime');
+	$this->get('/checktime', 'App\Controllers\AdminController:checktime');
 	
     $this->get('/ticket', 'App\Controllers\Admin\TicketController:index');
     $this->get('/ticket/{id}/view', 'App\Controllers\Admin\TicketController:show');
