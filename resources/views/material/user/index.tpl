@@ -703,8 +703,8 @@
                                             {/if}
 									<div class="card-action">
 										<div class="usercheck pull-left">
-											{if $user->isAbleToCheckin() }
-
+										<p>每次签到可获得{$config["checkinMin"]}MB~{$config["checkinMax"]}MB流量</p>
+											{if $user->isAbleToCheckin()}
 												<div id="checkin-btn">
 													<button id="checkin" class="btn btn-brand btn-flat"><span class="icon">check</span>&nbsp;点我签到&nbsp;
 													<div><span class="icon">screen_rotation</span>&nbsp;或者摇动手机签到</div>
