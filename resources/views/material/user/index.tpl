@@ -702,7 +702,7 @@
                                                 <div class="g-recaptcha" data-sitekey="{$recaptcha_sitekey}"></div>
                                             {/if}
 									<div class="card-action">
-									<p>小游戏：每天可签到一次，每次签到随机获得 {$config["checkinMin"]} MB ~ {$config["checkinMax"]} MB 流量，签到获得流量自动到账。</p>
+									<p>小游戏：每天可签到一次，每次签到随机获得 {$config["checkinMin"]}MB ~ {$config["checkinMax"]}MB 流量，签到获得流量自动到账。</p>
 										<div class="usercheck pull-left">
 										
 											{if $user->isAbleToCheckin()}
