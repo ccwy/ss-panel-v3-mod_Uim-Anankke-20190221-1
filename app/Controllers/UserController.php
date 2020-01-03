@@ -1962,7 +1962,7 @@ class UserController extends BaseController
         $user->save();  
 
         $res['ret'] = 1;
-        $res['msg'] = "工单提交成功，正在跳转到工单系统";
+        $res['msg'] = "已自动到账，您可以返回充值页面查看余额，此次充值失败为自动补单，需要管理员复核，管理员复核后会回复工单处理结果。";
         return $this->echoJson($response, $res);
     
 		
