@@ -50,7 +50,7 @@
 										</div>
 									
 									    <div class="card-action-btn pull-left">
-											<button class="btn btn-brand waves-attach" id="code_pay_update" >提交工单</button>   <a class="btn btn-brand waves-attach" href="/user/ticket">查询工单进度</a>
+											<button class="btn btn-brand waves-attach" id="code_pay_update" >提交工单</button>   <a class="btn btn-brand waves-attach" href="/user/ticket">查询工单进度</a>   <a class="btn btn-brand waves-attach" href="/user/code">返回充值页面</a>
 									    </div>
 									</div>	
 								</div>
