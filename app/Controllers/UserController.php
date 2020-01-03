@@ -1925,7 +1925,7 @@ class UserController extends BaseController
         }
         if (!Tools::fanliss($code_olrid)) {
             $res['ret'] = 0;
-            $res['msg'] = "请输入完整付款订单号。";
+            $res['msg'] = "请输入完整付款订单号，付款订单号可以在支付宝/微信账单里面找到。";
             return $this->echoJson($response, $res);
         }
 
