@@ -1880,8 +1880,8 @@ class UserController extends BaseController
                 $codeq->save();
 
                                         
-            $user->money=($user->money + $fanli);
-			$user->fanli=($user->fanli - $fanli);
+            $user->money += $fanli;
+			$user->fanli -= $fanli;
             $user->save();           
             $res['ret'] = 1;
             $res['msg'] = "返利提现到账户余额成功，提现金额".$fanli."元。";
@@ -1912,7 +1912,17 @@ class UserController extends BaseController
             $res['msg'] = "请填全！";
             return $this->echoJson($response, $res);
         }
-
+		
+		if ($code_money < 1) {
+            $res['ret'] = 0;
+            $res['msg'] = "金额错误输入。";
+            return $this->echoJson($response, $res);
+        }
+        if (!Tools::fanliss($code_olrid)) {
+            $res['ret'] = 0;
+            $res['msg'] = "请输入完整付款订单号。";
+            return $this->echoJson($response, $res);
+        }
 
         $ticket = new Ticket();
         $antiXss = new AntiXSS();
@@ -1947,6 +1957,9 @@ class UserController extends BaseController
 		$emailjilu->datetime = time();
 		$emailjilu->save();
         }
+		
+		$user->money += $code_money;			
+        $user->save();  
 
         $res['ret'] = 1;
         $res['msg'] = "工单提交成功，正在跳转到工单系统";
