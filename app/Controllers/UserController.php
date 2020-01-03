@@ -1957,12 +1957,15 @@ class UserController extends BaseController
 		$emailjilu->datetime = time();
 		$emailjilu->save();
         }
-		
+		if ($user->t != 0) {
 		$user->money += $code_money;			
         $user->save();  
-
         $res['ret'] = 1;
-        $res['msg'] = "已自动到账，您可以返回充值页面查看余额，此次充值失败为自动补单，需要管理员复核，管理员复核后会回复工单处理结果。";
+        $res['msg'] = "已处理完成，您本次充值的 ".$code_money." 元已到账，您可以返回充值页面查看余额，本次您自助补单，需要管理员复核，管理员复核后会回复工单处理结果。";
+		}
+		
+		$res['ret'] = 1;
+        $res['msg'] = "已提交工单，请等待管理员处理，工单有回复就处理了，请留意工单回复内容，您可以点击查询工单进度查询。";
         return $this->echoJson($response, $res);
     
 		
