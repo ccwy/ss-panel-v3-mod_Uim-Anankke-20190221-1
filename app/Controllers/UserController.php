@@ -1966,10 +1966,10 @@ class UserController extends BaseController
 		$this->user->money += $code_money;			
         $this->user->save();  
         $res['ret'] = 1;
-        $res['msg'] = "已处理完成，您本次充值的 ".$code_money." 元已到账，您可以返回充值页面查看余额；<br>请注意：本次是系统为您自动补单，本次自动补单结果需要管理员复核，管理员复核后会回复工单处理结果。";
+        $res['msg'] = "工单提交成功，本次已自动处理完成，您本次充值的 ".$code_money." 元已到账，您可以返回充值页面查看余额；<br>请注意：本次是系统为您自动补单，本次自动补单结果需要管理员复核，管理员复核后会回复工单处理结果。<br>请勿重复提交工单。";
 		} else {		
 		$res['ret'] = 1;
-        $res['msg'] = "工单提交成功，请等待管理员处理，工单有回复就处理了，请留意工单回复内容。";
+        $res['msg'] = "工单提交成功，请等待管理员处理，工单有回复就处理了，请留意工单回复内容。<br>请勿重复提交工单。";
 		}
         return $this->echoJson($response, $res);
     		
