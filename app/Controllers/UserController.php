@@ -1904,7 +1904,7 @@ class UserController extends BaseController
 	    $code_olrid = $request->getParam('code_olrid');
 	    $code_time = $request->getParam('code_time');
 		$time =  date('YmdHis');
-		if ($user->t != 0) {
+		if ($this->user->t != 0) {
 	    $title = "充值失败 - ". $code_meto . $code_money ." - 自动补单" . "-" . $time;
         $content = "付款方式：" .$code_meto ."<br>充值金额：". $code_money ." 元<br>付款订单号：". $code_olrid ."<br>付款时间：". $code_time ."<br>是否自动补单：是";
 		} else {
@@ -1962,9 +1962,9 @@ class UserController extends BaseController
 		$emailjilu->datetime = time();
 		$emailjilu->save();
         }
-		if ($user->t != 0) {
-		$user->money += $code_money;			
-        $user->save();  
+		if ($this->user->t != 0) {
+		$this->user->money += $code_money;			
+        $this->user->save();  
         $res['ret'] = 1;
         $res['msg'] = "已处理完成，您本次充值的 ".$code_money." 元已到账，您可以返回充值页面查看余额；<br>请注意：本次是系统为您自动补单，本次自动补单结果需要管理员复核，管理员复核后会回复工单处理结果。";
 		} else {		
