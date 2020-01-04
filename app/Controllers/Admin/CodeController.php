@@ -109,6 +109,9 @@ class CodeController extends AdminController
               case -3:
                 return "提现 ".$data['number']." 元";
 				
+			  case -3:
+                return "补单 ".$data['number']." 元";
+				
               default:
                 return "已经废弃";
             }
@@ -140,6 +143,9 @@ class CodeController extends AdminController
 				
               case -3:
                 return "返利提现";
+				
+			  case -4:
+                return "自动补单";
 				
               default:
                 return "已经废弃";

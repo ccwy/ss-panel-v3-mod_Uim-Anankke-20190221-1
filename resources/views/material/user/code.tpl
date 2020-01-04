@@ -99,6 +99,9 @@
 															{if $code->type==-3}
                                                                 <td>返利提现</td>
                                                             {/if}
+															{if $code->type==-4}
+                                                                <td>自动补单</td>
+                                                            {/if}
                                                             {if $code->type==10001}
                                                                 <td>流量充值</td>
                                                             {/if}
@@ -113,6 +116,9 @@
                                                             {/if}
 															{if $code->type==-3}
                                                                 <td>提现 {$code->number} 元</td>
+                                                            {/if}
+															{if $code->type==-4}
+                                                                <td>补单 {$code->number} 元</td>
                                                             {/if}
                                                             {if $code->type==10001}
                                                                 <td>充值 {$code->number} GB 流量</td>
