@@ -109,7 +109,7 @@ class CodeController extends AdminController
               case -3:
                 return "提现 ".$data['number']." 元";
 				
-			  case -3:
+			  case -4:
                 return "补单 ".$data['number']." 元";
 				
               default:
