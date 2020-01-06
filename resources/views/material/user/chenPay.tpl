@@ -22,7 +22,7 @@
     <div class="form-group pull-left">
         <p class="modal-title">支付宝/微信充值<a class="btn btn-brand waves-attach" href="/user/codefail">充值不到账点这里</a></p>
 		<p><font color="red">充值时禁止关闭网页二维码，否则无法自动到账</font>
-		<br>付款成功一分钟内到账，如未到账，请点击上面按钮解决。</p>
+		<br>付款成功一分钟内到账，如未到账，请点击上面充值不到账按钮解决。</p>
 		<p>{if $config['AliPay_Status']!=1}<font color="red">网络不稳定，支付宝暂不可用，请联系管理员处理。{/if}</font></p><p>{if $config['WxPay_Status']!=1}<font color="red">网络不稳定，微信支付暂不可用，请联系管理员处理。{/if}</font></p>
 		
 		{if $config['AliPay_Status']==1 || $config['WxPay_Status']==1}
@@ -210,7 +210,7 @@
             function getCountdown() {
                 countdown.innerHTML = "<span>" + (m >= 10 ? m : '0' + m) + "</span>:<span>" + (s >= 10 ? s : '0' + s) + "</span>";
                 if (m == 0 && s == 0) {
-                    close('充值码已过期，如付款成功请联系管理员处理');
+                    close('充值码已过期，如付款成功请点击上方的充值不到账按钮解决');
                 } else if (m >= 0) {
                     if (s > 0) {
                         s--;

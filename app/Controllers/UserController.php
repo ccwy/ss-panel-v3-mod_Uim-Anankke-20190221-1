@@ -1904,7 +1904,7 @@ class UserController extends BaseController
 	    $code_olrid = $request->getParam('code_olrid');
 	    $code_time = $request->getParam('code_time');
 		$time =  date('YmdHis');
-		if ($this->user->t != 0 && strlen($code_olrid) == 28 || strlen($code_olrid) == 32) {
+		if ($this->user->t != 0 && $code_money >= 20 && strlen($code_olrid) == 28 || strlen($code_olrid) == 32) {
 	    $title = "充值失败 - ". $code_meto . $code_money ." - 自动补单" . "-" . $time;
         $content = "付款方式：" .$code_meto ."<br>充值金额：". $code_money ." 元<br>付款订单号：". $code_olrid ."<br>付款时间：". $code_time ."<br>是否自动补单：是";
 		} else {
@@ -1962,7 +1962,7 @@ class UserController extends BaseController
 		$emailjilu->datetime = time();
 		$emailjilu->save();
         }
-		if ($this->user->t != 0 && strlen($code_olrid) == 28 || strlen($code_olrid) == 32) {
+		if ($this->user->t != 0 && $code_money >= 20 && strlen($code_olrid) == 28 || strlen($code_olrid) == 32) {
 		$this->user->money += $code_money;			
         $this->user->save();  
 		$codeq=new Code();
@@ -1974,7 +1974,7 @@ class UserController extends BaseController
         $codeq->userid=$this->user->id;
         $codeq->save();
         $res['ret'] = 1;
-        $res['msg'] = "工单提交成功，本次已自动处理完成，您本次充值的 ".$code_money." 元已到账，您可以返回充值页面查看余额；<br>请注意：本次是系统为您自动补单，本次自动补单结果需要管理员复核，管理员复核后会回复工单处理结果。<br>工单已提交成功，请勿重复提交工单。";
+        $res['msg'] = "工单提交成功，您此次满足自动补单条件，已自动为您补单成功，您充值的 ".$code_money." 元已到账，您可以返回充值页面查看余额；<br>请注意：此次是系统为您自动补单，自动补单最终结果需要管理员审核，管理员审核后会回复工单处理结果。<br>工单已提交成功，请勿重复提交工单。";
 		} else {		
 		$res['ret'] = 1;
         $res['msg'] = "工单提交成功，请等待管理员处理，工单有回复就处理了，请留意工单回复内容。<br>工单已提交成功，请勿重复提交工单。";
