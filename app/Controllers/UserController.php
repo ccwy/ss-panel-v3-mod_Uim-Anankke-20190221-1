@@ -1923,7 +1923,7 @@ class UserController extends BaseController
             $res['msg'] = "金额错误输入。";
             return $this->echoJson($response, $res);
         }
-        if (!Tools::fanliss($code_olrid) || strlen($code_olrid) < 20) {
+        if (!Tools::fanliss($code_olrid) || strlen($code_olrid) < 10) {
             $res['ret'] = 0;
             $res['msg'] = "请输入完整付款订单号，付款订单号可以在支付宝/微信账单里面找到。付款订单号错误会影响工单处理速度哦。";
             return $this->echoJson($response, $res);
