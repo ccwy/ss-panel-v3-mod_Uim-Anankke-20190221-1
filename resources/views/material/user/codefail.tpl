@@ -45,7 +45,7 @@
 										<input class="form-control maxwidth-edit" id="code_olrid" type="text">
                                         </div>
 										<div class="form-group form-group-label">
-										<label class="floating-label" for="code_time">付款时间：（实际付款时间）</label>
+										<label class="floating-label" for="code_time">付款时间：（准确付款时间）</label>
 										<input class="form-control maxwidth-edit" id="code_time" type="text">
 										</div>
 									
