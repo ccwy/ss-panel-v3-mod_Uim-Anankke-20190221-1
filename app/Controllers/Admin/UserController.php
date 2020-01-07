@@ -186,7 +186,7 @@ class UserController extends AdminController
         $user->enable = $request->getParam('enable');
         $user->is_admin = $request->getParam('is_admin');
         $user->ga_enable = $request->getParam('ga_enable');
-		$user->block_user = $request->getParam('block_user');  //拉黑用户，停用充值功能
+		$user->block_user_code = $request->getParam('block_user_code');  //拉黑用户，停用充值功能
         $user->node_group = $request->getParam('group');
         $user->ref_by = $request->getParam('ref_by');
         $user->remark = $request->getParam('remark');
