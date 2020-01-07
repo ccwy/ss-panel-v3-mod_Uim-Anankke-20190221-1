@@ -1718,7 +1718,7 @@ class UserController extends BaseController
 		//签到记录
 		$check_time_log = new Check_time_log();
 		$check_time_log->check_user_id = $this->user->id;
-		$check_time_log->check_user_name = $this->user->user_name;		
+		$check_time_log->check_user_name = $this->user->email;		
 		$check_time_log->check_traffic = $traffic;
 		$check_time_log->check_time = date("Y-m-d H:i:s");	
 		$check_time_log->save();

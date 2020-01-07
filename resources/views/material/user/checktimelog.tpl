@@ -25,7 +25,7 @@
 								<div class="card-inner">
                                         <div class="card-doubleinner">
 												
-												<p>签到记录。</p>  
+												<p>我的签到记录，数据仅供参考，可能会漏记。</p>  
 										</div>
 										
 										<div class="card-table">
@@ -44,7 +44,7 @@
 													{foreach $check_time_logs as $check_time_log}
 														<tr>
 															<td>{$check_time_log->check_user_name}</td>
-															<td>{$check_time_log->check_traffic}</td>
+															<td>{$check_time_log->check_traffic}MB</td>
 															<td>{$check_time_log->check_time}</td>
 															
 														</tr>
