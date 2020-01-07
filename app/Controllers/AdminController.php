@@ -176,7 +176,7 @@ class AdminController extends UserController
     public function checktimelog($request, $response, $args)
     {
         $table_config['total_column'] = array("id" => "ID", "check_user_id" => "用户ID", "check_user_name" => "用户名",                         
-                          "check_traffic" => "签到流量", "check_time" => "签到时间");           
+                          "check_traffic" => "签到流量(MB)", "check_time" => "签到时间");           
         $table_config['default_show_column'] = array("op", "id", "check_user_id", "check_user_name",
                                   "check_traffic", "check_time");
         $table_config['ajax_url'] = 'checktimelog/ajax';
@@ -186,8 +186,7 @@ class AdminController extends UserController
     public function ajax_checktimelog($request, $response, $args)
     {
         $datatables = new Datatables(new DatatablesHelper());
-        $datatables->query('Select check_time_log.id,check_time_log.check_user_id,check_time_log.check_user_name,check_time_log.check_traffic,check_time_log.check_time from check_time_log');
-
+        $datatables->query('Select check_time_log.id,check_time_log.check_user_id,check_time_log.check_user_name,check_time_log.check_traffic,check_time_log.check_time from check_time_log');      
         $body = $response->getBody();
         $body->write($datatables->generate());
     }
