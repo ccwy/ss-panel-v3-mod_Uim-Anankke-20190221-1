@@ -1923,7 +1923,7 @@ class UserController extends BaseController
             $res['msg'] = "金额错误输入。";
             return $this->echoJson($response, $res);
         }
-        if (!Tools::fanliss($code_olrid) || strlen($code_olrid) < 10) {
+        if (!Tools::fanliss($code_olrid) || strlen($code_olrid) < 20) {
             $res['ret'] = 0;
             $res['msg'] = "请输入完整付款订单号，付款订单号可以在支付宝/微信账单里面找到。付款订单号错误会影响工单处理速度哦。";
             return $this->echoJson($response, $res);
@@ -1966,7 +1966,7 @@ class UserController extends BaseController
 		$this->user->money += $code_money;			
         $this->user->save();  
 		$codeq=new Code();
-        $codeq->code=$this->user->id."自动补单".$code_olrid;
+        $codeq->code=$this->user->id.$code_meto."自动补单".$code_olrid;
         $codeq->isused=1;
         $codeq->type=-4;
         $codeq->number=$code_money;
