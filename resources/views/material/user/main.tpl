@@ -84,7 +84,7 @@
 							<li><a href="/user/detect"><i class="icon icon-lg">account_balance</i>&nbsp;审计规则</a></li>
 							<li><a href="/user/detect/log"><i class="icon icon-lg">assignment_late</i>&nbsp;审计记录</a></li>
 							
-                            {if $user->class >1}
+                            {if $user->class >1 && $user->block_user_code == 0}
                             <li><a href="/user/invite"><i class="icon icon-lg">loyalty</i>&nbsp;邀请链接</a></li>
 							{/if}	
 							
@@ -93,17 +93,16 @@
 							{/if}
 							{/if}
 							
-							{if $config['enable_ticket']=='true'}
-                            <li><a href="/user/ticket"><i class="icon icon-lg">question_answer</i>&nbsp;工单系统</a></li>
+							{if $config['enable_ticket']=='true' && $user->block_user_code == 0}
+                            <li><a href="/user/ticket"><i class="icon icon-lg">question_answer</i>&nbsp;工单系统</a></li>														
+							<li><a href="/cous"><i class="icon icon-lg">question_answer</i>&nbsp;联系我们</a></li>
 							{/if}
 							
-							<li><a href="/cous"><i class="icon icon-lg">question_answer</i>&nbsp;联系我们</a></li>
-							
-							{if $config['telegram1']!='' && $user->class > 1 && $user->enable != 0}
+							{if $config['telegram1']!='' && $user->class > 1 && $user->enable != 0 && $user->block_user_code == 0}
 						    <li><a href="{$config['telegram1']}" target="_blank"><span class="icon icon-lg">near_me</span> TG 频道</a></li>							
 						    {/if}
 						
-						    {if  $config['telegram2']!='' && $user->class > 1 && $user->enable != 0}
+						    {if  $config['telegram2']!='' && $user->class > 1 && $user->enable != 0 && $user->block_user_code == 0}
 						    <li><a href="{$config['telegram2']}" target="_blank"><span class="icon icon-lg">near_me</span> TG VIP群组</a></li>							
 						    {/if}
 							

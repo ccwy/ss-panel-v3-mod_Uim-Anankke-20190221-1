@@ -53,7 +53,7 @@
                         <div class="card margin-bottom-no">
                             <div class="card-main">
                                 <div class="card-inner">
-                                    <h4>充值系统故障，请等待修复！</h4>
+                                    <h4>充值系统故障，暂时无法使用，请等待修复！</h4>
                                 </div>
                             </div>
                         </div>
