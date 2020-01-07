@@ -95,7 +95,7 @@
 							<li><a href="/admin/announcement"><i class="icon icon-lg">announcement</i>&nbsp;公告管理</a></li>
 							<li><a href="/admin/ticket"><i class="icon icon-lg">question_answer</i>&nbsp;工单管理</a></li>
 							<li><a href="/admin/email"><i class="icon icon-lg">email</i>&nbsp;邮件记录</a></li>
-							<li><a href="/admin/checktimelog"><i class="icon icon-lg">email</i>&nbsp;签到记录</a></li>
+							<li><a href="/admin/checktimelog"><i class="icon icon-lg">check</i>&nbsp;签到记录</a></li>
 						</ul>
 
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_node">节点</a>
@@ -109,8 +109,8 @@
 						<a class="waves-attach" data-toggle="collapse" href="#ui_menu_user">用户</a>
 						<ul class="menu-collapse collapse in" id="ui_menu_user">
 							<li><a href="/admin/user"><i class="icon icon-lg">supervisor_account</i>&nbsp;用户列表</a></li>
-							<li><a href="/admin/relay"><i class="icon icon-lg">compare_arrows</i>&nbsp;中转规则</a></li>
-							<li><a href="/admin/invite"><i class="icon icon-lg">loyalty</i>&nbsp;邀请与返利</a></li>
+							{*<li><a href="/admin/relay"><i class="icon icon-lg">compare_arrows</i>&nbsp;中转规则</a></li>
+							<li><a href="/admin/invite"><i class="icon icon-lg">loyalty</i>&nbsp;邀请与返利</a></li>*}
 							<li><a href="/admin/login"><i class="icon icon-lg">text_fields</i>&nbsp;登录记录</a></li>
 							
 						</ul>

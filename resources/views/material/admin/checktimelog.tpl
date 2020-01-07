@@ -19,7 +19,7 @@
 				<div class="card">
 					<div class="card-main">
 						<div class="card-inner">
-							<p>签到记录，可能会漏记.</p>
+							<p>用户签到记录，可能会漏记.</p>
               <p>显示表项:
                 {include file='table/checkbox.tpl'}
               </p>

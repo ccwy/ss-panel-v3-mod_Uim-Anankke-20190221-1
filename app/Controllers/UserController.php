@@ -1715,7 +1715,7 @@ class UserController extends BaseController
         $this->user->transfer_enable = $this->user->transfer_enable + Tools::toMB($traffic);
         $this->user->last_check_in_time = time();
         $this->user->save();
-		
+		//签到记录
 		$check_time_log = new Check_time_log();
 		$check_time_log->check_user_id = $this->user->id;
 		$check_time_log->check_user_name = $this->user->user_name;		
