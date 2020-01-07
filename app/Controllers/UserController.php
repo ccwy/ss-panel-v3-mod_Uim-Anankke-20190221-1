@@ -1720,7 +1720,7 @@ class UserController extends BaseController
 		$check_time_log->check_user_id = $this->user->id;
 		$check_time_log->check_user_name = $this->user->user_name;		
 		$check_time_log->check_traffic = $traffic;
-		$check_time_log->check_time = date(Y-m-d H:i:s);		
+		$check_time_log->check_time = time();		
 		$check_time_log->save();
 		
         $res['msg'] = sprintf("获得了 %d MB流量.", $traffic);
