@@ -29,7 +29,7 @@ class UserController extends AdminController
                             "online_ip_count" => "在线IP数", "last_ss_time" => "上次使用时间",
                             "used_traffic" => "已用流量/GB", "enable_traffic" => "总流量/GB",
                             "last_checkin_time" => "上次签到时间", "today_traffic" => "今日流量/MB",
-                            "enable" => "是否启用",  "block_user_code" => "是否拉黑", "reg_date" => "注册时间",
+                            "enable" => "是否启用", "reg_date" => "注册时间",
                             "reg_ip" => "注册IP", "auto_reset_day" => "自动重置流量日",
                             "auto_reset_bandwidth" => "自动重置流量/GB", "ref_by" => "邀请人ID", "ref_by_user_name" => "邀请人用户名");
         $table_config['default_show_column'] = array("op", "id", "user_name", "email", "money", "account_expire_in", "class", "class_expire", "online_ip_count", "last_ss_time", "used_traffic", "enable_traffic", "today_traffic", "reg_date", "reg_location", "auto_reset_day", "auto_reset_bandwidth", "ref_by", "ref_by_user_name");
@@ -347,7 +347,6 @@ class UserController extends AdminController
 			$tempdata['last_checkin_time']=$user->lastCheckInTime();
 			$tempdata['today_traffic']=Tools::flowToMB($user->u + $user->d-$user->last_day_t);
 			$tempdata['enable']=$user->enable == 1 ? "可用" : "禁用";
-			$tempdata['block_user_code']=$user->block_user_code == 0 ? "正常" : "拉黑";
 			$tempdata['reg_date']=$user->reg_date;
 			$tempdata['reg_ip']=$user->reg_ip;
 			$tempdata['auto_reset_day']=$user->auto_reset_day;
