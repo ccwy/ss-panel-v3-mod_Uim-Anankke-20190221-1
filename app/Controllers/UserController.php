@@ -1991,6 +1991,19 @@ class UserController extends BaseController
         return $this->echoJson($response, $res);
     		
     }
+    //签到记录
+	public function checktimelog($request, $response, $args)
+    {
+        $pageNum = 1;
+        if (isset($request->getQueryParams()["page"])) {
+            $pageNum = $request->getQueryParams()["page"];
+        }		
+        $check_time_logs = Check_time_log::where("check_user_id", $this->user->id)->orderBy("id", "desc")->paginate(20, ['*'], 'page', $pageNum);		
+        $check_time_logs->setPath('/user/checktimelog');
+       
+        return $this->view()->assign("check_time_logs", $check_time_logs)->display('user/checktimelog.tpl');
+    }
+
 	
     public function backtoadmin($request, $response, $args)
     {

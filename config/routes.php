@@ -96,10 +96,12 @@ $app->group('/user', function () {
     $this->get('/node/{id}/ajax', 'App\Controllers\UserController:nodeAjax');
     $this->get('/profile', 'App\Controllers\UserController:profile');
     $this->get('/invite', 'App\Controllers\UserController:invite');
-   //fanli	 
+    //返利	 
 	$this->get('/fanli', 'App\Controllers\UserController:fanli');
 	$this->post('/fanli', 'App\Controllers\UserController:fanlipost');
 	$this->get('/fanlifile', 'App\Controllers\UserController:fanlifile');
+	//签到记录
+	$this->get('/checktimelog', 'App\Controllers\UserController:checktimelog');
 	
     $this->get('/detect', 'App\Controllers\UserController:detect_index');
     $this->get('/detect/log', 'App\Controllers\UserController:detect_log');
@@ -225,7 +227,7 @@ $app->group('/admin', function () {
     $this->delete('/node', 'App\Controllers\Admin\NodeController:delete');
     $this->post('/node/ajax', 'App\Controllers\Admin\NodeController:ajax');
 
-//邮件纪律
+    //邮件纪律
 	$this->get('/email', 'App\Controllers\AdminController:email');
 	$this->post('/email/ajax', 'App\Controllers\AdminController:ajax_email');
 	//签到记录
