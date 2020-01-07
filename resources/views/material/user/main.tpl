@@ -124,4 +124,4 @@
 		</div>
 	</nav>
 
-{if $config["enable_crisp"] == 'true'}{include file='crisp.tpl'}{/if}
+{if $config["enable_crisp"] == 'true' && $user->block_user_code == 0}{include file='crisp.tpl'}{/if}
