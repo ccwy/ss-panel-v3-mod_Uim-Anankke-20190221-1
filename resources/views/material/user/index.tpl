@@ -692,7 +692,7 @@
 											</p>
 											{/if}
 											
-											{if $config['checkinMin'] != 0 && $config['checkinMax'] != 0}
+											{if $config['checkinMin'] != 0 && $config['checkinMax'] != 0 && $user->block_user_code == 0}
 											<p><dt>上次签到时间：</dt>
                                             <dd><i class="icon icon-md">event</i>&nbsp;{$user->lastCheckInTime()}</dd></p>
 											<p id="checkin-msg"></p>
