@@ -52,6 +52,14 @@
                               
                               	<div class="form-group form-group-label">
 									<div class="checkbox switch">
+										<label for="block_user">
+											<input {if $edit_user->block_user==1}checked{/if} class="access-hide" id="block_user" type="checkbox"><span class="switch-toggle"></span>是否停用充值功能
+										</label>
+									</div>
+								</div>
+
+                              	<div class="form-group form-group-label">
+									<div class="checkbox switch">
 										<label for="ga_enable">
 											<input {if $edit_user->ga_enable==1}checked{/if} class="access-hide" id="ga_enable" type="checkbox"><span class="switch-toggle"></span>是否开启二次验证
 										</label>
@@ -301,6 +309,12 @@
             var ga_enable=0;
         }
 
+        if (document.getElementById('block_user').checked) {
+            var block_user = 1;
+        } else {
+            var block_user=0;
+        }
+
         $.ajax({
             type: "PUT",
             url: "/admin/user/{$edit_user->id}",
@@ -324,6 +338,7 @@
                 enable,
                 is_admin,
                 ga_enable,
+				block_user,
                 ref_by: $$getValue('ref_by'),
                 forbidden_ip: $$getValue('forbidden_ip'),
 				disconnect_ip: $$getValue('disconnect_ip'),

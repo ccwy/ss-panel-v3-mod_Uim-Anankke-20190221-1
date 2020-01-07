@@ -38,7 +38,7 @@
                 </div>
 
                
-                {if $pmw!=''}
+                {if $pmw!='' && $user->block_user == 0}
                     <div class="col-lg-12 col-md-12">
                         <div class="card margin-bottom-no">
                             <div class="card-main">
