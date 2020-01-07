@@ -48,6 +48,16 @@
                             </div>
                         </div>
                     </div>
+				{else}	
+				    <div class="col-lg-12 col-md-12">
+                        <div class="card margin-bottom-no">
+                            <div class="card-main">
+                                <div class="card-inner">
+                                    <h4>充值系统故障，请等待修复！</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 {/if}
 				
                 {if $config['payurlma'] != ''} 
