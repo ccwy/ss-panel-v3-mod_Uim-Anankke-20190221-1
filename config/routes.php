@@ -228,6 +228,9 @@ $app->group('/admin', function () {
 //邮件纪律
 	$this->get('/email', 'App\Controllers\AdminController:email');
 	$this->post('/email/ajax', 'App\Controllers\AdminController:ajax_email');
+	//签到记录
+	$this->get('/checktimelog', 'App\Controllers\AdminController:checktimelog');
+	$this->post('/checktimelog/ajax', 'App\Controllers\AdminController:ajax_checktimelog');
 	
     $this->get('/ticket', 'App\Controllers\Admin\TicketController:index');
     $this->get('/ticket/{id}/view', 'App\Controllers\Admin\TicketController:show');

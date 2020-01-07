@@ -46,7 +46,8 @@ use App\Utils\URL;
 use App\Services\Mail;
 //邮件记录
 use App\Models\Emailjilu;
-
+use App\Models\Check_time_log;
+//签到记录
 /**
  *  HomeController
  */
@@ -1714,6 +1715,14 @@ class UserController extends BaseController
         $this->user->transfer_enable = $this->user->transfer_enable + Tools::toMB($traffic);
         $this->user->last_check_in_time = time();
         $this->user->save();
+		
+		$check_time_log = new Check_time_log();
+		$check_time_log->check_user_id = $this->user->id;
+		$check_time_log->check_user_name = $this->user->user_name;		
+		$check_time_log->check_traffic = $traffic;
+		$check_time_log->check_time = date(Y-m-d H:i:s);		
+		$check_time_log->save();
+		
         $res['msg'] = sprintf("获得了 %d MB流量.", $traffic);
         $res['unflowtraffic'] = $this->user->transfer_enable;
         $res['traffic'] = Tools::flowAutoShow($this->user->transfer_enable);

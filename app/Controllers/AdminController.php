@@ -17,7 +17,8 @@ use Ozdemir\Datatables\Datatables;
 use App\Utils\DatatablesHelper;
 //增加邮件记录
 use App\Models\Emailjilu;
-
+use App\Models\Check_time_log;
+//签到记录
 /**
  *  Admin Controller
  */
@@ -171,8 +172,27 @@ class AdminController extends UserController
         $table_config['ajax_url'] = 'email/ajax';
         return $this->view()->assign('table_config', $table_config)->display('admin/email.tpl');
     }
+    //签到记录
+    public function checktimelog($request, $response, $args)
+    {
+        $table_config['total_column'] = array("id" => "ID", "check_user_id" => "用户ID", "check_user_name" => "用户名",                         
+                          "check_traffic" => "签到流量", "check_time" => "签到时间");           
+        $table_config['default_show_column'] = array("op", "id", "check_user_id", "check_user_name",
+                                  "check_traffic", "check_time");
+        $table_config['ajax_url'] = 'checktimelog/ajax';
+        return $this->view()->assign('table_config', $table_config)->display('admin/checktimelog.tpl');
+    }
+	 //签到记录
+    public function ajax_checktimelog($request, $response, $args)
+    {
+        $datatables = new Datatables(new DatatablesHelper());
+        $datatables->query('Select check_time_log.id,check_time_log.check_user_id,check_time_log.check_user_name,check_time_log.check_traffic,check_time_log.check_time from check_time_log');
 
-//邮件发送记录
+        $body = $response->getBody();
+        $body->write($datatables->generate());
+    }
+	
+    //邮件发送记录
     public function ajax_email($request, $response, $args)
     {
         $datatables = new Datatables(new DatatablesHelper());
