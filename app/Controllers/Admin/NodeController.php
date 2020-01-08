@@ -217,7 +217,7 @@ class NodeController extends AdminController
 
 
         $total_column = Array("op" => "操作", "id" => "ID", "name" => "节点名称",
-                              "type" => "显示与隐藏", "auto_update_ip" => "自动获取ip", "sort" => "类型",
+                              "type" => "显示与隐藏", "auto_update_ip" => "自动获取ip", "node_online" => "是否在线", "sort" => "类型",
                               "server" => "节点地址", "node_ip" => "节点IP",
                               "info" => "节点信息",
                               "status" => "状态", "traffic_rate" => "流量比率", "node_group" => "节点群组",
@@ -307,6 +307,20 @@ class NodeController extends AdminController
         $datatables->edit('DT_RowId', function ($data) {
             return 'row_1_'.$data['id'];
         });
+		
+		$node_online=$node->isNodeOnline();
+			if($node_online===null){
+				$array_node['online']=0;
+			}
+			else if($node_online===true){
+				$array_node['online']=1;
+			}
+			else if($node_online===false){
+				$array_node['online']=-1;
+			}
+		$datatables->edit('node_online', function ($data) {
+            return $data['node_online'] == 1 ? '在线' : '离线';
+        });	
 
         $body = $response->getBody();
         $body->write($datatables->generate());

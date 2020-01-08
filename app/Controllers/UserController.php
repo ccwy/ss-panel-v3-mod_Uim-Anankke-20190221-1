@@ -1776,7 +1776,7 @@ class UserController extends BaseController
         if (isset($request->getQueryParams()["page"])) {
             $pageNum = $request->getQueryParams()["page"];
         }
-        $logs = DetectRule::paginate(15, ['*'], 'page', $pageNum);
+        $logs = DetectRule::paginate(20, ['*'], 'page', $pageNum);
         $logs->setPath('/user/detect');
         return $this->view()->assign('rules', $logs)->display('user/detect_index.tpl');
     }
@@ -1787,7 +1787,7 @@ class UserController extends BaseController
         if (isset($request->getQueryParams()["page"])) {
             $pageNum = $request->getQueryParams()["page"];
         }
-        $logs = DetectLog::orderBy('id', 'desc')->where('user_id', $this->user->id)->paginate(15, ['*'], 'page', $pageNum);
+        $logs = DetectLog::orderBy('id', 'desc')->where('user_id', $this->user->id)->paginate(50, ['*'], 'page', $pageNum);
         $logs->setPath('/user/detect/log');
         return $this->view()->assign('logs', $logs)->display('user/detect_log.tpl');
     }
