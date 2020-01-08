@@ -319,7 +319,7 @@ class NodeController extends AdminController
 				$array_node['online']=-1;
 			}
 		$datatables->edit('node_online', function ($data) {
-            return $data['node_online'] == 1 ? '在线' : '离线';
+            return $node_online == 1 ? '在线' : '离线';
         });	
 
         $body = $response->getBody();
