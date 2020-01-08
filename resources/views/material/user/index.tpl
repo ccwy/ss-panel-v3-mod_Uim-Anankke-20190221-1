@@ -203,7 +203,9 @@
 										{if $ann != null}
 										<p><font color="red"><b><big>{$ann->content}</big></b></font></p>
 										{/if}
+										{if $user->block_user_code == 0}
 										<p>其他公告请到<a href="/user/announcement"/>公告面板</a>查看。</p>
+										{/if}
 									</div>
 								</div>
 							</div>
