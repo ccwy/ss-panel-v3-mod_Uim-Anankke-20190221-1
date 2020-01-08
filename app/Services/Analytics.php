@@ -220,22 +220,28 @@ class Analytics
         $number = Code::where('usedatetime', 'like', date('Y%'))->sum('number');
         return is_null($number)?0:$number;
     }
-	//2018年流水
+	//2019年流水
     public function threeyearIncome()
     {
         $number = Code::where('usedatetime', 'like', date('Y%', strtotime('-1 years')))->sum('number');
         return is_null($number)?0:$number;
     }
-	//2017年流水
+	//2018年流水
     public function twoyearIncome()
     {
         $number = Code::where('usedatetime', 'like', date('Y%', strtotime('-2 years')))->sum('number');
         return is_null($number)?0:$number;
     }
-	//2016年流水
+	//2017年流水
     public function oneyearIncome()
     {
         $number = Code::where('usedatetime', 'like', date('Y%', strtotime('-3 years')))->sum('number');
+        return is_null($number)?0:$number;
+    }
+	//2016年流水
+    public function fouryearIncome()
+    {
+        $number = Code::where('usedatetime', 'like', date('Y%', strtotime('-4 years')))->sum('number');
         return is_null($number)?0:$number;
     }
     //网站运营总金额
