@@ -1181,7 +1181,7 @@ class UserController extends BaseController
         if (isset($request->getQueryParams()["page"])) {
             $pageNum = $request->getQueryParams()["page"];
         }
-        $shops = Bought::where("userid", $this->user->id)->orderBy("id", "desc")->paginate(15, ['*'], 'page', $pageNum);
+        $shops = Bought::where("userid", $this->user->id)->orderBy("id", "desc")->paginate(20, ['*'], 'page', $pageNum);
         $shops->setPath('/user/bought');
 
         return $this->view()->assign('shops', $shops)->display('user/bought.tpl');
@@ -1222,7 +1222,7 @@ class UserController extends BaseController
         if (isset($request->getQueryParams()["page"])) {
             $pageNum = $request->getQueryParams()["page"];
         }
-        $tickets = Ticket::where("userid", $this->user->id)->where("rootid", 0)->orderBy("datetime", "desc")->paginate(15, ['*'], 'page', $pageNum);
+        $tickets = Ticket::where("userid", $this->user->id)->where("rootid", 0)->orderBy("datetime", "desc")->paginate(20, ['*'], 'page', $pageNum);
         $tickets->setPath('/user/ticket');
 
         return $this->view()->assign('tickets', $tickets)->display('user/ticket.tpl');
