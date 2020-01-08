@@ -114,7 +114,7 @@ window.addEventListener('load', () => {
             { "data": "method" },
             { "data": "protocol" },
             { "data": "obfs" },
-            { "data": "online_ip_count"},
+            { "data": "online_ip_count" ,"orderable":false},
             { "data": "last_ss_time" ,"orderable":false},
             { "data": "used_traffic" ,"orderable":false},
             { "data": "enable_traffic" ,"orderable":false},
