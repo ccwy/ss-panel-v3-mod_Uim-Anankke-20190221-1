@@ -17,7 +17,7 @@ class NodeController extends AdminController
     public function index($request, $response, $args)
     {
         $table_config['total_column'] = Array("op" => "操作", "id" => "ID", "name" => "节点名称",
-                            "type" => "显示与隐藏", "auto_update_ip" => "自动获取ip", "sort" => "类型",
+                            "type" => "显示与隐藏", "auto_update_ip" => "自动获取ip", "node_online" => "是否在线", "sort" => "类型",
                             "server" => "节点地址", "node_ip" => "节点IP",
                             "info" => "节点信息",
                             "status" => "状态", "traffic_rate" => "流量比率", "node_group" => "节点群组",
