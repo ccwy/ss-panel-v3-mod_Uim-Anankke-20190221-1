@@ -32,6 +32,7 @@ class User extends Model
         "port" => 'int',
         "transfer_enable" => 'float',
         "enable" => 'int',
+		"block_user_code" => 'int',
         'is_admin' => 'boolean',
         'is_multi_user' => 'int',
         'node_speedlimit' => 'float',
@@ -285,6 +286,7 @@ class User extends Model
         $id = $this->attributes['id'];
         $today_traffic = Tools::flowToMB($this->attributes['u'] + $this->attributes['d'] - $this->attributes['last_day_t']);
         $is_enable = $this->attributes['enable'] == 1 ? "可用" : "禁用";
+		$is_block_user_code = $this->attributes['block_user_code'] == 0 ? "正常" : "拉黑";
         $reg_location = $this->attributes['reg_ip'];
         $account_expire_in = $this->attributes['expire_in'];
         $class_expire_in = $this->attributes['class_expire'];
@@ -340,7 +342,7 @@ class User extends Model
                               $used_traffic, $enable_traffic,
                               $this->lastCheckInTime(), $today_traffic,
                               $is_enable, $this->attributes['reg_date'],
-                              $reg_location,
+                              $reg_location,$is_block_user_code,
                               $this->attributes['auto_reset_day'], $this->attributes['auto_reset_bandwidth'],
                               $ref_user_id, $ref_user_name);
         return $return_array;

@@ -121,6 +121,7 @@ window.addEventListener('load', () => {
             { "data": "last_checkin_time" ,"orderable":false},
             { "data": "today_traffic" ,"orderable":false},
             { "data": "enable" },
+			{ "data": "block_user_code" },
             { "data": "reg_date" },
             { "data": "reg_ip" },
             { "data": "auto_reset_day" },
