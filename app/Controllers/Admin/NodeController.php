@@ -17,7 +17,7 @@ class NodeController extends AdminController
     public function index($request, $response, $args)
     {
         $table_config['total_column'] = Array("op" => "操作", "id" => "ID", "name" => "节点名称",
-                            "type" => "显示与隐藏", "auto_update_ip" => "自动获取ip", "node_online_lin" => "是否在线", "sort" => "类型",
+                            "type" => "显示与隐藏", "auto_update_ip" => "自动获取ip", "sort" => "类型",
                             "server" => "节点地址", "node_ip" => "节点IP",
                             "info" => "节点信息",
                             "status" => "状态", "traffic_rate" => "流量比率", "node_group" => "节点群组",
@@ -217,7 +217,7 @@ class NodeController extends AdminController
 
 
         $total_column = Array("op" => "操作", "id" => "ID", "name" => "节点名称",
-                              "type" => "显示与隐藏", "auto_update_ip" => "自动获取ip", "node_online_lin" => "是否在线", "sort" => "类型",
+                              "type" => "显示与隐藏", "auto_update_ip" => "自动获取ip", "sort" => "类型",
                               "server" => "节点地址", "node_ip" => "节点IP",
                               "info" => "节点信息",
                               "status" => "状态", "traffic_rate" => "流量比率", "node_group" => "节点群组",
@@ -307,26 +307,6 @@ class NodeController extends AdminController
         $datatables->edit('DT_RowId', function ($data) {
             return 'row_1_'.$data['id'];
         });
-		
-		
-		$datatables->edit('node_online_lin', function ($data) {
-			$node_online=$node->isNodeOnline();
-			if($node_online===null){
-				$array_node=0;
-			}
-			else if($node_online===true){
-				$array_node=1;
-			}
-			else if($node_online===false){
-				$array_node=-1;
-			}
-		if ($array_node==1) {
-			$node_online_lin = '在线';
-		} else {
-			$node_online_lin = '离线';
-		}
-            return $node_online_lin;
-        });	
 
         $body = $response->getBody();
         $body->write($datatables->generate());
