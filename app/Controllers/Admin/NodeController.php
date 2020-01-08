@@ -308,7 +308,9 @@ class NodeController extends AdminController
             return 'row_1_'.$data['id'];
         });
 		
-		$node_online=$node->isNodeOnline();
+		
+		$datatables->edit('node_online_lin', function ($data) {
+			$node_online=$node->isNodeOnline();
 			if($node_online===null){
 				$array_node=0;
 			}
@@ -323,7 +325,6 @@ class NodeController extends AdminController
 		} else {
 			$node_online_lin = '离线';
 		}
-		$datatables->edit('node_online_lin', function ($data) {
             return $node_online_lin;
         });	
 
