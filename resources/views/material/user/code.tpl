@@ -24,13 +24,14 @@
                                     <p class="card-heading"><i class="icon icon-lg">view_compact</i>&nbsp;仪表盘</p>
 										<p><i class="icon icon-lg">monetization_on</i>&nbsp;余额：&nbsp;<font color="red" size="5">{$user->money}</font>&nbsp;元</p>
 									<p><i class="icon icon-lg">shop</i>&nbsp;商店：&nbsp;<a href="/user/shop">点击进入</a></p>
-									
+									{if $user->block_user_code == 0}
 									<p>
 									1，充值完成后需刷新网页以查看余额，通常一分钟内到账，<font color="red">充值完成后请到商店购买套餐激活账号</font>；<br>
 									2，充值过程中遇到问题，请   <a href="/user/ticket">发工单</a>   联系管理员处理；<br>
 									4，本站不提供退款，请您不要存储余额，本站不提供任何技术支持，使用方法请看<a href="/user/guide">使用教程</a>；<br>
 								    5，注册即代表您同意并愿意遵守本站<a href="/toos">用户协议（TOS）。</a>
 									</p>
+									{/if}
                                 </div>
                             </div>
                         </div>
