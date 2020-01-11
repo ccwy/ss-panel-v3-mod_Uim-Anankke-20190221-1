@@ -1913,7 +1913,7 @@ class UserController extends BaseController
 	    $code_olrid = $request->getParam('code_olrid');
 	    $code_time = $request->getParam('code_time');
 		$time =  date('YmdHis');
-		if ($this->user->t != 0 && $code_money >= 20 && strlen($code_olrid) == 28 || strlen($code_olrid) == 32) {
+		if ($this->user->t != 0 && $code_money >= 20 && (strlen($code_olrid) == 28 || strlen($code_olrid) == 32)) {
 	    $title = "充值失败 - ". $code_meto . $code_money ." - 自动补单" . "-" . $time;
         $content = "付款方式：" .$code_meto ."<br>充值金额：". $code_money ." 元<br>付款订单号：". $code_olrid ."<br>付款时间：". $code_time ."<br>是否自动补单：是";
 		} else {
@@ -1971,7 +1971,7 @@ class UserController extends BaseController
 		$emailjilu->datetime = time();
 		$emailjilu->save();
         }
-		if ($this->user->t != 0 && $code_money >= 20 && strlen($code_olrid) == 28 || strlen($code_olrid) == 32) {
+		if ($this->user->t != 0 && $code_money >= 20 && (strlen($code_olrid) == 28 || strlen($code_olrid) == 32)) {
 		$this->user->money += $code_money;			
         $this->user->save();  
 		$codeq=new Code();
