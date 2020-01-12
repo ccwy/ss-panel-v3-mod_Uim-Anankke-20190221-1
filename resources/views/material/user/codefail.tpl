@@ -46,7 +46,7 @@
                                         </div>
 										<div class="form-group form-group-label">
 										<label class="floating-label" for="code_time">付款时间：（准确付款时间）</label>
-										<input class="form-control maxwidth-edit" id="code_time" type="date" name="code_time">
+										<input class="form-control maxwidth-edit" id="code_time" type="datetime-local" name="code_time">
 										</div>
 									
 									    <div class="card-action-btn pull-left">
