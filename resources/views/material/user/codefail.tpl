@@ -32,8 +32,8 @@
 										<div class="form-group form-group-label">
 										<label class="floating-label" for="code_meto">付款方式：（支付宝？微信）</label>
 										<select class="form-control maxwidth-edit" id="code_meto">														
-										<option value="支付宝">支付宝</option>
-										<option value="微信">微信</option>														
+										<option value="1">支付宝</option>
+										<option value="2">微信</option>														
 										</select>
 										</div>										
 										<div class="form-group form-group-label">
