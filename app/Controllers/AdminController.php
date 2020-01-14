@@ -188,7 +188,7 @@ class AdminController extends UserController
         $datatables = new Datatables(new DatatablesHelper());
         $datatables->query('Select check_time_log.id,check_time_log.check_user_id,check_time_log.check_user_name,check_time_log.check_traffic,check_time_log.check_time from check_time_log');   
 		$datatables->edit('check_traffic', function ($data) {
-            return ($data['check_traffic'])."Mb";
+            return ($data['check_traffic'])."MB";
         });
         $body = $response->getBody();
         $body->write($datatables->generate());
