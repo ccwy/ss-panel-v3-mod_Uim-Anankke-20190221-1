@@ -186,7 +186,10 @@ class AdminController extends UserController
     public function ajax_checktimelog($request, $response, $args)
     {
         $datatables = new Datatables(new DatatablesHelper());
-        $datatables->query('Select check_time_log.id,check_time_log.check_user_id,check_time_log.check_user_name,check_time_log.check_traffic,check_time_log.check_time from check_time_log');      
+        $datatables->query('Select check_time_log.id,check_time_log.check_user_id,check_time_log.check_user_name,check_time_log.check_traffic,check_time_log.check_time from check_time_log');   
+		 $datatables->edit('check_traffic', function ($data) {
+            return Tools::flowAutoShow($data['check_traffic']);
+        });
         $body = $response->getBody();
         $body->write($datatables->generate());
     }
