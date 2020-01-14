@@ -177,7 +177,7 @@ class AdminController extends UserController
     {
         $table_config['total_column'] = array("id" => "ID", "check_user_id" => "用户ID", "check_user_name" => "用户名",                         
                           "check_traffic" => "签到流量(MB)", "check_time" => "签到时间");           
-        $table_config['default_show_column'] = array("op", "id", "check_user_id", "check_user_name",
+        $table_config['default_show_column'] = array("id", "check_user_id", "check_user_name",
                                   "check_traffic", "check_time");
         $table_config['ajax_url'] = 'checktimelog/ajax';
         return $this->view()->assign('table_config', $table_config)->display('admin/checktimelog.tpl');
