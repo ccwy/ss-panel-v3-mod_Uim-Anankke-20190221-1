@@ -28,7 +28,7 @@
 								
 								<div class="form-group form-group-label">
 									<label class="floating-label" for="starttime">开始时间(不填立即生效)</label>
-									<input class="form-control maxwidth-edit" id="starttime" type="date">
+									<input class="form-control maxwidth-edit" id="starttime" type="datetime">
 								</div>
 
 
