@@ -107,7 +107,7 @@ function time(o) {
 			wait = 30;
 		} else {
 			o.attr("disabled","disabled");
-			o.text("请稍后再提交(" + wait + ")");
+			o.text("提交(" + wait + ")");
 			wait--;
 			setTimeout(function() {
 				time(o)
@@ -116,10 +116,26 @@ function time(o) {
 		}
 	}
 
+var waits=30;
+function times(o) {
+		if (waits == 0) {
+			o.removeAttr("disabled");
+			o.text("提交并关闭");
+			waits = 30;
+		} else {
+			o.attr("disabled","disabled");
+			o.text("提交并关闭(" + waits + ")");
+			waits--;
+			setTimeout(function() {
+				times(o)
+			},
+			1000)
+		}
+	}
+	
     $(document).ready(function () {
 	
-        function submit() {	
-		
+        function submit() {			
 			$("#result").modal();
             $("#msg").html("正在提交。");
             $.ajax({
@@ -156,7 +172,7 @@ function time(o) {
         });
 		
 		$("#close").click(function () {
-		    time($("#close"));
+		    times($("#close"));
 			status=0;
             submit();
         });
