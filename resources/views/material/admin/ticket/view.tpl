@@ -79,7 +79,7 @@
 							<div class="card-inner">
 								{$ticket->content}
 							</div>
-							<div class="card-action">{if $ticket->User()->id == 2293}工单ID：{$ticket->rootid}{/if}<br>提交时间： {$ticket->datetime()}</div>                       
+							<div class="card-action">{if $ticket->rootid == 0}工单ID：{$ticket->id}{/if}<br>提交时间： {$ticket->datetime()}</div>                       
 						</div>
 					</div>
 					{/foreach}
