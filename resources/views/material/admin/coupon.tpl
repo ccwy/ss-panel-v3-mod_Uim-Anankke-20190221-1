@@ -25,6 +25,12 @@
 									<input class="form-control maxwidth-edit" id="credit" type="text">
 									<p class="form-control-guide"><i class="material-icons">info</i>百分比，九折就填 10</p>
 								</div>
+								
+								<div class="form-group form-group-label">
+									<label class="floating-label" for="starttime">开始时间(不填立即生效)</label>
+									<input class="form-control maxwidth-edit" id="starttime" type="date">
+								</div>
+
 
 								<div class="form-group form-group-label">
 									<label class="floating-label" for="expire">优惠码有效期(h)</label>
@@ -121,6 +127,7 @@ let submitCoupon = code => {
             shop: $$getValue('shop'),
             onetime: $$getValue('count'),
             expire: $$getValue('expire'),
+			starttime: $$getValue('starttime')
         },
         success: data => {
             if (data.ret) {

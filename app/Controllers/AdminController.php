@@ -116,7 +116,7 @@ class AdminController extends UserController
 
     public function coupon($request, $response, $args)
     {
-        $table_config['total_column'] = array("id" => "ID", "code" => "优惠码",
+        $table_config['total_column'] = array("id" => "ID", "code" => "优惠码","starttime" => "开始时间",
                           "expire" => "过期时间", "shop" => "限定商品ID",
                           "credit" => "额度", "onetime" => "次数");
         $table_config['default_show_column'] = array();
@@ -133,7 +133,13 @@ class AdminController extends UserController
         $code->onetime=$request->getParam('onetime');
 
         $code->code = $request->getParam('prefix');
-        $code->expire=time()+$request->getParam('expire')*3600;
+        $code->expire=time()+$request->getParam('expire')*3600;	
+		$starttime = $request->getParam('starttime');
+		if ($starttime == '') {
+		$code->starttime = date("Y-m-d H:i:s",time());
+	    } else {
+		$code->starttime = $starttime;
+		}		
         $code->shop=$request->getParam('shop');
         $code->credit=$request->getParam('credit');
 
@@ -241,10 +247,13 @@ class AdminController extends UserController
     public function ajax_coupon($request, $response, $args)
     {
         $datatables = new Datatables(new DatatablesHelper());
-        $datatables->query('Select id,code,expire,shop,credit,onetime from coupon');
+        $datatables->query('Select id,code,expire,starttime,shop,credit,onetime from coupon');
 
         $datatables->edit('expire', function ($data) {
             return date('Y-m-d H:i:s', $data['expire']);
+        });
+		$datatables->edit('starttime', function ($data) {
+            return date('Y-m-d H:i:s', $data['starttime']);
         });
 
         $body = $response->getBody();
