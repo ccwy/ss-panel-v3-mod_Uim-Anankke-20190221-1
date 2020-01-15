@@ -38,7 +38,7 @@
 
             <p>输入充值金额：</p>
             <div class="form-group form-group-label btnBox"><label class="floating-label" for="price">充值金额</label>
-                <input type="number" id="AliPayType" class="form-control" name="amount" value="20"/>
+                <input type="number" id="AliPayType" class="form-control" name="amount"/>
             </div>
             {/if}
 		{/if}	
