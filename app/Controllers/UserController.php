@@ -1060,6 +1060,16 @@ class UserController extends BaseController
             $res['msg'] = "此优惠码不可用于此商品";
             return $response->getBody()->write(json_encode($res));
         }
+		if ($coupon->starttime != '' && $coupon->starttime > date('Y-m-d H:i:s', time())) {
+            $res['ret'] = 0;
+            $res['msg'] = "优惠码未生效，此优惠码将于 ".$coupon->starttime." 生效，请在优惠码生效后再试。";
+            return $response->getBody()->write(json_encode($res));
+        }
+        if ($coupon->expire < time()) {
+            $res['ret'] = 0;
+            $res['msg'] = "此优惠码已过期";
+            return $response->getBody()->write(json_encode($res));
+        }
 
         $use_limit = $coupon->onetime;
         if ($use_limit > 0) {
@@ -1119,7 +1129,7 @@ class UserController extends BaseController
             }
 			if ($coupon->starttime != '' && $coupon->starttime > date('Y-m-d H:i:s', time())) {
                 $res['ret'] = 0;
-                $res['msg'] = "优惠码未生效，此优惠码将于 ".$coupon->starttime." 生效，请生效后再试。";
+                $res['msg'] = "优惠码未生效，此优惠码将于 ".$coupon->starttime." 生效，请在优惠码生效后再试。";
                 return $response->getBody()->write(json_encode($res));
             }
 
