@@ -33,7 +33,7 @@
 
 
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="expire">过期时间</label>
+									<label class="floating-label" for="expire">优惠码有效期(h)</label>
 									<input class="form-control maxwidth-edit" id="expire" type="number" value="1">
 								</div>
 
