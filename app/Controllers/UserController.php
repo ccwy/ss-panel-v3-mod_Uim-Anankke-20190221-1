@@ -1062,7 +1062,7 @@ class UserController extends BaseController
         }
 		if ($coupon->starttime != '' && $coupon->starttime > date('Y-m-d H:i:s', time())) {
             $res['ret'] = 0;
-            $res['msg'] = "优惠码未生效，此优惠码将于 ".$coupon->starttime." 生效，请在优惠码生效后再试。";
+            $res['msg'] = "此优惠码未生效，此优惠码将于 ".$coupon->starttime." 生效，请在优惠码生效后再试。";
             return $response->getBody()->write(json_encode($res));
         }
         if ($coupon->expire < time()) {
@@ -1129,7 +1129,7 @@ class UserController extends BaseController
             }
 			if ($coupon->starttime != '' && $coupon->starttime > date('Y-m-d H:i:s', time())) {
                 $res['ret'] = 0;
-                $res['msg'] = "优惠码未生效，此优惠码将于 ".$coupon->starttime." 生效，请在优惠码生效后再试。";
+                $res['msg'] = "此优惠码未生效，此优惠码将于 ".$coupon->starttime." 生效，请在优惠码生效后再试。";
                 return $response->getBody()->write(json_encode($res));
             }
 
