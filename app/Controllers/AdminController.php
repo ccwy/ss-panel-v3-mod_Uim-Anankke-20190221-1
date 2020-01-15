@@ -130,14 +130,10 @@ class AdminController extends UserController
     public function addCoupon($request, $response, $args)
     {
         $code = new Coupon();
-        $code->onetime=$request->getParam('onetime');
-
+        $code->onetime=$request->getParam('count');
         $code->code = $request->getParam('prefix');
         $code->expire=time()+$request->getParam('expire')*3600;	
-		$starttime = $request->getParam('starttime');
-		
-		$code->starttime = $starttime;
-			
+		$code->starttime = $request->getParam('starttime');	
         $code->shop=$request->getParam('shop');
         $code->credit=$request->getParam('credit');
 

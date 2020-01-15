@@ -44,17 +44,17 @@
 								</div>
 
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="shop">优惠码每个用户可用次数</label>
+									<label class="floating-label" for="count">优惠码每个用户可用次数</label>
 									<input class="form-control maxwidth-edit" id="count" type="number" value="1">
 								</div>
 
-								<div class="form-group form-group-label">
+								{*<div class="form-group form-group-label">
 									<div class="checkbox switch">
 										<label for="onetime">
 											<input class="access-hide" id="onetime" type="checkbox"><span class="switch-toggle"></span>一次性的,只在用户当次购买时有效
 										</label>
 									</div>
-								</div>
+								</div>*}
 
 
                                 <div class="form-group">
@@ -125,7 +125,7 @@ let submitCoupon = code => {
             prefix: code,
             credit: $$getValue('credit'),
             shop: $$getValue('shop'),
-            onetime: $$getValue('count'),
+            count: $$getValue('count'),
             expire: $$getValue('expire'),
 			starttime: $$getValue('starttime')
         },
