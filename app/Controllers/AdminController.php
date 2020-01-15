@@ -250,10 +250,7 @@ class AdminController extends UserController
         $datatables->edit('expire', function ($data) {
             return date('Y-m-d H:i:s', $data['expire']);
         });
-		$datatables->edit('starttime', function ($data) {
-            return date('Y-m-d H:i:s', $data['starttime']);
-        });
-
+		
         $body = $response->getBody();
         $body->write($datatables->generate());
     }
