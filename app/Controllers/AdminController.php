@@ -132,7 +132,12 @@ class AdminController extends UserController
         $code = new Coupon();
         $code->onetime=$request->getParam('count');
         $code->code = $request->getParam('prefix');
+		$starttimes = strtotime($request->getParam('starttime'));			
+		if ($starttimes != '') {
+			$code->expire= $starttimes + $request->getParam('expire')*3600;	
+		} else {
         $code->expire=time()+$request->getParam('expire')*3600;	
+		}
 		$code->starttime = $request->getParam('starttime');	
         $code->shop=$request->getParam('shop');
         $code->credit=$request->getParam('credit');
