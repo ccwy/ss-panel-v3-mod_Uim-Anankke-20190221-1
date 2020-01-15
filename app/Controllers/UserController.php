@@ -1060,6 +1060,22 @@ class UserController extends BaseController
             $res['msg'] = "此优惠码不可用于此商品";
             return $response->getBody()->write(json_encode($res));
         }
+		 if ($coupon->order($shop->id) == false) {
+                $res['ret'] = 0;
+                $res['msg'] = "此优惠码不可用于此商品";
+                return $response->getBody()->write(json_encode($res));
+            }
+			if ($coupon->starttime != '' && $coupon->starttime > date('Y-m-d H:i:s', time())) {
+                $res['ret'] = 0;
+                $res['msg'] = "优惠码未生效，生效时间请查看用户中心公告";
+                return $response->getBody()->write(json_encode($res));
+            }
+
+            if ($coupon->expire < time()) {
+                $res['ret'] = 0;
+                $res['msg'] = "此优惠码已过期";
+                return $response->getBody()->write(json_encode($res));
+            }
 
         $use_limit = $coupon->onetime;
         if ($use_limit > 0) {
@@ -1112,22 +1128,7 @@ class UserController extends BaseController
                 $credit = $coupon->credit;
             }
 
-            if ($coupon->order($shop->id) == false) {
-                $res['ret'] = 0;
-                $res['msg'] = "此优惠码不可用于此商品";
-                return $response->getBody()->write(json_encode($res));
-            }
-			if ($coupon->starttime != '' && $coupon->starttime > date('Y-m-d H:i:s', time())) {
-                $res['ret'] = 0;
-                $res['msg'] = "优惠码未生效，生效时间请查看用户中心公告";
-                return $response->getBody()->write(json_encode($res));
-            }
-
-            if ($coupon->expire < time()) {
-                $res['ret'] = 0;
-                $res['msg'] = "此优惠码已过期";
-                return $response->getBody()->write(json_encode($res));
-            }
+           
         }
 
         $price = $shop->price * ((100 - $credit) / 100);
