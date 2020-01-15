@@ -107,7 +107,7 @@ function time(o) {
 			wait = 30;
 		} else {
 			o.attr("disabled","disabled");
-			o.text("提交(" + wait + ")");
+			o.text("请稍后(" + wait + ")");
 			wait--;
 			setTimeout(function() {
 				time(o)
