@@ -67,7 +67,7 @@
 					<div class="card">
 						<aside class="card-side pull-left"><img alt="alt text for John Smith avatar" src="{$ticket->User()->gravatar}"></span></br>{if $ticket->User()->id != 2293}ID：{$ticket->User()->id}<br>{$ticket->User()->email}<br><a class="btn btn-brand" href="/admin/user/{$ticket->User()->id}/edit">编辑用户</a>{else}<br>Admin{/if}</aside>
 						
-						{if $ticket->User()->id != 2293}
+						{if $ticket->User()->id != 2293 && $ticket->rootid ==0}
 						<aside>
 						<p><br>用户余额： {$ticket->User()->money} 元</p>
 						<input class="form-control" id="money" type="text">
