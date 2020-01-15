@@ -1117,7 +1117,7 @@ class UserController extends BaseController
                 $res['msg'] = "此优惠码不可用于此商品";
                 return $response->getBody()->write(json_encode($res));
             }
-			if ($coupon->starttime > date("Y-m-d H:i:s",time())) {
+			if ($coupon->starttime != '' && $coupon->starttime > date("Y-m-d H:i:s",time())) {
                 $res['ret'] = 0;
                 $res['msg'] = "优惠码未生效，生效时间请查看用户中心公告";
                 return $response->getBody()->write(json_encode($res));

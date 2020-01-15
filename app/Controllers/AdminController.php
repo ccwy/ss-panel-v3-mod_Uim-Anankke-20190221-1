@@ -135,11 +135,9 @@ class AdminController extends UserController
         $code->code = $request->getParam('prefix');
         $code->expire=time()+$request->getParam('expire')*3600;	
 		$starttime = $request->getParam('starttime');
-		if ($starttime == '') {
-		$code->starttime = date("Y-m-d H:i:s",time());
-	    } else {
+		
 		$code->starttime = $starttime;
-		}		
+			
         $code->shop=$request->getParam('shop');
         $code->credit=$request->getParam('credit');
 
