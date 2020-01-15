@@ -1059,7 +1059,7 @@ class UserController extends BaseController
             $res['ret'] = 0;
             $res['msg'] = "此优惠码不可用于此商品";
             return $response->getBody()->write(json_encode($res));
-        }
+        }  //优惠码开始时间
 		if ($coupon->starttime != '' && $coupon->starttime > date('Y-m-d H:i:s', time())) {
             $res['ret'] = 0;
             $res['msg'] = "此优惠码未生效，此优惠码将于 ".$coupon->starttime." 生效，请在优惠码生效后再试。";
@@ -1127,6 +1127,7 @@ class UserController extends BaseController
                 $res['msg'] = "此优惠码不可用于此商品";
                 return $response->getBody()->write(json_encode($res));
             }
+			//优惠码开始时间
 			if ($coupon->starttime != '' && $coupon->starttime > date('Y-m-d H:i:s', time())) {
                 $res['ret'] = 0;
                 $res['msg'] = "此优惠码未生效，此优惠码将于 ".$coupon->starttime." 生效，请在优惠码生效后再试。";
