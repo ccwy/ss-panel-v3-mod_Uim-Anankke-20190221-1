@@ -70,7 +70,7 @@
 						{if $ticket->User()->id != 2293 && $ticket->rootid ==0}
 						<aside>
 						<p><br>用户余额： {$ticket->User()->money} 元</p>
-						<input class="form-control" id="money" type="text">
+						<input class="form-control" id="money" type="number">
 						<button class="btn btn-flat waves-attach" id="money-update" ><span class="icon">check</span>&nbsp;提交</button>
 						</aside>
 						{/if}
