@@ -103,7 +103,7 @@ var wait=30;
 function time(o) {
 		if (wait == 0) {
 			o.removeAttr("disabled");
-			o.text("提交");
+			o.text("请稍后再试");
 			wait = 30;
 		} else {
 			o.attr("disabled","disabled");
@@ -118,8 +118,7 @@ function time(o) {
 
     $(document).ready(function () {
 	
-        function submit() {
-		time($("#submit"));
+        function submit() {		
 			$("#result").modal();
             $("#msg").html("正在提交。");
             $.ajax({
@@ -150,6 +149,7 @@ function time(o) {
         }
 		
         $("#submit").click(function () {
+		    time($("#submit"));
 			status=1;
             submit();
         });
