@@ -103,7 +103,7 @@ var wait=30;
 function time(o) {
 		if (wait == 0) {
 			o.removeAttr("disabled");
-			o.text("请稍后再试");
+			o.text("提交");
 			wait = 30;
 		} else {
 			o.attr("disabled","disabled");
