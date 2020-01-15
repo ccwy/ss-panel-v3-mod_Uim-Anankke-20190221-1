@@ -27,8 +27,9 @@
 								</div>
 								
 								<div class="form-group form-group-label">
-									<label class="floating-label" for="starttime">开始时间(不填立即生效)</label>
+									<label class="floating-label" for="starttime">开始时间</label>
 									<input class="form-control maxwidth-edit" id="starttime" type="text" value="{date('Y-m-d H:i:s')}">
+								    <p class="form-control-guide"><i class="material-icons">info</i>不填立即生效呢</p>
 								</div>
 
 
@@ -46,6 +47,7 @@
 								<div class="form-group form-group-label">
 									<label class="floating-label" for="count">优惠码每个用户可用次数</label>
 									<input class="form-control maxwidth-edit" id="count" type="number" value="1">
+									<p class="form-control-guide"><i class="material-icons">info</i>每个用户可使用优惠码的次数</p>
 								</div>
 
 								{*<div class="form-group form-group-label">
