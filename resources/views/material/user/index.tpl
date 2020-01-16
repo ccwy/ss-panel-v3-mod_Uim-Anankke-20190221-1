@@ -785,7 +785,7 @@
 				
 						{include file='dialog.tpl'}
                         
-						<div aria-hidden="true" class="modal modal-va-middle fade" id="email_nrcy_modal" role="dialog" tabindex="-1">
+						<div aria-hidden="true" class="modal modal-va-middle fade" id="iphone_shadowrocket" role="dialog" tabindex="-1">
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<div class="modal-heading">
