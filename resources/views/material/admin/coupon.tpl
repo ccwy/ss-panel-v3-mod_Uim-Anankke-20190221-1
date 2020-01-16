@@ -136,7 +136,10 @@ let submitCoupon = code => {
                 $("#result").modal();
                 $$.getElementById('msg').innerHTML = data.msg;
                 window.setTimeout("location.href='/admin/coupon'", {$config['jump_delay']});
-            }
+            } else {
+			    $("#result").modal();
+                $$.getElementById('msg').innerHTML = data.msg;
+				}
             // window.location.reload();
         },
         error: jqXHR => {
