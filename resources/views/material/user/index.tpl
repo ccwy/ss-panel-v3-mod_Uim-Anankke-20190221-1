@@ -784,12 +784,14 @@
 				</div>
 				
 						{include file='dialog.tpl'}
-                        <div aria-hidden="true" class="modal modal-va-middle fade" id="iphone_shadowrocket" role="dialog" tabindex="-1">
-							<div class="modal-dialog modal-full">
-							    <div class="modal-heading">
+                        
+						<div aria-hidden="true" class="modal modal-va-middle fade" id="email_nrcy_modal" role="dialog" tabindex="-1">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-heading">
 									<h2 class="modal-title">教程</h2>
 								</div>
-								<div class="modal-content">
+								<div class="modal-inner">
 									<img src="/images/iphone_shadowrocket.gif" />
 								</div>
 								<div class="modal-footer">
