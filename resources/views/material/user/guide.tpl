@@ -167,6 +167,12 @@
 													</nav>
 										    <div class="tab-pane fade active in" id="ios_ssr_shadowrocket">
 											<ul>
+												<h3><li>动画教程</li> </h3>
+												<ol>
+												<p><img src="/images/iphone_shadowrocket.gif"/></p>
+												</ol>
+											</ul>
+											<ul>
 												<h3><li>下载软件</li> </h3>
 												<ol>
 													<li>由于政策原因，Apple Store中国区代理类软件被强制下架，所以需要注册一个非中国区的Apple ID账号（一般注册美区或港区的比较多，不会注册的百度搜一下就有教程了）；由于IOS系统限制，必须要IOS9以上系统才可以使用此类代理软件</li>
