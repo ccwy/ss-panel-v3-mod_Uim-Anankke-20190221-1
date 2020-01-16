@@ -169,7 +169,7 @@
 											<ul>
 												<h3><li>视频教程</li> </h3>
 												<ol>
-												<li>视频教程仅供参考</li>												
+												<p>视频教程仅供参考</p>												
 												<p><img src="/images/iphone_shadowrocket.gif"/></p>
 												</ol>
 											</ul>
