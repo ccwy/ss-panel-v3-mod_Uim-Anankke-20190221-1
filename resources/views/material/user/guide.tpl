@@ -171,7 +171,7 @@
 												<ol>
 												{literal}
 												<p>视频教程仅供参考</p>												
-												<p><img src="/images/iphone_shadowrocket.gif"/></p>
+												<p style="display:none;"><img src="/images/iphone_shadowrocket.gif"/></p>
 												{/literal}
 												</ol>
 											</ul>
