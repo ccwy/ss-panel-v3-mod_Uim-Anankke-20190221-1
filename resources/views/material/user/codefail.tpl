@@ -101,7 +101,7 @@ function time(o) {
 		$("#code_pay_update").click(function () {
 		time($("#code_pay_update"));
 		$("#result").modal();
-        $("#msg").html("正在提交。");
+        $("#msg").html("正在提交。。。");
 			$.ajax({
 				type: "POST",
 				url: "codefil",
