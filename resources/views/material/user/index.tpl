@@ -792,7 +792,7 @@
 									<h2 class="modal-title">教程</h2>
 								</div>
 								<div class="modal-inner">
-									<img src="/images/iphone_shadowrocket.gif" />
+									<img src="/images/iphone_shadowrocket.gif" /> <img src="/images/iphone_shadowrocket1.gif" />
 								</div>
 								<div class="modal-footer">
 										<p class="text-right">
