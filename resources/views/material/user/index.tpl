@@ -333,9 +333,7 @@
 														<div><span class="icon icon-lg text-white">flash_auto</span> 单端口节点订阅地址：</div>
 														<div class="float-clear"><input type="text" class="input form-control form-control-monospace cust-link col-xx-12 col-sm-8 col-lg-7" name="input1" id="sub1" readonly value="{$subUrl}{$ssr_sub_token}?mu=1" readonly="true"><button class="copy-text btn btn-subscription col-xx-12 col-sm-3 col-lg-2" type="button" data-clipboard-text="{$subUrl}{$ssr_sub_token}?mu=1">点击复制</button><br></div>
 														{/if}
-                                                       <p><a href="/user/guide">点击这里查看iOS傻瓜式教程</a> 
-													  
-													   <a href="" onclick="return false;" data-toggle='modal' data-target='#iphone_shadowrocket'>收不到验证码？点击这里</a></p> 
+                                                       <p><a href="/user/guide">点击这里查看iOS傻瓜式教程</a> <a href="javascript:void(0);" onClick="urlChange('iphone_shadowrocket',0,0,0)">如果您不知道如何查看节点的详细信息和二维码，请点我。</a></p> 
 													</div>
 													
 													<div class="tab-pane fade" id="all_ssr_android">
@@ -784,20 +782,10 @@
 				</div>
 				
 						{include file='dialog.tpl'}
-                        
-						<div aria-hidden="true" class="modal modal-va-middle fade" id="iphone_shadowrocket" role="dialog" tabindex="-1">
-							<div class="modal-dialog">
+                        <div aria-hidden="true" class="modal modal-va-middle fade" id="nodeinfo" role="dialog" tabindex="-1">
+							<div class="modal-dialog modal-full">
 								<div class="modal-content">
-									<div class="modal-heading">
-									<h2 class="modal-title">教程</h2>
-								</div>
-								<div class="modal-inner">
-									<img src="/images/iphone_shadowrocket.gif" /> <img src="/images/iphone_shadowrocket1.gif" />
-								</div>
-								<div class="modal-footer">
-										<p class="text-right">
-										<button class="btn btn-flat btn-brand-accent waves-attach waves-effect" data-dismiss="modal" type="button">我知道了</button>
-                                      </p>
+									<iframe class="iframe-seamless" title="Modal with iFrame" id="infoifram"></iframe>
 								</div>
 							</div>
 						</div>
@@ -827,6 +815,16 @@ $(document).ready(function(){
 });
 </script>
 *}
+
+<script>
+function urlChange(iphone_shadowrocket) {
+		var doc = document.getElementById('infoifram').contentWindow.document;
+		doc.open();
+		doc.write('<img src="/images/iphone_shadowrocket.gif"/>');
+		doc.close();
+	$("#nodeinfo").modal();
+}
+</script>
 
 <script>
 ;(function(){
