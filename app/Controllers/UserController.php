@@ -1935,14 +1935,14 @@ class UserController extends BaseController
 			$code_meto = "微信";
 		}
 		if ($this->user->t != 0 && $code_money >= 20 && $meto == 1 && strlen($code_olrid) == 28) {
-	    $title = "充值失败 - ". $code_meto . $code_money ." - 自动补单" . "-" . $time;
-        $content = "是否自动补单：是<br>付款方式：" .$code_meto ."<br>充值金额：". $code_money ." 元<br>付款订单号：". $code_olrid ."<br>付款时间：". $code_time;
+	    $title = "充值失败 - " .$code_meto . "自动补单" .$code_money . "-" . $time;
+        $content = "付款方式：" .$code_meto . "<br>充值金额：" . $code_money . " 元<br>付款订单号：" . $code_olrid . "<br>付款时间：" . $code_time . "<br>是否自动补单：是";
 		} elseif ($this->user->t != 0 && $code_money >= 20 && $meto == 2 && strlen($code_olrid) == 32) {
-		$title = "充值失败 - ". $code_meto . $code_money ." - 自动补单" . "-" . $time;
-        $content = "是否自动补单：是<br>付款方式：" .$code_meto ."<br>充值金额：". $code_money ." 元<br>付款订单号：". $code_olrid ."<br>付款时间：". $code_time;
+		$title = "充值失败 - " .$code_meto . "自动补单" .$code_money . "-" . $time;
+        $content = "付款方式：" .$code_meto . "<br>充值金额：" . $code_money . " 元<br>付款订单号：" . $code_olrid . "<br>付款时间：" . $code_time . "<br>是否自动补单：是";
 		} else {
-		$title = "充值失败 - ". $code_meto . $code_money . "-" . $time;
-        $content = "是否自动补单：否<br>付款方式：" .$code_meto ."<br>充值金额：". $code_money ." 元<br>付款订单号：". $code_olrid ."<br>付款时间：". $code_time;
+		$title = "充值失败 - ".$code_meto .$code_money . "-" . $time;
+        $content = "付款方式：" .$code_meto . "<br>充值金额：" . $code_money . " 元<br>付款订单号：" . $code_olrid . "<br>付款时间：" . $code_time . "<br>是否自动补单：否";
 		}
 
         if ($code_meto == '' || $code_money == '' || $code_olrid == '' || $code_time == '') {
@@ -1975,7 +1975,7 @@ class UserController extends BaseController
         foreach ($adminUser as $user) {
             $subject = Config::get('appName') . "-新工单被开启";
             $to = $user->email;
-            $text = "管理员您好，用户id： ".$this->user->id."   ，邮箱： ".$this->user->email."   ，开启了新工单，内容如下：<br>".$content ;  //工单优化
+            $text = "管理员您好，用户id： ".$this->user->id."   ，邮箱： ".$this->user->email."   ，开启了新工单，工单标题：<br>".$title."<br>内容如下：<br>".$content ;  //工单优化
             try {
                 Mail::send($to, $subject, 'news/warn.tpl', [
                     "user" => $user, "text" => $text
