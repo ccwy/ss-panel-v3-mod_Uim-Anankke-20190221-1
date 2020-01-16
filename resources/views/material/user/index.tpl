@@ -820,7 +820,7 @@ $(document).ready(function(){
 function urlChange(iphone_shadowrocket) {
 		var doc = document.getElementById('infoifram').contentWindow.document;
 		doc.open();
-		doc.write('<img src="/images/iphone_shadowrocket.gif" style="width: 60%;height: 100%; border: none;"/>');
+		doc.write('<img src="/images/iphone_shadowrocket.gif"/>');
 		doc.close();
 	$("#nodeinfo").modal();
 }
