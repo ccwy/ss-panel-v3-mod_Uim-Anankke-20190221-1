@@ -45,12 +45,12 @@
 										<div class="form-group form-group-label">
 										<label class="floating-label" for="code_olrid">付款订单号：（可在账单里面找到）</label>
 										<input class="form-control maxwidth-edit" id="code_olrid" type="text">
-										<p class="form-control-guide"><i class="material-icons">info</i>支付宝账单，找到付款订单，点进去复制订单号粘贴到上面输入框；微信支付凭证里面找到付款订单，点进去复制转账单号粘贴到上面输入框</p>
+										<p class="form-control-guide"><i class="material-icons">info</i>打开支付宝，点击我的，点击账单，找到付款订单，点进去复制订单号粘贴到上面输入框；打开微信，搜索微信支付，点进去查看支付凭证，找到付款订单，点进去复制转账单号粘贴到上面输入框</p>
                                         </div>
 										<div class="form-group form-group-label">
-										<label class="floating-label" for="code_time">付款时间：（填写准确付款时间）</label>
+										<label class="floating-label" for="code_time">付款时间：（格式：{date('Y-m-d H:i:s')}）</label>
 										<input class="form-control maxwidth-edit" id="code_time" type="text">
-										<p class="form-control-guide"><i class="material-icons">info</i>准确的付款时间，格式：{date('Y-m-d H:i:s')}</p>
+										<p class="form-control-guide"><i class="material-icons">info</i>准确的付款时间，付款时间在账单里面有，格式：{date('Y-m-d H:i:s')}</p>
 										</div>
 									
 									    <div class="card-action-btn pull-left">
