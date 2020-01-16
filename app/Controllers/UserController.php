@@ -1935,14 +1935,14 @@ class UserController extends BaseController
 			$code_meto = "微信";
 		}
 		if ($this->user->t != 0 && $code_money >= 20 && $meto == 1 && strlen($code_olrid) == 28) {
-	    $title = "充值失败 - " .$code_meto . "自动补单" .$code_money . "-" . $time;
-        $content = "付款方式：" .$code_meto . "<br>充值金额：" . $code_money . " 元<br>付款订单号：" . $code_olrid . "<br>付款时间：" . $code_time . "<br>是否自动补单：是";
+	    $title = "充值失败 - " .$code_meto. "自动补单" .$code_money. "元成功 -" .$time;
+        $content = "付款方式：" .$code_meto. "<br>充值金额：" .$code_money. " 元<br>付款订单号：" .$code_olrid. "<br>付款时间：" .$code_time. "<br>是否自动补单：是";
 		} elseif ($this->user->t != 0 && $code_money >= 20 && $meto == 2 && strlen($code_olrid) == 32) {
-		$title = "充值失败 - " .$code_meto . "自动补单" .$code_money . "-" . $time;
-        $content = "付款方式：" .$code_meto . "<br>充值金额：" . $code_money . " 元<br>付款订单号：" . $code_olrid . "<br>付款时间：" . $code_time . "<br>是否自动补单：是";
+		$title = "充值失败 - " .$code_meto. "自动补单" .$code_money. "元成功 -" .$time;
+        $content = "付款方式：" .$code_meto. "<br>充值金额：" .$code_money. " 元<br>付款订单号：" .$code_olrid. "<br>付款时间：" .$code_time. "<br>是否自动补单：是";
 		} else {
-		$title = "充值失败 - ".$code_meto .$code_money . "-" . $time;
-        $content = "付款方式：" .$code_meto . "<br>充值金额：" . $code_money . " 元<br>付款订单号：" . $code_olrid . "<br>付款时间：" . $code_time . "<br>是否自动补单：否";
+		$title = "充值失败 - ".$code_meto . $code_money . "-" . $time;
+        $content = "付款方式：" .$code_meto. "<br>充值金额：" .$code_money. " 元<br>付款订单号：" .$code_olrid. "<br>付款时间：" .$code_time. "<br>是否自动补单：否";
 		}
 
         if ($code_meto == '' || $code_money == '' || $code_olrid == '' || $code_time == '') {
@@ -2007,7 +2007,7 @@ class UserController extends BaseController
         $codeq->userid=$this->user->id;
         $codeq->save();	
         $res['ret'] = 1;
-        $res['msg'] = "工单提交成功，您此次满足自动补单条件，系统已为您自动补单成功，您充值的 ".$code_money." 元已到账，您可以返回充值页面查看余额。<br>请注意：此次是系统为您自动补单，自动补单结果需要管理员审核，管理员审核后会回复工单处理结果。<br>请注意：工单已提交成功，请勿重复提交工单。";
+        $res['msg'] = "工单提交成功，您此次满足自动补单条件，系统已为您自动补单成功，您充值的 ".$code_money." 元已到账，您可以返回充值页面查看余额或前往商店购买套餐。<br>请注意：此次是系统为您自动补单，自动补单结果需要管理员审核，管理员审核后会回复工单处理结果。<br>请注意：工单已提交成功，请勿重复提交工单。";
 		} elseif ($this->user->t != 0 && $code_money >= 20 && $meto == 2 && strlen($code_olrid) == 32) {
 		$this->user->money += $code_money;			
         $this->user->save();  
@@ -2020,7 +2020,7 @@ class UserController extends BaseController
         $codeq->userid=$this->user->id;
         $codeq->save();	
         $res['ret'] = 1;
-        $res['msg'] = "工单提交成功，您此次满足自动补单条件，系统已为您自动补单成功，您充值的 ".$code_money." 元已到账，您可以返回充值页面查看余额。<br>请注意：此次是系统为您自动补单，自动补单结果需要管理员审核，管理员审核后会回复工单处理结果。<br>请注意：工单已提交成功，请勿重复提交工单。";
+        $res['msg'] = "工单提交成功，您此次满足自动补单条件，系统已为您自动补单成功，您充值的 ".$code_money." 元已到账，您可以返回充值页面查看余额或前往商店购买套餐。<br>请注意：此次是系统为您自动补单，自动补单结果需要管理员审核，管理员审核后会回复工单处理结果。<br>请注意：工单已提交成功，请勿重复提交工单。";
 		} else {		
 		$res['ret'] = 1;
         $res['msg'] = "工单提交成功，请等待管理员处理，工单有回复就处理了，请留意工单回复内容。<br>请注意：工单已提交成功，请勿重复提交工单。";
