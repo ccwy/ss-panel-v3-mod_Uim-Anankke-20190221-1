@@ -131,7 +131,13 @@ class AdminController extends UserController
     {
         $code = new Coupon();
         $code->onetime=$request->getParam('count');
-        $code->code = $request->getParam('prefix');
+		$prefix = $request->getParam('prefix');
+		if ($prefix == '') {
+			$res['ret'] = 0;
+            $res['msg'] = "优惠码不能为空";
+            return $response->getBody()->write(json_encode($res));
+		}
+        $code->code = $request->getParam('prefix');		
 		$starttimes = strtotime($request->getParam('starttime'));			//优惠码开始时间
 		if ($starttimes != '') {
 			$code->expire= $starttimes + $request->getParam('expire')*3600;	
@@ -141,7 +147,6 @@ class AdminController extends UserController
 		$code->starttime = $request->getParam('starttime');	//优惠码开始时间
         $code->shop=$request->getParam('shop');
         $code->credit=$request->getParam('credit');
-
         $code->save();
 
         $res['ret'] = 1;
