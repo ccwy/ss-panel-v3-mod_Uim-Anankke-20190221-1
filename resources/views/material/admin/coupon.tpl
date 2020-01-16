@@ -29,7 +29,7 @@
 								<div class="form-group form-group-label">
 									<label class="floating-label" for="starttime">开始时间</label>
 									<input class="form-control maxwidth-edit" id="starttime" type="text" value="{date('Y-m-d H:i:s')}">
-								    <p class="form-control-guide"><i class="material-icons">info</i>不填立即生效呢</p>
+								    <p class="form-control-guide"><i class="material-icons">info</i>优惠码生效时间，不填立即生效呢</p>
 								</div>
 
 
@@ -158,7 +158,7 @@ window.addEventListener('load', () => {
             submitCoupon(couponCode);
         })
 
-        $$.getElementById('coupon-random').addEventListener('click', () => {
+        $$.getElementById('coupon-prefix-random').addEventListener('click', () => {
             let couponCode = $$.getElementById('prefix').value.concat(randomWord());
             submitCoupon(couponCode);
         })

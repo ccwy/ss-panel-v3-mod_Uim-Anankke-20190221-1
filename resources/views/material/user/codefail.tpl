@@ -39,14 +39,17 @@
 										<div class="form-group form-group-label">
 										<label class="floating-label" for="code_money">充值金额：（付款金额）</label>
 										<input class="form-control maxwidth-edit" id="code_money" type="number">
+										<p class="form-control-guide"><i class="material-icons">info</i>填写实际付款金额</p>
 										</div>
 										<div class="form-group form-group-label">
 										<label class="floating-label" for="code_olrid">付款订单号：（可在账单里面找到）</label>
 										<input class="form-control maxwidth-edit" id="code_olrid" type="text">
+										<p class="form-control-guide"><i class="material-icons">info</i>支付宝账单、微信支付凭证里面有付款订单号</p>
                                         </div>
 										<div class="form-group form-group-label">
-										<label class="floating-label" for="code_time">付款时间：（格式： 2020-01-12 13:59:12）</label>
+										<label class="floating-label" for="code_time">付款时间：</label>
 										<input class="form-control maxwidth-edit" id="code_time" type="text">
+										<p class="form-control-guide"><i class="material-icons">info</i>准确的付款时间，格式：{date('Y-m-d H:i:s')}</p>
 										</div>
 									
 									    <div class="card-action-btn pull-left">
