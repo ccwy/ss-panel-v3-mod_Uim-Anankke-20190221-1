@@ -169,10 +169,8 @@
 											<ul>
 												<h3><li>视频教程</li> </h3>
 												<ol>
-												{literal}
-												<p>视频教程仅供参考</p>												
-												<p style="display:none;"><img src="/images/iphone_shadowrocket.gif"/></p>
-												{/literal}
+												<p>此处为自动播放的视频教程</p>												
+												<p><img src="/images/iphone_shadowrocket.gif"/></p>
 												</ol>
 											</ul>
 											<ul>
