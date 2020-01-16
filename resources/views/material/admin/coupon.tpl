@@ -22,7 +22,7 @@
 
 								<div class="form-group form-group-label">
 									<label class="floating-label" for="credit">优惠码额度</label>
-									<input class="form-control maxwidth-edit" id="credit" type="text">
+									<input class="form-control maxwidth-edit" id="credit" type="number" value="10">
 									<p class="form-control-guide"><i class="material-icons">info</i>百分比，九折就填 10</p>
 								</div>
 								
