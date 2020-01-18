@@ -23,7 +23,7 @@
         <p class="modal-title">支付宝/微信在线充值<a class="btn btn-brand waves-attach" href="/user/codefail">充值不到账点这里</a></p>
 		<p><font color="red">充值时禁止关闭网页二维码，否则无法自动到账</font>
 		<br>付款成功一分钟内到账，如未到账，请点击上面充值不到账按钮解决。</p>
-		<p>{if $config['AliPay_Status']!=1}<font color="red">支付宝故障，支付宝暂停使用，请等待修复。{/if}</font></p><p>{if $config['WxPay_Status']!=1}<font color="red">微信支付故障，微信支付暂停使用，请等待修复。{/if}</font></p>
+		<p>{if $config['AliPay_Status']!=1}<font color="red">网络不稳定，支付宝充值如一分钟内未到账，请点击上方充值不到账按钮，按要求填写内容，符合条件的系统会自动处理到账，切勿重复提交。{/if}</font></p><p>{if $config['WxPay_Status']!=1}<font color="red">网络不稳定，微信充值如一分钟内未到账，请点击上方充值不到账按钮，按要求填写内容，符合条件的系统会自动处理到账，切勿重复提交。{/if}</font></p>
 		
 		{if $config['AliPay_Status']==1 || $config['WxPay_Status']==1}
         {if preg_match('/\|/', $config['Pay_Price'])}
@@ -44,14 +44,14 @@
 		{/if}	
         
 
-        {if $config['AliPay_Status']==1}
+       <!-- {if $config['AliPay_Status']==1} -->
             <a class="btn btn-flat waves-attach" id="urlChangeAliPay" type="1"><img src="/images/alipay.jpg"
                                                                                     width="45"></a>
-        {/if}
-        {if $config['WxPay_Status']==1}
+       <!-- {/if} -->
+      <!--  {if $config['WxPay_Status']==1} -->
             <a class="btn btn-flat waves-attach" id="urlChangeAliPay2" type="2"><img src="/images/weixin.jpg"
                                                                                      width="45"></a>
-        {/if}
+      <!--  {/if} -->
 		</div>
     </div>
 </div>
