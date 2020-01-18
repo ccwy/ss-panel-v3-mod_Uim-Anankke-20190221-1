@@ -44,14 +44,14 @@
 		{/if}	
         
 
-       <!-- {if $config['AliPay_Status']==1} -->
+       
             <a class="btn btn-flat waves-attach" id="urlChangeAliPay" type="1"><img src="/images/alipay.jpg"
                                                                                     width="45"></a>
-       <!-- {/if} -->
-      <!--  {if $config['WxPay_Status']==1} -->
+      
+      
             <a class="btn btn-flat waves-attach" id="urlChangeAliPay2" type="2"><img src="/images/weixin.jpg"
                                                                                      width="45"></a>
-      <!--  {/if} -->
+      
 		</div>
     </div>
 </div>
