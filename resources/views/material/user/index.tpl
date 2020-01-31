@@ -613,7 +613,8 @@
 										3，请<a href="/user/code">点我充值</a>余额到账户，<br>
 										4，然后通过  <a href="/user/shop">商店</a> 购买激活账号，<br>
 										5，如您未能在注册后  <code> 3 </code> 天内完成购买，账号将自动删除,<br>
-										6，如您有任何疑问，请 <a href="/user/ticket/create">建立工单</a> 联系管理员</p>
+										{$user->block_user_code == 0}
+										6，如您有任何疑问，请 <a href="/user/ticket/create">建立工单</a> 联系管理员{/if}</p>
 																												
 									</div>									
 								</div>
@@ -631,8 +632,9 @@
 										<p>1，您的账号等级已于 <code>{$user->class_expire}</code> 过期，<br>
 										2，为不影响您的正常使用，请及时通过  <a href="/user/shop">商店</a> 购买套餐重新激活账号；<br>
 										3，请注意，您的账号将在等级过期 <code> 7 </code>  天后自动删除，</p>
+										{$user->block_user_code == 0}
 										<p>4，如您有任何疑问，请 <a href="/user/ticket/create">建立工单</a> 联系管理员</p>
-																												
+										{/if}																		
 									</div>									
 								</div>
 							</div>
